@@ -1,0 +1,35 @@
+{ns hl7-fhir-r4-core.patient-animal,
+ import
+ #{hl7-fhir-r4-core.value-set.animal-breeds
+   zen.fhir
+   hl7-fhir-r4-core.value-set.animal-genderstatus
+   hl7-fhir-r4-core.value-set.animal-species
+   hl7-fhir-r4-core.CodeableConcept},
+ schema
+ {:zen.fhir/version "0.5.21-6",
+  :zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/profileUri
+  "http://hl7.org/fhir/StructureDefinition/patient-animal",
+  :require #{:species},
+  :type zen/map,
+  :zen/desc "This patient is known to be an animal.",
+  :keys
+  {:species
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.animal-species/value-set,
+     :strength :example},
+    :zen/desc "The animal species.  E.g. Dog, Cow."},
+   :breed
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.animal-breeds/value-set,
+     :strength :example},
+    :zen/desc "The animal breed.  E.g. Poodle, Angus."},
+   :genderStatus
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.animal-genderstatus/value-set,
+     :strength :example},
+    :zen/desc
+    "The status of the animal's reproductive parts.  E.g. Neutered, Intact."}}}}

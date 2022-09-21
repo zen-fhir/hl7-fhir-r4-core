@@ -1,0 +1,28 @@
+{ns hl7-fhir-r4-core.goal-relationship,
+ import
+ #{zen.fhir
+   hl7-fhir-r4-core.value-set.goal-relationship-type
+   hl7-fhir-r4-core.Goal
+   hl7-fhir-r4-core.Reference
+   hl7-fhir-r4-core.CodeableConcept},
+ schema
+ {:zen.fhir/version "0.5.21-6",
+  :zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/profileUri
+  "http://hl7.org/fhir/StructureDefinition/goal-relationship",
+  :require #{:type :target},
+  :type zen/map,
+  :zen/desc
+  "Establishes a relationship between this goal and other goals.",
+  :keys
+  {:type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.goal-relationship-type/value-set,
+     :strength :extensible},
+    :zen/desc "predecessor | successor | replacement | other"},
+   :target
+   {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+    :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Goal/schema}},
+    :zen/desc "Related goal"}}}}

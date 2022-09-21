@@ -1,0 +1,17 @@
+{ns hl7-fhir-r4-core.patient-religion,
+ import
+ #{zen.fhir
+   hl7-fhir-r4-core.value-set.v3-ReligiousAffiliation
+   hl7-fhir-r4-core.CodeableConcept},
+ schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen/desc "The patient's professed religious affiliations.",
+  :zen.fhir/type "CodeableConcept",
+  :zen.fhir/profileUri
+  "http://hl7.org/fhir/StructureDefinition/patient-religion",
+  :zen.fhir/version "0.5.21-6",
+  :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+  :zen.fhir/value-set
+  {:symbol
+   hl7-fhir-r4-core.value-set.v3-ReligiousAffiliation/value-set,
+   :strength :extensible}}}

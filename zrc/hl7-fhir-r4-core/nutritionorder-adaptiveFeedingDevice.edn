@@ -1,0 +1,16 @@
+{ns hl7-fhir-r4-core.nutritionorder-adaptiveFeedingDevice,
+ import
+ #{zen.fhir
+   hl7-fhir-r4-core.value-set.feeding-device
+   hl7-fhir-r4-core.CodeableConcept},
+ schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen/desc "Materials used or needed to feed the patient.",
+  :zen.fhir/type "CodeableConcept",
+  :zen.fhir/profileUri
+  "http://hl7.org/fhir/StructureDefinition/nutritionorder-adaptiveFeedingDevice",
+  :zen.fhir/version "0.5.21-6",
+  :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+  :zen.fhir/value-set
+  {:symbol hl7-fhir-r4-core.value-set.feeding-device/value-set,
+   :strength :example}}}

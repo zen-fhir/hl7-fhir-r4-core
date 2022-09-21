@@ -1,0 +1,31 @@
+{ns hl7-fhir-r4-core.DiagnosticReport-geneticsReferences,
+ import
+ #{zen.fhir
+   hl7-fhir-r4-core.value-set.diagnostic-based-on-snomed
+   hl7-fhir-r4-core.string
+   hl7-fhir-r4-core.uri
+   hl7-fhir-r4-core.CodeableConcept},
+ schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen/desc
+  "Additional bibliographic reference information about genetics, medications, clinical trials, etc. associated with knowledge-based information on genetics/genetic condition.",
+  :zen.fhir/profileUri
+  "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsReferences",
+  :zen.fhir/version "0.5.21-6",
+  :type zen/map,
+  :keys
+  {:description
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Reference description"},
+   :reference
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.uri/schema},
+     :zen/desc "Reference URI"}},
+   :type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.diagnostic-based-on-snomed/value-set,
+     :strength :example},
+    :zen/desc "Reference type"}}}}

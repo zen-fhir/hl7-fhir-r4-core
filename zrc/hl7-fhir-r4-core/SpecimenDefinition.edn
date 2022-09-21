@@ -1,0 +1,211 @@
+{ns hl7-fhir-r4-core.SpecimenDefinition,
+ import
+ #{hl7-fhir-r4-core.value-set.rejection-criteria
+   hl7-fhir-r4-core.Duration
+   hl7-fhir-r4-core.value-set.container-material
+   hl7-fhir-r4-core.Substance
+   hl7-fhir-r4-core.BackboneElement
+   hl7-fhir-r4-core.SimpleQuantity
+   hl7-fhir-r4-core.code
+   zen.fhir
+   hl7-fhir-r4-core.boolean
+   hl7-fhir-r4-core.Range
+   hl7-fhir-r4-core.string
+   hl7-fhir-r4-core.value-set.prepare-patient-prior-specimen-collection
+   hl7-fhir-r4-core.Quantity
+   hl7-fhir-r4-core.value-set.specimen-contained-preference
+   hl7-fhir-r4-core.value-set.specimen-collection
+   hl7-fhir-r4-core.value-set.v2-0487
+   hl7-fhir-r4-core.Reference
+   hl7-fhir-r4-core.value-set.handling-condition
+   hl7-fhir-r4-core.Element
+   hl7-fhir-r4-core.value-set.v2-0371
+   hl7-fhir-r4-core.DomainResource
+   hl7-fhir-r4-core.CodeableConcept
+   hl7-fhir-r4-core.Identifier
+   hl7-fhir-r4-core.value-set.specimen-container-type
+   hl7-fhir-r4-core.value-set.container-cap},
+ schema
+ {:zen/tags #{zen/schema zen.fhir/base-schema},
+  :zen/desc "A kind of specimen with associated set of requirements.",
+  :zen.fhir/type "SpecimenDefinition",
+  :zen.fhir/profileUri
+  "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition",
+  :zen.fhir/version "0.5.21-6",
+  :confirms
+  #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
+  :type zen/map,
+  :keys
+  {:identifier
+   {:confirms #{hl7-fhir-r4-core.Identifier/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "Business identifier of a kind of specimen"},
+   :typeCollected
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.v2-0487/value-set,
+     :strength :example},
+    :zen/desc "Kind of material to collect"},
+   :patientPreparation
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen.fhir/value-set
+     {:symbol
+      hl7-fhir-r4-core.value-set.prepare-patient-prior-specimen-collection/value-set,
+      :strength :example},
+     :zen/desc "Patient preparation for collection"}},
+   :timeAspect
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "Time aspect for collection"},
+   :_timeAspect {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :collection
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen.fhir/value-set
+     {:symbol hl7-fhir-r4-core.value-set.specimen-collection/value-set,
+      :strength :example},
+     :zen/desc "Specimen collection procedure"}},
+   :typeTested
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:requirement
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "Specimen requirements"},
+      :retentionTime
+      {:confirms #{hl7-fhir-r4-core.Duration/schema},
+       :zen/desc "Specimen retention time"},
+      :_preference {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :isDerived
+      {:confirms #{hl7-fhir-r4-core.boolean/schema},
+       :zen/desc "Primary or secondary specimen"},
+      :_isDerived {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :type
+      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+       :zen.fhir/value-set
+       {:symbol hl7-fhir-r4-core.value-set.v2-0487/value-set,
+        :strength :example},
+       :zen/desc "Type of intended specimen"},
+      :rejectionCriterion
+      {:type zen/vector,
+       :every
+       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+        :zen.fhir/value-set
+        {:symbol
+         hl7-fhir-r4-core.value-set.rejection-criteria/value-set,
+         :strength :example},
+        :zen/desc "Rejection criterion"}},
+      :preference
+      {:confirms #{hl7-fhir-r4-core.code/schema},
+       :zen.fhir/value-set
+       {:symbol
+        hl7-fhir-r4-core.value-set.specimen-contained-preference/value-set,
+        :strength :required},
+       :zen/desc "preferred | alternate"},
+      :handling
+      {:type zen/vector,
+       :every
+       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+        :type zen/map,
+        :keys
+        {:temperatureQualifier
+         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+          :zen.fhir/value-set
+          {:symbol
+           hl7-fhir-r4-core.value-set.handling-condition/value-set,
+           :strength :example},
+          :zen/desc "Temperature qualifier"},
+         :temperatureRange
+         {:confirms #{hl7-fhir-r4-core.Range/schema},
+          :zen/desc "Temperature range"},
+         :maxDuration
+         {:confirms #{hl7-fhir-r4-core.Duration/schema},
+          :zen/desc "Maximum preservation time"},
+         :instruction
+         {:confirms #{hl7-fhir-r4-core.string/schema},
+          :zen/desc "Preservation instruction"},
+         :_instruction {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+        :zen/desc "Specimen handling before testing"}},
+      :container
+      {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+       :type zen/map,
+       :keys
+       {:description
+        {:confirms #{hl7-fhir-r4-core.string/schema},
+         :zen/desc "Container description"},
+        :_preparation {:confirms #{hl7-fhir-r4-core.Element/schema}},
+        :capacity
+        {:confirms
+         #{hl7-fhir-r4-core.Quantity/schema
+           hl7-fhir-r4-core.SimpleQuantity/schema},
+         :zen/desc "Container capacity"},
+        :type
+        {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+         :zen.fhir/value-set
+         {:symbol
+          hl7-fhir-r4-core.value-set.specimen-container-type/value-set,
+          :strength :example},
+         :zen/desc
+         "Kind of container associated with the kind of specimen"},
+        :cap
+        {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+         :zen.fhir/value-set
+         {:symbol hl7-fhir-r4-core.value-set.container-cap/value-set,
+          :strength :example},
+         :zen/desc "Color of container cap"},
+        :preparation
+        {:confirms #{hl7-fhir-r4-core.string/schema},
+         :zen/desc "Specimen container preparation"},
+        :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+        :minimumVolume
+        {:fhir/polymorphic true,
+         :exclusive-keys #{#{:string :Quantity}},
+         :type zen/map,
+         :keys
+         {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
+          :string {:confirms #{hl7-fhir-r4-core.string/schema}},
+          :_string {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+         :zen/desc "Minimum volume"},
+        :material
+        {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+         :zen.fhir/value-set
+         {:symbol
+          hl7-fhir-r4-core.value-set.container-material/value-set,
+          :strength :example},
+         :zen/desc "Container material"},
+        :additive
+        {:type zen/vector,
+         :every
+         {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+          :type zen/map,
+          :keys
+          {:additive
+           {:fhir/polymorphic true,
+            :exclusive-keys #{#{:CodeableConcept :Reference}},
+            :type zen/map,
+            :keys
+            {:CodeableConcept
+             {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
+             :Reference
+             {:confirms
+              #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+              :zen.fhir/reference
+              {:refers #{hl7-fhir-r4-core.Substance/schema}}}},
+            :zen.fhir/value-set
+            {:symbol hl7-fhir-r4-core.value-set.v2-0371/value-set,
+             :strength :example},
+            :zen/desc "Additive associated with container"}},
+          :require #{:additive},
+          :zen/desc "Additive associated with container"}}},
+       :zen/desc "The specimen's container"},
+      :_requirement {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+     :require #{:preference},
+     :zen/desc "Specimen in container intended for testing by lab"}}}}}
