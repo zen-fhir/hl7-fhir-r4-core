@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "HL7-defined code system of concepts which specify a categorical assessment of an observation value.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation.",
-  :zen.fhir/version "0.5.21-6",
+  :zen.fhir/version "0.5.21-7",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0078",
      :zen.fhir/content :bundled}},

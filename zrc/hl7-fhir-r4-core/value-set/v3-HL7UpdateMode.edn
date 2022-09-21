@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " The possible modes of updating that occur when an attribute is received by a system that already contains values for that attribute.",
-  :zen.fhir/version "0.5.21-6",
+  :zen.fhir/version "0.5.21-7",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-HL7UpdateMode",

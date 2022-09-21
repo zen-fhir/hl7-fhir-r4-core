@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " A code identifying the specific message to be provided.  Discussion:\r\nA textual value may be specified as the print name, or for non-coded messages, as the original text.  Examples:\r\n'Required attribute xxx is missing', 'System will be unavailable March 19 from 0100 to 0300'",
-  :zen.fhir/version "0.5.21-6",
+  :zen.fhir/version "0.5.21-7",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-AcknowledgementDetailType",

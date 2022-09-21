@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Criterion for rejection of the specimen by laboratory.",
-  :zen.fhir/version "0.5.21-6",
+  :zen.fhir/version "0.5.21-7",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/rejection-criteria",

@@ -28,7 +28,7 @@
   :zen.fhir/type "DeviceDefinition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
-  :zen.fhir/version "0.5.21-6",
+  :zen.fhir/version "0.5.21-7",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,

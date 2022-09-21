@@ -20,7 +20,7 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.value-set.capability-statement-kind},
  schema
- {:zen.fhir/version "0.5.21-6",
+ {:zen.fhir/version "0.5.21-7",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

@@ -6,6 +6,6 @@
   "Base StructureDefinition for oid type: An OID represented as a URI",
   :zen.fhir/type "oid",
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/oid",
-  :zen.fhir/version "0.5.21-6",
+  :zen.fhir/version "0.5.21-7",
   :type zen/string,
   :confirms #{hl7-fhir-r4-core.uri/schema}}}
