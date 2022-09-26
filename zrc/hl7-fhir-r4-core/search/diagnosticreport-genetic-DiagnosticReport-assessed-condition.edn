@@ -11,4 +11,4 @@
   :name "assessed-condition",
   :expr
   {:DiagnosticReport
-   {:jsonpath [], :data-types #{}, :template :reference}}}}
+   {:knife [], :jsonpath [], :data-types #{}, :template :reference}}}}

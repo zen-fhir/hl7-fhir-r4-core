@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Describes payment terms for a financial transaction, used in an invoice. This is typically expressed as a responsibility of the acceptor or payor of an invoice.",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-PaymentTerms",
      :zen.fhir/content :bundled}},

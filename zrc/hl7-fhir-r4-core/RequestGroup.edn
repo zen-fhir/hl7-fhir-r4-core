@@ -44,7 +44,7 @@
    hl7-fhir-r4-core.value-set.action-condition-kind
    hl7-fhir-r4-core.Expression},
  schema
- {:zen.fhir/version "0.5.21-7",
+ {:zen.fhir/version "0.5.21-8",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

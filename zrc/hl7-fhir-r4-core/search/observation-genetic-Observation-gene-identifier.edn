@@ -9,4 +9,5 @@
   :fhir/type "token",
   :name "gene-identifier",
   :expr
-  {:Observation {:jsonpath [], :data-types #{}, :template :token}}}}
+  {:Observation
+   {:knife [], :jsonpath [], :data-types #{}, :template :token}}}}

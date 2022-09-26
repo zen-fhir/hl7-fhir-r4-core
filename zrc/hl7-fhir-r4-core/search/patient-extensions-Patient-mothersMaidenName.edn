@@ -10,7 +10,8 @@
   :name "mothersMaidenName",
   :expr
   {:Patient
-   {:jsonpath [],
+   {:knife [],
+    :jsonpath [],
     :data-types #{},
     :template :string,
     :sql {:where [:or], :parameter-format "%\"?%"}}}}}

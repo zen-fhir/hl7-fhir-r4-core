@@ -7,4 +7,4 @@
   :zen.fhir/type "Definition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Definition",
-  :zen.fhir/version "0.5.21-7"}}
+  :zen.fhir/version "0.5.21-8"}}

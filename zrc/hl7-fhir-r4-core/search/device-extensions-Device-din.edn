@@ -7,4 +7,6 @@
   "http://hl7.org/fhir/SearchParameter/device-extensions-Device-din",
   :fhir/type "token",
   :name "din",
-  :expr {:Device {:jsonpath [], :data-types #{}, :template :token}}}}
+  :expr
+  {:Device
+   {:knife [], :jsonpath [], :data-types #{}, :template :token}}}}

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " A set of codes specifying the modality by which the Entity playing the Role is participating in the Act.  Examples:\r\nPhysically present, over the telephone, written communication.  Rationale:\r\nParticularly for author (originator) participants this is used to specify whether the information represented by the act was initially provided verbally, (hand-)written, or electronically.  Open Issue:\r\nThere needs to be a reexamination of the hierarchies as there seems to be some muddling between ELECTRONIC and other concepts that involve electronic communication that are in other hierarchies.",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",

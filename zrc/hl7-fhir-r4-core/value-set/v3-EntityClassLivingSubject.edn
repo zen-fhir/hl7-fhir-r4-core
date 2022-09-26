@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Anything that essentially has the property of life, independent of current state (a dead human corpse is still essentially a living subject.)",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-EntityClass",
      :zen.fhir/content :bundled}},

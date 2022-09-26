@@ -6,4 +6,9 @@
   :fhir/url "http://hl7.org/fhir/SearchParameter/example",
   :fhir/type "token",
   :name "_id",
-  :expr {:Resource {:jsonpath [], :data-types #{}, :template :token}}}}
+  :expr
+  {:Resource
+   {:knife [["id"]],
+    :jsonpath ["$.\"id\"[*]"],
+    :data-types #{},
+    :template :token}}}}

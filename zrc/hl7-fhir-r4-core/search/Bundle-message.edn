@@ -7,4 +7,5 @@
   :fhir/type "reference",
   :name "message",
   :expr
-  {:Bundle {:jsonpath [], :data-types #{}, :template :reference}}}}
+  {:Bundle
+   {:knife [], :jsonpath [], :data-types #{}, :template :reference}}}}

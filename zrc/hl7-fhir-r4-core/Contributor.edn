@@ -7,7 +7,7 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.value-set.contributor-type},
  schema
- {:zen.fhir/version "0.5.21-7",
+ {:zen.fhir/version "0.5.21-8",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "  Description:\r\nCodes for concepts describing the approval level of HL7 artifacts.  This code system reflects the concepts expressed in HL7's Governance & Operations Manual (GOM) past and present.",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-hl7ApprovalStatus",

@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Defines organization behavior of a group.",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/action-grouping-behavior",
      :zen.fhir/content :bundled}},

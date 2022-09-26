@@ -15,7 +15,7 @@
   "Base StructureDefinition for Meta Type: The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
   :zen.fhir/type "Meta",
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Meta",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :type zen/map,
   :keys

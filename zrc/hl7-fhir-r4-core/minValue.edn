@@ -8,7 +8,7 @@
    hl7-fhir-r4-core.date},
  schema
  {:fhir/polymorphic true,
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/minValue",

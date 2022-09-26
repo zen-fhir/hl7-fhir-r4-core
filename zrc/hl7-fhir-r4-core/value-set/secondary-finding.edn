@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes to denote a guideline or policy statement.when a genetic test result is being shared as a secondary finding.",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/secondary-finding",
      :zen.fhir/content :bundled}},

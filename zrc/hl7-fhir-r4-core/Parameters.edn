@@ -61,7 +61,7 @@
   :zen.fhir/type "Parameters",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Parameters",
-  :zen.fhir/version "0.5.21-7",
+  :zen.fhir/version "0.5.21-8",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :type zen/map,
   :keys

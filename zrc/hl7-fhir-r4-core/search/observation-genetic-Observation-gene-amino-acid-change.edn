@@ -10,7 +10,8 @@
   :name "gene-amino-acid-change",
   :expr
   {:Observation
-   {:jsonpath [],
+   {:knife [],
+    :jsonpath [],
     :data-types #{},
     :template :string,
     :sql {:where [:or], :parameter-format "%\"?%"}}}}}
