@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Indicates that the receiver has messages for the sender  OpenIssue:\r\nDescription does not make sense relative to name of coding system.  Must be reviewed and improved.",
-  :zen.fhir/version "0.5.21-10",
+  :zen.fhir/version "0.5.21-11",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-MessageWaitingPriority",

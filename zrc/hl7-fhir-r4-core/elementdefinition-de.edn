@@ -18,7 +18,7 @@
   :zen.fhir/type "ElementDefinition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/elementdefinition-de",
-  :zen.fhir/version "0.5.21-10",
+  :zen.fhir/version "0.5.21-11",
   :confirms #{hl7-fhir-r4-core.ElementDefinition/schema},
   :type zen/map,
   :keys

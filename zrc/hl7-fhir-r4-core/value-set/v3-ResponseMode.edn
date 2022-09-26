@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Specifies the mode, immediate versus deferred or queued, by which a receiver should communicate its receiver responsibilities.",
-  :zen.fhir/version "0.5.21-10",
+  :zen.fhir/version "0.5.21-11",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ResponseMode",
      :zen.fhir/content :bundled}},

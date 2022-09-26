@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Code for the mechanism by which the exposure agent was exchanged or potentially exchanged by the participants involved in the exposure.",
-  :zen.fhir/version "0.5.21-10",
+  :zen.fhir/version "0.5.21-11",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ExposureMode",
      :zen.fhir/content :bundled}},

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " An intention or plan to perform a service. Historical note: in previous RIM versions, the intent mood was captured as a separate class hierarchy, called Service_intent_or_order.",
-  :zen.fhir/version "0.5.21-10",
+  :zen.fhir/version "0.5.21-11",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ActMood",
      :zen.fhir/content :bundled}},

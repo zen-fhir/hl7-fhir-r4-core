@@ -14,7 +14,7 @@
   :zen.fhir/type "DiagnosticReport",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/diagnosticreport-genetics",
-  :zen.fhir/version "0.5.21-10",
+  :zen.fhir/version "0.5.21-11",
   :confirms
   #{hl7-fhir-r4-core.DiagnosticReport/schema zen.fhir/Resource},
   :type zen/map,
