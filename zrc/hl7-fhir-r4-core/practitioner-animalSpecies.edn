@@ -10,7 +10,7 @@
   :zen.fhir/type "CodeableConcept",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/practitioner-animalSpecies",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
   :zen.fhir/value-set
   {:symbol hl7-fhir-r4-core.value-set.animal-species/value-set,

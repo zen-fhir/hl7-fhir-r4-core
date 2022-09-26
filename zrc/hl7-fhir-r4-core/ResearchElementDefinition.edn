@@ -33,7 +33,7 @@
    hl7-fhir-r4-core.Expression
    hl7-fhir-r4-core.value-set.variable-type},
  schema
- {:zen.fhir/version "0.5.21-9",
+ {:zen.fhir/version "0.5.21-10",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

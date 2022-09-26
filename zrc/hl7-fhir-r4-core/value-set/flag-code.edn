@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Example list of detail codes for flagged issues.  (Not complete or necessarily appropriate.)",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},

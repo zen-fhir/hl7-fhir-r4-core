@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Describes the type of a metric calibration.",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/metric-calibration-type",
      :zen.fhir/content :bundled}},

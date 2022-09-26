@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The meaning of the hierarchy of concepts in a code system.",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/codesystem-hierarchy-meaning",
      :zen.fhir/content :bundled}},

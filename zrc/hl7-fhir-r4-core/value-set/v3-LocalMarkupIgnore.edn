@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Tells a receiver to ignore just the local markup tags (local_markup, local_header, local_attr) when value=\"markup\", or to ignore the local markup tags and all contained content when value=\"all\"",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-LocalMarkupIgnore",

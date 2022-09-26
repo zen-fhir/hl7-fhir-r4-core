@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set captures the set of indicator codes defined by the CDS Hooks specification.",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url "http://cds-hooks.hl7.org/CodeSystem/indicator",
      :zen.fhir/content :bundled}},

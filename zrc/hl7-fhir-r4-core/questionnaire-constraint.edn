@@ -6,7 +6,7 @@
    hl7-fhir-r4-core.value-set.constraint-severity
    hl7-fhir-r4-core.id},
  schema
- {:zen.fhir/version "0.5.21-9",
+ {:zen.fhir/version "0.5.21-10",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/questionnaire-constraint",

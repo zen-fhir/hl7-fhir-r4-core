@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "A code that indicates how the server supports conditional read.",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/conditional-read-status",
      :zen.fhir/content :bundled}},

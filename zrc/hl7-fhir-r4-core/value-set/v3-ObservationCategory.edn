@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " High level observation categories for the general type of observation being made. URL: http://hl7-fhir.github.io/valueset-observation-category.html This is an inline code system http://hl7.org/fhir/observation-category.",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-ObservationCategory",

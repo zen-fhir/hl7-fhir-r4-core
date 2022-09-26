@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " Security observation values used to indicate security control metadata.  V:SecurityControl is the union of V:SecurityPolicy,V:ObligationPolicy, V:RefrainPolicy, V:PurposeOfUse, and V:GeneralPurpose of Use used to populate the SecurityControlObservationValue attribute in order to convey one or more nonhierarchical security control metadata dictating handling caveats, purpose of use, dissemination controls and other refrain policies, and obligations to which a custodian or receiver is required to comply.",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ActCode",
      :zen.fhir/content :bundled}

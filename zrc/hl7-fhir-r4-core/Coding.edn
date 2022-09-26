@@ -13,7 +13,7 @@
   :zen.fhir/type "Coding",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Coding",
-  :zen.fhir/version "0.5.21-9",
+  :zen.fhir/version "0.5.21-10",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :type zen/map,
   :keys
