@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " A subtype of ManufacturedMaterial used in an activity, without being substantially changed through that activity.  The kind of device is identified by the code attribute inherited from Entity.  Usage:\r\nThis includes durable (reusable) medical equipment as well as disposable equipment.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-EntityClass",
      :zen.fhir/content :bundled}},

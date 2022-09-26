@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The workflow/clinical status of the composition.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/composition-status",
      :zen.fhir/content :bundled}},

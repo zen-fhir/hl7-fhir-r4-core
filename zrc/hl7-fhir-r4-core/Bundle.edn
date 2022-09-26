@@ -16,7 +16,7 @@
    hl7-fhir-r4-core.Resource
    hl7-fhir-r4-core.value-set.search-entry-mode},
  schema
- {:zen.fhir/version "0.5.21-8",
+ {:zen.fhir/version "0.5.21-9",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
   :zen.fhir/profileUri

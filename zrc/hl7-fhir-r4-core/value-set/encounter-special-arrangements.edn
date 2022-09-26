@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",

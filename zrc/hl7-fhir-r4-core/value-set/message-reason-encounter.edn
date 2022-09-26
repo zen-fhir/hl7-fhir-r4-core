@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",

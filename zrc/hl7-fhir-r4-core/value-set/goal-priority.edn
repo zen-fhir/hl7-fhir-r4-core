@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Indicates the level of importance associated with reaching or sustaining a goal.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/goal-priority",
      :zen.fhir/content :bundled}},

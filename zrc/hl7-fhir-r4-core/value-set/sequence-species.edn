@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes identifying atomic results of observations when value is type codeableConcept. This value set includes all the children of SNOMED CT Concepts from SCTIDs 404684003 Clinical finding (finding), 410607006 Organism (organism),362981000 Qualifier value (qualifier value), 105590001 Substance (substance), and 123037004 Body structure (body structure).  It is provided as a suggestive example",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},

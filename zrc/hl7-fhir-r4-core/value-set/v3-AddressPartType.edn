@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "  Description:\r\nCode that specifies whether an address part names the street, city, country, postal code, post box, etc. Discussion: The hierarchical nature of these concepts shows composition.  E.g. \"Street Name\" is part of \"Street Address Line\"",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-AddressPartType",

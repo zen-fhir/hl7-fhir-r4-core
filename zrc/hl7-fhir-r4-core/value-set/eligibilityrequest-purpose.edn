@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "A code specifying the types of information being requested.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/eligibilityrequest-purpose",
      :zen.fhir/content :bundled}},

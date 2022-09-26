@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Describes the operational status of the DeviceMetric.",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/metric-operational-status",
      :zen.fhir/content :bundled}},

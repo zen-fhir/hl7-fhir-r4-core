@@ -5,7 +5,7 @@
   :zen/desc "glstring.",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-glstring",
-  :zen.fhir/version "0.5.21-8",
+  :zen.fhir/version "0.5.21-9",
   :type zen/map,
   :keys
   {:url
