@@ -13,7 +13,7 @@
   :zen.fhir/type "Resource",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Resource",
-  :zen.fhir/version "0.5.21-11",
+  :zen.fhir/version "0.5.21-14",
   :confirms #{zen.fhir/Resource},
   :type zen/map,
   :keys

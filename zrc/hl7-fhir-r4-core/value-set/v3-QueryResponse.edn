@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " A code classifying the general nature of the response to a given query. Includes whether or not data was found, or whether an error occurred.",
-  :zen.fhir/version "0.5.21-11",
+  :zen.fhir/version "0.5.21-14",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-QueryResponse",

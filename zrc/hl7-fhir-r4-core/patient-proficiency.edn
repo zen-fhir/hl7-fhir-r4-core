@@ -9,7 +9,7 @@
   :zen/desc "Proficiency level of the communication.",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/patient-proficiency",
-  :zen.fhir/version "0.5.21-11",
+  :zen.fhir/version "0.5.21-14",
   :type zen/map,
   :keys
   {:level

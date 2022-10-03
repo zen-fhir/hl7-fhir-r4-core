@@ -8,6 +8,6 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/request-relevantHistory",
-  :zen.fhir/version "0.5.21-11",
+  :zen.fhir/version "0.5.21-14",
   :confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
   :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Provenance/schema}}}}
