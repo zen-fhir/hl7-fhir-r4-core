@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "  Description:\r\nIdentifies allowed codes for HL7aTMs v3 conformance property.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-hl7V3Conformance",

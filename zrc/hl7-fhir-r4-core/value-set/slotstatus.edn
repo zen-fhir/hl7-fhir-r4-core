@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The free/busy status of the slot.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/slotstatus",
      :zen.fhir/content :bundled}},

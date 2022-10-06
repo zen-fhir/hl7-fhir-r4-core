@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The nature of the relationship between the patient and the contact person.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0131",
      :zen.fhir/content :bundled}},

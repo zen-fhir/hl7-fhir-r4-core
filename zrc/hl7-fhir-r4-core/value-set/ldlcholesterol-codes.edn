@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "LDL Cholesterol codes - measured or calculated",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://loinc.org", :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/ldlcholesterol-codes",

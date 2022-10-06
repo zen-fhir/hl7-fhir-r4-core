@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes the FHIR resource types, along with some other important content class codes",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url
      "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",

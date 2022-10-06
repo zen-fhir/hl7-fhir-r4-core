@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "This value set includes the four Consent scope codes.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/consentscope",
      :zen.fhir/content :bundled}},

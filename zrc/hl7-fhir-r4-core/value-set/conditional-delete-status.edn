@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "A code that indicates how the server supports conditional delete.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/conditional-delete-status",
      :zen.fhir/content :bundled}},

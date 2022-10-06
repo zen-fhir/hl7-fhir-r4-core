@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The purpose of the Claim: predetermination, preauthorization, claim.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/claim-use",
      :zen.fhir/content :bundled}},

@@ -18,7 +18,7 @@
    hl7-fhir-r4-core.value-set.report-participant-type
    hl7-fhir-r4-core.value-set.report-result-codes},
  schema
- {:zen.fhir/version "0.5.22",
+ {:zen.fhir/version "0.5.22-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

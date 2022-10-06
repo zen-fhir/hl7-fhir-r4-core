@@ -7,5 +7,5 @@
   :zen.fhir/type "canonical",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/questionnaire-unitValueSet",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :confirms #{hl7-fhir-r4-core.canonical/schema}}}

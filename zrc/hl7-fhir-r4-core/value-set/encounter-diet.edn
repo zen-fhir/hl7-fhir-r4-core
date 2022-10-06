@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
-  :zen.fhir/version "0.5.22",
+  :zen.fhir/version "0.5.22-1",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/diet",
      :zen.fhir/content :bundled}},
