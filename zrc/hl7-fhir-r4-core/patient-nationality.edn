@@ -6,7 +6,7 @@
   :zen/desc "The nationality of the patient.",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/patient-nationality",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :type zen/map,
   :keys
   {:code

@@ -2,7 +2,7 @@
  import
  #{hl7-fhir-r4-core.decimal zen.fhir hl7-fhir-r4-core.CodeableConcept},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/observation-geneticsAncestry",

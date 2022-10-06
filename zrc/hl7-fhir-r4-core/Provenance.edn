@@ -11,9 +11,9 @@
    hl7-fhir-r4-core.Patient
    hl7-fhir-r4-core.instant
    hl7-fhir-r4-core.PractitionerRole
-   hl7-fhir-r4-core.value-set.v3-PurposeOfUse
    hl7-fhir-r4-core.uri
    hl7-fhir-r4-core.value-set.provenance-entity-role
+   hl7-terminology-r4.value-set.v3-PurposeOfUse
    hl7-fhir-r4-core.value-set.security-role-type
    hl7-fhir-r4-core.Reference
    hl7-fhir-r4-core.Element
@@ -25,7 +25,7 @@
    hl7-fhir-r4-core.Location
    hl7-fhir-r4-core.Organization},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -115,7 +115,7 @@
     :every
     {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
      :zen.fhir/value-set
-     {:symbol hl7-fhir-r4-core.value-set.v3-PurposeOfUse/value-set,
+     {:symbol hl7-terminology-r4.value-set.v3-PurposeOfUse/value-set,
       :strength :extensible},
      :zen/desc "Reason the activity is occurring"}},
    :activity

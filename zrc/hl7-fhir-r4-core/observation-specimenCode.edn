@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.observation-specimenCode,
  import
  #{zen.fhir
-   hl7-fhir-r4-core.value-set.v2-0487
+   hl7-terminology-r4.value-set.v2-0487
    hl7-fhir-r4-core.CodeableConcept},
  schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
@@ -10,8 +10,8 @@
   :zen.fhir/type "CodeableConcept",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/observation-specimenCode",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
   :zen.fhir/value-set
-  {:symbol hl7-fhir-r4-core.value-set.v2-0487/value-set,
+  {:symbol hl7-terminology-r4.value-set.v2-0487/value-set,
    :strength :example}}}

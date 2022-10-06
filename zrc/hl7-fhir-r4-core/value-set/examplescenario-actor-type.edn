@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The type of actor - system or human.",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/examplescenario-actor-type",
      :zen.fhir/content :bundled}},

@@ -42,7 +42,6 @@
    hl7-fhir-r4-core.PractitionerRole
    hl7-fhir-r4-core.value-set.contract-assetcontext
    hl7-fhir-r4-core.value-set.contract-action
-   hl7-fhir-r4-core.value-set.v3-PurposeOfUse
    hl7-fhir-r4-core.value-set.consent-content-class
    hl7-fhir-r4-core.Quantity
    hl7-fhir-r4-core.value-set.contract-assetscope
@@ -53,6 +52,7 @@
    hl7-fhir-r4-core.value-set.contract-scope
    hl7-fhir-r4-core.value-set.provenance-agent-role
    hl7-fhir-r4-core.unsignedInt
+   hl7-terminology-r4.value-set.v3-PurposeOfUse
    hl7-fhir-r4-core.Composition
    hl7-fhir-r4-core.value-set.contract-content-derivative
    hl7-fhir-r4-core.QuestionnaireResponse
@@ -75,7 +75,7 @@
    hl7-fhir-r4-core.value-set.contract-actionstatus
    hl7-fhir-r4-core.value-set.contract-term-type
    hl7-fhir-r4-core.value-set.provenance-agent-type
-   hl7-fhir-r4-core.value-set.v3-ActConsentDirective
+   hl7-terminology-r4.value-set.v3-ActConsentDirective
    hl7-fhir-r4-core.Location
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.asset-availability},
@@ -86,7 +86,7 @@
   :zen.fhir/type "Contract",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Contract",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -454,7 +454,7 @@
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set
          {:symbol
-          hl7-fhir-r4-core.value-set.v3-ActConsentDirective/value-set,
+          hl7-terminology-r4.value-set.v3-ActConsentDirective/value-set,
           :strength :extensible},
          :zen/desc "Accepting party choice"},
         :text
@@ -541,7 +541,7 @@
           {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
            :zen.fhir/value-set
            {:symbol
-            hl7-fhir-r4-core.value-set.v3-PurposeOfUse/value-set,
+            hl7-terminology-r4.value-set.v3-PurposeOfUse/value-set,
             :strength :example},
            :zen/desc "Why is action (not) needed?"}},
          :type
@@ -613,7 +613,7 @@
          {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
           :zen.fhir/value-set
           {:symbol
-           hl7-fhir-r4-core.value-set.v3-PurposeOfUse/value-set,
+           hl7-terminology-r4.value-set.v3-PurposeOfUse/value-set,
            :strength :example},
           :zen/desc "Purpose for the Contract Term Action"},
          :performerLinkId

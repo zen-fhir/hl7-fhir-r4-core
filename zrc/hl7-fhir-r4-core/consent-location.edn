@@ -8,6 +8,6 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/consent-location",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
   :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Location/schema}}}}

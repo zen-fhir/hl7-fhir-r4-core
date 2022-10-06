@@ -33,7 +33,7 @@
   :zen.fhir/type "HealthcareService",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,

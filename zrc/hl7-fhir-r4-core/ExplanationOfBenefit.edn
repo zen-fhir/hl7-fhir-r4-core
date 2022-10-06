@@ -16,6 +16,7 @@
    hl7-fhir-r4-core.value-set.ex-diagnosistype
    hl7-fhir-r4-core.value-set.payment-adjustment-reason
    zen.fhir
+   hl7-terminology-r4.value-set.v3-ActIncidentCode
    hl7-fhir-r4-core.Money
    hl7-fhir-r4-core.value-set.ex-benefitcategory
    hl7-fhir-r4-core.value-set.ex-program-code
@@ -33,7 +34,6 @@
    hl7-fhir-r4-core.Patient
    hl7-fhir-r4-core.value-set.icd-10
    hl7-fhir-r4-core.value-set.ex-paymenttype
-   hl7-fhir-r4-core.value-set.v3-ActIncidentCode
    hl7-fhir-r4-core.value-set.ex-procedure-type
    hl7-fhir-r4-core.value-set.forms
    hl7-fhir-r4-core.ClaimResponse
@@ -78,7 +78,7 @@
    hl7-fhir-r4-core.Claim
    hl7-fhir-r4-core.Address},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -924,7 +924,8 @@
      :type
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
       :zen.fhir/value-set
-      {:symbol hl7-fhir-r4-core.value-set.v3-ActIncidentCode/value-set,
+      {:symbol
+       hl7-terminology-r4.value-set.v3-ActIncidentCode/value-set,
        :strength :extensible},
       :zen/desc "The nature of the accident"},
      :location

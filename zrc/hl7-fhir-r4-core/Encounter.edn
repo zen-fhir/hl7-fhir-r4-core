@@ -1,6 +1,7 @@
 {ns hl7-fhir-r4-core.Encounter,
  import
  #{hl7-fhir-r4-core.Period
+   hl7-terminology-r4.value-set.v3-ActEncounterCode
    hl7-fhir-r4-core.Observation
    hl7-fhir-r4-core.value-set.encounter-diet
    hl7-fhir-r4-core.Duration
@@ -15,11 +16,10 @@
    hl7-fhir-r4-core.value-set.encounter-discharge-disposition
    hl7-fhir-r4-core.Patient
    hl7-fhir-r4-core.value-set.encounter-participant-type
-   hl7-fhir-r4-core.value-set.v3-ActEncounterCode
-   hl7-fhir-r4-core.value-set.v2-0092
    hl7-fhir-r4-core.value-set.encounter-type
    hl7-fhir-r4-core.EpisodeOfCare
    hl7-fhir-r4-core.Coding
+   hl7-terminology-r4.value-set.v3-ActPriority
    hl7-fhir-r4-core.value-set.diagnosis-role
    hl7-fhir-r4-core.Appointment
    hl7-fhir-r4-core.PractitionerRole
@@ -35,7 +35,6 @@
    hl7-fhir-r4-core.Account
    hl7-fhir-r4-core.Procedure
    hl7-fhir-r4-core.Encounter
-   hl7-fhir-r4-core.value-set.v3-ActPriority
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.value-set.encounter-status
@@ -43,9 +42,10 @@
    hl7-fhir-r4-core.Location
    hl7-fhir-r4-core.value-set.encounter-special-arrangements
    hl7-fhir-r4-core.Organization
-   hl7-fhir-r4-core.value-set.encounter-admit-source},
+   hl7-fhir-r4-core.value-set.encounter-admit-source
+   hl7-terminology-r4.value-set.v2-0092},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -185,7 +185,7 @@
       {:confirms #{hl7-fhir-r4-core.Coding/schema},
        :zen.fhir/value-set
        {:symbol
-        hl7-fhir-r4-core.value-set.v3-ActEncounterCode/value-set,
+        hl7-terminology-r4.value-set.v3-ActEncounterCode/value-set,
         :strength :extensible},
        :zen/desc "inpatient | outpatient | ambulatory | emergency +"},
       :period
@@ -197,7 +197,7 @@
    :priority
    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
     :zen.fhir/value-set
-    {:symbol hl7-fhir-r4-core.value-set.v3-ActPriority/value-set,
+    {:symbol hl7-terminology-r4.value-set.v3-ActPriority/value-set,
      :strength :example},
     :zen/desc "Indicates the urgency of the encounter"},
    :status
@@ -212,7 +212,8 @@
    {:confirms #{hl7-fhir-r4-core.Coding/schema},
     :fhir/flags #{:SU},
     :zen.fhir/value-set
-    {:symbol hl7-fhir-r4-core.value-set.v3-ActEncounterCode/value-set,
+    {:symbol
+     hl7-terminology-r4.value-set.v3-ActEncounterCode/value-set,
      :strength :extensible},
     :zen/desc "Classification of patient encounter"},
    :length
@@ -276,7 +277,7 @@
      :reAdmission
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
       :zen.fhir/value-set
-      {:symbol hl7-fhir-r4-core.value-set.v2-0092/value-set,
+      {:symbol hl7-terminology-r4.value-set.v2-0092/value-set,
        :strength :example},
       :zen/desc
       "The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission"},

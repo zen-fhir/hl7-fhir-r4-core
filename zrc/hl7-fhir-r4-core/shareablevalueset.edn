@@ -9,7 +9,7 @@
    hl7-fhir-r4-core.ValueSet
    hl7-fhir-r4-core.Element},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms #{hl7-fhir-r4-core.ValueSet/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri

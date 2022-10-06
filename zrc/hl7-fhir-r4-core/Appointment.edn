@@ -25,8 +25,8 @@
    hl7-fhir-r4-core.Slot
    hl7-fhir-r4-core.unsignedInt
    hl7-fhir-r4-core.value-set.service-type
-   hl7-fhir-r4-core.value-set.v2-0276
    hl7-fhir-r4-core.Reference
+   hl7-terminology-r4.value-set.v2-0276
    hl7-fhir-r4-core.positiveInt
    hl7-fhir-r4-core.ServiceRequest
    hl7-fhir-r4-core.Element
@@ -38,7 +38,7 @@
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.Location},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -196,7 +196,7 @@
    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
     :fhir/flags #{:SU},
     :zen.fhir/value-set
-    {:symbol hl7-fhir-r4-core.value-set.v2-0276/value-set,
+    {:symbol hl7-terminology-r4.value-set.v2-0276/value-set,
      :strength :preferred},
     :zen/desc
     "The style of appointment or patient that has been booked in the slot (not service type)"},

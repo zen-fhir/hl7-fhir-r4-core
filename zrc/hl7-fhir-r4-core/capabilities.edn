@@ -10,7 +10,7 @@
   :zen.fhir/type "code",
   :zen.fhir/profileUri
   "http://fhir-registry.smarthealthit.org/StructureDefinition/capabilities",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :confirms #{hl7-fhir-r4-core.code/schema},
   :zen.fhir/value-set
   {:symbol hl7-fhir-r4-core.value-set.smart-capabilities/value-set,

@@ -23,9 +23,9 @@
    hl7-fhir-r4-core.value-set.consent-policy
    hl7-fhir-r4-core.PractitionerRole
    hl7-fhir-r4-core.Consent
-   hl7-fhir-r4-core.value-set.v3-PurposeOfUse
    hl7-fhir-r4-core.value-set.consent-content-class
    hl7-fhir-r4-core.uri
+   hl7-terminology-r4.value-set.v3-PurposeOfUse
    hl7-fhir-r4-core.value-set.security-role-type
    hl7-fhir-r4-core.QuestionnaireResponse
    hl7-fhir-r4-core.Reference
@@ -39,7 +39,7 @@
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.Organization},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -78,7 +78,7 @@
       {:confirms #{hl7-fhir-r4-core.Coding/schema},
        :fhir/flags #{:SU},
        :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.v3-PurposeOfUse/value-set,
+       {:symbol hl7-terminology-r4.value-set.v3-PurposeOfUse/value-set,
         :strength :extensible},
        :zen/desc "Context of activities covered by this rule"}},
      :dataPeriod

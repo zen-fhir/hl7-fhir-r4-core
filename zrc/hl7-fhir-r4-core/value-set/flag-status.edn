@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/flag-status",
      :zen.fhir/content :bundled}},

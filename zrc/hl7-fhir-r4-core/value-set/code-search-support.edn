@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The degree to which the server supports the code search parameter on ValueSet, if it is supported.",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/code-search-support",
      :zen.fhir/content :bundled}},

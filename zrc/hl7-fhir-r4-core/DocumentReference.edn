@@ -4,7 +4,6 @@
    hl7-fhir-r4-core.Device
    hl7-fhir-r4-core.value-set.document-relationship-type
    hl7-fhir-r4-core.BackboneElement
-   hl7-fhir-r4-core.value-set.v3-ActCode
    hl7-fhir-r4-core.code
    zen.fhir
    hl7-fhir-r4-core.Group
@@ -20,6 +19,7 @@
    hl7-fhir-r4-core.value-set.security-labels
    hl7-fhir-r4-core.PractitionerRole
    hl7-fhir-r4-core.value-set.document-reference-status
+   hl7-terminology-r4.value-set.v3-ActCode
    hl7-fhir-r4-core.value-set.composition-status
    hl7-fhir-r4-core.value-set.document-classcodes
    hl7-fhir-r4-core.Reference
@@ -34,7 +34,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.formatcodes},
  schema
- {:zen.fhir/version "0.5.21-14",
+ {:zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -181,7 +181,7 @@
       :every
       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
        :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.v3-ActCode/value-set,
+       {:symbol hl7-terminology-r4.value-set.v3-ActCode/value-set,
         :strength :example},
        :zen/desc "Main clinical acts documented"}},
      :period

@@ -8,7 +8,8 @@
    hl7-fhir-r4-core.SimpleQuantity
    hl7-fhir-r4-core.code
    zen.fhir
-   hl7-fhir-r4-core.value-set.v2-0493
+   hl7-terminology-r4.value-set.v2-0916
+   hl7-terminology-r4.value-set.v2-0493
    hl7-fhir-r4-core.Annotation
    hl7-fhir-r4-core.Group
    hl7-fhir-r4-core.dateTime
@@ -18,17 +19,16 @@
    hl7-fhir-r4-core.Patient
    hl7-fhir-r4-core.value-set.specimen-processing-procedure
    hl7-fhir-r4-core.PractitionerRole
+   hl7-terminology-r4.value-set.v2-0487
    hl7-fhir-r4-core.value-set.specimen-collection-method
    hl7-fhir-r4-core.Quantity
+   hl7-terminology-r4.value-set.v2-0371
    hl7-fhir-r4-core.value-set.specimen-status
-   hl7-fhir-r4-core.value-set.v2-0487
    hl7-fhir-r4-core.Reference
    hl7-fhir-r4-core.ServiceRequest
    hl7-fhir-r4-core.Element
-   hl7-fhir-r4-core.value-set.v2-0371
    hl7-fhir-r4-core.DomainResource
    hl7-fhir-r4-core.Practitioner
-   hl7-fhir-r4-core.value-set.v2-0916
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.value-set.specimen-container-type
@@ -39,7 +39,7 @@
   :zen.fhir/type "Specimen",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Specimen",
-  :zen.fhir/version "0.5.21-14",
+  :zen.fhir/version "0.5.22",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -102,7 +102,7 @@
    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
     :fhir/flags #{:SU},
     :zen.fhir/value-set
-    {:symbol hl7-fhir-r4-core.value-set.v2-0487/value-set,
+    {:symbol hl7-terminology-r4.value-set.v2-0487/value-set,
      :strength :example},
     :zen/desc "Kind of material that forms the specimen"},
    :note
@@ -124,7 +124,7 @@
     {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
      :fhir/flags #{:SU},
      :zen.fhir/value-set
-     {:symbol hl7-fhir-r4-core.value-set.v2-0493/value-set,
+     {:symbol hl7-terminology-r4.value-set.v2-0493/value-set,
       :strength :extensible},
      :zen/desc "State of the specimen"}},
    :container
@@ -174,7 +174,7 @@
          :zen.fhir/reference
          {:refers #{hl7-fhir-r4-core.Substance/schema}}}},
        :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.v2-0371/value-set,
+       {:symbol hl7-terminology-r4.value-set.v2-0371/value-set,
         :strength :example},
        :zen/desc "Additive associated with container"}},
      :zen/desc "Direct container of specimen (tube/slide, etc.)"}},
@@ -244,7 +244,7 @@
        :Duration {:confirms #{hl7-fhir-r4-core.Duration/schema}}},
       :fhir/flags #{:SU},
       :zen.fhir/value-set
-      {:symbol hl7-fhir-r4-core.value-set.v2-0916/value-set,
+      {:symbol hl7-terminology-r4.value-set.v2-0916/value-set,
        :strength :extensible},
       :zen/desc
       "Whether or how long patient abstained from food and/or drink"}},
