@@ -11,7 +11,7 @@
   "Base StructureDefinition for Money Type: An amount of economic utility in some recognized currency.",
   :zen.fhir/type "Money",
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Money",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :type zen/map,
   :keys

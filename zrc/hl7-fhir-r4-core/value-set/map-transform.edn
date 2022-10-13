@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "How data is copied/created.",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/map-transform",
      :zen.fhir/content :bundled}},

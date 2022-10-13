@@ -19,15 +19,28 @@
     {:where
      [:or
       [:and
+       [:<=
+        [:pg/call
+         :jsonpath_extract_max_numeric
+         [:pg/sql "{{table}}.resource"]
+         "$.\"prediction\".\"probability\"[*].Range.low.value"]
+        [:pg/cast [:pg/sql "{{param}}"] :numeric]]
+       [:>=
+        [:pg/call
+         :jsonpath_extract_min_numeric
+         [:pg/sql "{{table}}.resource"]
+         "$.\"prediction\".\"probability\"[*].Range.high.value"]
+        [:pg/cast [:pg/sql "{{param}}"] :numeric]]]
+      [:and
        [:>=
         [:pg/call
          :jsonpath_extract_max_numeric
          [:pg/sql "{{table}}.resource"]
-         "$.\"prediction\".\"probability\"[*]"]
+         "$.\"prediction\".\"probability\"[*].decimal"]
         [:pg/cast [:pg/sql "{{param}}"] :numeric]]
        [:<=
         [:pg/call
          :jsonpath_extract_min_numeric
          [:pg/sql "{{table}}.resource"]
-         "$.\"prediction\".\"probability\"[*]"]
+         "$.\"prediction\".\"probability\"[*].decimal"]
         [:pg/cast [:pg/sql "{{param}}"] :numeric]]]]}}}}}

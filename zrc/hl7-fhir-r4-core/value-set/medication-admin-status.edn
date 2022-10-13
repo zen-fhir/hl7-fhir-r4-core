@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "MedicationAdministration Status Codes",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/medication-admin-status",

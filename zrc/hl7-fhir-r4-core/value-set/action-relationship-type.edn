@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Defines the types of relationships between actions.",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/action-relationship-type",
      :zen.fhir/content :bundled}},

@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The allowable request method or HTTP operation codes.",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/http-operations",
      :zen.fhir/content :bundled}},

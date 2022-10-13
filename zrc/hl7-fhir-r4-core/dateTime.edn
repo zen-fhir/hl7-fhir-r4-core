@@ -7,5 +7,5 @@
   :zen.fhir/type "dateTime",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/dateTime",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :type zen/string}}

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "An HL7 administrative unit that owns artifacts in the FHIR specification.",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/hl7-work-group",
      :zen.fhir/content :bundled}},

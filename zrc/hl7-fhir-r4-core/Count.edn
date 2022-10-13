@@ -6,5 +6,5 @@
   "Base StructureDefinition for Count Type: A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.",
   :zen.fhir/type "Count",
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Count",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :confirms #{hl7-fhir-r4-core.Quantity/schema}}}

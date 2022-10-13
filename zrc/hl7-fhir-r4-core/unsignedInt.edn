@@ -7,6 +7,6 @@
   :zen.fhir/type "unsignedInt",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/unsignedInt",
-  :zen.fhir/version "0.5.22-1",
+  :zen.fhir/version "0.5.23",
   :type zen/integer,
   :confirms #{hl7-fhir-r4-core.integer/schema}}}
