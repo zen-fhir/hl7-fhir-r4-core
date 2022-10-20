@@ -3,9 +3,15 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Color of the container cap.",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/container-cap",
      :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/container-cap",
-  :version "4.0.1"}}
+  :version "4.0.1",
+  :ftr
+  {:module "ftr",
+   :source-url "node_modules//hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "zen-packages//hl7-fhir-r4-core/",
+   :tag "init"}}}

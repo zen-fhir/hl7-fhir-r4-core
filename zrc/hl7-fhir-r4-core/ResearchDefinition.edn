@@ -25,7 +25,7 @@
    hl7-fhir-r4-core.value-set.subject-type
    hl7-fhir-r4-core.ResearchElementDefinition},
  schema
- {:zen.fhir/version "0.5.23",
+ {:zen.fhir/version "0.5.24-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

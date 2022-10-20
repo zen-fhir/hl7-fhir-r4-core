@@ -6,4 +6,4 @@
   "Logical Model: A pattern to be followed by resources that represent the performance of some activity, possibly in accordance with a request or service definition.",
   :zen.fhir/type "Event",
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Event",
-  :zen.fhir/version "0.5.23"}}
+  :zen.fhir/version "0.5.24-1"}}

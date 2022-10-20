@@ -10,7 +10,7 @@
   :zen.fhir/type "code",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :confirms #{hl7-fhir-r4-core.code/schema},
   :zen.fhir/value-set
   {:symbol hl7-fhir-r4-core.value-set.name-part-qualifier/value-set,

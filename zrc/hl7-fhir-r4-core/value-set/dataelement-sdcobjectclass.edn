@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The allowed codes for identifying the ISO 11179 ObjectClass for a particular data element if intended for registration/use within the U.S. Structured Data Capture (SDC) project.",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :fhir/code-systems
   #{{:fhir/url "http://loinc.org", :zen.fhir/content :not-present}
     {:fhir/url "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -12,4 +12,10 @@
     {:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},
   :uri "http://hl7.org/fhir/ValueSet/dataelement-sdcobjectclass",
-  :version "4.0.1"}}
+  :version "4.0.1",
+  :ftr
+  {:module "ftr",
+   :source-url "node_modules//hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "zen-packages//hl7-fhir-r4-core/",
+   :tag "init"}}}

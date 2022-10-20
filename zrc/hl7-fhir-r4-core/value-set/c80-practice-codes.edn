@@ -4,8 +4,14 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct", :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/c80-practice-codes",
-  :version "4.0.1"}}
+  :version "4.0.1",
+  :ftr
+  {:module "ftr",
+   :source-url "node_modules//hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "zen-packages//hl7-fhir-r4-core/",
+   :tag "init"}}}
