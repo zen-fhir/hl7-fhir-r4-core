@@ -11,7 +11,7 @@
   :zen.fhir/type "DomainResource",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/DomainResource",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :type zen/map,
   :keys

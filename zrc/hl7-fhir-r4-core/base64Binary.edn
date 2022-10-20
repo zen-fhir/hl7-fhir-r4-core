@@ -7,5 +7,5 @@
   :zen.fhir/type "base64Binary",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/base64Binary",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :type zen/string}}

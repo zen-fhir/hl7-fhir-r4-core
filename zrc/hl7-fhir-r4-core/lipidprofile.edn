@@ -7,7 +7,7 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.CodeableConcept},
  schema
- {:zen.fhir/version "0.5.23",
+ {:zen.fhir/version "0.5.24-1",
   :confirms
   #{hl7-fhir-r4-core.DiagnosticReport/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},

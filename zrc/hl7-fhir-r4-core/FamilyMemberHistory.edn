@@ -33,7 +33,7 @@
    hl7-fhir-r4-core.Age
    hl7-fhir-r4-core.value-set.clinical-findings},
  schema
- {:zen.fhir/version "0.5.23",
+ {:zen.fhir/version "0.5.24-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

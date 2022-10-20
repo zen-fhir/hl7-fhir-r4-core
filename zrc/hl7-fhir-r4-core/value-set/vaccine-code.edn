@@ -4,11 +4,17 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This identifies the vaccine substance administered - CVX codes.",
-  :zen.fhir/version "0.5.23",
+  :zen.fhir/version "0.5.24-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/sid/cvx",
      :zen.fhir/content :not-present}
     {:fhir/url "urn:oid:1.2.36.1.2001.1005.17",
      :zen.fhir/content :not-present}},
   :uri "http://hl7.org/fhir/ValueSet/vaccine-code",
-  :version "4.0.1"}}
+  :version "4.0.1",
+  :ftr
+  {:module "ftr",
+   :source-url "node_modules//hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "zen-packages//hl7-fhir-r4-core/",
+   :tag "init"}}}
