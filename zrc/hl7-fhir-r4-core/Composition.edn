@@ -32,7 +32,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.v3-ConfidentialityClassification},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -64,73 +64,7 @@
    :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :section
    {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:orderedBy
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.list-order/value-set,
-        :strength :preferred},
-       :zen/desc "Order of section entries"},
-      :section
-      {:type zen/vector, :every #:zen{:desc "Nested Section"}},
-      :mode
-      {:confirms #{hl7-fhir-r4-core.code/schema},
-       :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.list-mode/value-set,
-        :strength :required},
-       :zen/desc "working | snapshot | changes"},
-      :title
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Label for section (e.g. for ToC)"},
-      :emptyReason
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.list-empty-reason/value-set,
-        :strength :preferred},
-       :zen/desc "Why the section is empty"},
-      :author
-      {:type zen/vector,
-       :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :zen.fhir/reference
-        {:refers
-         #{hl7-fhir-r4-core.Patient/schema
-           hl7-fhir-r4-core.PractitionerRole/schema
-           hl7-fhir-r4-core.Organization/schema
-           hl7-fhir-r4-core.Device/schema
-           hl7-fhir-r4-core.Practitioner/schema
-           hl7-fhir-r4-core.RelatedPerson/schema}},
-        :zen/desc "Who and/or what authored the section"}},
-      :code
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.doc-section-codes/value-set,
-        :strength :example},
-       :zen/desc "Classification of section (recommended)"},
-      :focus
-      {:confirms
-       #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-       :zen.fhir/reference {:refers #{}},
-       :zen/desc
-       "Who/what the section is about, when it is not about the subject of composition"},
-      :entry
-      {:type zen/vector,
-       :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :zen.fhir/reference {:refers #{}},
-        :zen/desc "A reference to data that supports this section"}},
-      :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_mode {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :text
-      {:confirms #{hl7-fhir-r4-core.Narrative/schema},
-       :zen/desc
-       "Text summary of the section, for human interpretation"}},
-     :zen/desc "Composition is broken into sections"}},
+    :every {:confirms #{hl7-fhir-r4-core.Composition/section-schema}}},
    :_status {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :attester
    {:type zen/vector,
@@ -278,4 +212,73 @@
      hl7-fhir-r4-core.value-set.v3-ConfidentialityClassification/value-set,
      :strength :required},
     :zen/desc "As defined by affinity domain"}},
-  :zen.fhir/type "Composition"}}
+  :zen.fhir/type "Composition"},
+ section-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:orderedBy
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.list-order/value-set,
+     :strength :preferred},
+    :zen/desc "Order of section entries"},
+   :section
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Composition/section-schema},
+     :zen/desc "Nested Section"}},
+   :mode
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.list-mode/value-set,
+     :strength :required},
+    :zen/desc "working | snapshot | changes"},
+   :title
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Label for section (e.g. for ToC)"},
+   :emptyReason
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.list-empty-reason/value-set,
+     :strength :preferred},
+    :zen/desc "Why the section is empty"},
+   :author
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+     :zen.fhir/reference
+     {:refers
+      #{hl7-fhir-r4-core.Patient/schema
+        hl7-fhir-r4-core.PractitionerRole/schema
+        hl7-fhir-r4-core.Organization/schema
+        hl7-fhir-r4-core.Device/schema
+        hl7-fhir-r4-core.Practitioner/schema
+        hl7-fhir-r4-core.RelatedPerson/schema}},
+     :zen/desc "Who and/or what authored the section"}},
+   :code
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.doc-section-codes/value-set,
+     :strength :example},
+    :zen/desc "Classification of section (recommended)"},
+   :focus
+   {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+    :zen.fhir/reference {:refers #{}},
+    :zen/desc
+    "Who/what the section is about, when it is not about the subject of composition"},
+   :entry
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+     :zen.fhir/reference {:refers #{}},
+     :zen/desc "A reference to data that supports this section"}},
+   :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_mode {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :text
+   {:confirms #{hl7-fhir-r4-core.Narrative/schema},
+    :zen/desc
+    "Text summary of the section, for human interpretation"}},
+  :zen/desc "Composition is broken into sections"}}

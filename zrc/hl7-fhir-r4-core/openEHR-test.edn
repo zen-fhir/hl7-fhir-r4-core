@@ -11,7 +11,7 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/openEHR-test",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
   :zen.fhir/reference
   {:refers

@@ -24,9 +24,49 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.Binary
    hl7-fhir-r4-core.DomainResource
+   hl7-fhir-r4-core.ImplementationGuide
    hl7-fhir-r4-core.CodeableConcept},
+ definition-page-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:name
+   {:fhir/polymorphic true,
+    :exclusive-keys #{#{:url :Reference}},
+    :type zen/map,
+    :keys
+    {:url {:confirms #{hl7-fhir-r4-core.url/schema}},
+     :_url {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :Reference
+     {:confirms
+      #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+      :zen.fhir/reference
+      {:refers #{hl7-fhir-r4-core.Binary/schema}}}},
+    :zen/desc "Where to find that page"},
+   :title
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Short title shown for navigational assistance"},
+   :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :generation
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.guide-page-generation/value-set,
+     :strength :required},
+    :zen/desc "html | markdown | xml | generated"},
+   :_generation {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :page
+   {:type zen/vector,
+    :every
+    {:confirms
+     #{hl7-fhir-r4-core.ImplementationGuide/definition-page-schema},
+     :zen/desc "Nested Pages / Sections"}}},
+  :require #{:generation :name :title},
+  :zen/desc "Page/Section in the Guide"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -110,39 +150,8 @@
        :zen/desc "Resource in the implementation guide"},
       :minItems 1},
      :page
-     {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-      :type zen/map,
-      :keys
-      {:name
-       {:fhir/polymorphic true,
-        :exclusive-keys #{#{:url :Reference}},
-        :type zen/map,
-        :keys
-        {:url {:confirms #{hl7-fhir-r4-core.url/schema}},
-         :_url {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :Reference
-         {:confirms
-          #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-          :zen.fhir/reference
-          {:refers #{hl7-fhir-r4-core.Binary/schema}}}},
-        :zen/desc "Where to find that page"},
-       :title
-       {:confirms #{hl7-fhir-r4-core.string/schema},
-        :zen/desc "Short title shown for navigational assistance"},
-       :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
-       :generation
-       {:confirms #{hl7-fhir-r4-core.code/schema},
-        :zen.fhir/value-set
-        {:symbol
-         hl7-fhir-r4-core.value-set.guide-page-generation/value-set,
-         :strength :required},
-        :zen/desc "html | markdown | xml | generated"},
-       :_generation {:confirms #{hl7-fhir-r4-core.Element/schema}},
-       :page
-       {:type zen/vector,
-        :every #:zen{:desc "Nested Pages / Sections"}}},
-      :require #{:generation :name :title},
-      :zen/desc "Page/Section in the Guide"},
+     {:confirms
+      #{hl7-fhir-r4-core.ImplementationGuide/definition-page-schema}},
      :parameter
      {:type zen/vector,
       :every

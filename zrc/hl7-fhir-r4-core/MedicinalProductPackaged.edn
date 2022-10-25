@@ -9,6 +9,7 @@
    hl7-fhir-r4-core.MedicinalProductManufactured
    hl7-fhir-r4-core.DeviceDefinition
    hl7-fhir-r4-core.Reference
+   hl7-fhir-r4-core.MedicinalProductPackaged
    hl7-fhir-r4-core.MedicinalProductAuthorization
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.DomainResource
@@ -17,8 +18,93 @@
    hl7-fhir-r4-core.MedicinalProduct
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.ProductShelfLife},
+ packageItem-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:manufacturedItem
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+     :fhir/flags #{:SU},
+     :zen.fhir/reference
+     {:refers #{hl7-fhir-r4-core.MedicinalProductManufactured/schema}},
+     :zen/desc
+     "The manufactured item as contained in the packaged medicinal product"}},
+   :otherCharacteristics
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "Other codeable characteristics"}},
+   :shelfLifeStorage
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.ProductShelfLife/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "Shelf Life and storage information"}},
+   :alternateMaterial
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "A possible alternate material for the packaging"}},
+   :type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "The physical type of the container of the medicine"},
+   :material
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "Material type of the package item"}},
+   :identifier
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Identifier/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "Including possibly Data Carrier Identifier"}},
+   :manufacturer
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+     :fhir/flags #{:SU},
+     :zen.fhir/reference
+     {:refers #{hl7-fhir-r4-core.Organization/schema}},
+     :zen/desc "Manufacturer of this Package Item"}},
+   :device
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+     :fhir/flags #{:SU},
+     :zen.fhir/reference
+     {:refers #{hl7-fhir-r4-core.DeviceDefinition/schema}},
+     :zen/desc "A device accompanying a medicinal product"}},
+   :quantity
+   {:confirms #{hl7-fhir-r4-core.Quantity/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1"},
+   :physicalCharacteristics
+   {:confirms #{hl7-fhir-r4-core.ProdCharacteristic/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "Dimensions, color etc."},
+   :packageItem
+   {:type zen/vector,
+    :every
+    {:fhir/flags #{:SU},
+     :confirms
+     #{hl7-fhir-r4-core.MedicinalProductPackaged/packageItem-schema},
+     :zen/desc "Allows containers within containers"}}},
+  :require #{:type :quantity},
+  :fhir/flags #{:SU},
+  :zen/desc
+  "A packaging item, as a contained for medicine, possibly with other packaging items within"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -94,89 +180,7 @@
    :packageItem
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:manufacturedItem
-      {:type zen/vector,
-       :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :fhir/flags #{:SU},
-        :zen.fhir/reference
-        {:refers
-         #{hl7-fhir-r4-core.MedicinalProductManufactured/schema}},
-        :zen/desc
-        "The manufactured item as contained in the packaged medicinal product"}},
-      :otherCharacteristics
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "Other codeable characteristics"}},
-      :shelfLifeStorage
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.ProductShelfLife/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "Shelf Life and storage information"}},
-      :alternateMaterial
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "A possible alternate material for the packaging"}},
-      :type
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "The physical type of the container of the medicine"},
-      :material
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "Material type of the package item"}},
-      :identifier
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.Identifier/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "Including possibly Data Carrier Identifier"}},
-      :manufacturer
-      {:type zen/vector,
-       :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :fhir/flags #{:SU},
-        :zen.fhir/reference
-        {:refers #{hl7-fhir-r4-core.Organization/schema}},
-        :zen/desc "Manufacturer of this Package Item"}},
-      :device
-      {:type zen/vector,
-       :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :fhir/flags #{:SU},
-        :zen.fhir/reference
-        {:refers #{hl7-fhir-r4-core.DeviceDefinition/schema}},
-        :zen/desc "A device accompanying a medicinal product"}},
-      :quantity
-      {:confirms #{hl7-fhir-r4-core.Quantity/schema},
-       :fhir/flags #{:SU},
-       :zen/desc
-       "The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1"},
-      :physicalCharacteristics
-      {:confirms #{hl7-fhir-r4-core.ProdCharacteristic/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "Dimensions, color etc."},
-      :packageItem
-      {:type zen/vector,
-       :every
-       {:fhir/flags #{:SU},
-        :zen/desc "Allows containers within containers"}}},
-     :require #{:type :quantity},
-     :fhir/flags #{:SU},
-     :zen/desc
-     "A packaging item, as a contained for medicine, possibly with other packaging items within"},
+    {:confirms
+     #{hl7-fhir-r4-core.MedicinalProductPackaged/packageItem-schema}},
     :minItems 1}},
   :zen.fhir/type "MedicinalProductPackaged"}}

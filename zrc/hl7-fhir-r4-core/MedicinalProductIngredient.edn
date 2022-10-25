@@ -8,11 +8,12 @@
    hl7-fhir-r4-core.Reference
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.DomainResource
+   hl7-fhir-r4-core.MedicinalProductIngredient
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.Organization},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -68,84 +69,8 @@
       :strength
       {:type zen/vector,
        :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:presentation
-         {:confirms #{hl7-fhir-r4-core.Ratio/schema},
-          :fhir/flags #{:SU},
-          :zen/desc
-          "The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item"},
-         :presentationLowLimit
-         {:confirms #{hl7-fhir-r4-core.Ratio/schema},
-          :fhir/flags #{:SU :?!},
-          :zen/desc
-          "A lower limit for the quantity of substance in the unit of presentation. For use when there is a range of strengths, this is the lower limit, with the presentation attribute becoming the upper limit"},
-         :concentration
-         {:confirms #{hl7-fhir-r4-core.Ratio/schema},
-          :fhir/flags #{:SU},
-          :zen/desc "The strength per unitary volume (or mass)"},
-         :concentrationLowLimit
-         {:confirms #{hl7-fhir-r4-core.Ratio/schema},
-          :fhir/flags #{:SU :?!},
-          :zen/desc
-          "A lower limit for the strength per unitary volume (or mass), for when there is a range. The concentration attribute then becomes the upper limit"},
-         :measurementPoint
-         {:confirms #{hl7-fhir-r4-core.string/schema},
-          :fhir/flags #{:SU},
-          :zen/desc
-          "For when strength is measured at a particular point or distance"},
-         :_measurementPoint
-         {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :country
-         {:type zen/vector,
-          :every
-          {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-           :fhir/flags #{:SU},
-           :zen/desc
-           "The country or countries for which the strength range applies"}},
-         :referenceStrength
-         {:type zen/vector,
-          :every
-          {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-           :type zen/map,
-           :keys
-           {:substance
-            {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-             :fhir/flags #{:SU},
-             :zen/desc "Relevant reference substance"},
-            :strength
-            {:confirms #{hl7-fhir-r4-core.Ratio/schema},
-             :fhir/flags #{:SU},
-             :zen/desc
-             "Strength expressed in terms of a reference substance"},
-            :strengthLowLimit
-            {:confirms #{hl7-fhir-r4-core.Ratio/schema},
-             :fhir/flags #{:SU},
-             :zen/desc
-             "Strength expressed in terms of a reference substance"},
-            :measurementPoint
-            {:confirms #{hl7-fhir-r4-core.string/schema},
-             :fhir/flags #{:SU},
-             :zen/desc
-             "For when strength is measured at a particular point or distance"},
-            :_measurementPoint
-            {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :country
-            {:type zen/vector,
-             :every
-             {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-              :fhir/flags #{:SU},
-              :zen/desc
-              "The country or countries for which the strength range applies"}}},
-           :require #{:strength},
-           :fhir/flags #{:SU},
-           :zen/desc
-           "Strength expressed in terms of a reference substance"}}},
-        :require #{:presentation},
-        :fhir/flags #{:SU},
-        :zen/desc
-        "Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product"}}},
+       {:confirms
+        #{hl7-fhir-r4-core.MedicinalProductIngredient/specifiedSubstance-strength-schema}}}},
      :require #{:group :code},
      :fhir/flags #{:SU},
      :zen/desc
@@ -162,9 +87,91 @@
      {:type zen/vector,
       :every
       {:fhir/flags #{:SU},
+       :confirms
+       #{hl7-fhir-r4-core.MedicinalProductIngredient/specifiedSubstance-strength-schema},
        :zen/desc
        "Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product"}}},
     :require #{:code},
     :fhir/flags #{:SU},
     :zen/desc "The ingredient substance"}},
-  :zen.fhir/type "MedicinalProductIngredient"}}
+  :zen.fhir/type "MedicinalProductIngredient"},
+ specifiedSubstance-strength-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:presentation
+   {:confirms #{hl7-fhir-r4-core.Ratio/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item"},
+   :presentationLowLimit
+   {:confirms #{hl7-fhir-r4-core.Ratio/schema},
+    :fhir/flags #{:SU :?!},
+    :zen/desc
+    "A lower limit for the quantity of substance in the unit of presentation. For use when there is a range of strengths, this is the lower limit, with the presentation attribute becoming the upper limit"},
+   :concentration
+   {:confirms #{hl7-fhir-r4-core.Ratio/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "The strength per unitary volume (or mass)"},
+   :concentrationLowLimit
+   {:confirms #{hl7-fhir-r4-core.Ratio/schema},
+    :fhir/flags #{:SU :?!},
+    :zen/desc
+    "A lower limit for the strength per unitary volume (or mass), for when there is a range. The concentration attribute then becomes the upper limit"},
+   :measurementPoint
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "For when strength is measured at a particular point or distance"},
+   :_measurementPoint {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :country
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc
+     "The country or countries for which the strength range applies"}},
+   :referenceStrength
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:substance
+      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+       :fhir/flags #{:SU},
+       :zen/desc "Relevant reference substance"},
+      :strength
+      {:confirms #{hl7-fhir-r4-core.Ratio/schema},
+       :fhir/flags #{:SU},
+       :zen/desc
+       "Strength expressed in terms of a reference substance"},
+      :strengthLowLimit
+      {:confirms #{hl7-fhir-r4-core.Ratio/schema},
+       :fhir/flags #{:SU},
+       :zen/desc
+       "Strength expressed in terms of a reference substance"},
+      :measurementPoint
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :fhir/flags #{:SU},
+       :zen/desc
+       "For when strength is measured at a particular point or distance"},
+      :_measurementPoint
+      {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :country
+      {:type zen/vector,
+       :every
+       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+        :fhir/flags #{:SU},
+        :zen/desc
+        "The country or countries for which the strength range applies"}}},
+     :require #{:strength},
+     :fhir/flags #{:SU},
+     :zen/desc
+     "Strength expressed in terms of a reference substance"}}},
+  :require #{:presentation},
+  :fhir/flags #{:SU},
+  :zen/desc
+  "Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product"}}

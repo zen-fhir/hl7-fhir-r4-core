@@ -4,16 +4,10 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the data when the report of the immunization event is not based on information from the person, entity or organization who administered the vaccine. This value set is provided as a suggestive example.",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/immunization-origin",
      :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/immunization-origin",
-  :version "4.0.1",
-  :ftr
-  {:module "ftr",
-   :source-url "node_modules//hl7.fhir.r4.core",
-   :source-type :ig,
-   :ftr-path "zen-packages//hl7-fhir-r4-core/",
-   :tag "init"}}}
+  :version "4.0.1"}}

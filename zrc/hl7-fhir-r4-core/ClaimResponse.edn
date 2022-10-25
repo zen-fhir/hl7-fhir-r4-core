@@ -50,8 +50,35 @@
    hl7-fhir-r4-core.value-set.claim-use
    hl7-fhir-r4-core.Claim
    hl7-fhir-r4-core.Address},
+ item-adjudication-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:category
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.adjudication/value-set,
+     :strength :example},
+    :zen/desc "Type of adjudication information"},
+   :reason
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.adjudication-reason/value-set,
+     :strength :example},
+    :zen/desc "Explanation of adjudication outcome"},
+   :amount
+   {:confirms #{hl7-fhir-r4-core.Money/schema},
+    :zen/desc "Monetary amount"},
+   :value
+   {:confirms #{hl7-fhir-r4-core.decimal/schema},
+    :zen/desc "Non-monetary value"},
+   :_value {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:category},
+  :zen/desc "Adjudication details"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -153,7 +180,11 @@
    {:confirms #{hl7-fhir-r4-core.string/schema},
     :zen/desc "Preauthorization reference"},
    :adjudication
-   {:type zen/vector, :every #:zen{:desc "Header-level adjudication"}},
+   {:type zen/vector,
+    :every
+    {:confirms
+     #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema},
+     :zen/desc "Header-level adjudication"}},
    :_disposition {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :use
    {:confirms #{hl7-fhir-r4-core.code/schema},
@@ -215,31 +246,8 @@
       :adjudication
       {:type zen/vector,
        :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:category
-         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-          :zen.fhir/value-set
-          {:symbol hl7-fhir-r4-core.value-set.adjudication/value-set,
-           :strength :example},
-          :zen/desc "Type of adjudication information"},
-         :reason
-         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-          :zen.fhir/value-set
-          {:symbol
-           hl7-fhir-r4-core.value-set.adjudication-reason/value-set,
-           :strength :example},
-          :zen/desc "Explanation of adjudication outcome"},
-         :amount
-         {:confirms #{hl7-fhir-r4-core.Money/schema},
-          :zen/desc "Monetary amount"},
-         :value
-         {:confirms #{hl7-fhir-r4-core.decimal/schema},
-          :zen/desc "Non-monetary value"},
-         :_value {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-        :require #{:category},
-        :zen/desc "Adjudication details"},
+       {:confirms
+        #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema}},
        :minItems 1},
       :detail
       {:type zen/vector,
@@ -262,7 +270,10 @@
           :every {:confirms #{hl7-fhir-r4-core.Element/schema}}},
          :adjudication
          {:type zen/vector,
-          :every #:zen{:desc "Detail level adjudication details"},
+          :every
+          {:confirms
+           #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema},
+           :zen/desc "Detail level adjudication details"},
           :minItems 1},
          :subDetail
          {:type zen/vector,
@@ -286,7 +297,9 @@
             :adjudication
             {:type zen/vector,
              :every
-             #:zen{:desc "Subdetail level adjudication details"}}},
+             {:confirms
+              #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema},
+              :zen/desc "Subdetail level adjudication details"}}},
            :require #{:subDetailSequence},
            :zen/desc "Adjudication for claim sub-details"}}},
         :require #{:adjudication :detailSequence},
@@ -436,7 +449,10 @@
         :zen/desc "Service/Product billing modifiers"}},
       :adjudication
       {:type zen/vector,
-       :every #:zen{:desc "Added items adjudication"},
+       :every
+       {:confirms
+        #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema},
+        :zen/desc "Added items adjudication"},
        :minItems 1},
       :subdetailSequence
       {:type zen/vector,
@@ -564,7 +580,10 @@
            :zen/desc "Service/Product billing modifiers"}},
          :adjudication
          {:type zen/vector,
-          :every #:zen{:desc "Added items detail adjudication"},
+          :every
+          {:confirms
+           #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema},
+           :zen/desc "Added items detail adjudication"},
           :minItems 1},
          :_factor {:confirms #{hl7-fhir-r4-core.Element/schema}},
          :net
@@ -599,7 +618,10 @@
               :zen/desc "Service/Product billing modifiers"}},
             :adjudication
             {:type zen/vector,
-             :every #:zen{:desc "Added items detail adjudication"},
+             :every
+             {:confirms
+              #{hl7-fhir-r4-core.ClaimResponse/item-adjudication-schema},
+              :zen/desc "Added items detail adjudication"},
              :minItems 1},
             :_factor {:confirms #{hl7-fhir-r4-core.Element/schema}},
             :net

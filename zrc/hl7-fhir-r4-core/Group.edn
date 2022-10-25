@@ -25,7 +25,7 @@
    hl7-fhir-r4-core.Medication
    hl7-fhir-r4-core.Organization},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

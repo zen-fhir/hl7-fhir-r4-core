@@ -7,6 +7,7 @@
    hl7-fhir-r4-core.code
    zen.fhir
    hl7-fhir-r4-core.dateTime
+   hl7-fhir-r4-core.TestReport
    hl7-fhir-r4-core.string
    hl7-fhir-r4-core.value-set.report-status-codes
    hl7-fhir-r4-core.TestScript
@@ -18,7 +19,7 @@
    hl7-fhir-r4-core.value-set.report-participant-type
    hl7-fhir-r4-core.value-set.report-result-codes},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -86,49 +87,11 @@
        :type zen/map,
        :keys
        {:operation
-        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-         :type zen/map,
-         :keys
-         {:result
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.report-action-result-codes/value-set,
-            :strength :required},
-           :zen/desc "pass | skip | fail | warning | error"},
-          :_result {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :message
-          {:confirms #{hl7-fhir-r4-core.markdown/schema},
-           :zen/desc "A message associated with the result"},
-          :_message {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :detail
-          {:confirms #{hl7-fhir-r4-core.uri/schema},
-           :zen/desc "A link to further details on the result"},
-          :_detail {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-         :require #{:result},
-         :zen/desc "The operation to perform"},
+        {:confirms
+         #{hl7-fhir-r4-core.TestReport/setup-action-operation-schema}},
         :assert
-        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-         :type zen/map,
-         :keys
-         {:result
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.report-action-result-codes/value-set,
-            :strength :required},
-           :zen/desc "pass | skip | fail | warning | error"},
-          :_result {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :message
-          {:confirms #{hl7-fhir-r4-core.markdown/schema},
-           :zen/desc "A message associated with the result"},
-          :_message {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :detail
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "A link to further details on the result"},
-          :_detail {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-         :require #{:result},
-         :zen/desc "The assertion to perform"}},
+        {:confirms
+         #{hl7-fhir-r4-core.TestReport/setup-action-assert-schema}}},
        :zen/desc "A setup operation or assert that was executed"},
       :minItems 1}},
     :require #{:action},
@@ -175,7 +138,10 @@
       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
        :type zen/map,
        :keys
-       {:operation #:zen{:desc "The teardown operation performed"}},
+       {:operation
+        {:confirms
+         #{hl7-fhir-r4-core.TestReport/setup-action-operation-schema},
+         :zen/desc "The teardown operation performed"}},
        :require #{:operation},
        :zen/desc "One or more teardown operations performed"},
       :minItems 1}},
@@ -202,10 +168,64 @@
        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
         :type zen/map,
         :keys
-        {:operation #:zen{:desc "The operation performed"},
-         :assert #:zen{:desc "The assertion performed"}},
+        {:operation
+         {:confirms
+          #{hl7-fhir-r4-core.TestReport/setup-action-operation-schema},
+          :zen/desc "The operation performed"},
+         :assert
+         {:confirms
+          #{hl7-fhir-r4-core.TestReport/setup-action-assert-schema},
+          :zen/desc "The assertion performed"}},
         :zen/desc "A test operation or assert that was performed"},
        :minItems 1}},
      :require #{:action},
      :zen/desc "A test executed from the test script"}}},
-  :zen.fhir/type "TestReport"}}
+  :zen.fhir/type "TestReport"},
+ setup-action-assert-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:result
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.report-action-result-codes/value-set,
+     :strength :required},
+    :zen/desc "pass | skip | fail | warning | error"},
+   :_result {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :message
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc "A message associated with the result"},
+   :_message {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :detail
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "A link to further details on the result"},
+   :_detail {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:result},
+  :zen/desc "The assertion to perform"},
+ setup-action-operation-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:result
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.report-action-result-codes/value-set,
+     :strength :required},
+    :zen/desc "pass | skip | fail | warning | error"},
+   :_result {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :message
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc "A message associated with the result"},
+   :_message {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :detail
+   {:confirms #{hl7-fhir-r4-core.uri/schema},
+    :zen/desc "A link to further details on the result"},
+   :_detail {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:result},
+  :zen/desc "The operation to perform"}}

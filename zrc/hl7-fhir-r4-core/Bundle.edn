@@ -9,14 +9,35 @@
    hl7-fhir-r4-core.instant
    hl7-fhir-r4-core.uri
    hl7-fhir-r4-core.unsignedInt
+   hl7-fhir-r4-core.Bundle
    hl7-fhir-r4-core.value-set.bundle-type
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.Signature
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.Resource
    hl7-fhir-r4-core.value-set.search-entry-mode},
+ link-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:relation
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1"},
+   :_relation {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :url
+   {:confirms #{hl7-fhir-r4-core.uri/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "Reference details for the link"},
+   :_url {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:url :relation},
+  :fhir/flags #{:SU},
+  :zen/desc "Links related to this Bundle"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
   :zen.fhir/profileUri
@@ -45,24 +66,7 @@
     :zen/desc "If search, the total number of matches"},
    :link
    {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:relation
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:SU},
-       :zen/desc
-       "See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1"},
-      :_relation {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :url
-      {:confirms #{hl7-fhir-r4-core.uri/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "Reference details for the link"},
-      :_url {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-     :require #{:url :relation},
-     :fhir/flags #{:SU},
-     :zen/desc "Links related to this Bundle"}},
+    :every {:confirms #{hl7-fhir-r4-core.Bundle/link-schema}}},
    :identifier
    {:confirms #{hl7-fhir-r4-core.Identifier/schema},
     :fhir/flags #{:SU},
@@ -76,7 +80,9 @@
      {:link
       {:type zen/vector,
        :every
-       {:fhir/flags #{:SU}, :zen/desc "Links related to this entry"}},
+       {:fhir/flags #{:SU},
+        :confirms #{hl7-fhir-r4-core.Bundle/link-schema},
+        :zen/desc "Links related to this entry"}},
       :fullUrl
       {:confirms #{hl7-fhir-r4-core.uri/schema},
        :fhir/flags #{:SU},

@@ -11,6 +11,7 @@
    hl7-fhir-r4-core.UsageContext
    hl7-fhir-r4-core.boolean
    hl7-fhir-r4-core.dateTime
+   hl7-fhir-r4-core.ExampleScenario
    hl7-fhir-r4-core.string
    hl7-fhir-r4-core.value-set.jurisdiction
    hl7-fhir-r4-core.uri
@@ -19,8 +20,142 @@
    hl7-fhir-r4-core.DomainResource
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier},
+ instance-containedInstance-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:resourceId
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Each resource contained in the instance"},
+   :_resourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :versionId
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc
+    "A specific version of a resource contained in the instance"},
+   :_versionId {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:resourceId},
+  :zen/desc "Resources contained in the instance"},
+ process-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:description
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc "A longer description of the group of operations"},
+   :_postConditions {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :postConditions
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc "Description of final status after the process ends"},
+   :preConditions
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc
+    "Description of initial status before the process starts"},
+   :_preConditions {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :title
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "The diagram title of the group of operations"},
+   :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :step
+   {:type zen/vector,
+    :every
+    {:confirms
+     #{hl7-fhir-r4-core.ExampleScenario/process-step-schema}}}},
+  :require #{:title},
+  :zen/desc "Each major process - a group of operations"},
+ process-step-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:process
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.ExampleScenario/process-schema},
+     :zen/desc "Nested process"}},
+   :pause
+   {:confirms #{hl7-fhir-r4-core.boolean/schema},
+    :zen/desc "If there is a pause in the flow"},
+   :_pause {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :operation
+   {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+    :type zen/map,
+    :keys
+    {:response
+     {:confirms
+      #{hl7-fhir-r4-core.ExampleScenario/instance-containedInstance-schema},
+      :zen/desc "Each resource instance used by the responder"},
+     :description
+     {:confirms #{hl7-fhir-r4-core.markdown/schema},
+      :zen/desc "A comment to be inserted in the diagram"},
+     :request
+     {:confirms
+      #{hl7-fhir-r4-core.ExampleScenario/instance-containedInstance-schema},
+      :zen/desc "Each resource instance used by the initiator"},
+     :number
+     {:confirms #{hl7-fhir-r4-core.string/schema},
+      :zen/desc "The sequential number of the interaction"},
+     :name
+     {:confirms #{hl7-fhir-r4-core.string/schema},
+      :zen/desc "The human-friendly name of the interaction"},
+     :initiator
+     {:confirms #{hl7-fhir-r4-core.string/schema},
+      :zen/desc "Who starts the transaction"},
+     :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :_initiatorActive {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :_number {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :type
+     {:confirms #{hl7-fhir-r4-core.string/schema},
+      :zen/desc "The type of operation - CRUD"},
+     :receiverActive
+     {:confirms #{hl7-fhir-r4-core.boolean/schema},
+      :zen/desc
+      "Whether the receiver is deactivated right after the transaction"},
+     :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :initiatorActive
+     {:confirms #{hl7-fhir-r4-core.boolean/schema},
+      :zen/desc
+      "Whether the initiator is deactivated right after the transaction"},
+     :_initiator {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :_receiver {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :_receiverActive {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :receiver
+     {:confirms #{hl7-fhir-r4-core.string/schema},
+      :zen/desc "Who receives the transaction"}},
+    :require #{:number},
+    :zen/desc "Each interaction or action"},
+   :alternative
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:title
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "Label for alternative"},
+      :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :description
+      {:confirms #{hl7-fhir-r4-core.markdown/schema},
+       :zen/desc "A human-readable description of each option"},
+      :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :step
+      {:type zen/vector,
+       :every
+       {:confirms
+        #{hl7-fhir-r4-core.ExampleScenario/process-step-schema},
+        :zen/desc "What happens in each alternative option"}}},
+     :require #{:title},
+     :zen/desc "Alternate non-typical step action"}}},
+  :zen/desc "Each step of the process"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -51,20 +186,8 @@
       :containedInstance
       {:type zen/vector,
        :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:resourceId
-         {:confirms #{hl7-fhir-r4-core.string/schema},
-          :zen/desc "Each resource contained in the instance"},
-         :_resourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :versionId
-         {:confirms #{hl7-fhir-r4-core.string/schema},
-          :zen/desc
-          "A specific version of a resource contained in the instance"},
-         :_versionId {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-        :require #{:resourceId},
-        :zen/desc "Resources contained in the instance"}},
+       {:confirms
+        #{hl7-fhir-r4-core.ExampleScenario/instance-containedInstance-schema}}},
       :name
       {:confirms #{hl7-fhir-r4-core.string/schema},
        :zen/desc "A short name for the resource instance"},
@@ -124,110 +247,7 @@
    :process
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:description
-      {:confirms #{hl7-fhir-r4-core.markdown/schema},
-       :zen/desc "A longer description of the group of operations"},
-      :_postConditions {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :postConditions
-      {:confirms #{hl7-fhir-r4-core.markdown/schema},
-       :zen/desc "Description of final status after the process ends"},
-      :preConditions
-      {:confirms #{hl7-fhir-r4-core.markdown/schema},
-       :zen/desc
-       "Description of initial status before the process starts"},
-      :_preConditions {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :title
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "The diagram title of the group of operations"},
-      :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :step
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:process
-         {:type zen/vector, :every #:zen{:desc "Nested process"}},
-         :pause
-         {:confirms #{hl7-fhir-r4-core.boolean/schema},
-          :zen/desc "If there is a pause in the flow"},
-         :_pause {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :operation
-         {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-          :type zen/map,
-          :keys
-          {:response
-           #:zen{:desc "Each resource instance used by the responder"},
-           :description
-           {:confirms #{hl7-fhir-r4-core.markdown/schema},
-            :zen/desc "A comment to be inserted in the diagram"},
-           :request
-           #:zen{:desc "Each resource instance used by the initiator"},
-           :number
-           {:confirms #{hl7-fhir-r4-core.string/schema},
-            :zen/desc "The sequential number of the interaction"},
-           :name
-           {:confirms #{hl7-fhir-r4-core.string/schema},
-            :zen/desc "The human-friendly name of the interaction"},
-           :initiator
-           {:confirms #{hl7-fhir-r4-core.string/schema},
-            :zen/desc "Who starts the transaction"},
-           :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :_initiatorActive
-           {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :_number {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :type
-           {:confirms #{hl7-fhir-r4-core.string/schema},
-            :zen/desc "The type of operation - CRUD"},
-           :receiverActive
-           {:confirms #{hl7-fhir-r4-core.boolean/schema},
-            :zen/desc
-            "Whether the receiver is deactivated right after the transaction"},
-           :_description
-           {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :initiatorActive
-           {:confirms #{hl7-fhir-r4-core.boolean/schema},
-            :zen/desc
-            "Whether the initiator is deactivated right after the transaction"},
-           :_initiator {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :_receiver {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :_receiverActive
-           {:confirms #{hl7-fhir-r4-core.Element/schema}},
-           :receiver
-           {:confirms #{hl7-fhir-r4-core.string/schema},
-            :zen/desc "Who receives the transaction"}},
-          :require #{:number},
-          :zen/desc "Each interaction or action"},
-         :alternative
-         {:type zen/vector,
-          :every
-          {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-           :type zen/map,
-           :keys
-           {:title
-            {:confirms #{hl7-fhir-r4-core.string/schema},
-             :zen/desc "Label for alternative"},
-            :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :description
-            {:confirms #{hl7-fhir-r4-core.markdown/schema},
-             :zen/desc "A human-readable description of each option"},
-            :_description
-            {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :step
-            {:type zen/vector,
-             :every
-             #:zen{:desc "What happens in each alternative option"}}},
-           :require #{:title},
-           :zen/desc "Alternate non-typical step action"}}},
-        :zen/desc "Each step of the process"}}},
-     :require #{:title},
-     :zen/desc "Each major process - a group of operations"}},
+    {:confirms #{hl7-fhir-r4-core.ExampleScenario/process-schema}}},
    :_status {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :_experimental {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :useContext

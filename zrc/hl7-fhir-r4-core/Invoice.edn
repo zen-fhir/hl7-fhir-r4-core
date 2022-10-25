@@ -16,6 +16,7 @@
    hl7-fhir-r4-core.ChargeItem
    hl7-fhir-r4-core.PractitionerRole
    hl7-fhir-r4-core.value-set.invoice-priceComponentType
+   hl7-fhir-r4-core.Invoice
    hl7-fhir-r4-core.Reference
    hl7-fhir-r4-core.positiveInt
    hl7-fhir-r4-core.Element
@@ -26,8 +27,35 @@
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.invoice-status},
+ lineItem-priceComponent-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:type
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.invoice-priceComponentType/value-set,
+     :strength :required},
+    :zen/desc
+    "base | surcharge | deduction | discount | tax | informational"},
+   :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :code
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen/desc "Code identifying the specific component"},
+   :factor
+   {:confirms #{hl7-fhir-r4-core.decimal/schema},
+    :zen/desc "Factor used for calculating this component"},
+   :_factor {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :amount
+   {:confirms #{hl7-fhir-r4-core.Money/schema},
+    :zen/desc "Monetary amount associated with this component"}},
+  :require #{:type},
+  :zen/desc "Components of total line item price"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -59,7 +87,10 @@
     :zen/desc "Recipient of this invoice"},
    :totalPriceComponent
    {:type zen/vector,
-    :every #:zen{:desc "Components of Invoice total"}},
+    :every
+    {:confirms
+     #{hl7-fhir-r4-core.Invoice/lineItem-priceComponent-schema},
+     :zen/desc "Components of Invoice total"}},
    :type
    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
     :fhir/flags #{:SU},
@@ -137,30 +168,8 @@
       :priceComponent
       {:type zen/vector,
        :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:type
-         {:confirms #{hl7-fhir-r4-core.code/schema},
-          :zen.fhir/value-set
-          {:symbol
-           hl7-fhir-r4-core.value-set.invoice-priceComponentType/value-set,
-           :strength :required},
-          :zen/desc
-          "base | surcharge | deduction | discount | tax | informational"},
-         :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :code
-         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-          :zen/desc "Code identifying the specific component"},
-         :factor
-         {:confirms #{hl7-fhir-r4-core.decimal/schema},
-          :zen/desc "Factor used for calculating this component"},
-         :_factor {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :amount
-         {:confirms #{hl7-fhir-r4-core.Money/schema},
-          :zen/desc "Monetary amount associated with this component"}},
-        :require #{:type},
-        :zen/desc "Components of total line item price"}}},
+       {:confirms
+        #{hl7-fhir-r4-core.Invoice/lineItem-priceComponent-schema}}}},
      :require #{:chargeItem},
      :zen/desc "Line items of this Invoice"}},
    :identifier

@@ -18,9 +18,34 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.DomainResource
    hl7-fhir-r4-core.CodeableConcept
-   hl7-fhir-r4-core.Identifier},
+   hl7-fhir-r4-core.Identifier
+   hl7-fhir-r4-core.ConceptMap},
+ group-element-target-dependsOn-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:property
+   {:confirms #{hl7-fhir-r4-core.uri/schema},
+    :zen/desc "Reference to property mapping depends on"},
+   :_property {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :system
+   {:confirms #{hl7-fhir-r4-core.canonical/schema},
+    :zen/desc "Code System (if necessary)"},
+   :_system {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :value
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Value of the referenced element"},
+   :_value {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :display
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Display for the code (if value is a code)"},
+   :_display {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:property :value},
+  :zen/desc "Other elements required for this mapping (from context)"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -97,37 +122,17 @@
             :dependsOn
             {:type zen/vector,
              :every
-             {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-              :type zen/map,
-              :keys
-              {:property
-               {:confirms #{hl7-fhir-r4-core.uri/schema},
-                :zen/desc "Reference to property mapping depends on"},
-               :_property
-               {:confirms #{hl7-fhir-r4-core.Element/schema}},
-               :system
-               {:confirms #{hl7-fhir-r4-core.canonical/schema},
-                :zen/desc "Code System (if necessary)"},
-               :_system {:confirms #{hl7-fhir-r4-core.Element/schema}},
-               :value
-               {:confirms #{hl7-fhir-r4-core.string/schema},
-                :zen/desc "Value of the referenced element"},
-               :_value {:confirms #{hl7-fhir-r4-core.Element/schema}},
-               :display
-               {:confirms #{hl7-fhir-r4-core.string/schema},
-                :zen/desc "Display for the code (if value is a code)"},
-               :_display
-               {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-              :require #{:property :value},
-              :zen/desc
-              "Other elements required for this mapping (from context)"}},
+             {:confirms
+              #{hl7-fhir-r4-core.ConceptMap/group-element-target-dependsOn-schema}}},
             :_equivalence
             {:confirms #{hl7-fhir-r4-core.Element/schema}},
             :product
             {:type zen/vector,
              :every
-             #:zen{:desc
-                   "Other concepts that this mapping also produces"}},
+             {:confirms
+              #{hl7-fhir-r4-core.ConceptMap/group-element-target-dependsOn-schema},
+              :zen/desc
+              "Other concepts that this mapping also produces"}},
             :comment
             {:confirms #{hl7-fhir-r4-core.string/schema},
              :zen/desc "Description of status/issues in mapping"},

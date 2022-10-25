@@ -20,6 +20,7 @@
    hl7-fhir-r4-core.value-set.jurisdiction
    hl7-fhir-r4-core.Coding
    hl7-fhir-r4-core.value-set.message-transport
+   hl7-fhir-r4-core.CapabilityStatement
    hl7-fhir-r4-core.value-set.FHIR-version
    hl7-fhir-r4-core.uri
    hl7-fhir-r4-core.value-set.type-restful-interaction
@@ -37,8 +38,59 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.document-mode
    hl7-fhir-r4-core.value-set.conditional-delete-status},
+ rest-resource-operation-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:name
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "Name by which the operation/query is invoked"},
+   :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :definition
+   {:confirms #{hl7-fhir-r4-core.canonical/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "The defined operation/query"},
+   :_definition {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :documentation
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc "Specific details about operation behavior"},
+   :_documentation {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:definition :name},
+  :fhir/flags #{:SU},
+  :zen/desc "Definition of a resource operation"},
+ rest-resource-searchParam-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:name
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Name of search parameter"},
+   :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :definition
+   {:confirms #{hl7-fhir-r4-core.canonical/schema},
+    :zen/desc "Source of definition for parameter"},
+   :_definition {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :type
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.search-param-type/value-set,
+     :strength :required},
+    :zen/desc
+    "number | date | string | token | reference | composite | quantity | uri | special"},
+   :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :documentation
+   {:confirms #{hl7-fhir-r4-core.markdown/schema},
+    :zen/desc "Server-specific usage"},
+   :_documentation {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:name :type},
+  :zen/desc "Search parameters supported by implementation"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -336,7 +388,9 @@
       :searchParam
       {:type zen/vector,
        :every
-       #:zen{:desc "Search parameters for searching all resources"}},
+       {:confirms
+        #{hl7-fhir-r4-core.CapabilityStatement/rest-resource-searchParam-schema},
+        :zen/desc "Search parameters for searching all resources"}},
       :security
       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
        :type zen/map,
@@ -367,6 +421,8 @@
       {:type zen/vector,
        :every
        {:fhir/flags #{:SU},
+        :confirms
+        #{hl7-fhir-r4-core.CapabilityStatement/rest-resource-operation-schema},
         :zen/desc "Definition of a system level operation"}},
       :mode
       {:confirms #{hl7-fhir-r4-core.code/schema},
@@ -424,34 +480,8 @@
          :searchParam
          {:type zen/vector,
           :every
-          {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-           :type zen/map,
-           :keys
-           {:name
-            {:confirms #{hl7-fhir-r4-core.string/schema},
-             :zen/desc "Name of search parameter"},
-            :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :definition
-            {:confirms #{hl7-fhir-r4-core.canonical/schema},
-             :zen/desc "Source of definition for parameter"},
-            :_definition
-            {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :type
-            {:confirms #{hl7-fhir-r4-core.code/schema},
-             :zen.fhir/value-set
-             {:symbol
-              hl7-fhir-r4-core.value-set.search-param-type/value-set,
-              :strength :required},
-             :zen/desc
-             "number | date | string | token | reference | composite | quantity | uri | special"},
-            :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :documentation
-            {:confirms #{hl7-fhir-r4-core.markdown/schema},
-             :zen/desc "Server-specific usage"},
-            :_documentation
-            {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-           :require #{:name :type},
-           :zen/desc "Search parameters supported by implementation"}},
+          {:confirms
+           #{hl7-fhir-r4-core.CapabilityStatement/rest-resource-searchParam-schema}}},
          :conditionalUpdate
          {:confirms #{hl7-fhir-r4-core.boolean/schema},
           :zen/desc "If allows/uses conditional update"},
@@ -470,28 +500,8 @@
          :operation
          {:type zen/vector,
           :every
-          {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-           :type zen/map,
-           :keys
-           {:name
-            {:confirms #{hl7-fhir-r4-core.string/schema},
-             :fhir/flags #{:SU},
-             :zen/desc "Name by which the operation/query is invoked"},
-            :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :definition
-            {:confirms #{hl7-fhir-r4-core.canonical/schema},
-             :fhir/flags #{:SU},
-             :zen/desc "The defined operation/query"},
-            :_definition
-            {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :documentation
-            {:confirms #{hl7-fhir-r4-core.markdown/schema},
-             :zen/desc "Specific details about operation behavior"},
-            :_documentation
-            {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-           :require #{:definition :name},
-           :fhir/flags #{:SU},
-           :zen/desc "Definition of a resource operation"}},
+          {:confirms
+           #{hl7-fhir-r4-core.CapabilityStatement/rest-resource-operation-schema}}},
          :_conditionalUpdate
          {:confirms #{hl7-fhir-r4-core.Element/schema}},
          :referencePolicy

@@ -60,8 +60,48 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.observation-category
    hl7-fhir-r4-core.value-set.referencerange-appliesto},
+ referenceRange-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:low
+   {:confirms
+    #{hl7-fhir-r4-core.Quantity/schema
+      hl7-fhir-r4-core.SimpleQuantity/schema},
+    :zen/desc "Low Range, if relevant"},
+   :high
+   {:confirms
+    #{hl7-fhir-r4-core.Quantity/schema
+      hl7-fhir-r4-core.SimpleQuantity/schema},
+    :zen/desc "High Range, if relevant"},
+   :type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.referencerange-meaning/value-set,
+     :strength :preferred},
+    :zen/desc "Reference range qualifier"},
+   :appliesTo
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :zen.fhir/value-set
+     {:symbol
+      hl7-fhir-r4-core.value-set.referencerange-appliesto/value-set,
+      :strength :example},
+     :zen/desc "Reference range population"}},
+   :age
+   {:confirms #{hl7-fhir-r4-core.Range/schema},
+    :zen/desc "Applicable age range, if relevant"},
+   :text
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Text based reference range in an observation"},
+   :_text {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :zen/desc "Provides guide for interpretation"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -85,43 +125,7 @@
    :referenceRange
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:low
-      {:confirms
-       #{hl7-fhir-r4-core.Quantity/schema
-         hl7-fhir-r4-core.SimpleQuantity/schema},
-       :zen/desc "Low Range, if relevant"},
-      :high
-      {:confirms
-       #{hl7-fhir-r4-core.Quantity/schema
-         hl7-fhir-r4-core.SimpleQuantity/schema},
-       :zen/desc "High Range, if relevant"},
-      :type
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :zen.fhir/value-set
-       {:symbol
-        hl7-fhir-r4-core.value-set.referencerange-meaning/value-set,
-        :strength :preferred},
-       :zen/desc "Reference range qualifier"},
-      :appliesTo
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :zen.fhir/value-set
-        {:symbol
-         hl7-fhir-r4-core.value-set.referencerange-appliesto/value-set,
-         :strength :example},
-        :zen/desc "Reference range population"}},
-      :age
-      {:confirms #{hl7-fhir-r4-core.Range/schema},
-       :zen/desc "Applicable age range, if relevant"},
-      :text
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Text based reference range in an observation"},
-      :_text {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-     :zen/desc "Provides guide for interpretation"}},
+    {:confirms #{hl7-fhir-r4-core.Observation/referenceRange-schema}}},
    :hasMember
    {:type zen/vector,
     :every
@@ -277,8 +281,10 @@
       :referenceRange
       {:type zen/vector,
        :every
-       #:zen{:desc
-             "Provides guide for interpretation of component result"}}},
+       {:confirms
+        #{hl7-fhir-r4-core.Observation/referenceRange-schema},
+        :zen/desc
+        "Provides guide for interpretation of component result"}}},
      :require #{:code},
      :fhir/flags #{:SU},
      :zen/desc "Component results"}},

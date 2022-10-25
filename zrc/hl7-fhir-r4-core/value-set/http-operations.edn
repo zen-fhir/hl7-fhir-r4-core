@@ -3,15 +3,9 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The allowable request method or HTTP operation codes.",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/http-operations",
      :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/http-operations",
-  :version "4.0.1",
-  :ftr
-  {:module "ftr",
-   :source-url "node_modules//hl7.fhir.r4.core",
-   :source-type :ig,
-   :ftr-path "zen-packages//hl7-fhir-r4-core/",
-   :tag "init"}}}
+  :version "4.0.1"}}
