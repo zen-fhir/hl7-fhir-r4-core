@@ -16,7 +16,7 @@
   :zen.fhir/type "SubstanceNucleicAcid",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/SubstanceNucleicAcid",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,

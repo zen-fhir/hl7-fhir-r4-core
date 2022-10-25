@@ -17,6 +17,7 @@
    hl7-fhir-r4-core.Coding
    hl7-fhir-r4-core.value-set.testscript-profile-origin-types
    hl7-fhir-r4-core.value-set.assert-direction-codes
+   hl7-fhir-r4-core.TestScript
    hl7-fhir-r4-core.id
    hl7-fhir-r4-core.uri
    hl7-fhir-r4-core.Reference
@@ -31,7 +32,7 @@
    hl7-fhir-r4-core.value-set.assert-operator-codes
    hl7-fhir-r4-core.value-set.testscript-operation-codes},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -145,244 +146,11 @@
        :type zen/map,
        :keys
        {:operation
-        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-         :type zen/map,
-         :keys
-         {:description
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Tracking/reporting operation description"},
-          :_destination {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_accept {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_params {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_encodeRequestUrl
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_targetId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :method
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.http-operations/value-set,
-            :strength :required},
-           :zen/desc
-           "delete | get | options | patch | post | put | head"},
-          :targetId
-          {:confirms #{hl7-fhir-r4-core.id/schema},
-           :zen/desc
-           "Id of fixture used for extracting the [id],  [type], and [vid] for GET requests"},
-          :_contentType {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :requestHeader
-          {:type zen/vector,
-           :every
-           {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-            :type zen/map,
-            :keys
-            {:field
-             {:confirms #{hl7-fhir-r4-core.string/schema},
-              :zen/desc "HTTP header field name"},
-             :_field {:confirms #{hl7-fhir-r4-core.Element/schema}},
-             :value
-             {:confirms #{hl7-fhir-r4-core.string/schema},
-              :zen/desc "HTTP headerfield value"},
-             :_value {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-            :require #{:value :field},
-            :zen/desc
-            "Each operation can have one or more header elements"}},
-          :_method {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :params
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Explicitly defined path parameters"},
-          :type
-          {:confirms #{hl7-fhir-r4-core.Coding/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.testscript-operation-codes/value-set,
-            :strength :extensible},
-           :zen/desc "The operation code type that will be executed"},
-          :_origin {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :requestId
-          {:confirms #{hl7-fhir-r4-core.id/schema},
-           :zen/desc "Fixture Id of mapped request"},
-          :encodeRequestUrl
-          {:confirms #{hl7-fhir-r4-core.boolean/schema},
-           :zen/desc
-           "Whether or not to send the request url in encoded format"},
-          :_label {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_resource {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :label
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Tracking/logging operation label"},
-          :resource
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol hl7-fhir-r4-core.value-set.defined-types/value-set,
-            :strength :required},
-           :zen/desc "Resource type"},
-          :url
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Request URL"},
-          :origin
-          {:confirms #{hl7-fhir-r4-core.integer/schema},
-           :zen/desc "Server initiating the request"},
-          :contentType
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
-            :strength :required},
-           :zen/desc
-           "Mime type of the request payload contents, with charset etc."},
-          :_responseId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :sourceId
-          {:confirms #{hl7-fhir-r4-core.id/schema},
-           :zen/desc "Fixture Id of body for PUT and POST requests"},
-          :responseId
-          {:confirms #{hl7-fhir-r4-core.id/schema},
-           :zen/desc "Fixture Id of mapped response"},
-          :_sourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_requestId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :destination
-          {:confirms #{hl7-fhir-r4-core.integer/schema},
-           :zen/desc "Server responding to the request"},
-          :_url {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :accept
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
-            :strength :required},
-           :zen/desc
-           "Mime type to accept in the payload of the response, with charset etc."}},
-         :require #{:encodeRequestUrl},
-         :zen/desc "The setup operation to perform"},
+        {:confirms
+         #{hl7-fhir-r4-core.TestScript/setup-action-operation-schema}},
         :assert
-        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-         :type zen/map,
-         :keys
-         {:response
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.assert-response-code-types/value-set,
-            :strength :required},
-           :zen/desc
-           "okay | created | noContent | notModified | bad | forbidden | notFound | methodNotAllowed | conflict | gone | preconditionFailed | unprocessable"},
-          :description
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Tracking/reporting assertion description"},
-          :path
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "XPath or JSONPath expression"},
-          :headerField
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "HTTP header field name"},
-          :compareToSourceId
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Id of the source fixture to be evaluated"},
-          :_operator {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_response {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_navigationLinks
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_direction {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :expression
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "The FHIRPath expression to be evaluated"},
-          :_compareToSourceId
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_path {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_contentType {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :value
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "The value to compare to"},
-          :_requestMethod
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_responseCode
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :warningOnly
-          {:confirms #{hl7-fhir-r4-core.boolean/schema},
-           :zen/desc
-           "Will this assert produce a warning only on error?"},
-          :_value {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_validateProfileId
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_expression {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :compareToSourceExpression
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc
-           "The FHIRPath expression to evaluate against the source fixture"},
-          :_label {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_resource {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_requestURL {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_headerField {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :label
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Tracking/logging assertion label"},
-          :resource
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol hl7-fhir-r4-core.value-set.defined-types/value-set,
-            :strength :required},
-           :zen/desc "Resource type"},
-          :responseCode
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "HTTP response code to test"},
-          :minimumId
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Fixture Id of minimum content resource"},
-          :operator
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.assert-operator-codes/value-set,
-            :strength :required},
-           :zen/desc
-           "equals | notEquals | in | notIn | greaterThan | lessThan | empty | notEmpty | contains | notContains | eval"},
-          :contentType
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
-            :strength :required},
-           :zen/desc
-           "Mime type to compare against the 'Content-Type' header"},
-          :compareToSourcePath
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc
-           "XPath or JSONPath expression to evaluate against the source fixture"},
-          :validateProfileId
-          {:confirms #{hl7-fhir-r4-core.id/schema},
-           :zen/desc "Profile Id of validation profile reference"},
-          :_compareToSourceExpression
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :sourceId
-          {:confirms #{hl7-fhir-r4-core.id/schema},
-           :zen/desc "Fixture Id of source expression or headerField"},
-          :_warningOnly {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_sourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :requestMethod
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.http-operations/value-set,
-            :strength :required},
-           :zen/desc
-           "delete | get | options | patch | post | put | head"},
-          :_compareToSourcePath
-          {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :_minimumId {:confirms #{hl7-fhir-r4-core.Element/schema}},
-          :requestURL
-          {:confirms #{hl7-fhir-r4-core.string/schema},
-           :zen/desc "Request URL comparison value"},
-          :direction
-          {:confirms #{hl7-fhir-r4-core.code/schema},
-           :zen.fhir/value-set
-           {:symbol
-            hl7-fhir-r4-core.value-set.assert-direction-codes/value-set,
-            :strength :required},
-           :zen/desc "response | request"},
-          :navigationLinks
-          {:confirms #{hl7-fhir-r4-core.boolean/schema},
-           :zen/desc "Perform validation on navigation links?"}},
-         :require #{:warningOnly},
-         :zen/desc "The assertion to perform"}},
+        {:confirms
+         #{hl7-fhir-r4-core.TestScript/setup-action-assert-schema}}},
        :zen/desc "A setup operation or assert to perform"},
       :minItems 1}},
     :require #{:action},
@@ -467,7 +235,10 @@
       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
        :type zen/map,
        :keys
-       {:operation #:zen{:desc "The teardown operation to perform"}},
+       {:operation
+        {:confirms
+         #{hl7-fhir-r4-core.TestScript/setup-action-operation-schema},
+         :zen/desc "The teardown operation to perform"}},
        :require #{:operation},
        :zen/desc "One or more teardown operations to perform"},
       :minItems 1}},
@@ -591,8 +362,14 @@
        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
         :type zen/map,
         :keys
-        {:operation #:zen{:desc "The setup operation to perform"},
-         :assert #:zen{:desc "The setup assertion to perform"}},
+        {:operation
+         {:confirms
+          #{hl7-fhir-r4-core.TestScript/setup-action-operation-schema},
+          :zen/desc "The setup operation to perform"},
+         :assert
+         {:confirms
+          #{hl7-fhir-r4-core.TestScript/setup-action-assert-schema},
+          :zen/desc "The setup assertion to perform"}},
         :zen/desc "A test operation or assert to perform"},
        :minItems 1}},
      :require #{:action},
@@ -604,4 +381,235 @@
     {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
      :zen.fhir/reference {:refers #{}},
      :zen/desc "Reference of the validation profile"}}},
-  :zen.fhir/type "TestScript"}}
+  :zen.fhir/type "TestScript"},
+ setup-action-assert-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:response
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.assert-response-code-types/value-set,
+     :strength :required},
+    :zen/desc
+    "okay | created | noContent | notModified | bad | forbidden | notFound | methodNotAllowed | conflict | gone | preconditionFailed | unprocessable"},
+   :description
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Tracking/reporting assertion description"},
+   :path
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "XPath or JSONPath expression"},
+   :headerField
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "HTTP header field name"},
+   :compareToSourceId
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Id of the source fixture to be evaluated"},
+   :_operator {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_response {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_navigationLinks {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_direction {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :expression
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "The FHIRPath expression to be evaluated"},
+   :_compareToSourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_path {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_contentType {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :value
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "The value to compare to"},
+   :_requestMethod {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_responseCode {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :warningOnly
+   {:confirms #{hl7-fhir-r4-core.boolean/schema},
+    :zen/desc "Will this assert produce a warning only on error?"},
+   :_value {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_validateProfileId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_expression {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :compareToSourceExpression
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc
+    "The FHIRPath expression to evaluate against the source fixture"},
+   :_label {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_resource {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_requestURL {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_headerField {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :label
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Tracking/logging assertion label"},
+   :resource
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.defined-types/value-set,
+     :strength :required},
+    :zen/desc "Resource type"},
+   :responseCode
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "HTTP response code to test"},
+   :minimumId
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Fixture Id of minimum content resource"},
+   :operator
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.assert-operator-codes/value-set,
+     :strength :required},
+    :zen/desc
+    "equals | notEquals | in | notIn | greaterThan | lessThan | empty | notEmpty | contains | notContains | eval"},
+   :contentType
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
+     :strength :required},
+    :zen/desc
+    "Mime type to compare against the 'Content-Type' header"},
+   :compareToSourcePath
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc
+    "XPath or JSONPath expression to evaluate against the source fixture"},
+   :validateProfileId
+   {:confirms #{hl7-fhir-r4-core.id/schema},
+    :zen/desc "Profile Id of validation profile reference"},
+   :_compareToSourceExpression
+   {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :sourceId
+   {:confirms #{hl7-fhir-r4-core.id/schema},
+    :zen/desc "Fixture Id of source expression or headerField"},
+   :_warningOnly {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_sourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :requestMethod
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.http-operations/value-set,
+     :strength :required},
+    :zen/desc "delete | get | options | patch | post | put | head"},
+   :_compareToSourcePath
+   {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_minimumId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :requestURL
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Request URL comparison value"},
+   :direction
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.assert-direction-codes/value-set,
+     :strength :required},
+    :zen/desc "response | request"},
+   :navigationLinks
+   {:confirms #{hl7-fhir-r4-core.boolean/schema},
+    :zen/desc "Perform validation on navigation links?"}},
+  :require #{:warningOnly},
+  :zen/desc "The assertion to perform"},
+ setup-action-operation-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:description
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Tracking/reporting operation description"},
+   :_destination {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_accept {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_params {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_encodeRequestUrl {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_targetId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :method
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.http-operations/value-set,
+     :strength :required},
+    :zen/desc "delete | get | options | patch | post | put | head"},
+   :targetId
+   {:confirms #{hl7-fhir-r4-core.id/schema},
+    :zen/desc
+    "Id of fixture used for extracting the [id],  [type], and [vid] for GET requests"},
+   :_contentType {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :requestHeader
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:field
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "HTTP header field name"},
+      :_field {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :value
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "HTTP headerfield value"},
+      :_value {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+     :require #{:value :field},
+     :zen/desc "Each operation can have one or more header elements"}},
+   :_method {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :params
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Explicitly defined path parameters"},
+   :type
+   {:confirms #{hl7-fhir-r4-core.Coding/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.testscript-operation-codes/value-set,
+     :strength :extensible},
+    :zen/desc "The operation code type that will be executed"},
+   :_origin {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :requestId
+   {:confirms #{hl7-fhir-r4-core.id/schema},
+    :zen/desc "Fixture Id of mapped request"},
+   :encodeRequestUrl
+   {:confirms #{hl7-fhir-r4-core.boolean/schema},
+    :zen/desc
+    "Whether or not to send the request url in encoded format"},
+   :_label {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_resource {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :label
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Tracking/logging operation label"},
+   :resource
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.defined-types/value-set,
+     :strength :required},
+    :zen/desc "Resource type"},
+   :url
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Request URL"},
+   :origin
+   {:confirms #{hl7-fhir-r4-core.integer/schema},
+    :zen/desc "Server initiating the request"},
+   :contentType
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
+     :strength :required},
+    :zen/desc
+    "Mime type of the request payload contents, with charset etc."},
+   :_responseId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :sourceId
+   {:confirms #{hl7-fhir-r4-core.id/schema},
+    :zen/desc "Fixture Id of body for PUT and POST requests"},
+   :responseId
+   {:confirms #{hl7-fhir-r4-core.id/schema},
+    :zen/desc "Fixture Id of mapped response"},
+   :_sourceId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_requestId {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :destination
+   {:confirms #{hl7-fhir-r4-core.integer/schema},
+    :zen/desc "Server responding to the request"},
+   :_url {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :accept
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
+     :strength :required},
+    :zen/desc
+    "Mime type to accept in the payload of the response, with charset etc."}},
+  :require #{:encodeRequestUrl},
+  :zen/desc "The setup operation to perform"}}

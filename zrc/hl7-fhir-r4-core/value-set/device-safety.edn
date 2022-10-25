@@ -4,15 +4,9 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes used to identify medical devices safety characteristics. These codes are taken from the [NCI Thesaurus](https://ncit.nci.nih.gov/ncitbrowser/pages/home.jsf) and are provided here as a suggestive example.",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :fhir/code-systems
   #{{:fhir/url "urn:oid:2.16.840.1.113883.3.26.1.1",
      :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/device-safety",
-  :version "4.0.1",
-  :ftr
-  {:module "ftr",
-   :source-url "node_modules//hl7.fhir.r4.core",
-   :source-type :ig,
-   :ftr-path "zen-packages//hl7-fhir-r4-core/",
-   :tag "init"}}}
+  :version "4.0.1"}}

@@ -19,13 +19,61 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.DomainResource
    hl7-fhir-r4-core.Practitioner
+   hl7-fhir-r4-core.Provenance
    hl7-fhir-r4-core.Signature
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.value-set.provenance-agent-type
    hl7-fhir-r4-core.Location
    hl7-fhir-r4-core.Organization},
+ agent-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.provenance-agent-type/value-set,
+     :strength :extensible},
+    :zen/desc "How the agent participated"},
+   :role
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :zen.fhir/value-set
+     {:symbol hl7-fhir-r4-core.value-set.security-role-type/value-set,
+      :strength :example},
+     :zen/desc "What the agents role was"}},
+   :who
+   {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+    :fhir/flags #{:SU},
+    :zen.fhir/reference
+    {:refers
+     #{hl7-fhir-r4-core.Patient/schema
+       hl7-fhir-r4-core.PractitionerRole/schema
+       hl7-fhir-r4-core.Organization/schema
+       hl7-fhir-r4-core.Device/schema
+       hl7-fhir-r4-core.Practitioner/schema
+       hl7-fhir-r4-core.RelatedPerson/schema}},
+    :zen/desc "Who participated"},
+   :onBehalfOf
+   {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+    :zen.fhir/reference
+    {:refers
+     #{hl7-fhir-r4-core.Patient/schema
+       hl7-fhir-r4-core.PractitionerRole/schema
+       hl7-fhir-r4-core.Organization/schema
+       hl7-fhir-r4-core.Device/schema
+       hl7-fhir-r4-core.Practitioner/schema
+       hl7-fhir-r4-core.RelatedPerson/schema}},
+    :zen/desc "Who the agent is representing"}},
+  :require #{:who},
+  :zen/desc "Actor involved"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -56,54 +104,7 @@
     :zen/desc "When the activity was recorded / updated"},
    :agent
    {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:type
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :fhir/flags #{:SU},
-       :zen.fhir/value-set
-       {:symbol
-        hl7-fhir-r4-core.value-set.provenance-agent-type/value-set,
-        :strength :extensible},
-       :zen/desc "How the agent participated"},
-      :role
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :zen.fhir/value-set
-        {:symbol
-         hl7-fhir-r4-core.value-set.security-role-type/value-set,
-         :strength :example},
-        :zen/desc "What the agents role was"}},
-      :who
-      {:confirms
-       #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-       :fhir/flags #{:SU},
-       :zen.fhir/reference
-       {:refers
-        #{hl7-fhir-r4-core.Patient/schema
-          hl7-fhir-r4-core.PractitionerRole/schema
-          hl7-fhir-r4-core.Organization/schema
-          hl7-fhir-r4-core.Device/schema
-          hl7-fhir-r4-core.Practitioner/schema
-          hl7-fhir-r4-core.RelatedPerson/schema}},
-       :zen/desc "Who participated"},
-      :onBehalfOf
-      {:confirms
-       #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-       :zen.fhir/reference
-       {:refers
-        #{hl7-fhir-r4-core.Patient/schema
-          hl7-fhir-r4-core.PractitionerRole/schema
-          hl7-fhir-r4-core.Organization/schema
-          hl7-fhir-r4-core.Device/schema
-          hl7-fhir-r4-core.Practitioner/schema
-          hl7-fhir-r4-core.RelatedPerson/schema}},
-       :zen/desc "Who the agent is representing"}},
-     :require #{:who},
-     :zen/desc "Actor involved"},
+    :every {:confirms #{hl7-fhir-r4-core.Provenance/agent-schema}},
     :minItems 1},
    :policy
    {:type zen/vector,
@@ -165,7 +166,9 @@
        :zen/desc "Identity of entity"},
       :agent
       {:type zen/vector,
-       :every #:zen{:desc "Entity is attributed to this agent"}}},
+       :every
+       {:confirms #{hl7-fhir-r4-core.Provenance/agent-schema},
+        :zen/desc "Entity is attributed to this agent"}}},
      :require #{:role :what},
      :zen/desc "An entity used in this activity"}}},
   :zen.fhir/type "Provenance"}}

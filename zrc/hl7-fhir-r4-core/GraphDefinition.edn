@@ -17,12 +17,109 @@
    hl7-fhir-r4-core.string
    hl7-fhir-r4-core.value-set.jurisdiction
    hl7-fhir-r4-core.uri
+   hl7-fhir-r4-core.GraphDefinition
    hl7-fhir-r4-core.ContactDetail
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.DomainResource
    hl7-fhir-r4-core.CodeableConcept},
+ link-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:description
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Why this link is specified"},
+   :path
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Path in the resource that contains the link"},
+   :min
+   {:confirms #{hl7-fhir-r4-core.integer/schema},
+    :zen/desc "Minimum occurrences for this link"},
+   :_path {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_sliceName {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :sliceName
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Which slice (if profiled)"},
+   :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_min {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :max
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Maximum occurrences for this link"},
+   :_max {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :target
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:type
+      {:confirms #{hl7-fhir-r4-core.code/schema},
+       :zen.fhir/value-set
+       {:symbol hl7-fhir-r4-core.value-set.resource-types/value-set,
+        :strength :required},
+       :zen/desc "Type of resource this link refers to"},
+      :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :params
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "Criteria for reverse lookup"},
+      :_params {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :profile
+      {:confirms #{hl7-fhir-r4-core.canonical/schema},
+       :zen/desc "Profile for the target resource"},
+      :_profile {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :compartment
+      {:type zen/vector,
+       :every
+       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+        :type zen/map,
+        :keys
+        {:description
+         {:confirms #{hl7-fhir-r4-core.string/schema},
+          :zen/desc "Documentation for FHIRPath expression"},
+         :_code {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         :expression
+         {:confirms #{hl7-fhir-r4-core.string/schema},
+          :zen/desc "Custom rule, as a FHIRPath expression"},
+         :use
+         {:confirms #{hl7-fhir-r4-core.code/schema},
+          :zen.fhir/value-set
+          {:symbol
+           hl7-fhir-r4-core.value-set.graph-compartment-use/value-set,
+           :strength :required},
+          :zen/desc "condition | requirement"},
+         :rule
+         {:confirms #{hl7-fhir-r4-core.code/schema},
+          :zen.fhir/value-set
+          {:symbol
+           hl7-fhir-r4-core.value-set.graph-compartment-rule/value-set,
+           :strength :required},
+          :zen/desc "identical | matching | different | custom"},
+         :_expression {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         :code
+         {:confirms #{hl7-fhir-r4-core.code/schema},
+          :zen.fhir/value-set
+          {:symbol
+           hl7-fhir-r4-core.value-set.compartment-type/value-set,
+           :strength :required},
+          :zen/desc
+          "Patient | Encounter | RelatedPerson | Practitioner | Device"},
+         :_rule {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         :_use {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+        :require #{:use :rule :code},
+        :zen/desc "Compartment Consistency Rules"}},
+      :link
+      {:type zen/vector,
+       :every
+       {:confirms #{hl7-fhir-r4-core.GraphDefinition/link-schema},
+        :zen/desc "Additional links from target resource"}}},
+     :require #{:type},
+     :zen/desc "Potential target for the link"}}},
+  :zen/desc "Links this graph makes rules about"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -95,100 +192,7 @@
    :link
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:description
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Why this link is specified"},
-      :path
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Path in the resource that contains the link"},
-      :min
-      {:confirms #{hl7-fhir-r4-core.integer/schema},
-       :zen/desc "Minimum occurrences for this link"},
-      :_path {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_sliceName {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :sliceName
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Which slice (if profiled)"},
-      :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_min {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :max
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Maximum occurrences for this link"},
-      :_max {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :target
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:type
-         {:confirms #{hl7-fhir-r4-core.code/schema},
-          :zen.fhir/value-set
-          {:symbol hl7-fhir-r4-core.value-set.resource-types/value-set,
-           :strength :required},
-          :zen/desc "Type of resource this link refers to"},
-         :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :params
-         {:confirms #{hl7-fhir-r4-core.string/schema},
-          :zen/desc "Criteria for reverse lookup"},
-         :_params {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :profile
-         {:confirms #{hl7-fhir-r4-core.canonical/schema},
-          :zen/desc "Profile for the target resource"},
-         :_profile {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :compartment
-         {:type zen/vector,
-          :every
-          {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-           :type zen/map,
-           :keys
-           {:description
-            {:confirms #{hl7-fhir-r4-core.string/schema},
-             :zen/desc "Documentation for FHIRPath expression"},
-            :_code {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :expression
-            {:confirms #{hl7-fhir-r4-core.string/schema},
-             :zen/desc "Custom rule, as a FHIRPath expression"},
-            :use
-            {:confirms #{hl7-fhir-r4-core.code/schema},
-             :zen.fhir/value-set
-             {:symbol
-              hl7-fhir-r4-core.value-set.graph-compartment-use/value-set,
-              :strength :required},
-             :zen/desc "condition | requirement"},
-            :rule
-            {:confirms #{hl7-fhir-r4-core.code/schema},
-             :zen.fhir/value-set
-             {:symbol
-              hl7-fhir-r4-core.value-set.graph-compartment-rule/value-set,
-              :strength :required},
-             :zen/desc "identical | matching | different | custom"},
-            :_expression
-            {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :_description
-            {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :code
-            {:confirms #{hl7-fhir-r4-core.code/schema},
-             :zen.fhir/value-set
-             {:symbol
-              hl7-fhir-r4-core.value-set.compartment-type/value-set,
-              :strength :required},
-             :zen/desc
-             "Patient | Encounter | RelatedPerson | Practitioner | Device"},
-            :_rule {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :_use {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-           :require #{:use :rule :code},
-           :zen/desc "Compartment Consistency Rules"}},
-         :link
-         {:type zen/vector,
-          :every
-          #:zen{:desc "Additional links from target resource"}}},
-        :require #{:type},
-        :zen/desc "Potential target for the link"}}},
-     :zen/desc "Links this graph makes rules about"}},
+    {:confirms #{hl7-fhir-r4-core.GraphDefinition/link-schema}}},
    :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :url
    {:confirms #{hl7-fhir-r4-core.uri/schema},

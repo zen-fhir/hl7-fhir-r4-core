@@ -1,6 +1,7 @@
 {ns hl7-fhir-r4-core.OperationDefinition,
  import
  #{hl7-fhir-r4-core.integer
+   hl7-fhir-r4-core.OperationDefinition
    hl7-fhir-r4-core.BackboneElement
    hl7-fhir-r4-core.canonical
    hl7-fhir-r4-core.value-set.resource-types
@@ -23,8 +24,102 @@
    hl7-fhir-r4-core.value-set.operation-parameter-use
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.value-set.search-param-type},
+ parameter-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:min
+   {:confirms #{hl7-fhir-r4-core.integer/schema},
+    :zen/desc "Minimum Cardinality"},
+   :_documentation {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_searchType {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :searchType
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.search-param-type/value-set,
+     :strength :required},
+    :zen/desc
+    "number | date | string | token | reference | composite | quantity | uri | special"},
+   :use
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol
+     hl7-fhir-r4-core.value-set.operation-parameter-use/value-set,
+     :strength :required},
+    :zen/desc "in | out"},
+   :name
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen/desc "Name in Parameters.parameter.name or in URL"},
+   :part
+   {:type zen/vector,
+    :every
+    {:confirms
+     #{hl7-fhir-r4-core.OperationDefinition/parameter-schema},
+     :zen/desc "Parts of a nested Parameter"}},
+   :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :type
+   {:confirms #{hl7-fhir-r4-core.code/schema},
+    :zen.fhir/value-set
+    {:symbol hl7-fhir-r4-core.value-set.all-types/value-set,
+     :strength :required},
+    :zen/desc "What type this parameter has"},
+   :referencedFrom
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:source
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "Referencing parameter"},
+      :_source {:confirms #{hl7-fhir-r4-core.Element/schema}},
+      :sourceId
+      {:confirms #{hl7-fhir-r4-core.string/schema},
+       :zen/desc "Element id of reference"},
+      :_sourceId {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+     :require #{:source},
+     :zen/desc "References to this parameter"}},
+   :documentation
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Description of meaning/use"},
+   :_min {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :binding
+   {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+    :type zen/map,
+    :keys
+    {:strength
+     {:confirms #{hl7-fhir-r4-core.code/schema},
+      :zen.fhir/value-set
+      {:symbol hl7-fhir-r4-core.value-set.binding-strength/value-set,
+       :strength :required},
+      :zen/desc "required | extensible | preferred | example"},
+     :_strength {:confirms #{hl7-fhir-r4-core.Element/schema}},
+     :valueSet
+     {:confirms #{hl7-fhir-r4-core.canonical/schema},
+      :zen/desc "Source of value set"},
+     :_valueSet {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+    :require #{:strength :valueSet},
+    :zen/desc "ValueSet details if this is coded"},
+   :max
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :zen/desc "Maximum Cardinality (a number or *)"},
+   :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :targetProfile
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.canonical/schema},
+     :zen/desc "If type is Reference | canonical, allowed targets"}},
+   :_max {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :_targetProfile
+   {:type zen/vector,
+    :every {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+   :_use {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+  :require #{:min :use :name :max},
+  :zen/desc "Parameters for the operation/query"},
  schema
- {:zen.fhir/version "0.5.24-1",
+ {:zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -195,95 +290,7 @@
    :parameter
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:min
-      {:confirms #{hl7-fhir-r4-core.integer/schema},
-       :zen/desc "Minimum Cardinality"},
-      :_documentation {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_searchType {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :searchType
-      {:confirms #{hl7-fhir-r4-core.code/schema},
-       :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.search-param-type/value-set,
-        :strength :required},
-       :zen/desc
-       "number | date | string | token | reference | composite | quantity | uri | special"},
-      :use
-      {:confirms #{hl7-fhir-r4-core.code/schema},
-       :zen.fhir/value-set
-       {:symbol
-        hl7-fhir-r4-core.value-set.operation-parameter-use/value-set,
-        :strength :required},
-       :zen/desc "in | out"},
-      :name
-      {:confirms #{hl7-fhir-r4-core.code/schema},
-       :zen/desc "Name in Parameters.parameter.name or in URL"},
-      :part
-      {:type zen/vector,
-       :every #:zen{:desc "Parts of a nested Parameter"}},
-      :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :type
-      {:confirms #{hl7-fhir-r4-core.code/schema},
-       :zen.fhir/value-set
-       {:symbol hl7-fhir-r4-core.value-set.all-types/value-set,
-        :strength :required},
-       :zen/desc "What type this parameter has"},
-      :referencedFrom
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:source
-         {:confirms #{hl7-fhir-r4-core.string/schema},
-          :zen/desc "Referencing parameter"},
-         :_source {:confirms #{hl7-fhir-r4-core.Element/schema}},
-         :sourceId
-         {:confirms #{hl7-fhir-r4-core.string/schema},
-          :zen/desc "Element id of reference"},
-         :_sourceId {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-        :require #{:source},
-        :zen/desc "References to this parameter"}},
-      :documentation
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Description of meaning/use"},
-      :_min {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :binding
-      {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-       :type zen/map,
-       :keys
-       {:strength
-        {:confirms #{hl7-fhir-r4-core.code/schema},
-         :zen.fhir/value-set
-         {:symbol
-          hl7-fhir-r4-core.value-set.binding-strength/value-set,
-          :strength :required},
-         :zen/desc "required | extensible | preferred | example"},
-        :_strength {:confirms #{hl7-fhir-r4-core.Element/schema}},
-        :valueSet
-        {:confirms #{hl7-fhir-r4-core.canonical/schema},
-         :zen/desc "Source of value set"},
-        :_valueSet {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-       :require #{:strength :valueSet},
-       :zen/desc "ValueSet details if this is coded"},
-      :max
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :zen/desc "Maximum Cardinality (a number or *)"},
-      :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :targetProfile
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.canonical/schema},
-        :zen/desc
-        "If type is Reference | canonical, allowed targets"}},
-      :_max {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_targetProfile
-      {:type zen/vector,
-       :every {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-      :_use {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-     :require #{:min :use :name :max},
-     :zen/desc "Parameters for the operation/query"}},
+    {:confirms
+     #{hl7-fhir-r4-core.OperationDefinition/parameter-schema}}},
    :_url {:confirms #{hl7-fhir-r4-core.Element/schema}}},
   :zen.fhir/type "OperationDefinition"}}

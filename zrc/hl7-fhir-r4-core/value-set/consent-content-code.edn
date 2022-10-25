@@ -3,14 +3,8 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "This example value set contains all LOINC code",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :fhir/code-systems
   #{{:fhir/url "http://loinc.org", :zen.fhir/content :not-present}},
   :uri "http://hl7.org/fhir/ValueSet/consent-content-code",
-  :version "4.0.1",
-  :ftr
-  {:module "ftr",
-   :source-url "node_modules//hl7.fhir.r4.core",
-   :source-type :ig,
-   :ftr-path "zen-packages//hl7-fhir-r4-core/",
-   :tag "init"}}}
+  :version "4.0.1"}}

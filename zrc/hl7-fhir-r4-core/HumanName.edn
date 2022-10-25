@@ -13,7 +13,7 @@
   :zen.fhir/type "HumanName",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/HumanName",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :type zen/map,
   :keys

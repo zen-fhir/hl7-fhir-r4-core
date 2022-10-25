@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
@@ -12,10 +12,4 @@
     {:fhir/url "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
      :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
-  :version "4.0.1",
-  :ftr
-  {:module "ftr",
-   :source-url "node_modules//hl7.fhir.r4.core",
-   :source-type :ig,
-   :ftr-path "zen-packages//hl7-fhir-r4-core/",
-   :tag "init"}}}
+  :version "4.0.1"}}

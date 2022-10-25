@@ -22,6 +22,93 @@
    hl7-fhir-r4-core.DocumentReference
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier},
+ name-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:official
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+     :type zen/map,
+     :keys
+     {:authority
+      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+       :fhir/flags #{:SU},
+       :zen/desc "Which authority uses this official name"},
+      :status
+      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+       :fhir/flags #{:SU},
+       :zen/desc "The status of the official name"},
+      :date
+      {:confirms #{hl7-fhir-r4-core.dateTime/schema},
+       :fhir/flags #{:SU},
+       :zen/desc "Date of official name change"},
+      :_date {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+     :fhir/flags #{:SU},
+     :zen/desc "Details of the official nature of this name"}},
+   :jurisdiction
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "The jurisdiction where this name applies"}},
+   :name
+   {:confirms #{hl7-fhir-r4-core.string/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "The actual name"},
+   :type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "Name type"},
+   :source
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+     :fhir/flags #{:SU},
+     :zen.fhir/reference
+     {:refers #{hl7-fhir-r4-core.DocumentReference/schema}},
+     :zen/desc "Supporting literature"}},
+   :status
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "The status of the name"},
+   :language
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc "Language of the name"}},
+   :synonym
+   {:type zen/vector,
+    :every
+    {:fhir/flags #{:SU},
+     :confirms #{hl7-fhir-r4-core.SubstanceSpecification/name-schema},
+     :zen/desc "A synonym of this name"}},
+   :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :translation
+   {:type zen/vector,
+    :every
+    {:fhir/flags #{:SU},
+     :confirms #{hl7-fhir-r4-core.SubstanceSpecification/name-schema},
+     :zen/desc "A translation for this name"}},
+   :_preferred {:confirms #{hl7-fhir-r4-core.Element/schema}},
+   :preferred
+   {:confirms #{hl7-fhir-r4-core.boolean/schema},
+    :fhir/flags #{:SU},
+    :zen/desc "If this is the preferred name for this substance"},
+   :domain
+   {:type zen/vector,
+    :every
+    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+     :fhir/flags #{:SU},
+     :zen/desc
+     "The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive"}}},
+  :require #{:name},
+  :fhir/flags #{:SU},
+  :zen/desc "Names applicable to this substance"},
  schema
  {:zen/tags #{zen/schema zen.fhir/base-schema},
   :zen/desc
@@ -29,7 +116,7 @@
   :zen.fhir/type "SubstanceSpecification",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification",
-  :zen.fhir/version "0.5.24-1",
+  :zen.fhir/version "0.5.25-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -93,87 +180,8 @@
    :name
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
-     :keys
-     {:official
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :type zen/map,
-        :keys
-        {:authority
-         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-          :fhir/flags #{:SU},
-          :zen/desc "Which authority uses this official name"},
-         :status
-         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-          :fhir/flags #{:SU},
-          :zen/desc "The status of the official name"},
-         :date
-         {:confirms #{hl7-fhir-r4-core.dateTime/schema},
-          :fhir/flags #{:SU},
-          :zen/desc "Date of official name change"},
-         :_date {:confirms #{hl7-fhir-r4-core.Element/schema}}},
-        :fhir/flags #{:SU},
-        :zen/desc "Details of the official nature of this name"}},
-      :jurisdiction
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "The jurisdiction where this name applies"}},
-      :name
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "The actual name"},
-      :type
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "Name type"},
-      :source
-      {:type zen/vector,
-       :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :fhir/flags #{:SU},
-        :zen.fhir/reference
-        {:refers #{hl7-fhir-r4-core.DocumentReference/schema}},
-        :zen/desc "Supporting literature"}},
-      :status
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "The status of the name"},
-      :language
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :fhir/flags #{:SU},
-        :zen/desc "Language of the name"}},
-      :synonym
-      {:type zen/vector,
-       :every
-       {:fhir/flags #{:SU}, :zen/desc "A synonym of this name"}},
-      :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :translation
-      {:type zen/vector,
-       :every
-       {:fhir/flags #{:SU}, :zen/desc "A translation for this name"}},
-      :_preferred {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :preferred
-      {:confirms #{hl7-fhir-r4-core.boolean/schema},
-       :fhir/flags #{:SU},
-       :zen/desc "If this is the preferred name for this substance"},
-      :domain
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-        :fhir/flags #{:SU},
-        :zen/desc
-        "The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive"}}},
-     :require #{:name},
-     :fhir/flags #{:SU},
-     :zen/desc "Names applicable to this substance"}},
+    {:confirms
+     #{hl7-fhir-r4-core.SubstanceSpecification/name-schema}}},
    :referenceInformation
    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
     :fhir/flags #{:SU},
@@ -341,27 +349,8 @@
          :fhir/flags #{:SU},
          :zen/desc "Half life - for a non-natural nuclide"},
         :molecularWeight
-        {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-         :type zen/map,
-         :keys
-         {:method
-          {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-           :fhir/flags #{:SU},
-           :zen/desc
-           "The method by which the molecular weight was determined"},
-          :type
-          {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-           :fhir/flags #{:SU},
-           :zen/desc
-           "Type of molecular weight such as exact, average (also known as. number average), weight average"},
-          :amount
-          {:confirms #{hl7-fhir-r4-core.Quantity/schema},
-           :fhir/flags #{:SU},
-           :zen/desc
-           "Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field"}},
-         :fhir/flags #{:SU},
-         :zen/desc
-         "The molecular weight or weight range (for proteins, polymers or nucleic acids)"}},
+        {:confirms
+         #{hl7-fhir-r4-core.SubstanceSpecification/structure-isotope-molecularWeight-schema}}},
        :fhir/flags #{:SU},
        :zen/desc
        "Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio"}},
@@ -412,6 +401,8 @@
       :zen/desc "Optical activity type"},
      :molecularWeight
      {:fhir/flags #{:SU},
+      :confirms
+      #{hl7-fhir-r4-core.SubstanceSpecification/structure-isotope-molecularWeight-schema},
       :zen/desc
       "The molecular weight or weight range (for proteins, polymers or nucleic acids)"},
      :stereochemistry
@@ -479,6 +470,8 @@
    {:type zen/vector,
     :every
     {:fhir/flags #{:SU},
+     :confirms
+     #{hl7-fhir-r4-core.SubstanceSpecification/structure-isotope-molecularWeight-schema},
      :zen/desc
      "The molecular weight or weight range (for proteins, polymers or nucleic acids)"}},
    :polymer
@@ -505,4 +498,28 @@
     {:refers #{hl7-fhir-r4-core.SubstanceSourceMaterial/schema}},
     :zen/desc
     "Material or taxonomic/anatomical source for the substance"},
-   :_comment {:confirms #{hl7-fhir-r4-core.Element/schema}}}}}
+   :_comment {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
+ structure-isotope-molecularWeight-schema
+ {:zen/tags #{zen/schema zen.fhir/structure-schema},
+  :zen.fhir/version "0.5.25-1",
+  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
+  :type zen/map,
+  :keys
+  {:method
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "The method by which the molecular weight was determined"},
+   :type
+   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "Type of molecular weight such as exact, average (also known as. number average), weight average"},
+   :amount
+   {:confirms #{hl7-fhir-r4-core.Quantity/schema},
+    :fhir/flags #{:SU},
+    :zen/desc
+    "Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field"}},
+  :fhir/flags #{:SU},
+  :zen/desc
+  "The molecular weight or weight range (for proteins, polymers or nucleic acids)"}}
