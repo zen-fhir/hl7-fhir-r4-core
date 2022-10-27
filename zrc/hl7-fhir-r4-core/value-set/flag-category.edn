@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Example list of general categories for flagged issues. (Not complete or necessarily appropriate.)",
-  :zen.fhir/version "0.5.26-4",
+  :zen.fhir/version "0.5.26-5",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/flag-category",
      :zen.fhir/content :bundled}},

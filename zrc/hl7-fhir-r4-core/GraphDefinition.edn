@@ -24,7 +24,7 @@
    hl7-fhir-r4-core.CodeableConcept},
  link-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.26-4",
+  :zen.fhir/version "0.5.26-5",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -119,7 +119,7 @@
      :zen/desc "Potential target for the link"}}},
   :zen/desc "Links this graph makes rules about"},
  schema
- {:zen.fhir/version "0.5.26-4",
+ {:zen.fhir/version "0.5.26-5",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

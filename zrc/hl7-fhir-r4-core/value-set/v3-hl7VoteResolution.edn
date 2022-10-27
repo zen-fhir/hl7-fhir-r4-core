@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "  Description:\r\nBased on concepts for resolutions from HL7 ballot spreadsheet according to HL7's Governance & Operations Manual (GOM).",
-  :zen.fhir/version "0.5.26-4",
+  :zen.fhir/version "0.5.26-5",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-hl7VoteResolution",

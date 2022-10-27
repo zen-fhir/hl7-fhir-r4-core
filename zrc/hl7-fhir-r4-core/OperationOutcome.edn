@@ -11,7 +11,7 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.value-set.issue-type},
  schema
- {:zen.fhir/version "0.5.26-4",
+ {:zen.fhir/version "0.5.26-5",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

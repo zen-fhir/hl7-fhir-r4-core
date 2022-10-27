@@ -23,7 +23,7 @@
    hl7-fhir-r4-core.TriggerDefinition
    hl7-fhir-r4-core.Expression},
  schema
- {:zen.fhir/version "0.5.26-4",
+ {:zen.fhir/version "0.5.26-5",
   :confirms
   #{hl7-fhir-r4-core.EvidenceVariable/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
