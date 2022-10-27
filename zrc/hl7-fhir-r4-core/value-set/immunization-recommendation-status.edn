@@ -4,11 +4,18 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the status of the patient towards perceived immunity against a vaccine preventable disease. This value set is provided as a suggestive example.",
-  :zen.fhir/version "0.5.25-1",
+  :zen.fhir/version "0.5.26-4",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/immunization-recommendation-status",
      :zen.fhir/content :bundled}},
   :uri
   "http://hl7.org/fhir/ValueSet/immunization-recommendation-status",
-  :version "4.0.1"}}
+  :version "4.0.1",
+  :ftr
+  {:module "ig",
+   :source-url "node_modules/hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "ftr",
+   :zen/package-name "hl7-fhir-r4-core",
+   :tag "init"}}}

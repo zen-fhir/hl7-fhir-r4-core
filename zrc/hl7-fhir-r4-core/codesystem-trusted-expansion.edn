@@ -7,5 +7,5 @@
   :zen.fhir/type "uri",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/codesystem-trusted-expansion",
-  :zen.fhir/version "0.5.25-1",
+  :zen.fhir/version "0.5.26-4",
   :confirms #{hl7-fhir-r4-core.uri/schema}}}

@@ -4,9 +4,16 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "FHIR Value set/code system definition for HL7 v2 table 0229 ( Outlier Type)",
-  :zen.fhir/version "0.5.25-1",
+  :zen.fhir/version "0.5.26-4",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0229",
      :zen.fhir/content :bundled}},
   :uri "http://terminology.hl7.org/ValueSet/v2-0229",
-  :version "2.9"}}
+  :version "2.9",
+  :ftr
+  {:module "ig",
+   :source-url "node_modules/hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "ftr",
+   :zen/package-name "hl7-fhir-r4-core",
+   :tag "init"}}}
