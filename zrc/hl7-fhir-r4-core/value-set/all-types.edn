@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "A list of all the concrete types defined in this version of the FHIR specification - Abstract Types, Data Types and Resource Types.",
-  :zen.fhir/version "0.5.25-1",
+  :zen.fhir/version "0.5.26-4",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/abstract-types",
      :zen.fhir/content :bundled}
@@ -13,4 +13,11 @@
     {:fhir/url "http://hl7.org/fhir/data-types",
      :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/all-types",
-  :version "4.0.1"}}
+  :version "4.0.1",
+  :ftr
+  {:module "ig",
+   :source-url "node_modules/hl7.fhir.r4.core",
+   :source-type :ig,
+   :ftr-path "ftr",
+   :zen/package-name "hl7-fhir-r4-core",
+   :tag "init"}}}

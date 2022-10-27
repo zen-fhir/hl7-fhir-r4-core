@@ -8,7 +8,7 @@
   :zen.fhir/type "Composition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/example-composition",
-  :zen.fhir/version "0.5.25-1",
+  :zen.fhir/version "0.5.26-4",
   :confirms #{hl7-fhir-r4-core.Composition/schema},
   :type zen/map,
   :keys

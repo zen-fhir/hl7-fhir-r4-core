@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.codesystem-usage,
  import #{zen.fhir hl7-fhir-r4-core.string},
  schema
- {:zen.fhir/version "0.5.25-1",
+ {:zen.fhir/version "0.5.26-4",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/codesystem-usage",
