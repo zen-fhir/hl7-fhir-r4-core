@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes identifying groupings of parameters; e.g. Cardiovascular.",
-  :zen.fhir/version "0.5.26-4",
+  :zen.fhir/version "0.5.26-5",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/parameter-group",
      :zen.fhir/content :bundled}},

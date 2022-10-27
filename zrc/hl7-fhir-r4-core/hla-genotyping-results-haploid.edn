@@ -5,7 +5,7 @@
   :zen/desc "haploid.",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-haploid",
-  :zen.fhir/version "0.5.26-4",
+  :zen.fhir/version "0.5.26-5",
   :type zen/map,
   :keys
   {:locus

@@ -37,7 +37,7 @@
    hl7-fhir-r4-core.value-set.clinical-findings
    hl7-terminology-r4.value-set.v3-ParticipationMode},
  schema
- {:zen.fhir/version "0.5.26-4",
+ {:zen.fhir/version "0.5.26-5",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
