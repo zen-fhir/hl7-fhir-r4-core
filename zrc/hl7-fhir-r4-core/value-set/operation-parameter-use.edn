@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Whether an operation parameter is an input or an output parameter.",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/operation-parameter-use",
      :zen.fhir/content :bundled}},

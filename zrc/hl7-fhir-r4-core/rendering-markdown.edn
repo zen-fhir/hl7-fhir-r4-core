@@ -7,5 +7,5 @@
   :zen.fhir/type "markdown",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :confirms #{hl7-fhir-r4-core.markdown/schema}}}

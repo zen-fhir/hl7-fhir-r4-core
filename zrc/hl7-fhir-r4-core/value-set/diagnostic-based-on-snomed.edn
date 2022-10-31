@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Diagnostic Attachment Type codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 182836005 (Review of medication (procedure)) or is-a 404684003 (Clinical finding (finding))",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},
