@@ -12,7 +12,7 @@
    hl7-fhir-r4-core.Element},
  concept-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -29,7 +29,7 @@
      #{hl7-fhir-r4-core.shareablecodesystem/concept-schema}}}},
   :require #{:code}},
  schema
- {:zen.fhir/version "0.5.27",
+ {:zen.fhir/version "0.5.27-1",
   :confirms #{hl7-fhir-r4-core.CodeSystem/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "How a resource reference is interpreted when testing consent restrictions.",
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/consent-data-meaning",
      :zen.fhir/content :bundled}},
