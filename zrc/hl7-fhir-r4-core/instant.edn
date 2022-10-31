@@ -7,5 +7,5 @@
   :zen.fhir/type "instant",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/instant",
-  :zen.fhir/version "0.5.26-5",
+  :zen.fhir/version "0.5.27",
   :type zen/string}}

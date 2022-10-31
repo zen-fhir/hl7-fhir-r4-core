@@ -13,7 +13,7 @@
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.PlanDefinition},
  schema
- {:zen.fhir/version "0.5.26-5",
+ {:zen.fhir/version "0.5.27",
   :confirms
   #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
