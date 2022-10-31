@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36.",
-  :zen.fhir/version "0.5.26-5",
+  :zen.fhir/version "0.5.27",
   :fhir/code-systems
   #{{:fhir/url "http://loinc.org", :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/example-extensional",
@@ -14,5 +14,4 @@
    :source-url "node_modules/hl7.fhir.r4.core",
    :source-type :ig,
    :ftr-path "ftr",
-   :zen/package-name "hl7-fhir-r4-core",
    :tag "init"}}}

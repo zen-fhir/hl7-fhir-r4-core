@@ -9,7 +9,7 @@
   :zen.fhir/type "code",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/language",
-  :zen.fhir/version "0.5.26-5",
+  :zen.fhir/version "0.5.27",
   :confirms #{hl7-fhir-r4-core.code/schema},
   :zen.fhir/value-set
   {:symbol hl7-fhir-r4-core.value-set.languages/value-set,
