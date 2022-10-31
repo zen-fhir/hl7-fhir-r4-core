@@ -7,5 +7,5 @@
   :zen.fhir/type "boolean",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/boolean",
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :type zen/boolean}}

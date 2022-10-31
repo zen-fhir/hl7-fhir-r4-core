@@ -86,7 +86,7 @@
   :zen.fhir/type "Contract",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Contract",
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -424,7 +424,7 @@
    :_instantiatesUri {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
  term-offer-answer-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -473,7 +473,7 @@
   :zen/desc "Response to offer text"},
  term-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys

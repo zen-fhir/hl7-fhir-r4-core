@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Distinguishes whether the task is a proposal, plan or full order.",
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/request-intent",
      :zen.fhir/content :bundled}

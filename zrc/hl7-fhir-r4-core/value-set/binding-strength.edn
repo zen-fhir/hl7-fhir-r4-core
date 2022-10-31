@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Indication of the degree of conformance expectations associated with a binding.",
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/binding-strength",
      :zen.fhir/content :bundled}},

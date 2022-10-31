@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "ENSEMBL reference sequence identifiers",
-  :zen.fhir/version "0.5.27",
+  :zen.fhir/version "0.5.27-1",
   :fhir/code-systems
   #{{:fhir/url "http://www.ensembl.org",
      :zen.fhir/content :not-present}},
