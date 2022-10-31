@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Availability of the resource.",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :fhir/code-systems
   #{{:fhir/url "http://dicom.nema.org/resources/ontology/DCM",
      :zen.fhir/content :bundled}},

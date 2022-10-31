@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "NUCC Healthcare Provider Taxonomy codes",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :fhir/code-systems
   #{{:fhir/url "http://nucc.org/provider-taxonomy",
      :zen.fhir/content :not-present}},

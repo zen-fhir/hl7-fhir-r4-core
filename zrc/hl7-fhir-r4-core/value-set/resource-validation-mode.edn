@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Codes indicating the type of validation to perform.",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/resource-validation-mode",
      :zen.fhir/content :bundled}},

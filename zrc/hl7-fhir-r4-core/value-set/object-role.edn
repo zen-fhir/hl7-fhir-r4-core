@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Code representing the role the entity played in the audit event.",
-  :zen.fhir/version "0.5.27-1",
+  :zen.fhir/version "0.5.28",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/object-role",
      :zen.fhir/content :bundled}},
