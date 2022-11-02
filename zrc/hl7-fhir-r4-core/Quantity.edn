@@ -14,7 +14,7 @@
   :zen.fhir/type "Quantity",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Quantity",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :type zen/map,
   :keys

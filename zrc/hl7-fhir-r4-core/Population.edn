@@ -11,7 +11,7 @@
   :zen.fhir/type "Population",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Population",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
