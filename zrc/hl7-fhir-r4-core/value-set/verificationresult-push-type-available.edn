@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Type of alerts/updates the primary source can send",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/push-type-available",

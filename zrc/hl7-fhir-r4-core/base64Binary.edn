@@ -7,6 +7,6 @@
   :zen.fhir/type "base64Binary",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/base64Binary",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :type zen/string,
   :regex "(\\s*([0-9a-zA-Z\\+\\=]){4}\\s*)+"}}

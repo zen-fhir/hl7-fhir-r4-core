@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The code(s) that detail the conditions under which the healthcare service is available/offered.",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/service-provision-conditions",

@@ -26,7 +26,7 @@
    hl7-fhir-r4-core.value-set.search-param-type},
  parameter-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -119,7 +119,7 @@
   :require #{:min :use :name :max},
   :zen/desc "Parameters for the operation/query"},
  schema
- {:zen.fhir/version "0.5.28",
+ {:zen.fhir/version "0.5.30-1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

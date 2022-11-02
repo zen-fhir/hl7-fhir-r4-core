@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/http-verb",
      :zen.fhir/content :bundled}},

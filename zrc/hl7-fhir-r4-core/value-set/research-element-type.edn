@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The possible types of research elements (E.g. Population, Exposure, Outcome).",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/research-element-type",
      :zen.fhir/content :bundled}},

@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The status of the location.",
-  :zen.fhir/version "0.5.28",
+  :zen.fhir/version "0.5.30-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/encounter-location-status",
      :zen.fhir/content :bundled}},
