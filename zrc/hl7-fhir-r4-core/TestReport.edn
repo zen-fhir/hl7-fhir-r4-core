@@ -19,7 +19,7 @@
    hl7-fhir-r4-core.value-set.report-participant-type
    hl7-fhir-r4-core.value-set.report-result-codes},
  schema
- {:zen.fhir/version "0.5.30-1",
+ {:zen.fhir/version "0.5.31",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -183,7 +183,7 @@
   :zen.fhir/type "TestReport"},
  setup-action-assert-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -207,7 +207,7 @@
   :zen/desc "The assertion to perform"},
  setup-action-operation-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose of vaccine was not administered. This value set is provided as a suggestive example.",
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ActReason",
      :zen.fhir/content :bundled}
@@ -14,7 +14,7 @@
   :version "4.0.1",
   :ftr
   {:module "ig",
-   :source-url "node_modules/hl7.fhir.r4.core",
-   :source-type :ig,
+   :source-urls ["node_modules/hl7.fhir.r4.core"],
+   :source-type :igs,
    :ftr-path "ftr",
    :tag "init"}}}

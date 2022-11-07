@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   " This domain is the root domain to which all HL7-recognized value sets for the Observation.value attribute will be linked when Observation.value has a coded data type.  OpenIssue:\r\nDescription copied from Concept Domain of same name.  Must be corrected..",
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
@@ -13,7 +13,7 @@
   :version "2018-08-12",
   :ftr
   {:module "ig",
-   :source-url "node_modules/hl7.fhir.r4.core",
-   :source-type :ig,
+   :source-urls ["node_modules/hl7.fhir.r4.core"],
+   :source-type :igs,
    :ftr-path "ftr",
    :tag "init"}}}

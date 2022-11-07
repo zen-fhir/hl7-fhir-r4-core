@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "MedicationDispense Category Codes",
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
@@ -12,7 +12,7 @@
   :version "4.0.1",
   :ftr
   {:module "ig",
-   :source-url "node_modules/hl7.fhir.r4.core",
-   :source-type :ig,
+   :source-urls ["node_modules/hl7.fhir.r4.core"],
+   :source-type :igs,
    :ftr-path "ftr",
    :tag "init"}}}
