@@ -57,7 +57,7 @@
    hl7-fhir-r4-core.Address},
  parameter-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -222,7 +222,7 @@
   :zen.fhir/type "Parameters",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Parameters",
-  :zen.fhir/version "0.5.30-1",
+  :zen.fhir/version "0.5.31",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :type zen/map,
   :keys
