@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Used to distinguish different roles a resource can play within a set of linked resources.",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/linkage-type",
      :zen.fhir/content :bundled}},

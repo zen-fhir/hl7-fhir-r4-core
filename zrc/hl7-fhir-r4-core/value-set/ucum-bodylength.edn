@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "UCUM units for recording body length measures such as height and head circumference",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :fhir/code-systems
   #{{:fhir/url "http://unitsofmeasure.org",
      :zen.fhir/content :bundled}},

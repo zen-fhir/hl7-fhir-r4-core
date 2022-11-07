@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Defines selection frequency behavior for an action or group.",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/action-precheck-behavior",
      :zen.fhir/content :bundled}},

@@ -15,7 +15,7 @@
   :zen.fhir/type "ContactPoint",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/ContactPoint",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :type zen/map,
   :keys
