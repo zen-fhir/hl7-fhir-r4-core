@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "This value set has asset availability codes.",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/asset-availability",
      :zen.fhir/content :bundled}},

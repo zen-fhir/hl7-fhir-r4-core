@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "DBSNP : Single Nucleotide Polymorphism database",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :fhir/code-systems
   #{{:fhir/url "http://www.ncbi.nlm.nih.gov/projects/SNP",
      :zen.fhir/content :not-present}},

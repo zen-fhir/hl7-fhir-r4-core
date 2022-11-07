@@ -7,7 +7,7 @@
   :zen.fhir/type "positiveInt",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/positiveInt",
-  :zen.fhir/version "0.5.31",
+  :zen.fhir/version "0.5.31-1",
   :type zen/integer,
   :min 1,
   :confirms #{hl7-fhir-r4-core.integer/schema}}}
