@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.timing-daysOfCycle,
  import #{hl7-fhir-r4-core.integer zen.fhir},
  schema
- {:zen.fhir/version "0.5.31-1",
+ {:zen.fhir/version "0.5.32-2",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/timing-daysOfCycle",

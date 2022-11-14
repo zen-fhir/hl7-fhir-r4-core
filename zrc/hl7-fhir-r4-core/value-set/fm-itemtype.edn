@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "This value set includes sample Item Type codes.",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/ex-claimitemtype",
      :zen.fhir/content :bundled}},

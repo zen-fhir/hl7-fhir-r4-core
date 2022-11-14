@@ -7,5 +7,5 @@
   :zen.fhir/type "string",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-deliveryAddressLine",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :confirms #{hl7-fhir-r4-core.string/schema}}}

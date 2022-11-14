@@ -7,7 +7,7 @@
   :zen.fhir/type "Element",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Element",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :type zen/map,
   :keys
   {:id

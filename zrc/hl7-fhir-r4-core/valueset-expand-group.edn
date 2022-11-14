@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.valueset-expand-group,
  import #{hl7-fhir-r4-core.code zen.fhir hl7-fhir-r4-core.string},
  schema
- {:zen.fhir/version "0.5.31-1",
+ {:zen.fhir/version "0.5.32-2",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/valueset-expand-group",

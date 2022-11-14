@@ -6,5 +6,5 @@
   :zen.fhir/type "CodeableConcept",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/patient-importance",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

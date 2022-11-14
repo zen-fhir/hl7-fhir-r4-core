@@ -13,7 +13,7 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier},
  schema
- {:zen.fhir/version "0.5.31-1",
+ {:zen.fhir/version "0.5.32-2",
   :confirms #{zen.fhir/Resource hl7-fhir-r4-core.Measure/schema},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri

@@ -21,7 +21,7 @@
   :zen.fhir/type "EnrollmentResponse",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/EnrollmentResponse",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
