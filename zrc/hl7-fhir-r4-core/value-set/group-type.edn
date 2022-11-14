@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Types of resources that are part of group.",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/group-type",
      :zen.fhir/content :bundled}},

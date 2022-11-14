@@ -7,5 +7,5 @@
   :zen.fhir/type "integer",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/integer",
-  :zen.fhir/version "0.5.31-1",
+  :zen.fhir/version "0.5.32-2",
   :type zen/integer}}
