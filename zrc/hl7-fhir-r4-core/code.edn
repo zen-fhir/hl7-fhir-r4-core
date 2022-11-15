@@ -6,7 +6,7 @@
   "Base StructureDefinition for code type: A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents",
   :zen.fhir/type "code",
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/code",
-  :zen.fhir/version "0.5.32-2",
+  :zen.fhir/version "0.5.33",
   :type zen/string,
   :regex "[^\\s]+(\\s[^\\s]+)*",
   :confirms #{hl7-fhir-r4-core.string/schema}}}

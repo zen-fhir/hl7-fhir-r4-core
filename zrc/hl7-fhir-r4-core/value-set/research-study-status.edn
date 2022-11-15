@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes that convey the current status of the research study.",
-  :zen.fhir/version "0.5.32-2",
+  :zen.fhir/version "0.5.33",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/research-study-status",
      :zen.fhir/content :bundled}},
