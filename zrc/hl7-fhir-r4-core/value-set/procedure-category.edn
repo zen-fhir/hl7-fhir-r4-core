@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Procedure Category code: A selection of relevant SNOMED CT codes.",
-  :zen.fhir/version "0.5.32-2",
+  :zen.fhir/version "0.5.33",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct", :zen.fhir/content :bundled}},
   :uri "http://hl7.org/fhir/ValueSet/procedure-category",
