@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Defines the type of structure that a definition is describing.",
-  :zen.fhir/version "0.5.33",
+  :zen.fhir/version "0.5.33-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/structure-definition-kind",
      :zen.fhir/content :bundled}},

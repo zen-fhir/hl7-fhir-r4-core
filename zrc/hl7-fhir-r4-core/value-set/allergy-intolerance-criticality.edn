@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.",
-  :zen.fhir/version "0.5.33",
+  :zen.fhir/version "0.5.33-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/allergy-intolerance-criticality",
      :zen.fhir/content :bundled}},

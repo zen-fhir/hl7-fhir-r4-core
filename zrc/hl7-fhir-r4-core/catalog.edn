@@ -9,7 +9,7 @@
    hl7-fhir-r4-core.CatalogEntry
    hl7-fhir-r4-core.CodeableConcept},
  schema
- {:zen.fhir/version "0.5.33",
+ {:zen.fhir/version "0.5.33-1",
   :confirms #{hl7-fhir-r4-core.Composition/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri

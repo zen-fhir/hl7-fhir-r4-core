@@ -9,7 +9,7 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.value-set.operation-parameter-use},
  schema
- {:zen.fhir/version "0.5.33",
+ {:zen.fhir/version "0.5.33-1",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
