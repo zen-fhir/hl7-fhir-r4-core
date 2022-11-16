@@ -10,7 +10,7 @@
   :zen.fhir/type "CodeableConcept",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation",
-  :zen.fhir/version "0.5.33",
+  :zen.fhir/version "0.5.33-1",
   :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
   :zen.fhir/value-set
   {:symbol

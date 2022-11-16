@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Identification of the underlying physiological mechanism for a Reaction Risk.",
-  :zen.fhir/version "0.5.33",
+  :zen.fhir/version "0.5.33-1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/allergy-intolerance-type",
      :zen.fhir/content :bundled}},

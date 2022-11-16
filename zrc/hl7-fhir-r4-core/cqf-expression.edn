@@ -7,5 +7,5 @@
   :zen.fhir/type "Expression",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-  :zen.fhir/version "0.5.33",
+  :zen.fhir/version "0.5.33-1",
   :confirms #{hl7-fhir-r4-core.Expression/schema}}}
