@@ -7,6 +7,6 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/list-changeBase",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
   :zen.fhir/reference {:refers #{hl7-fhir-r4-core.List/schema}}}}

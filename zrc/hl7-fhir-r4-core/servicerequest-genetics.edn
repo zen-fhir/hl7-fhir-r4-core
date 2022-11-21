@@ -10,7 +10,7 @@
   :zen.fhir/type "ServiceRequest",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/servicerequest-genetics",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :confirms
   #{hl7-fhir-r4-core.ServiceRequest/schema zen.fhir/Resource},
   :type zen/map,

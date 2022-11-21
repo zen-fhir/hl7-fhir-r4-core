@@ -25,7 +25,7 @@
   :zen.fhir/type "Dosage",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Dosage",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
