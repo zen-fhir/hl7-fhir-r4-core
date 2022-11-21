@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "The status of a resource narrative.",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/narrative-status",
      :zen.fhir/content :bundled}},

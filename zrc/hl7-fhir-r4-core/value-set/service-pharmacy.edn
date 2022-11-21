@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes a smattering of Pharmacy Service codes.",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/ex-pharmaservice",
      :zen.fhir/content :bundled}},

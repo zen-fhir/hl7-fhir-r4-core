@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/identity-assuranceLevel",
      :zen.fhir/content :bundled}},

@@ -10,7 +10,7 @@
   :zen.fhir/type "code",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-  :zen.fhir/version "0.5.33-1",
+  :zen.fhir/version "0.6.0",
   :confirms #{hl7-fhir-r4-core.code/schema},
   :zen.fhir/value-set
   {:symbol
