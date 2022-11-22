@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes LOINC codes that relate to Diagnostic Observations.",
-  :zen.fhir/version "0.6.0",
+  :zen.fhir/version "0.6.1",
   :fhir/code-systems
   #{{:fhir/url "http://loinc.org", :zen.fhir/content :not-present}},
   :uri "http://hl7.org/fhir/ValueSet/report-codes",

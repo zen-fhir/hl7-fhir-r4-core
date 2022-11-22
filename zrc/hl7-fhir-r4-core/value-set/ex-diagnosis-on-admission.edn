@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes example Diagnosis on Admission codes.",
-  :zen.fhir/version "0.6.0",
+  :zen.fhir/version "0.6.1",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission",

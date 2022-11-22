@@ -7,7 +7,7 @@
   :zen.fhir/type "markdown",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/markdown",
-  :zen.fhir/version "0.6.0",
+  :zen.fhir/version "0.6.1",
   :type zen/string,
   :maxLength 1048576,
   :confirms #{hl7-fhir-r4-core.string/schema}}}

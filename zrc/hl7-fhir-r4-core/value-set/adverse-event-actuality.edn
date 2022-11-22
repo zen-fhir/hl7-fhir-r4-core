@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Overall nature of the adverse event, e.g. real or potential.",
-  :zen.fhir/version "0.6.0",
+  :zen.fhir/version "0.6.1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/adverse-event-actuality",
      :zen.fhir/content :bundled}},

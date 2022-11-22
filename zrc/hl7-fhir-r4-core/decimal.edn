@@ -7,5 +7,5 @@
   :zen.fhir/type "decimal",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/decimal",
-  :zen.fhir/version "0.6.0",
+  :zen.fhir/version "0.6.1",
   :type zen/number}}
