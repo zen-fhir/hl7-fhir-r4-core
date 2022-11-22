@@ -23,12 +23,12 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier},
  schema
- {:zen.fhir/version "0.6.0",
+ {:zen.fhir/version "0.6.1",
   :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/devicemetricobservation",
-  :require #{:effectiveDateTime :status :code :device :subject},
+  :require #{:status :code :device :subject},
   :type zen/map,
   :zen/desc
   "This profile describes the direct or derived, qualitative or quantitative physiological measurement, setting, or calculation data produced by a medical device or a device component.",
@@ -47,7 +47,6 @@
      :fhir/flags #{:MS},
      :zen.fhir/reference
      {:refers #{hl7-fhir-r4-core.Observation/schema}}}},
-   :_effectiveDateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :derivedFrom
    {:type zen/vector,
     :every
@@ -100,10 +99,9 @@
    :note
    {:type zen/vector,
     :every {:confirms #{hl7-fhir-r4-core.Annotation/schema}}},
-   :effectiveDateTime
-   {:confirms #{hl7-fhir-r4-core.dateTime/schema}, :fhir/flags #{:MS}},
    :status
    {:confirms #{hl7-fhir-r4-core.code/schema}, :fhir/flags #{:MS}},
+   :effective {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
    :code
    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
     :fhir/flags #{:MS}},
@@ -121,6 +119,15 @@
     :fhir/flags #{:MS},
     :zen.fhir/reference
     {:refers #{hl7-fhir-r4-core.DeviceMetric/schema}}},
+   :_effective
+   {:confirms #{hl7-fhir-r4-core.Element/schema},
+    :type zen/map,
+    :keys
+    {:dateTime
+     {:confirms #{hl7-fhir-r4-core.dateTime/schema},
+      :fhir/flags #{:MS}},
+     :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+    :require #{:dateTime}},
    :subject
    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
     :fhir/flags #{:MS},

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "A code that indicates whether an application accepts unknown elements or extensions when reading resources.",
-  :zen.fhir/version "0.6.0",
+  :zen.fhir/version "0.6.1",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/unknown-content-code",
      :zen.fhir/content :bundled}},

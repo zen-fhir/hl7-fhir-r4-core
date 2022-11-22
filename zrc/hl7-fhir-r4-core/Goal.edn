@@ -37,7 +37,7 @@
    hl7-fhir-r4-core.RiskAssessment
    hl7-fhir-r4-core.value-set.clinical-findings},
  schema
- {:zen.fhir/version "0.6.0",
+ {:zen.fhir/version "0.6.1",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
