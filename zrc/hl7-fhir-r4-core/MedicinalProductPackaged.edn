@@ -20,7 +20,7 @@
    hl7-fhir-r4-core.ProductShelfLife},
  packageItem-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -104,7 +104,7 @@
   :zen/desc
   "A packaging item, as a contained for medicine, possibly with other packaging items within"},
  schema
- {:zen.fhir/version "0.6.1",
+ {:zen.fhir/version "0.6.2",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

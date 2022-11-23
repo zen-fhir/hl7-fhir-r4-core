@@ -35,7 +35,7 @@
    hl7-fhir-r4-core.Identifier},
  item-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -260,7 +260,7 @@
   :require #{:linkId :type},
   :zen/desc "Questions and sections within the Questionnaire"},
  schema
- {:zen.fhir/version "0.6.1",
+ {:zen.fhir/version "0.6.2",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

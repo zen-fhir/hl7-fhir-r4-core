@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.",
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",

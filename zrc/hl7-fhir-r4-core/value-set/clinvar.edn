@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "NCBI central repository for curating pathogenicity of potentially clinically relevant variants",
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :fhir/code-systems
   #{{:fhir/url "http://www.ncbi.nlm.nih.gov/clinvar",
      :zen.fhir/content :not-present}},
