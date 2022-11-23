@@ -23,12 +23,12 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier},
  schema
- {:zen.fhir/version "0.6.1",
+ {:zen.fhir/version "0.6.2",
   :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/devicemetricobservation",
-  :require #{:status :code :device :subject},
+  :require #{:status :effective :code :device :subject},
   :type zen/map,
   :zen/desc
   "This profile describes the direct or derived, qualitative or quantitative physiological measurement, setting, or calculation data produced by a medical device or a device component.",

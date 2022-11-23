@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "How the Quantity should be understood and represented.",
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/quantity-comparator",
      :zen.fhir/content :bundled}},

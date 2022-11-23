@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Example set of codes that can be used for billing purposes.",
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes",

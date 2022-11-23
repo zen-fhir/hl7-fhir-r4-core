@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Codes providing the status/availability of a specimen.",
-  :zen.fhir/version "0.6.1",
+  :zen.fhir/version "0.6.2",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/specimen-status",
      :zen.fhir/content :bundled}},
