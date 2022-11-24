@@ -10,7 +10,7 @@
   :zen.fhir/type "Distance",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Distance",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :confirms #{hl7-fhir-r4-core.Quantity/schema},
   :zen.fhir/value-set
   {:symbol hl7-fhir-r4-core.value-set.distance-units/value-set,

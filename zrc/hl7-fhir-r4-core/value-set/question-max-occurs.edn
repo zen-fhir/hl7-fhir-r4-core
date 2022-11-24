@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Flags an element as having unlimited repetitions.",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/question-max-occurs",

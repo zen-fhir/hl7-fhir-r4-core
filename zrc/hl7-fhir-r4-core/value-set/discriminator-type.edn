@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "How an element value is interpreted when discrimination is evaluated.",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/discriminator-type",
      :zen.fhir/content :bundled}},

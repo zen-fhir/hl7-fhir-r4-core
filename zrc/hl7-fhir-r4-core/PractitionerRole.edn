@@ -28,7 +28,7 @@
   :zen.fhir/type "PractitionerRole",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,

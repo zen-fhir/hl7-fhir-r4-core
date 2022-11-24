@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "MedicationRequest Intent Codes",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :fhir/code-systems
   #{{:fhir/url
      "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",

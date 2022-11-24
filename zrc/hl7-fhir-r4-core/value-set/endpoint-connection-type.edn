@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This is an example value set defined by the FHIR project, that could be used to represent possible connection type profile values.",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",

@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes sample Regulatory consent policy types from the US and other regions.",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/consentpolicycodes",

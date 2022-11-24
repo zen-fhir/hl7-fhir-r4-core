@@ -4,10 +4,9 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Example value set for the type of stages of cancer and other conditions",
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :fhir/code-systems
-  #{{:fhir/url "http://snomed.info/sct", :zen.fhir/content :bundled}
-    {:fhir/url "http://snomed.info/sct",
+  #{{:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},
   :uri "http://hl7.org/fhir/ValueSet/condition-stage-type",
   :version "4.0.1",
