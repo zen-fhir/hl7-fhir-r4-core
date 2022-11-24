@@ -27,7 +27,7 @@
    hl7-fhir-r4-core.Identifier},
  compose-include-concept-designation-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -52,7 +52,7 @@
   :zen/desc "Additional representations for this concept"},
  compose-include-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -132,7 +132,7 @@
   "Include one or more codes from a code system or other value set(s)"},
  expansion-contains-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.2",
+  :zen.fhir/version "0.6.3",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -173,7 +173,7 @@
    :_inactive {:confirms #{hl7-fhir-r4-core.Element/schema}}},
   :zen/desc "Codes in the value set"},
  schema
- {:zen.fhir/version "0.6.2",
+ {:zen.fhir/version "0.6.3",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
