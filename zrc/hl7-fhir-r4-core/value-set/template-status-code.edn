@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The status indicates the level of maturity of the design and may be used to manage the use of the design.",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :fhir/code-systems
   #{{:fhir/url "urn:oid:2.16.840.1.113883.3.1937.98.5.8",
      :zen.fhir/content :bundled}},

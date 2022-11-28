@@ -1,19 +1,7 @@
 {ns hl7-fhir-r4-core.cdshooksrequestgroup,
- import
- #{hl7-fhir-r4-core.BackboneElement
-   hl7-fhir-r4-core.code
-   zen.fhir
-   hl7-fhir-r4-core.dateTime
-   hl7-fhir-r4-core.string
-   hl7-fhir-r4-core.uri
-   hl7-fhir-r4-core.RequestGroup
-   hl7-fhir-r4-core.RelatedArtifact
-   hl7-fhir-r4-core.Reference
-   hl7-fhir-r4-core.Element
-   hl7-fhir-r4-core.CodeableConcept
-   hl7-fhir-r4-core.Identifier},
+ import #{zen.fhir hl7-fhir-r4-core.RequestGroup},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :confirms #{hl7-fhir-r4-core.RequestGroup/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -24,77 +12,40 @@
   "Defines a RequestGroup that can represent a CDS Hooks response",
   :keys
   {:instantiatesUri
-   {:type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.uri/schema}},
-    :minItems 1,
-    :maxItems 1},
-   :_authoredOn {:confirms #{hl7-fhir-r4-core.Element/schema}},
-   :_priority {:confirms #{hl7-fhir-r4-core.Element/schema}},
-   :authoredOn
-   {:confirms #{hl7-fhir-r4-core.dateTime/schema}, :fhir/flags #{:MS}},
+   {:type zen/vector, :every {}, :minItems 1, :maxItems 1},
+   :authoredOn #:fhir{:flags #{:MS}},
    :author
-   {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-    :fhir/flags #{:MS},
+   {:fhir/flags #{:MS},
+    :confirms #{zen.fhir/Reference},
     :zen.fhir/reference {:refers #{}}},
-   :priority
-   {:confirms #{hl7-fhir-r4-core.code/schema}, :fhir/flags #{:MS}},
-   :identifier
-   {:type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.Identifier/schema}},
-    :minItems 1,
-    :maxItems 1},
+   :priority #:fhir{:flags #{:MS}},
+   :identifier {:type zen/vector, :every {}, :minItems 1, :maxItems 1},
    :action
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
+    {:type zen/map,
      :keys
-     {:description
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:MS}},
-      :_priority {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :type
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :fhir/flags #{:MS}},
+     {:description #:fhir{:flags #{:MS}},
+      :type #:fhir{:flags #{:MS}},
       :participant
       {:type zen/vector,
        :every
-       {:confirms
-        #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-        :fhir/flags #{:MS},
+       {:fhir/flags #{:MS},
+        :confirms #{zen.fhir/Reference},
         :zen.fhir/reference {:refers #{}}}},
-      :title
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:MS}},
-      :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :documentation
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.RelatedArtifact/schema},
-        :fhir/flags #{:MS}}},
-      :selectionBehavior
-      {:confirms #{hl7-fhir-r4-core.code/schema}, :fhir/flags #{:MS}},
-      :priority
-      {:confirms #{hl7-fhir-r4-core.code/schema}, :fhir/flags #{:MS}},
-      :condition
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :fhir/flags #{:MS}}},
+      :title #:fhir{:flags #{:MS}},
+      :documentation {:type zen/vector, :every #:fhir{:flags #{:MS}}},
+      :selectionBehavior #:fhir{:flags #{:MS}},
+      :priority #:fhir{:flags #{:MS}},
+      :condition {:type zen/vector, :every #:fhir{:flags #{:MS}}},
       :resource
-      {:confirms
-       #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-       :fhir/flags #{:MS},
+      {:fhir/flags #{:MS},
+       :confirms #{zen.fhir/Reference},
        :zen.fhir/reference {:refers #{}}},
-      :timing #:fhir{:polymorphic true, :flags #{:MS}},
-      :_selectionBehavior
-      {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_title {:confirms #{hl7-fhir-r4-core.Element/schema}}}}},
+      :timing #:fhir{:polymorphic true, :flags #{:MS}}}}},
    :subject
-   {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
-    :fhir/flags #{:MS},
+   {:fhir/flags #{:MS},
+    :confirms #{zen.fhir/Reference},
     :zen.fhir/reference {:refers #{}}},
-   :_instantiatesUri
-   {:type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
+   :_instantiatesUri {:type zen/vector, :every {}}},
   :zen.fhir/type "RequestGroup"}}

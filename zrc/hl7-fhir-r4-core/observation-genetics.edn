@@ -11,7 +11,6 @@
    hl7-fhir-r4-core.observation-geneticsAncestry
    hl7-fhir-r4-core.observation-geneticsInterpretation
    hl7-fhir-r4-core.observation-geneticsPhaseSet
-   hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.observation-geneticsAminoAcidChange},
  schema
  {:zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -20,7 +19,7 @@
   :zen.fhir/type "Observation",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/observation-genetics",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
   :type zen/map,
   :keys
@@ -40,8 +39,7 @@
    {:type zen/vector,
     :every
     {:confirms
-     #{hl7-fhir-r4-core.observation-geneticsInterpretation/schema
-       hl7-fhir-r4-core.CodeableConcept/schema},
+     #{hl7-fhir-r4-core.observation-geneticsInterpretation/schema},
      :zen/desc "Clinical interpretations for variant"},
     :maxItems 1},
    :Ancestry

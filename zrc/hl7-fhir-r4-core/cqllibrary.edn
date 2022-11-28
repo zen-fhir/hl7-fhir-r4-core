@@ -1,12 +1,7 @@
 {ns hl7-fhir-r4-core.cqllibrary,
- import
- #{hl7-fhir-r4-core.ParameterDefinition
-   zen.fhir
-   hl7-fhir-r4-core.DataRequirement
-   hl7-fhir-r4-core.CodeableConcept
-   hl7-fhir-r4-core.Library},
+ import #{zen.fhir hl7-fhir-r4-core.Library},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :confirms #{zen.fhir/Resource hl7-fhir-r4-core.Library/schema},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -21,16 +16,7 @@
      {:coding
       [{:system "http://terminology.hl7.org/CodeSystem/library-type",
         :code "logic-library",
-        :display "Logic Library"}]}},
-    :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
-   :parameter
-   {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.ParameterDefinition/schema},
-     :fhir/flags #{:MS}}},
-   :dataRequirement
-   {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.DataRequirement/schema},
-     :fhir/flags #{:MS}}}},
+        :display "Logic Library"}]}}},
+   :parameter {:type zen/vector, :every #:fhir{:flags #{:MS}}},
+   :dataRequirement {:type zen/vector, :every #:fhir{:flags #{:MS}}}},
   :zen.fhir/type "Library"}}

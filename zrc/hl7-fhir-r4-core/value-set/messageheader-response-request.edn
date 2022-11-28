@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message.",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/messageheader-response-request",
      :zen.fhir/content :bundled}},

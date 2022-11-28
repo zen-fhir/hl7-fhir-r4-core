@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Identifies the style of unique identifier used to identify a namespace.",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/namingsystem-identifier-type",
      :zen.fhir/content :bundled}},

@@ -5,7 +5,6 @@
    hl7-fhir-r4-core.DiagnosticReport-geneticsFamilyMemberHistory
    hl7-fhir-r4-core.DiagnosticReport
    hl7-fhir-r4-core.DiagnosticReport-geneticsAssessedCondition
-   hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.DiagnosticReport-geneticsAnalysis},
  schema
  {:zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -14,7 +13,7 @@
   :zen.fhir/type "DiagnosticReport",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/diagnosticreport-genetics",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :confirms
   #{hl7-fhir-r4-core.DiagnosticReport/schema zen.fhir/Resource},
   :type zen/map,
@@ -51,7 +50,4 @@
      :fhir/extensionUri
      "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsReferences",
      :zen/desc "References"}},
-   :conclusionCode
-   {:type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
-    :maxItems 0}}}}
+   :conclusionCode {:type zen/vector, :every {}, :maxItems 0}}}}

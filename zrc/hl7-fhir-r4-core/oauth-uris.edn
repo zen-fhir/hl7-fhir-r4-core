@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.oauth-uris,
  import #{zen.fhir hl7-fhir-r4-core.uri},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris",
