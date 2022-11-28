@@ -7,13 +7,12 @@
   :zen.fhir/type "Element",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Element",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :type zen/map,
   :keys
   {:id
    {:confirms #{hl7-fhir-r4-core.string/schema},
     :zen/desc "Unique id for inter-element referencing"},
-   :_id {},
    :extension
    {:type zen/vector,
     :every

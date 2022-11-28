@@ -1,16 +1,10 @@
 {ns hl7-fhir-r4-core.cdshooksserviceplandefinition,
  import
- #{hl7-fhir-r4-core.BackboneElement
-   hl7-fhir-r4-core.code
-   zen.fhir
-   hl7-fhir-r4-core.string
-   hl7-fhir-r4-core.Element
-   hl7-fhir-r4-core.CodeableConcept
-   hl7-fhir-r4-core.TriggerDefinition
+ #{zen.fhir
    hl7-fhir-r4-core.PlanDefinition
    hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :confirms
   #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -29,42 +23,16 @@
    :action
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
+    {:type zen/map,
      :keys
-     {:description
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:MS}},
+     {:description #:fhir{:flags #{:MS}},
       :definition #:fhir{:polymorphic true, :flags #{:MS}},
-      :_priority {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :type
-      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-       :fhir/flags #{:MS}},
-      :participant
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :fhir/flags #{:MS}}},
-      :title
-      {:confirms #{hl7-fhir-r4-core.string/schema},
-       :fhir/flags #{:MS}},
-      :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :selectionBehavior
-      {:confirms #{hl7-fhir-r4-core.code/schema}, :fhir/flags #{:MS}},
-      :priority
-      {:confirms #{hl7-fhir-r4-core.code/schema}, :fhir/flags #{:MS}},
-      :condition
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-        :fhir/flags #{:MS}}},
+      :type #:fhir{:flags #{:MS}},
+      :participant {:type zen/vector, :every #:fhir{:flags #{:MS}}},
+      :title #:fhir{:flags #{:MS}},
+      :selectionBehavior #:fhir{:flags #{:MS}},
+      :priority #:fhir{:flags #{:MS}},
+      :condition {:type zen/vector, :every #:fhir{:flags #{:MS}}},
       :timing #:fhir{:polymorphic true, :flags #{:MS}},
-      :_selectionBehavior
-      {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
-      :trigger
-      {:type zen/vector,
-       :every
-       {:confirms #{hl7-fhir-r4-core.TriggerDefinition/schema},
-        :fhir/flags #{:MS}}}}}}},
+      :trigger {:type zen/vector, :every #:fhir{:flags #{:MS}}}}}}},
   :zen.fhir/type "PlanDefinition"}}

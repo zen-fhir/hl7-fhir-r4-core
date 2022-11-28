@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Kinds of issues or contraindications, such as 'drug-drug interaction', 'duplicate therapy', etc.",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ActCode",
      :zen.fhir/content :bundled}},

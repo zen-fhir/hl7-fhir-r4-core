@@ -1,16 +1,7 @@
 {ns hl7-fhir-r4-core.bp,
- import
- #{hl7-fhir-r4-core.BackboneElement
-   hl7-fhir-r4-core.code
-   zen.fhir
-   hl7-fhir-r4-core.Coding
-   hl7-fhir-r4-core.Quantity
-   hl7-fhir-r4-core.uri
-   hl7-fhir-r4-core.Element
-   hl7-fhir-r4-core.CodeableConcept
-   hl7-fhir-r4-core.vitalsigns},
+ import #{zen.fhir hl7-fhir-r4-core.vitalsigns},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :confirms #{zen.fhir/Resource hl7-fhir-r4-core.vitalsigns/schema},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/bp",
@@ -19,8 +10,7 @@
   :zen/desc "FHIR Blood Pressure Profile",
   :keys
   {:code
-   {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-    :type zen/map,
+   {:type zen/map,
     :keys
     {:coding
      {:slicing
@@ -33,27 +23,16 @@
           :every
           {:type zen/map,
            :keys
-           {:system
-            {:const {:value "http://loinc.org"},
-             :confirms #{hl7-fhir-r4-core.uri/schema}},
-            :_system {:confirms #{hl7-fhir-r4-core.Element/schema}},
-            :code
-            {:const {:value "85354-9"},
-             :confirms #{hl7-fhir-r4-core.code/schema}},
-            :_code {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+           {:system {:const {:value "http://loinc.org"}},
+            :code {:const {:value "85354-9"}}},
            :require #{:system :code}}},
          :filter
          {:engine :match,
           :match {:code "85354-9", :system "http://loinc.org"}}}}},
       :type zen/vector,
-      :every {:confirms #{hl7-fhir-r4-core.Coding/schema}}}},
+      :every {}}},
     :zen/desc "Blood Pressure"},
-   :value
-   {:type zen/map,
-    :keys {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}}}},
+   :value {:type zen/map, :keys {}},
    :component
-   {:slicing {:slices {}},
-    :type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.BackboneElement/schema}},
-    :minItems 2}},
+   {:slicing {:slices {}}, :type zen/vector, :every {}, :minItems 2}},
   :zen.fhir/type "Observation"}}

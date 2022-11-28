@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Type if a sequence -- DNA, RNA, or amino acid sequence.",
-  :zen.fhir/version "0.6.3",
+  :zen.fhir/version "0.6.4",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/sequence-type",
      :zen.fhir/content :bundled}},

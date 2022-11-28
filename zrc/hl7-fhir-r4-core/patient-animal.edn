@@ -6,7 +6,7 @@
    hl7-fhir-r4-core.value-set.animal-species
    hl7-fhir-r4-core.CodeableConcept},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/patient-animal",

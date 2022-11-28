@@ -1,21 +1,10 @@
 {ns hl7-fhir-r4-core.cholesterol,
  import
  #{hl7-fhir-r4-core.Observation
-   hl7-fhir-r4-core.decimal
-   hl7-fhir-r4-core.BackboneElement
    hl7-fhir-r4-core.SimpleQuantity
-   hl7-fhir-r4-core.code
-   zen.fhir
-   hl7-fhir-r4-core.Annotation
-   hl7-fhir-r4-core.Range
-   hl7-fhir-r4-core.string
-   hl7-fhir-r4-core.Quantity
-   hl7-fhir-r4-core.uri
-   hl7-fhir-r4-core.Reference
-   hl7-fhir-r4-core.Element
-   hl7-fhir-r4-core.CodeableConcept},
+   zen.fhir},
  schema
- {:zen.fhir/version "0.6.3",
+ {:zen.fhir/version "0.6.4",
   :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -32,73 +21,40 @@
       [{:system "http://loinc.org",
         :code "35200-5",
         :display "Cholesterol [Moles/​volume] in Serum or Plasma"}]}},
-    :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
     :fhir/flags #{:MS},
     :zen/desc "Cholesterol"},
    :value
-   {:confirms #{hl7-fhir-r4-core.Quantity/schema},
-    :type zen/map,
+   {:type zen/map,
     :keys
     {:Quantity
-     {:confirms #{hl7-fhir-r4-core.Quantity/schema},
-      :type zen/map,
+     {:type zen/map,
       :keys
-      {:_code {:confirms #{hl7-fhir-r4-core.Element/schema}},
-       :system
+      {:system
        {:const {:value "http://unitsofmeasure.org"},
-        :confirms #{hl7-fhir-r4-core.uri/schema},
         :fhir/flags #{:MS}},
-       :_comparator {:confirms #{hl7-fhir-r4-core.Element/schema}},
-       :unit
-       {:const {:value "mmol/L"},
-        :confirms #{hl7-fhir-r4-core.string/schema},
-        :fhir/flags #{:MS}},
-       :value
-       {:confirms #{hl7-fhir-r4-core.decimal/schema},
-        :fhir/flags #{:MS},
-        :zen/desc "Actual numerical value"},
-       :_value {:confirms #{hl7-fhir-r4-core.Element/schema}},
-       :code
-       {:const {:value "mmol/L"},
-        :confirms #{hl7-fhir-r4-core.code/schema},
-        :fhir/flags #{:MS}},
-       :comparator {:confirms #{hl7-fhir-r4-core.code/schema}},
-       :_system {:confirms #{hl7-fhir-r4-core.Element/schema}},
-       :_unit {:confirms #{hl7-fhir-r4-core.Element/schema}}},
+       :unit {:const {:value "mmol/L"}, :fhir/flags #{:MS}},
+       :value {:fhir/flags #{:MS}, :zen/desc "Actual numerical value"},
+       :code {:const {:value "mmol/L"}, :fhir/flags #{:MS}}},
       :require #{:system :unit :code},
       :fhir/flags #{:MS},
       :zen/desc "Cholesterol value"}}},
    :interpretation
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-     :fhir/flags #{:MS},
-     :zen/desc "+ | ++ | +++ | - | -- | ---"},
+    {:fhir/flags #{:MS}, :zen/desc "+ | ++ | +++ | - | -- | ---"},
     :maxItems 1},
    :note
    {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.Annotation/schema},
-     :fhir/flags #{:MS},
-     :zen/desc "Comments about result"}},
+    :every {:fhir/flags #{:MS}, :zen/desc "Comments about result"}},
    :referenceRange
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.BackboneElement/schema},
-     :type zen/map,
+    {:type zen/map,
      :keys
-     {:low {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
-      :high
+     {:high
       {:const {:value {:value 4.5}},
-       :confirms
-       #{hl7-fhir-r4-core.Quantity/schema
-         hl7-fhir-r4-core.SimpleQuantity/schema}},
-      :type {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
-      :appliesTo
-      {:type zen/vector,
-       :every {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
-       :maxItems 0},
-      :age {:confirms #{hl7-fhir-r4-core.Range/schema}}},
+       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
+      :appliesTo {:type zen/vector, :every {}, :maxItems 0}},
      :require #{:high},
      :fhir/flags #{:MS}},
     :minItems 1,
@@ -106,13 +62,13 @@
    :hasMember
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+    {:confirms #{zen.fhir/Reference},
      :zen.fhir/reference {:refers #{}}},
     :maxItems 0},
    :derivedFrom
    {:type zen/vector,
     :every
-    {:confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+    {:confirms #{zen.fhir/Reference},
      :zen.fhir/reference {:refers #{}}},
     :maxItems 0}},
   :zen.fhir/type "Observation"}}
