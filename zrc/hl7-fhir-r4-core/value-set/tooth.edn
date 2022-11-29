@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes a smattering of FDI oral site codes.",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/ex-tooth",
      :zen.fhir/content :bundled}},

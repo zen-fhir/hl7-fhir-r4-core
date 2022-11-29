@@ -7,5 +7,5 @@
   :zen.fhir/type "boolean",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.boolean/schema}}}

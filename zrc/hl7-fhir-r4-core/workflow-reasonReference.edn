@@ -4,7 +4,6 @@
    hl7-fhir-r4-core.Condition
    zen.fhir
    hl7-fhir-r4-core.DiagnosticReport
-   hl7-fhir-r4-core.Reference
    hl7-fhir-r4-core.Media
    hl7-fhir-r4-core.DocumentReference},
  schema
@@ -14,8 +13,8 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/workflow-reasonReference",
-  :zen.fhir/version "0.6.4",
-  :confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+  :zen.fhir/version "0.6.5",
+  :confirms #{zen.fhir/Reference},
   :zen.fhir/reference
   {:refers
    #{hl7-fhir-r4-core.Media/schema

@@ -1,22 +1,17 @@
 {ns hl7-fhir-r4-core.example-section-library,
- import
- #{hl7-fhir-r4-core.BackboneElement
-   zen.fhir
-   hl7-fhir-r4-core.string
-   hl7-fhir-r4-core.Composition
-   hl7-fhir-r4-core.Element
-   hl7-fhir-r4-core.CodeableConcept},
+ import #{zen.fhir hl7-fhir-r4-core.Composition},
  schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/type "Composition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/example-section-library",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.Composition/schema},
   :type zen/map,
   :keys
   {:section
-   {:slicing
+   {:type zen/vector,
+    :slicing
     {:slices
      {"procedure"
       {:schema
@@ -24,17 +19,13 @@
         :every
         {:type zen/map,
          :keys
-         {:title
-          {:const {:value "Procedures Performed"},
-           :confirms #{hl7-fhir-r4-core.string/schema}},
-          :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         {:title {:const {:value "Procedures Performed"}},
           :code
           {:match
            {:coding
             #{{:system "http://loinc.org",
                :code "29554-3",
-               :display "Procedure Narrative"}}},
-           :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}},
+               :display "Procedure Narrative"}}}}},
          :require #{:title :code}}},
        :filter
        {:engine :match,
@@ -50,17 +41,13 @@
         :every
         {:type zen/map,
          :keys
-         {:title
-          {:const {:value "Medications Administered"},
-           :confirms #{hl7-fhir-r4-core.string/schema}},
-          :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         {:title {:const {:value "Medications Administered"}},
           :code
           {:match
            {:coding
             #{{:system "http://loinc.org",
                :code "29549-3",
-               :display "Medication administered Narrative"}}},
-           :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}},
+               :display "Medication administered Narrative"}}}}},
          :require #{:title :code}}},
        :filter
        {:engine :match,
@@ -76,17 +63,13 @@
         :every
         {:type zen/map,
          :keys
-         {:title
-          {:const {:value "Discharge Treatment Plan"},
-           :confirms #{hl7-fhir-r4-core.string/schema}},
-          :_title {:confirms #{hl7-fhir-r4-core.Element/schema}},
+         {:title {:const {:value "Discharge Treatment Plan"}},
           :code
           {:match
            {:coding
             #{{:system "http://loinc.org",
                :code "18776-5",
-               :display "Plan of treatment (narrative)"}}},
-           :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}},
+               :display "Plan of treatment (narrative)"}}}}},
          :require #{:title :code}}},
        :filter
        {:engine :match,
@@ -95,6 +78,4 @@
          {:coding
           #{{:system "http://loinc.org",
              :code "18776-5",
-             :display "Plan of treatment (narrative)"}}}}}}}},
-    :type zen/vector,
-    :every {:confirms #{hl7-fhir-r4-core.BackboneElement/schema}}}}}}
+             :display "Plan of treatment (narrative)"}}}}}}}}}}}}

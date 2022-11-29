@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "This value set defines the ISO 3166 Part 1 Numeric codes",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :fhir/code-systems
   #{{:fhir/url "urn:iso:std:iso:3166",
      :zen.fhir/content :not-present}},

@@ -1,5 +1,5 @@
 {ns hl7-fhir-r4-core,
- import #{zen.fhir},
+ import #{zen.fhir hl7-terminology-r4},
  base-schemas
  {:zen/tags #{zen.fhir/base-schemas},
   :schemas

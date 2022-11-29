@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.lipidprofile,
  import #{zen.fhir hl7-fhir-r4-core.DiagnosticReport},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms
   #{hl7-fhir-r4-core.DiagnosticReport/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -20,8 +20,8 @@
         :display "Lipid panel with direct LDL - Serum or Plasma"}]}},
     :zen/desc "LOINC Code for Lipid Panel with LDL"},
    :result
-   {:slicing {:slices {}},
-    :type zen/vector,
+   {:type zen/vector,
+    :slicing {:slices {}},
     :every
     {:confirms #{zen.fhir/Reference},
      :zen.fhir/reference {:refers #{}}},

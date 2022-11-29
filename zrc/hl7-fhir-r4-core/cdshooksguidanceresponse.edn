@@ -4,7 +4,7 @@
    hl7-fhir-r4-core.GuidanceResponse
    hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms
   #{hl7-fhir-r4-core.GuidanceResponse/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -15,12 +15,12 @@
   :zen/desc
   "Defines a GuidanceResponse that represents the response container for a CDS Hooks response",
   :keys
-  {:module {:type zen/map, :keys {}, :require #{:uri}},
+  {:module {:type zen/map, :require #{:uri}},
    :result
    {:fhir/flags #{:MS},
     :confirms #{zen.fhir/Reference},
     :zen.fhir/reference {:refers #{}}},
-   :identifier {:type zen/vector, :every {}, :minItems 1, :maxItems 1},
+   :identifier {:type zen/vector, :minItems 1, :maxItems 1},
    :occurrenceDateTime #:fhir{:flags #{:MS}},
    :cdsHooksEndpoint
    {:confirms #{hl7-fhir-r4-core.cqf-cdsHooksEndpoint/schema},

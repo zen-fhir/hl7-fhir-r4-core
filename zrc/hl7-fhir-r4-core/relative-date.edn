@@ -8,7 +8,7 @@
    hl7-fhir-r4-core.Reference
    hl7-fhir-r4-core.CodeableConcept},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/relative-date",

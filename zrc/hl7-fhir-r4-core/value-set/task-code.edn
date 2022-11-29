@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes indicating the type of action that is expected to be performed",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/CodeSystem/task-code",
      :zen.fhir/content :bundled}},

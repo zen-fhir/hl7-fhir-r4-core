@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},

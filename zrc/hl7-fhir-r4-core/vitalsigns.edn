@@ -11,10 +11,9 @@
    hl7-fhir-r4-core.QuestionnaireResponse
    hl7-fhir-r4-core.Media
    hl7-fhir-r4-core.DocumentReference
-   hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.vitalsigns},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -24,7 +23,8 @@
   :zen/desc "FHIR Vital Signs Profile",
   :keys
   {:category
-   {:slicing
+   {:type zen/vector,
+    :slicing
     {:slices
      {"VSCat"
       {:schema
@@ -32,8 +32,7 @@
         :minItems 1,
         :maxItems 1,
         :every
-        {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-         :type zen/map,
+        {:type zen/map,
          :keys
          {:coding
           {:type zen/vector,
@@ -58,7 +57,6 @@
          #{{:code "vital-signs",
             :system
             "http://terminology.hl7.org/CodeSystem/observation-category"}}}}}}},
-    :type zen/vector,
     :every #:fhir{:flags #{:MS}},
     :minItems 1},
    :hasMember
@@ -120,8 +118,6 @@
    :effective
    {:fhir/polymorphic true,
     :exclusive-keys #{#{:dateTime :Period}},
-    :type zen/map,
-    :keys {},
     :fhir/flags #{:MS},
     :zen/desc "Often just a dateTime for Vital Signs"},
    :code
