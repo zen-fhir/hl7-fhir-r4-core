@@ -5,7 +5,7 @@
    hl7-fhir-r4-core.value-set.provenance-history-agent-type
    hl7-fhir-r4-core.value-set.provenance-history-record-activity},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms #{zen.fhir/Resource hl7-fhir-r4-core.Provenance/schema},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -22,11 +22,7 @@
      :confirms #{zen.fhir/Reference},
      :zen.fhir/reference {:refers #{}},
      :zen/desc "Resource version"}},
-   :occurred
-   {:fhir/polymorphic true,
-    :type zen/map,
-    :keys {},
-    :fhir/flags #{:MS}},
+   :occurred #:fhir{:polymorphic true, :flags #{:MS}},
    :reason {:type zen/vector, :every #:fhir{:flags #{:MS}}},
    :activity
    {:fhir/flags #{:MS},
@@ -36,8 +32,8 @@
      :strength :extensible},
     :zen/desc "Record activity"},
    :agent
-   {:slicing {:slices {}},
-    :type zen/vector,
+   {:type zen/vector,
+    :slicing {:slices {}},
     :every
     {:type zen/map,
      :keys

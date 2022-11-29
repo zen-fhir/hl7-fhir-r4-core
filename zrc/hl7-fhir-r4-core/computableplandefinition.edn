@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.computableplandefinition,
  import #{zen.fhir hl7-fhir-r4-core.PlanDefinition},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms
   #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -11,7 +11,5 @@
   :type zen/map,
   :zen/desc
   "Defines a computable PlanDefinition that specifies a single library and requires all expressions referenced from the PlanDefinition to be definitions in that single library",
-  :keys
-  {:library {:type zen/vector, :every {}, :minItems 1, :maxItems 1},
-   :_library {:type zen/vector, :every {}}},
+  :keys {:library {:type zen/vector, :minItems 1, :maxItems 1}},
   :zen.fhir/type "PlanDefinition"}}

@@ -13,7 +13,7 @@
   :zen.fhir/type "DiagnosticReport",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/diagnosticreport-genetics",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :confirms
   #{hl7-fhir-r4-core.DiagnosticReport/schema zen.fhir/Resource},
   :type zen/map,
@@ -50,4 +50,4 @@
      :fhir/extensionUri
      "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsReferences",
      :zen/desc "References"}},
-   :conclusionCode {:type zen/vector, :every {}, :maxItems 0}}}}
+   :conclusionCode {:type zen/vector, :maxItems 0}}}}

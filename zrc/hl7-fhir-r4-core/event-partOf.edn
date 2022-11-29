@@ -1,5 +1,5 @@
 {ns hl7-fhir-r4-core.event-partOf,
- import #{zen.fhir hl7-fhir-r4-core.Reference},
+ import #{zen.fhir},
  schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen/desc
@@ -7,6 +7,6 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/event-partOf",
-  :zen.fhir/version "0.6.4",
-  :confirms #{hl7-fhir-r4-core.Reference/schema zen.fhir/Reference},
+  :zen.fhir/version "0.6.5",
+  :confirms #{zen.fhir/Reference},
   :zen.fhir/reference {:refers #{}}}}

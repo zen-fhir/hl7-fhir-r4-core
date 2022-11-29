@@ -18,7 +18,7 @@
    hl7-fhir-r4-core.value-set.search-entry-mode},
  link-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -37,7 +37,7 @@
   :fhir/flags #{:SU},
   :zen/desc "Links related to this Bundle"},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
   :zen.fhir/profileUri

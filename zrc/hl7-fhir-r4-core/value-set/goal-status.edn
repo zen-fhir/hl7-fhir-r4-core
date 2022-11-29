@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Codes that reflect the current state of a goal and whether the goal is still being targeted.",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/goal-status",
      :zen.fhir/content :bundled}},

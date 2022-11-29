@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.shareableplandefinition,
  import #{zen.fhir hl7-fhir-r4-core.PlanDefinition},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms
   #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},

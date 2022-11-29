@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.groupdefinition,
  import #{zen.fhir hl7-fhir-r4-core.Group},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms #{zen.fhir/Resource hl7-fhir-r4-core.Group/schema},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -10,5 +10,5 @@
   :type zen/map,
   :zen/desc
   "Enforces a descriptive group that can be used in definitional resources",
-  :keys {:member {:type zen/vector, :every {}, :maxItems 0}},
+  :keys {:member {:type zen/vector, :maxItems 0}},
   :zen.fhir/type "Group"}}

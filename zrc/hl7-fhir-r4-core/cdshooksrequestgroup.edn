@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.cdshooksrequestgroup,
  import #{zen.fhir hl7-fhir-r4-core.RequestGroup},
  schema
- {:zen.fhir/version "0.6.4",
+ {:zen.fhir/version "0.6.5",
   :confirms #{hl7-fhir-r4-core.RequestGroup/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -11,15 +11,14 @@
   :zen/desc
   "Defines a RequestGroup that can represent a CDS Hooks response",
   :keys
-  {:instantiatesUri
-   {:type zen/vector, :every {}, :minItems 1, :maxItems 1},
+  {:instantiatesUri {:type zen/vector, :minItems 1, :maxItems 1},
    :authoredOn #:fhir{:flags #{:MS}},
    :author
    {:fhir/flags #{:MS},
     :confirms #{zen.fhir/Reference},
     :zen.fhir/reference {:refers #{}}},
    :priority #:fhir{:flags #{:MS}},
-   :identifier {:type zen/vector, :every {}, :minItems 1, :maxItems 1},
+   :identifier {:type zen/vector, :minItems 1, :maxItems 1},
    :action
    {:type zen/vector,
     :every
@@ -46,6 +45,5 @@
    :subject
    {:fhir/flags #{:MS},
     :confirms #{zen.fhir/Reference},
-    :zen.fhir/reference {:refers #{}}},
-   :_instantiatesUri {:type zen/vector, :every {}}},
+    :zen.fhir/reference {:refers #{}}}},
   :zen.fhir/type "RequestGroup"}}

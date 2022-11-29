@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "More detailed code concerning the type of the audit event - defined by DICOM with some FHIR specific additions.",
-  :zen.fhir/version "0.6.4",
+  :zen.fhir/version "0.6.5",
   :fhir/code-systems
   #{{:fhir/url "http://dicom.nema.org/resources/ontology/DCM",
      :zen.fhir/content :bundled}
