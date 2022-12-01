@@ -9,7 +9,7 @@
    hl7-fhir-r4-core.Extension
    hl7-fhir-r4-core.Reference},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
@@ -36,8 +36,8 @@
    :offset
    {:confirms #{hl7-fhir-r4-core.Extension/schema},
     :fhir/polymorphic true,
-    :exclusive-keys #{#{:Range :Duration}},
     :type zen/map,
+    :exclusive-keys #{#{:Range :Duration}},
     :keys
     {:Duration {:confirms #{hl7-fhir-r4-core.Duration/schema}},
      :Range {:confirms #{hl7-fhir-r4-core.Range/schema}}},

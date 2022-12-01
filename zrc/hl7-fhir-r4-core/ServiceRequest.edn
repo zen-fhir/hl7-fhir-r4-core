@@ -52,7 +52,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.procedure-reason},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -111,8 +111,8 @@
    :_patientInstruction {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :asNeeded
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :boolean}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :boolean}},
     :keys
     {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
      :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -272,8 +272,8 @@
      :zen/desc "What request fulfills"}},
    :quantity
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:Range :Ratio :Quantity}},
     :type zen/map,
+    :exclusive-keys #{#{:Range :Ratio :Quantity}},
     :keys
     {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
      :Ratio {:confirms #{hl7-fhir-r4-core.Ratio/schema}},
@@ -305,8 +305,8 @@
     :zen/desc "Individual or Entity the service is ordered for"},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

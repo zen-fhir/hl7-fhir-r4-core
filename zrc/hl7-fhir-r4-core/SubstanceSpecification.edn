@@ -24,7 +24,7 @@
    hl7-fhir-r4-core.Identifier},
  name-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -116,7 +116,7 @@
   :zen.fhir/type "SubstanceSpecification",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -149,8 +149,8 @@
       :_parameters {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :definingSubstance
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:Reference
         {:confirms
@@ -166,8 +166,8 @@
        "A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol)"},
       :amount
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Quantity}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Quantity}},
        :keys
        {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
         :string {:confirms #{hl7-fhir-r4-core.string/schema}},
@@ -196,8 +196,8 @@
      :keys
      {:substance
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:Reference
         {:confirms
@@ -222,8 +222,8 @@
       :_isDefining {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :amount
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Range :Ratio :Quantity}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Range :Ratio :Quantity}},
        :keys
        {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
@@ -271,8 +271,8 @@
        :zen/desc "Role that the moiety is playing"},
       :amount
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Quantity}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Quantity}},
        :keys
        {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
         :string {:confirms #{hl7-fhir-r4-core.string/schema}},
@@ -501,7 +501,7 @@
    :_comment {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
  structure-isotope-molecularWeight-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys

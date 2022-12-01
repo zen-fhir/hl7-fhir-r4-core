@@ -11,14 +11,14 @@
   :zen.fhir/type "Population",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Population",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
   {:age
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:Range :CodeableConcept}},
     :type zen/map,
+    :exclusive-keys #{#{:Range :CodeableConcept}},
     :keys
     {:Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
      :CodeableConcept

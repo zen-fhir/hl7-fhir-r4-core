@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The methods of referral can be used when referring to a specific HealthCareService resource.",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/service-referral-method",

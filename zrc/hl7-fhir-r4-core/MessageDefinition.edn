@@ -24,7 +24,7 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.Identifier},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -115,8 +115,8 @@
    :_purpose {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :event
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:Coding :uri}},
     :type zen/map,
+    :exclusive-keys #{#{:Coding :uri}},
     :keys
     {:Coding {:confirms #{hl7-fhir-r4-core.Coding/schema}},
      :uri {:confirms #{hl7-fhir-r4-core.uri/schema}},

@@ -8,7 +8,7 @@
   :zen/desc "AminoAcidChange information.",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/observation-geneticsAminoAcidChange",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :type zen/map,
   :keys
   {:Name

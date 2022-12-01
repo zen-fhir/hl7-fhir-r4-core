@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The technique that is used to perform the process or preserve the specimen.",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0373",
      :zen.fhir/content :bundled}},

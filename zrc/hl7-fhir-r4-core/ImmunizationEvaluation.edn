@@ -18,7 +18,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.immunization-evaluation-target-disease},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -46,8 +46,8 @@
     :zen/desc "Name of vaccine series"},
    :doseNumber
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:string :positiveInt}},
     :type zen/map,
+    :exclusive-keys #{#{:string :positiveInt}},
     :keys
     {:positiveInt {:confirms #{hl7-fhir-r4-core.positiveInt/schema}},
      :_positiveInt {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -64,8 +64,8 @@
    :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :seriesDoses
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:string :positiveInt}},
     :type zen/map,
+    :exclusive-keys #{#{:string :positiveInt}},
     :keys
     {:positiveInt {:confirms #{hl7-fhir-r4-core.positiveInt/schema}},
      :_positiveInt {:confirms #{hl7-fhir-r4-core.Element/schema}},

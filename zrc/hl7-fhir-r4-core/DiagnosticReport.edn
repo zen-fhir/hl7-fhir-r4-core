@@ -36,7 +36,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.clinical-findings},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -110,8 +110,8 @@
      :zen/desc "Observations"}},
    :effective
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

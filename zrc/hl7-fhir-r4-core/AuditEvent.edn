@@ -36,7 +36,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.network-type},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -286,8 +286,8 @@
          :_type {:confirms #{hl7-fhir-r4-core.Element/schema}},
          :value
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:base64Binary :string}},
           :type zen/map,
+          :exclusive-keys #{#{:base64Binary :string}},
           :keys
           {:string {:confirms #{hl7-fhir-r4-core.string/schema}},
            :_string {:confirms #{hl7-fhir-r4-core.Element/schema}},

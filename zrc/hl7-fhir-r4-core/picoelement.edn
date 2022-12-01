@@ -2,7 +2,7 @@
  import
  #{zen.fhir hl7-fhir-r4-core.EvidenceVariable hl7-fhir-r4-core.Group},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.EvidenceVariable/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -33,6 +33,7 @@
             "Natural language description of the characteristic"},
       :definition
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:DataRequirement
            :TriggerDefinition
@@ -40,7 +41,6 @@
            :canonical
            :CodeableConcept
            :Reference}},
-       :type zen/map,
        :keys
        {:Reference
         {:confirms #{zen.fhir/Reference},
@@ -56,6 +56,7 @@
       :timeFromStart #:zen{:desc "Observation time from study start"},
       :participantEffective
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :zen/desc "What time period do participants cover"},
       :usageContext

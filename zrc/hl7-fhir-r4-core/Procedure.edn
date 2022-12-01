@@ -49,7 +49,7 @@
    hl7-fhir-r4-core.value-set.device-kind
    hl7-fhir-r4-core.value-set.procedure-reason},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -158,8 +158,8 @@
     :zen/desc "Reason for current status"},
    :performed
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:string :dateTime :Range :Period :Age}},
     :type zen/map,
+    :exclusive-keys #{#{:string :dateTime :Range :Period :Age}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

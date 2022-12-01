@@ -7,7 +7,7 @@
    hl7-fhir-r4-core.value-set.languages
    hl7-fhir-r4-core.Extension},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/translation",
@@ -25,8 +25,8 @@
    :content
    {:confirms #{hl7-fhir-r4-core.Extension/schema},
     :fhir/polymorphic true,
-    :exclusive-keys #{#{:markdown :string}},
     :type zen/map,
+    :exclusive-keys #{#{:markdown :string}},
     :keys
     {:string {:confirms #{hl7-fhir-r4-core.string/schema}},
      :markdown {:confirms #{hl7-fhir-r4-core.markdown/schema}}},

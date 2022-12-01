@@ -28,14 +28,14 @@
    hl7-fhir-r4-core.CodeableConcept},
  definition-page-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
   {:name
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:url :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:url :Reference}},
     :keys
     {:url {:confirms #{hl7-fhir-r4-core.url/schema}},
      :_url {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -66,7 +66,7 @@
   :require #{:generation :name :title},
   :zen/desc "Page/Section in the Guide"},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -138,8 +138,8 @@
         :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :example
         {:fhir/polymorphic true,
-         :exclusive-keys #{#{:canonical :boolean}},
          :type zen/map,
+         :exclusive-keys #{#{:canonical :boolean}},
          :keys
          {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
           :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -325,8 +325,8 @@
          :zen/desc "Location of the resource"},
         :example
         {:fhir/polymorphic true,
-         :exclusive-keys #{#{:canonical :boolean}},
          :type zen/map,
+         :exclusive-keys #{#{:canonical :boolean}},
          :keys
          {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
           :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},

@@ -33,7 +33,7 @@
    hl7-fhir-r4-core.Expression
    hl7-fhir-r4-core.value-set.variable-type},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -151,9 +151,9 @@
      :keys
      {:definition
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:DataRequirement :Expression :canonical :CodeableConcept}},
-       :type zen/map,
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -198,8 +198,8 @@
        :zen/desc "What unit is the outcome described in?"},
       :studyEffective
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :type zen/map,
+       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :keys
        {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
         :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -212,8 +212,8 @@
        :zen/desc "What time period do participants cover"},
       :participantEffective
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :type zen/map,
+       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :keys
        {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
         :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -321,8 +321,8 @@
     :every {:confirms #{hl7-fhir-r4-core.Element/schema}}},
    :subject
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

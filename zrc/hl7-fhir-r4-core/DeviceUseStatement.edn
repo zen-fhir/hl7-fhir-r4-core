@@ -29,7 +29,7 @@
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.Claim},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -87,8 +87,8 @@
     :zen/desc "active | completed | entered-in-error +"},
    :timing
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :keys
     {:Timing {:confirms #{hl7-fhir-r4-core.Timing/schema}},
      :Period {:confirms #{hl7-fhir-r4-core.Period/schema}},

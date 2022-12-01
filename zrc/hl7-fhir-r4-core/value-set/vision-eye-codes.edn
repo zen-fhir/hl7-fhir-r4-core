@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "A coded concept listing the eye codes.",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/vision-eye-codes",
      :zen.fhir/content :bundled}},

@@ -54,7 +54,7 @@
    hl7-fhir-r4-core.Expression},
  action-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -64,8 +64,8 @@
     :zen/desc "Brief description of the action"},
    :definition
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:canonical :uri}},
     :type zen/map,
+    :exclusive-keys #{#{:canonical :uri}},
     :keys
     {:canonical {:confirms #{hl7-fhir-r4-core.canonical/schema}},
      :_canonical {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -108,8 +108,8 @@
       :_relationship {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :offset
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Range :Duration}},
        :type zen/map,
+       :exclusive-keys #{#{:Range :Duration}},
        :keys
        {:Duration {:confirms #{hl7-fhir-r4-core.Duration/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}}},
@@ -215,9 +215,9 @@
      :zen/desc "Whether or not the action is applicable"}},
    :timing
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:dateTime :Range :Period :Timing :Duration :Age}},
-    :type zen/map,
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -283,8 +283,8 @@
      :zen/desc "When the action should be triggered"}},
    :subject
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -306,7 +306,7 @@
     :zen/desc "single | multiple"}},
   :zen/desc "Action defined by the plan"},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -423,8 +423,8 @@
           :zen/desc "The parameter whose value is to be tracked"},
          :detail
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:Range :CodeableConcept :Quantity}},
           :type zen/map,
+          :exclusive-keys #{#{:Range :CodeableConcept :Quantity}},
           :keys
           {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
            :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
@@ -544,8 +544,8 @@
      :zen/desc "Contact details for the publisher"}},
    :subject
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

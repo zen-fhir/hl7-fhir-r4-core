@@ -64,7 +64,7 @@
    hl7-fhir-r4-core.Expression
    hl7-fhir-r4-core.Address},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
@@ -143,6 +143,7 @@
     :zen/desc "Full formal definition as narrative text"},
    :maxValue
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:unsignedInt
         :date
@@ -153,7 +154,6 @@
         :decimal
         :positiveInt
         :Quantity}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :unsignedInt {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -346,6 +346,7 @@
    :_short {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :minValue
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:unsignedInt
         :date
@@ -356,7 +357,6 @@
         :decimal
         :positiveInt
         :Quantity}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :unsignedInt {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -484,6 +484,7 @@
       :_label {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:unsignedInt
            :Signature
@@ -535,7 +536,6 @@
            :Annotation
            :Age
            :Reference}},
-       :type zen/map,
        :keys
        {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :unsignedInt
@@ -634,6 +634,7 @@
     :zen/desc "What the order of the elements means"},
    :defaultValue
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:unsignedInt
         :Signature
@@ -685,7 +686,6 @@
         :Annotation
         :Age
         :Reference}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :unsignedInt {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -769,6 +769,7 @@
     :zen/desc "Specified value if missing from instance"},
    :fixed
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:unsignedInt
         :Signature
@@ -820,7 +821,6 @@
         :Annotation
         :Age
         :Reference}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :unsignedInt {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -938,6 +938,7 @@
     :zen/desc "Include when _summary = true?"},
    :pattern
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:unsignedInt
         :Signature
@@ -989,7 +990,6 @@
         :Annotation
         :Age
         :Reference}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :unsignedInt {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},

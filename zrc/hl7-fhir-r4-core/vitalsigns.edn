@@ -13,7 +13,7 @@
    hl7-fhir-r4-core.DocumentReference
    hl7-fhir-r4-core.vitalsigns},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -83,6 +83,7 @@
         hl7-fhir-r4-core.vitalsigns/schema}}}},
    :value
    {:fhir/polymorphic true,
+    :type zen/map,
     :fhir/flags #{:MS},
     :zen/desc
     "Vital Signs value are recorded using the Quantity data type. For supporting observations such as Cuff size could use other datatypes such as CodeableConcept."},
@@ -99,6 +100,7 @@
         :strength :extensible}},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :fhir/flags #{:MS},
        :zen.fhir/value-set
        {:symbol
@@ -117,6 +119,7 @@
      :strength :required}},
    :effective
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys #{#{:dateTime :Period}},
     :fhir/flags #{:MS},
     :zen/desc "Often just a dateTime for Vital Signs"},

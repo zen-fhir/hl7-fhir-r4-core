@@ -18,7 +18,7 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/procedure-causedBy",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{zen.fhir/Reference},
   :zen.fhir/reference
   {:refers

@@ -37,7 +37,7 @@
    hl7-fhir-r4-core.value-set.clinical-findings
    hl7-terminology-r4.value-set.v3-ParticipationMode},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -74,8 +74,8 @@
      :keys
      {:content
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Attachment :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Attachment :Reference}},
        :keys
        {:string {:confirms #{hl7-fhir-r4-core.string/schema}},
         :_string {:confirms #{hl7-fhir-r4-core.Element/schema}},

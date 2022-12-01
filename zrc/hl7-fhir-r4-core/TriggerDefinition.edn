@@ -13,7 +13,7 @@
    hl7-fhir-r4-core.Element
    hl7-fhir-r4-core.Expression},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
@@ -39,8 +39,8 @@
    :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :timing
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:date :dateTime :Timing :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:date :dateTime :Timing :Reference}},
     :keys
     {:Timing {:confirms #{hl7-fhir-r4-core.Timing/schema}},
      :Reference

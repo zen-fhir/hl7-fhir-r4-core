@@ -75,7 +75,7 @@
    hl7-fhir-r4-core.Expression
    hl7-fhir-r4-core.Address},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -179,6 +179,7 @@
        :zen/desc "Label for output"},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:unsignedInt
            :Signature
@@ -230,7 +231,6 @@
            :Annotation
            :Age
            :Reference}},
-       :type zen/map,
        :keys
        {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :unsignedInt
@@ -405,6 +405,7 @@
        :zen/desc "Label for the input"},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:unsignedInt
            :Signature
@@ -456,7 +457,6 @@
            :Annotation
            :Age
            :Reference}},
-       :type zen/map,
        :keys
        {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :unsignedInt

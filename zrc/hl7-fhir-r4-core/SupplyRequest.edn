@@ -34,7 +34,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.supplyrequest-status},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -73,8 +73,8 @@
    :_authoredOn {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :item
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -161,9 +161,9 @@
        :zen/desc "Item detail"},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:Range :CodeableConcept :Quantity :boolean}},
-       :type zen/map,
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -175,8 +175,8 @@
      :zen/desc "Ordered item details"}},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

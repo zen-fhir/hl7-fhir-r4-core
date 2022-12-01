@@ -4,7 +4,7 @@
    hl7-fhir-r4-core.PlanDefinition
    hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -26,13 +26,15 @@
     {:type zen/map,
      :keys
      {:description #:fhir{:flags #{:MS}},
-      :definition #:fhir{:polymorphic true, :flags #{:MS}},
+      :definition
+      {:fhir/polymorphic true, :type zen/map, :fhir/flags #{:MS}},
       :type #:fhir{:flags #{:MS}},
       :participant {:type zen/vector, :every #:fhir{:flags #{:MS}}},
       :title #:fhir{:flags #{:MS}},
       :selectionBehavior #:fhir{:flags #{:MS}},
       :priority #:fhir{:flags #{:MS}},
       :condition {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-      :timing #:fhir{:polymorphic true, :flags #{:MS}},
+      :timing
+      {:fhir/polymorphic true, :type zen/map, :fhir/flags #{:MS}},
       :trigger {:type zen/vector, :every #:fhir{:flags #{:MS}}}}}}},
   :zen.fhir/type "PlanDefinition"}}

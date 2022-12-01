@@ -62,7 +62,7 @@
    hl7-fhir-r4-core.value-set.referencerange-appliesto},
  referenceRange-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -101,7 +101,7 @@
    :_text {:confirms #{hl7-fhir-r4-core.Element/schema}}},
   :zen/desc "Provides guide for interpretation"},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -179,6 +179,7 @@
     :zen/desc "Specimen used for this observation"},
    :value
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:time
         :SampledData
@@ -191,7 +192,6 @@
         :CodeableConcept
         :Quantity
         :boolean}},
-    :type zen/map,
     :keys
     {:_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :time {:confirms #{hl7-fhir-r4-core.time/schema}},
@@ -228,6 +228,7 @@
        :zen/desc "Type of component observation (code / type)"},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:time
            :SampledData
@@ -240,7 +241,6 @@
            :CodeableConcept
            :Quantity
            :boolean}},
-       :type zen/map,
        :keys
        {:_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :time {:confirms #{hl7-fhir-r4-core.time/schema}},
@@ -302,8 +302,8 @@
     :zen/desc "registered | preliminary | final | amended +"},
    :effective
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:instant :dateTime :Period :Timing}},
     :type zen/map,
+    :exclusive-keys #{#{:instant :dateTime :Period :Timing}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

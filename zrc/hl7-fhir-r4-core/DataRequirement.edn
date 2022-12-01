@@ -17,7 +17,7 @@
    hl7-fhir-r4-core.CodeableConcept
    hl7-fhir-r4-core.value-set.subject-type},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.Element/schema},
   :zen/tags #{zen/schema zen.fhir/structure-schema},
   :zen.fhir/profileUri
@@ -84,8 +84,8 @@
      :zen/desc "What codes are expected"}},
    :subject
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -117,8 +117,8 @@
       :_searchParam {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :value
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:dateTime :Period :Duration}},
        :type zen/map,
+       :exclusive-keys #{#{:dateTime :Period :Duration}},
        :keys
        {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
         :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

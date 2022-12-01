@@ -31,7 +31,7 @@
   :zen.fhir/type "BiologicallyDerivedProduct",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -68,8 +68,8 @@
        :zen/desc "Substance added during processing"},
       :time
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:dateTime :Period}},
        :type zen/map,
+       :exclusive-keys #{#{:dateTime :Period}},
        :keys
        {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
         :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -145,8 +145,8 @@
      :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :time
      {:fhir/polymorphic true,
-      :exclusive-keys #{#{:dateTime :Period}},
       :type zen/map,
+      :exclusive-keys #{#{:dateTime :Period}},
       :keys
       {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
        :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -175,8 +175,8 @@
       :zen/desc "Who is product from"},
      :collected
      {:fhir/polymorphic true,
-      :exclusive-keys #{#{:dateTime :Period}},
       :type zen/map,
+      :exclusive-keys #{#{:dateTime :Period}},
       :keys
       {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
        :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

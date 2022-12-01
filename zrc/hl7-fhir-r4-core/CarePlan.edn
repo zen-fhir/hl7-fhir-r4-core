@@ -56,7 +56,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.clinical-findings},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -238,8 +238,8 @@
         :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :product
         {:fhir/polymorphic true,
-         :exclusive-keys #{#{:CodeableConcept :Reference}},
          :type zen/map,
+         :exclusive-keys #{#{:CodeableConcept :Reference}},
          :keys
          {:CodeableConcept
           {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -284,8 +284,8 @@
          :zen/desc "If true, activity is prohibiting action"},
         :scheduled
         {:fhir/polymorphic true,
-         :exclusive-keys #{#{:string :Period :Timing}},
          :type zen/map,
+         :exclusive-keys #{#{:string :Period :Timing}},
          :keys
          {:Timing {:confirms #{hl7-fhir-r4-core.Timing/schema}},
           :Period {:confirms #{hl7-fhir-r4-core.Period/schema}},

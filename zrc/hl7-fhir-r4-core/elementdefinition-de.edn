@@ -11,7 +11,7 @@
   :zen.fhir/type "ElementDefinition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/elementdefinition-de",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.ElementDefinition/schema},
   :type zen/map,
   :keys
@@ -34,6 +34,6 @@
     {:confirms #{hl7-fhir-r4-core.elementdefinition-question/schema},
      :fhir/extensionUri
      "http://hl7.org/fhir/StructureDefinition/elementdefinition-question"}},
-   :defaultValue #:fhir{:polymorphic true},
-   :fixed #:fhir{:polymorphic true},
-   :pattern #:fhir{:polymorphic true}}}}
+   :defaultValue {:fhir/polymorphic true, :type zen/map},
+   :fixed {:fhir/polymorphic true, :type zen/map},
+   :pattern {:fhir/polymorphic true, :type zen/map}}}}

@@ -5,7 +5,7 @@
    hl7-fhir-r4-core.CodeSystem},
  concept-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :type zen/map,
   :keys
   {:concept
@@ -15,7 +15,7 @@
      #{hl7-fhir-r4-core.shareablecodesystem/concept-schema}}}},
   :require #{:code}},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.CodeSystem/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri

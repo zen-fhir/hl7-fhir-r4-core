@@ -66,7 +66,7 @@
    hl7-fhir-r4-core.StructureMap},
  group-rule-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -136,6 +136,7 @@
        :zen/desc "first | not_first | last | not_last | only_one"},
       :defaultValue
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:unsignedInt
            :Signature
@@ -187,7 +188,6 @@
            :Annotation
            :Age
            :Reference}},
-       :type zen/map,
        :keys
        {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :unsignedInt
@@ -346,8 +346,8 @@
         :keys
         {:value
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:string :integer :decimal :id :boolean}},
           :type zen/map,
+          :exclusive-keys #{#{:string :integer :decimal :id :boolean}},
           :keys
           {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
            :_id {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -406,7 +406,7 @@
   :fhir/flags #{:SU},
   :zen/desc "Transform Rule from source to target"},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

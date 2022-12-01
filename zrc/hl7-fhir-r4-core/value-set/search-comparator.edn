@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "What Search Comparator Codes are supported in search.",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/search-comparator",
      :zen.fhir/content :bundled}},

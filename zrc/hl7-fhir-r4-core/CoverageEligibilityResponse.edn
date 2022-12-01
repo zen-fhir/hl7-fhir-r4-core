@@ -36,7 +36,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.benefit-type},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -161,8 +161,8 @@
              :zen/desc "Benefit classification"},
             :allowed
             {:fhir/polymorphic true,
-             :exclusive-keys #{#{:unsignedInt :string :Money}},
              :type zen/map,
+             :exclusive-keys #{#{:unsignedInt :string :Money}},
              :keys
              {:unsignedInt
               {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -174,8 +174,8 @@
              :zen/desc "Benefits allowed"},
             :used
             {:fhir/polymorphic true,
-             :exclusive-keys #{#{:unsignedInt :string :Money}},
              :type zen/map,
+             :exclusive-keys #{#{:unsignedInt :string :Money}},
              :keys
              {:unsignedInt
               {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -241,8 +241,8 @@
     :zen/desc "Response creation date"},
    :serviced
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:date :Period}},
     :type zen/map,
+    :exclusive-keys #{#{:date :Period}},
     :keys
     {:date {:confirms #{hl7-fhir-r4-core.date/schema}},
      :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},

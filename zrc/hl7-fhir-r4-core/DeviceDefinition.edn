@@ -28,7 +28,7 @@
   :zen.fhir/type "DeviceDefinition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -210,8 +210,8 @@
      :zen/desc "Instance identifier"}},
    :manufacturer
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:string :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:string :Reference}},
     :keys
     {:string {:confirms #{hl7-fhir-r4-core.string/schema}},
      :_string {:confirms #{hl7-fhir-r4-core.Element/schema}},

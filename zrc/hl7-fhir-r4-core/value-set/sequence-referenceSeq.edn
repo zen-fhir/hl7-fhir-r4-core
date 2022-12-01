@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "This value set includes all Reference codes",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url "http://www.ncbi.nlm.nih.gov/nuccore",
      :zen.fhir/content :not-present}

@@ -34,7 +34,7 @@
   :zen.fhir/type "Patient",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Patient",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -67,8 +67,8 @@
    :_birthDate {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :multipleBirth
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:integer :boolean}},
     :type zen/map,
+    :exclusive-keys #{#{:integer :boolean}},
     :keys
     {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
      :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -77,8 +77,8 @@
     :zen/desc "Whether patient is part of a multiple birth"},
    :deceased
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :boolean}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :boolean}},
     :keys
     {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
      :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},

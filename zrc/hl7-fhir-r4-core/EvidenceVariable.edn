@@ -32,7 +32,7 @@
    hl7-fhir-r4-core.Expression
    hl7-fhir-r4-core.value-set.variable-type},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -133,6 +133,7 @@
        :zen/desc "Natural language description of the characteristic"},
       :definition
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:DataRequirement
            :TriggerDefinition
@@ -140,7 +141,6 @@
            :canonical
            :CodeableConcept
            :Reference}},
-       :type zen/map,
        :keys
        {:Reference
         {:confirms
@@ -176,8 +176,8 @@
       :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :participantEffective
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :type zen/map,
+       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
        :keys
        {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
         :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

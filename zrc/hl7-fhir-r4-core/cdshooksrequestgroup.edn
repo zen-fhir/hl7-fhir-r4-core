@@ -1,7 +1,7 @@
 {ns hl7-fhir-r4-core.cdshooksrequestgroup,
  import #{zen.fhir hl7-fhir-r4-core.RequestGroup},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.RequestGroup/schema zen.fhir/Resource},
   :zen/tags #{zen.fhir/profile-schema zen/schema},
   :zen.fhir/profileUri
@@ -41,7 +41,8 @@
       {:fhir/flags #{:MS},
        :confirms #{zen.fhir/Reference},
        :zen.fhir/reference {:refers #{}}},
-      :timing #:fhir{:polymorphic true, :flags #{:MS}}}}},
+      :timing
+      {:fhir/polymorphic true, :type zen/map, :fhir/flags #{:MS}}}}},
    :subject
    {:fhir/flags #{:MS},
     :confirms #{zen.fhir/Reference},
