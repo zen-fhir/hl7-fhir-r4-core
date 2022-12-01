@@ -30,7 +30,7 @@
    hl7-fhir-r4-core.Identifier},
  concept-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -50,6 +50,7 @@
       :_code {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:string
            :dateTime
@@ -58,7 +59,6 @@
            :code
            :Coding
            :boolean}},
-       :type zen/map,
        :keys
        {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :_code {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -117,7 +117,7 @@
   :require #{:code},
   :zen/desc "Concepts in the code system"},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},

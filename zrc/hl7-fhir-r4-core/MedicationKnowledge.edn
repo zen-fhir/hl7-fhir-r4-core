@@ -38,7 +38,7 @@
   :zen.fhir/type "MedicationKnowledge",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/MedicationKnowledge",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -166,9 +166,9 @@
        "Code specifying the type of characteristic of medication"},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:base64Binary :string :CodeableConcept :Quantity}},
-       :type zen/map,
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -282,8 +282,8 @@
      :keys
      {:item
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -379,8 +379,8 @@
         "Dosage for the medication for the specific guidelines"}},
       :indication
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -399,8 +399,8 @@
         :keys
         {:characteristic
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:CodeableConcept :Quantity}},
           :type zen/map,
+          :exclusive-keys #{#{:CodeableConcept :Quantity}},
           :keys
           {:CodeableConcept
            {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

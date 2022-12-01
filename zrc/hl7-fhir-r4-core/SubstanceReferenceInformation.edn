@@ -17,7 +17,7 @@
   :zen.fhir/type "SubstanceReferenceInformation",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -136,8 +136,8 @@
        :zen/desc "Todo"},
       :amount
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Range :Quantity}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Range :Quantity}},
        :keys
        {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},

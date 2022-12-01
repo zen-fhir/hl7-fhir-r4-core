@@ -35,7 +35,7 @@
    hl7-terminology-r4.value-set.v3-ActReason
    hl7-terminology-r4.value-set.v3-ParticipationMode},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -63,8 +63,8 @@
      :keys
      {:content
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Attachment :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Attachment :Reference}},
        :keys
        {:string {:confirms #{hl7-fhir-r4-core.string/schema}},
         :_string {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -208,8 +208,8 @@
     :zen/desc "Focus of message"},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

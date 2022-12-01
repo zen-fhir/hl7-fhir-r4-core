@@ -46,7 +46,7 @@
    hl7-fhir-r4-core.value-set.action-participant-role
    hl7-fhir-r4-core.Expression},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -192,8 +192,8 @@
    :_purpose {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :product
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:Reference
      {:confirms
@@ -229,9 +229,9 @@
     :zen/desc "draft | active | retired | unknown"},
    :timing
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:dateTime :Range :Period :Timing :Duration :Age}},
-    :type zen/map,
     :keys
     {:Timing {:confirms #{hl7-fhir-r4-core.Timing/schema}},
      :dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
@@ -359,8 +359,8 @@
      :zen/desc "Contact details for the publisher"}},
    :subject
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

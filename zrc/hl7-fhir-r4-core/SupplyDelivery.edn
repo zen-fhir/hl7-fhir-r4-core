@@ -33,7 +33,7 @@
   :zen.fhir/type "SupplyDelivery",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/SupplyDelivery",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -61,8 +61,8 @@
       :zen/desc "Amount dispensed"},
      :item
      {:fhir/polymorphic true,
-      :exclusive-keys #{#{:CodeableConcept :Reference}},
       :type zen/map,
+      :exclusive-keys #{#{:CodeableConcept :Reference}},
       :keys
       {:CodeableConcept
        {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -133,8 +133,8 @@
     :zen/desc "Where the Supply was sent"},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

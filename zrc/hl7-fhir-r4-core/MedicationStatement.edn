@@ -36,7 +36,7 @@
    hl7-fhir-r4-core.value-set.medication-statement-category
    hl7-fhir-r4-core.value-set.reason-medication-status-codes},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -101,8 +101,8 @@
     "active | completed | entered-in-error | intended | stopped | on-hold | unknown | not-taken"},
    :effective
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -174,8 +174,8 @@
     :zen/desc "Who is/was taking  the medication"},
    :medication
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

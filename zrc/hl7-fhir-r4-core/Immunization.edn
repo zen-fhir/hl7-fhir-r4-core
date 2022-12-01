@@ -39,7 +39,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.immunization-route},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -93,8 +93,8 @@
         :zen/desc "Vaccine preventatable disease being targetted"}},
       :doseNumber
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :positiveInt}},
        :type zen/map,
+       :exclusive-keys #{#{:string :positiveInt}},
        :keys
        {:positiveInt
         {:confirms #{hl7-fhir-r4-core.positiveInt/schema}},
@@ -104,8 +104,8 @@
        :zen/desc "Dose number within series"},
       :seriesDoses
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :positiveInt}},
        :type zen/map,
+       :exclusive-keys #{#{:string :positiveInt}},
        :keys
        {:positiveInt
         {:confirms #{hl7-fhir-r4-core.positiveInt/schema}},
@@ -274,8 +274,8 @@
      :zen/desc "Reason for being subpotent"}},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:string :dateTime}},
     :type zen/map,
+    :exclusive-keys #{#{:string :dateTime}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

@@ -27,7 +27,7 @@
    hl7-fhir-r4-core.Identifier
    hl7-fhir-r4-core.value-set.risk-probability},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -59,8 +59,8 @@
        :zen/desc "Possible outcome for the subject"},
       :probability
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Range :decimal}},
        :type zen/map,
+       :exclusive-keys #{#{:Range :decimal}},
        :keys
        {:decimal {:confirms #{hl7-fhir-r4-core.decimal/schema}},
         :_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -79,8 +79,8 @@
       :_relativeRisk {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :when
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Range :Period}},
        :type zen/map,
+       :exclusive-keys #{#{:Range :Period}},
        :keys
        {:Period {:confirms #{hl7-fhir-r4-core.Period/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}}},
@@ -149,8 +149,8 @@
     :zen/desc "Who/what does assessment apply to?"},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

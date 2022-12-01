@@ -7,6 +7,6 @@
   :zen.fhir/type "Reference",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/openEHR-careplan",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{zen.fhir/Reference},
   :zen.fhir/reference {:refers #{hl7-fhir-r4-core.CarePlan/schema}}}}

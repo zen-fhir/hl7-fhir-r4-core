@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "A version specific list of the data types defined by the FHIR specification for use as an element  type (any of the FHIR defined data types).",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/data-types",
      :zen.fhir/content :bundled}},

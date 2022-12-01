@@ -33,7 +33,7 @@
    hl7-fhir-r4-core.Age
    hl7-fhir-r4-core.value-set.clinical-findings},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -67,8 +67,8 @@
      :zen/desc "Instantiates external protocol or definition"}},
    :age
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:string :Range :Age}},
     :type zen/map,
+    :exclusive-keys #{#{:string :Range :Age}},
     :keys
     {:Age {:confirms #{hl7-fhir-r4-core.Age/schema}},
      :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
@@ -109,8 +109,8 @@
    :_estimatedAge {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :deceased
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:date :string :Range :boolean :Age}},
     :type zen/map,
+    :exclusive-keys #{#{:date :string :Range :boolean :Age}},
     :keys
     {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
      :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -161,8 +161,8 @@
       {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :onset
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:string :Range :Period :Age}},
        :type zen/map,
+       :exclusive-keys #{#{:string :Range :Period :Age}},
        :keys
        {:Age {:confirms #{hl7-fhir-r4-core.Age/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
@@ -186,8 +186,8 @@
      :zen/desc "External Id(s) for this record"}},
    :born
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:date :string :Period}},
     :type zen/map,
+    :exclusive-keys #{#{:date :string :Period}},
     :keys
     {:Period {:confirms #{hl7-fhir-r4-core.Period/schema}},
      :date {:confirms #{hl7-fhir-r4-core.date/schema}},

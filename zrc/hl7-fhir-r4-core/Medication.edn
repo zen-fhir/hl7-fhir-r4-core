@@ -25,7 +25,7 @@
   :zen.fhir/type "Medication",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Medication",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -56,8 +56,8 @@
      :keys
      {:item
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

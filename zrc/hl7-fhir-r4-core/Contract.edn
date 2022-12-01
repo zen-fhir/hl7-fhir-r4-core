@@ -86,7 +86,7 @@
   :zen.fhir/type "Contract",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Contract",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -141,8 +141,8 @@
      :keys
      {:content
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Attachment :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:Attachment :Reference}},
        :keys
        {:Attachment {:confirms #{hl7-fhir-r4-core.Attachment/schema}},
         :Reference
@@ -169,8 +169,8 @@
      :keys
      {:content
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Attachment :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:Attachment :Reference}},
        :keys
        {:Attachment {:confirms #{hl7-fhir-r4-core.Attachment/schema}},
         :Reference
@@ -193,8 +193,8 @@
     :zen/desc "Content derived from the basal information"},
    :topic
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -318,8 +318,8 @@
      :keys
      {:content
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Attachment :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:Attachment :Reference}},
        :keys
        {:Attachment {:confirms #{hl7-fhir-r4-core.Attachment/schema}},
         :Reference
@@ -407,8 +407,8 @@
    :_url {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :legallyBinding
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:Attachment :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:Attachment :Reference}},
     :keys
     {:Attachment {:confirms #{hl7-fhir-r4-core.Attachment/schema}},
      :Reference
@@ -424,12 +424,13 @@
    :_instantiatesUri {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
  term-offer-answer-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
   {:value
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:date
         :time
@@ -443,7 +444,6 @@
         :Quantity
         :boolean
         :Reference}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :date {:confirms #{hl7-fhir-r4-core.date/schema}},
@@ -473,7 +473,7 @@
   :zen/desc "Response to offer text"},
  term-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -589,8 +589,8 @@
     :zen/desc "Contract Term Type or Form"},
    :topic
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:CodeableConcept
      {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -771,8 +771,8 @@
         :zen/desc "Entity of the action"}},
       :occurrence
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:dateTime :Period :Timing}},
        :type zen/map,
+       :exclusive-keys #{#{:dateTime :Period :Timing}},
        :keys
        {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
         :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -1051,8 +1051,8 @@
           :zen/desc "Count of Contract Valued Items"},
          :entity
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:CodeableConcept :Reference}},
           :type zen/map,
+          :exclusive-keys #{#{:CodeableConcept :Reference}},
           :keys
           {:CodeableConcept
            {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

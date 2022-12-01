@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "The master set of status codes used throughout FHIR. All status codes are mapped to one of these codes.",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/resource-status",
      :zen.fhir/content :bundled}},

@@ -57,7 +57,7 @@
    hl7-fhir-r4-core.Address},
  parameter-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -68,6 +68,7 @@
    :_name {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :value
    {:fhir/polymorphic true,
+    :type zen/map,
     :exclusive-keys
     #{#{:unsignedInt
         :Signature
@@ -119,7 +120,6 @@
         :Annotation
         :Age
         :Reference}},
-    :type zen/map,
     :keys
     {:_decimal {:confirms #{hl7-fhir-r4-core.Element/schema}},
      :unsignedInt {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -222,7 +222,7 @@
   :zen.fhir/type "Parameters",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Parameters",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.Resource/schema zen.fhir/Resource},
   :type zen/map,
   :keys

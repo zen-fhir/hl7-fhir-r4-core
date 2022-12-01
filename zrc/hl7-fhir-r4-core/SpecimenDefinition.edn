@@ -31,7 +31,7 @@
   :zen.fhir/type "SpecimenDefinition",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :type zen/map,
@@ -167,8 +167,8 @@
         :_description {:confirms #{hl7-fhir-r4-core.Element/schema}},
         :minimumVolume
         {:fhir/polymorphic true,
-         :exclusive-keys #{#{:string :Quantity}},
          :type zen/map,
+         :exclusive-keys #{#{:string :Quantity}},
          :keys
          {:Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}},
           :string {:confirms #{hl7-fhir-r4-core.string/schema}},
@@ -189,8 +189,8 @@
           :keys
           {:additive
            {:fhir/polymorphic true,
-            :exclusive-keys #{#{:CodeableConcept :Reference}},
             :type zen/map,
+            :exclusive-keys #{#{:CodeableConcept :Reference}},
             :keys
             {:CodeableConcept
              {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},

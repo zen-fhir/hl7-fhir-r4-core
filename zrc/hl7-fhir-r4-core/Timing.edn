@@ -24,7 +24,7 @@
   :zen.fhir/type "Timing",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Timing",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -91,8 +91,8 @@
       :zen/desc "How long when it happens"},
      :bounds
      {:fhir/polymorphic true,
-      :exclusive-keys #{#{:Range :Period :Duration}},
       :type zen/map,
+      :exclusive-keys #{#{:Range :Period :Duration}},
       :keys
       {:Duration {:confirms #{hl7-fhir-r4-core.Duration/schema}},
        :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},

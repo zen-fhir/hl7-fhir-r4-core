@@ -25,7 +25,7 @@
   :zen.fhir/type "Dosage",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/Dosage",
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -40,8 +40,8 @@
    :_patientInstruction {:confirms #{hl7-fhir-r4-core.Element/schema}},
    :asNeeded
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :boolean}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :boolean}},
     :keys
     {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
      :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -123,8 +123,8 @@
        :zen/desc "The kind of dose or rate specified"},
       :dose
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Range :Quantity}},
        :type zen/map,
+       :exclusive-keys #{#{:Range :Quantity}},
        :keys
        {:Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
         :Quantity {:confirms #{hl7-fhir-r4-core.Quantity/schema}}},
@@ -132,8 +132,8 @@
        :zen/desc "Amount of medication per dose"},
       :rate
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Range :Ratio :Quantity}},
        :type zen/map,
+       :exclusive-keys #{#{:Range :Ratio :Quantity}},
        :keys
        {:Ratio {:confirms #{hl7-fhir-r4-core.Ratio/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},

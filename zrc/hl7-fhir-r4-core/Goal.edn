@@ -37,7 +37,7 @@
    hl7-fhir-r4-core.RiskAssessment
    hl7-fhir-r4-core.value-set.clinical-findings},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -88,8 +88,8 @@
     :zen/desc "Who's responsible for creating Goal?"},
    :start
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:date :CodeableConcept}},
     :type zen/map,
+    :exclusive-keys #{#{:date :CodeableConcept}},
     :keys
     {:date {:confirms #{hl7-fhir-r4-core.date/schema}},
      :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -156,6 +156,7 @@
        :zen/desc "The parameter whose value is being tracked"},
       :detail
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:string
            :Range
@@ -164,7 +165,6 @@
            :CodeableConcept
            :Quantity
            :boolean}},
-       :type zen/map,
        :keys
        {:string {:confirms #{hl7-fhir-r4-core.string/schema}},
         :Range {:confirms #{hl7-fhir-r4-core.Range/schema}},
@@ -181,8 +181,8 @@
        :zen/desc "The target value to be achieved"},
       :due
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:date :Duration}},
        :type zen/map,
+       :exclusive-keys #{#{:date :Duration}},
        :keys
        {:date {:confirms #{hl7-fhir-r4-core.date/schema}},
         :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},

@@ -47,7 +47,7 @@
    hl7-fhir-r4-core.Organization
    hl7-fhir-r4-core.value-set.device-kind},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -146,8 +146,8 @@
      :zen/desc "Why was the charged  service rendered?"}},
    :product
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :type zen/map,
+    :exclusive-keys #{#{:CodeableConcept :Reference}},
     :keys
     {:Reference
      {:confirms
@@ -240,8 +240,8 @@
     :zen/desc "Factor overriding the associated rules"},
    :occurrence
    {:fhir/polymorphic true,
-    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :type zen/map,
+    :exclusive-keys #{#{:dateTime :Period :Timing}},
     :keys
     {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
      :_dateTime {:confirms #{hl7-fhir-r4-core.Element/schema}},

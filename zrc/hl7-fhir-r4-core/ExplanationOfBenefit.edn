@@ -80,7 +80,7 @@
    hl7-fhir-r4-core.Address},
  item-adjudication-schema
  {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/version "0.6.5",
+  :zen.fhir/version "0.6.6",
   :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
   :type zen/map,
   :keys
@@ -106,7 +106,7 @@
   :require #{:category},
   :zen/desc "Adjudication details"},
  schema
- {:zen.fhir/version "0.6.5",
+ {:zen.fhir/version "0.6.6",
   :confirms
   #{hl7-fhir-r4-core.DomainResource/schema zen.fhir/Resource},
   :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -209,8 +209,8 @@
           :zen/desc "Benefit classification"},
          :allowed
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:unsignedInt :string :Money}},
           :type zen/map,
+          :exclusive-keys #{#{:unsignedInt :string :Money}},
           :keys
           {:unsignedInt
            {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -222,8 +222,8 @@
           :zen/desc "Benefits allowed"},
          :used
          {:fhir/polymorphic true,
-          :exclusive-keys #{#{:unsignedInt :Money}},
           :type zen/map,
+          :exclusive-keys #{#{:unsignedInt :Money}},
           :keys
           {:unsignedInt
            {:confirms #{hl7-fhir-r4-core.unsignedInt/schema}},
@@ -294,8 +294,8 @@
       :_sequence {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :diagnosis
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -376,8 +376,8 @@
        :zen/desc "Type of information"},
       :timing
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:date :Period}},
        :type zen/map,
+       :exclusive-keys #{#{:date :Period}},
        :keys
        {:date {:confirms #{hl7-fhir-r4-core.date/schema}},
         :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -385,9 +385,9 @@
        :zen/desc "When it occurred"},
       :value
       {:fhir/polymorphic true,
+       :type zen/map,
        :exclusive-keys
        #{#{:string :Attachment :Quantity :boolean :Reference}},
-       :type zen/map,
        :keys
        {:boolean {:confirms #{hl7-fhir-r4-core.boolean/schema}},
         :_boolean {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -511,8 +511,8 @@
        :zen/desc "Total item cost"},
       :serviced
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:date :Period}},
        :type zen/map,
+       :exclusive-keys #{#{:date :Period}},
        :keys
        {:date {:confirms #{hl7-fhir-r4-core.date/schema}},
         :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -586,8 +586,8 @@
        :zen/desc "Count of products or services"},
       :location
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Address :CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:Address :CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -825,8 +825,8 @@
       :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},
       :procedure
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
@@ -944,8 +944,8 @@
       :zen/desc "The nature of the accident"},
      :location
      {:fhir/polymorphic true,
-      :exclusive-keys #{#{:Address :Reference}},
       :type zen/map,
+      :exclusive-keys #{#{:Address :Reference}},
       :keys
       {:Address {:confirms #{hl7-fhir-r4-core.Address/schema}},
        :Reference
@@ -1074,8 +1074,8 @@
        :zen/desc "Total item cost"},
       :serviced
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:date :Period}},
        :type zen/map,
+       :exclusive-keys #{#{:date :Period}},
        :keys
        {:date {:confirms #{hl7-fhir-r4-core.date/schema}},
         :_date {:confirms #{hl7-fhir-r4-core.Element/schema}},
@@ -1138,8 +1138,8 @@
        :zen/desc "Count of products or services"},
       :location
       {:fhir/polymorphic true,
-       :exclusive-keys #{#{:Address :CodeableConcept :Reference}},
        :type zen/map,
+       :exclusive-keys #{#{:Address :CodeableConcept :Reference}},
        :keys
        {:CodeableConcept
         {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema}},
