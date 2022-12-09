@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "This value set includes [SNOMED CT](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) or  concept is-a 260787004 (Physical object)  and provided as an example value set.",
-  :zen.fhir/version "0.6.6",
+  :zen.fhir/version "0.6.6-7",
   :fhir/code-systems
   #{{:fhir/url "http://snomed.info/sct",
      :zen.fhir/content :not-present}},

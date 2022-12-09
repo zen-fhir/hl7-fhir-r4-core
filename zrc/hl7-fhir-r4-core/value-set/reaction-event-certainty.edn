@@ -4,7 +4,7 @@
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc
   "Statement about the degree of clinical certainty that a specific substance was the cause of the manifestation in a reaction event.",
-  :zen.fhir/version "0.6.6",
+  :zen.fhir/version "0.6.6-7",
   :fhir/code-systems
   #{{:fhir/url
      "http://terminology.hl7.org/CodeSystem/reaction-event-certainty",
