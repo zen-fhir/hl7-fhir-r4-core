@@ -10,7 +10,7 @@
   "Information on changes made to the Value Set Definition over time, and also has a contained audit trail of all such changes.",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/codesystem-history",
-  :zen.fhir/version "0.6.6",
+  :zen.fhir/version "0.6.6-7",
   :type zen/map,
   :keys
   {:name

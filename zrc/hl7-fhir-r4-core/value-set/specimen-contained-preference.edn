@@ -3,7 +3,7 @@
  value-set
  {:zen/tags #{zen.fhir/value-set},
   :zen/desc "Degree of preference of a type of conditioned specimen.",
-  :zen.fhir/version "0.6.6",
+  :zen.fhir/version "0.6.6-7",
   :fhir/code-systems
   #{{:fhir/url "http://hl7.org/fhir/specimen-contained-preference",
      :zen.fhir/content :bundled}},

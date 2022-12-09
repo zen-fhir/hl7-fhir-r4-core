@@ -7,7 +7,7 @@
   :zen.fhir/type "ValueSet",
   :zen.fhir/profileUri
   "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
-  :zen.fhir/version "0.6.6",
+  :zen.fhir/version "0.6.6-7",
   :confirms #{hl7-fhir-r4-core.ValueSet/schema zen.fhir/Resource},
   :type zen/map,
   :require
