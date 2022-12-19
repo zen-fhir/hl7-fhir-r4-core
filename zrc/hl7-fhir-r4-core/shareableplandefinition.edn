@@ -1,22 +1,26 @@
 {ns hl7-fhir-r4-core.shareableplandefinition,
  import #{zen.fhir hl7-fhir-r4-core.PlanDefinition},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/shareableplandefinition",
-  :require
-  #{:description :publisher :name :experimental :url :version},
-  :type zen/map,
-  :zen/desc
-  "Enforces the minimum information set for the plan definition metadata required by HL7 and other organizations that share and publish plan definitions",
-  :keys
-  {:date #:fhir{:flags #{:MS}},
-   :jurisdiction {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-   :useContext {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-   :title #:fhir{:flags #{:MS}},
-   :identifier {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-   :contact {:type zen/vector, :every #:fhir{:flags #{:MS}}}},
-  :zen.fhir/type "PlanDefinition"}}
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.PlanDefinition/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/shareableplandefinition",
+         :require #{:description
+                    :publisher
+                    :name
+                    :experimental
+                    :url
+                    :version},
+         :type zen/map,
+         :zen/desc "Enforces the minimum information set for the plan definition metadata required by HL7 and other organizations that share and publish plan definitions",
+         :keys {:date {:fhir/flags #{:MS}},
+                :jurisdiction {:type zen/vector,
+                               :every {:fhir/flags #{:MS}}},
+                :useContext {:type zen/vector,
+                             :every {:fhir/flags #{:MS}}},
+                :title {:fhir/flags #{:MS}},
+                :identifier {:type zen/vector,
+                             :every {:fhir/flags #{:MS}}},
+                :contact {:type zen/vector,
+                          :every {:fhir/flags #{:MS}}}},
+         :zen.fhir/type "PlanDefinition"}}

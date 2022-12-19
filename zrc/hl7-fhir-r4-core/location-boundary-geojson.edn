@@ -1,11 +1,8 @@
 {ns hl7-fhir-r4-core.location-boundary-geojson,
  import #{zen.fhir hl7-fhir-r4-core.Attachment},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "A boundary shape that represents the outside edge of the location (in GeoJSON format) This shape may have holes, and disconnected shapes.",
-  :zen.fhir/type "Attachment",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/location-boundary-geojson",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Attachment/schema}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "A boundary shape that represents the outside edge of the location (in GeoJSON format) This shape may have holes, and disconnected shapes.",
+         :zen.fhir/type "Attachment",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/location-boundary-geojson",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Attachment/schema}}}

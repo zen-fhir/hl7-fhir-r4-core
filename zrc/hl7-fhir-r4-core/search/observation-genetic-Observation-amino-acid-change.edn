@@ -1,17 +1,13 @@
-{ns
- hl7-fhir-r4-core.search.observation-genetic-Observation-amino-acid-change,
+{ns hl7-fhir-r4-core.search.observation-genetic-Observation-amino-acid-change,
  import #{zen.fhir},
- search
- {:zen/tags #{zen.fhir/search},
-  :fhir/id "observation-genetic-Observation-amino-acid-change",
-  :fhir/url
-  "http://hl7.org/fhir/SearchParameter/observation-genetic-Observation-amino-acid-change",
-  :fhir/type "string",
-  :name "amino-acid-change",
-  :expr
-  {:Observation
-   {:knife [],
-    :jsonpath [],
-    :data-types #{},
-    :template :string,
-    :sql {:where [:or], :parameter-format "%\"?%"}}}}}
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "observation-genetic-Observation-amino-acid-change",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/observation-genetic-Observation-amino-acid-change",
+         :fhir/type "string",
+         :name "amino-acid-change",
+         :expr {:Observation {:knife [],
+                              :jsonpath [],
+                              :data-types #{},
+                              :template :string,
+                              :sql {:where [:or],
+                                    :parameter-format "%\"?%"}}}}}

@@ -1,17 +1,12 @@
 {ns hl7-fhir-r4-core.observation-deviceCode,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.CodeableConcept
-   hl7-fhir-r4-core.value-set.device-kind},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "A code representing the the type of device used for this observation.  Should only be used if not implicit in the code found in `Observation.code`.",
-  :zen.fhir/type "CodeableConcept",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/observation-deviceCode",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-  :zen.fhir/value-set
-  {:symbol hl7-fhir-r4-core.value-set.device-kind/value-set,
-   :strength :example}}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.CodeableConcept
+          hl7-fhir-r4-core.value-set.device-kind},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "A code representing the the type of device used for this observation.  Should only be used if not implicit in the code found in `Observation.code`.",
+         :zen.fhir/type "CodeableConcept",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-deviceCode",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+         :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.device-kind/value-set,
+                              :strength :example}}}

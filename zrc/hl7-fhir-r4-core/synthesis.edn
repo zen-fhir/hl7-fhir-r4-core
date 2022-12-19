@@ -1,88 +1,67 @@
 {ns hl7-fhir-r4-core.synthesis,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.value-set.publication-status
-   hl7-fhir-r4-core.EvidenceVariable
-   hl7-fhir-r4-core.Evidence},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Evidence/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/synthesis",
-  :require #{:outcome :status :exposureBackground :exposureVariant},
-  :type zen/map,
-  :zen/desc "Explanation of what this profile contains/is for.",
-  :keys
-  {:description
-   #:zen{:desc "Natural language description of the evidence"},
-   :date {:fhir/flags #{:SU}, :zen/desc "Date last changed"},
-   :publisher
-   {:fhir/flags #{:SU},
-    :zen/desc "Name of the publisher (organization or individual)"},
-   :approvalDate
-   #:zen{:desc "When the evidence was approved by publisher"},
-   :copyright #:zen{:desc "Use and/or publishing restrictions"},
-   :outcome
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference
-     {:refers #{hl7-fhir-r4-core.EvidenceVariable/schema}},
-     :zen/desc "What outcome?"},
-    :minItems 1},
-   :title
-   {:fhir/flags #{:SU},
-    :zen/desc "Name for this evidence (human friendly)"},
-   :note
-   {:type zen/vector,
-    :every #:zen{:desc "Used for footnotes or explanatory notes"}},
-   :author
-   {:type zen/vector, :every #:zen{:desc "Who authored the content"}},
-   :status
-   {:fhir/flags #{:SU :?!},
-    :zen.fhir/value-set
-    {:symbol hl7-fhir-r4-core.value-set.publication-status/value-set,
-     :strength :required},
-    :zen/desc "draft | active | retired | unknown"},
-   :subtitle #:zen{:desc "Subordinate title of the Evidence"},
-   :url
-   {:fhir/flags #{:SU},
-    :zen/desc
-    "Canonical identifier for this evidence, represented as a URI (globally unique)"},
-   :identifier
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:SU},
-     :zen/desc "Additional identifier for the evidence"}},
-   :lastReviewDate #:zen{:desc "When the evidence was last reviewed"},
-   :editor
-   {:type zen/vector, :every #:zen{:desc "Who edited the content"}},
-   :reviewer
-   {:type zen/vector, :every #:zen{:desc "Who reviewed the content"}},
-   :shortTitle #:zen{:desc "Title for use in informal contexts"},
-   :version
-   {:fhir/flags #{:SU}, :zen/desc "Business version of the evidence"},
-   :relatedArtifact
-   {:type zen/vector,
-    :every #:zen{:desc "Additional documentation, citations, etc."}},
-   :contact
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:SU},
-     :zen/desc "Contact details for the publisher"}},
-   :exposureBackground
-   {:confirms #{zen.fhir/Reference},
-    :zen.fhir/reference
-    {:refers #{hl7-fhir-r4-core.EvidenceVariable/schema}},
-    :zen/desc "What population?"},
-   :exposureVariant
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference
-     {:refers #{hl7-fhir-r4-core.EvidenceVariable/schema}},
-     :zen/desc "What exposure?"},
-    :minItems 1,
-    :maxItems 2}},
-  :zen.fhir/type "Evidence"}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.value-set.publication-status
+          hl7-fhir-r4-core.EvidenceVariable
+          hl7-fhir-r4-core.Evidence},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Evidence/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/synthesis",
+         :require #{:outcome
+                    :status
+                    :exposureBackground
+                    :exposureVariant},
+         :type zen/map,
+         :zen/desc "Explanation of what this profile contains/is for.",
+         :keys {:description {:zen/desc "Natural language description of the evidence"},
+                :date {:fhir/flags #{:SU},
+                       :zen/desc "Date last changed"},
+                :publisher {:fhir/flags #{:SU},
+                            :zen/desc "Name of the publisher (organization or individual)"},
+                :approvalDate {:zen/desc "When the evidence was approved by publisher"},
+                :copyright {:zen/desc "Use and/or publishing restrictions"},
+                :outcome {:type zen/vector,
+                          :every {:confirms #{zen.fhir/Reference},
+                                  :zen.fhir/reference {:refers #{hl7-fhir-r4-core.EvidenceVariable/schema}},
+                                  :zen/desc "What outcome?"},
+                          :minItems 1},
+                :title {:fhir/flags #{:SU},
+                        :zen/desc "Name for this evidence (human friendly)"},
+                :note {:type zen/vector,
+                       :every {:zen/desc "Used for footnotes or explanatory notes"}},
+                :author {:type zen/vector,
+                         :every {:zen/desc "Who authored the content"}},
+                :status {:fhir/flags #{:SU :?!},
+                         :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.publication-status/value-set,
+                                              :strength :required},
+                         :zen/desc "draft | active | retired | unknown"},
+                :subtitle {:zen/desc "Subordinate title of the Evidence"},
+                :url {:fhir/flags #{:SU},
+                      :zen/desc "Canonical identifier for this evidence, represented as a URI (globally unique)"},
+                :identifier {:type zen/vector,
+                             :every {:fhir/flags #{:SU},
+                                     :zen/desc "Additional identifier for the evidence"}},
+                :lastReviewDate {:zen/desc "When the evidence was last reviewed"},
+                :editor {:type zen/vector,
+                         :every {:zen/desc "Who edited the content"}},
+                :reviewer {:type zen/vector,
+                           :every {:zen/desc "Who reviewed the content"}},
+                :shortTitle {:zen/desc "Title for use in informal contexts"},
+                :version {:fhir/flags #{:SU},
+                          :zen/desc "Business version of the evidence"},
+                :relatedArtifact {:type zen/vector,
+                                  :every {:zen/desc "Additional documentation, citations, etc."}},
+                :contact {:type zen/vector,
+                          :every {:fhir/flags #{:SU},
+                                  :zen/desc "Contact details for the publisher"}},
+                :exposureBackground {:confirms #{zen.fhir/Reference},
+                                     :zen.fhir/reference {:refers #{hl7-fhir-r4-core.EvidenceVariable/schema}},
+                                     :zen/desc "What population?"},
+                :exposureVariant {:type zen/vector,
+                                  :every {:confirms #{zen.fhir/Reference},
+                                          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.EvidenceVariable/schema}},
+                                          :zen/desc "What exposure?"},
+                                  :minItems 1,
+                                  :maxItems 2}},
+         :zen.fhir/type "Evidence"}}

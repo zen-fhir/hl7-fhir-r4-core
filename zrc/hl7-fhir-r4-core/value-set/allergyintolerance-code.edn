@@ -1,18 +1,14 @@
 {ns hl7-fhir-r4-core.value-set.allergyintolerance-code,
  import #{zen.fhir},
- value-set
- {:zen/tags #{zen.fhir/value-set},
-  :zen/desc
-  "This value set includes concept codes for specific substances/pharmaceutical products, allergy or intolerance conditions, and negation/exclusion codes to specify the absence of specific types of allergies or intolerances.",
-  :zen.fhir/version "0.6.6-7",
-  :fhir/code-systems
-  #{{:fhir/url "http://snomed.info/sct",
-     :zen.fhir/content :not-present}},
-  :uri "http://hl7.org/fhir/ValueSet/allergyintolerance-code",
-  :version "4.0.1",
-  :ftr
-  {:module "ig",
-   :source-urls ["node_modules/hl7.fhir.r4.core"],
-   :source-type :igs,
-   :ftr-path "ftr",
-   :tag "init"}}}
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "This value set includes concept codes for specific substances/pharmaceutical products, allergy or intolerance conditions, and negation/exclusion codes to specify the absence of specific types of allergies or intolerances.",
+            :zen.fhir/version "0.6.6-8",
+            :fhir/code-systems #{{:fhir/url "http://snomed.info/sct",
+                                  :zen.fhir/content :not-present}},
+            :uri "http://hl7.org/fhir/ValueSet/allergyintolerance-code",
+            :version "4.0.1",
+            :ftr {:module "ig",
+                  :source-urls ["node_modules/hl7.fhir.r4.core"],
+                  :source-type :igs,
+                  :ftr-path "ftr",
+                  :tag "init"}}}

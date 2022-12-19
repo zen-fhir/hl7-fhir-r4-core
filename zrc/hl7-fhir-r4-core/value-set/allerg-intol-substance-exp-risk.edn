@@ -1,19 +1,14 @@
 {ns hl7-fhir-r4-core.value-set.allerg-intol-substance-exp-risk,
  import #{zen.fhir},
- value-set
- {:zen/tags #{zen.fhir/value-set},
-  :zen/desc
-  "The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the substance (including pharmaceutical products).",
-  :zen.fhir/version "0.6.6-7",
-  :fhir/code-systems
-  #{{:fhir/url
-     "http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk",
-     :zen.fhir/content :bundled}},
-  :uri "http://hl7.org/fhir/ValueSet/allerg-intol-substance-exp-risk",
-  :version "4.0.1",
-  :ftr
-  {:module "ig",
-   :source-urls ["node_modules/hl7.fhir.r4.core"],
-   :source-type :igs,
-   :ftr-path "ftr",
-   :tag "init"}}}
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "The risk of an adverse reaction (allergy or intolerance) for this patient upon exposure to the substance (including pharmaceutical products).",
+            :zen.fhir/version "0.6.6-8",
+            :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/allerg-intol-substance-exp-risk",
+                                  :zen.fhir/content :bundled}},
+            :uri "http://hl7.org/fhir/ValueSet/allerg-intol-substance-exp-risk",
+            :version "4.0.1",
+            :ftr {:module "ig",
+                  :source-urls ["node_modules/hl7.fhir.r4.core"],
+                  :source-type :igs,
+                  :ftr-path "ftr",
+                  :tag "init"}}}

@@ -1,12 +1,9 @@
 {ns hl7-fhir-r4-core.request-replaces,
  import #{zen.fhir},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "Completed or terminated request(s) whose function is taken by this new request.",
-  :zen.fhir/type "Reference",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/request-replaces",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{zen.fhir/Reference},
-  :zen.fhir/reference {:refers #{}}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Completed or terminated request(s) whose function is taken by this new request.",
+         :zen.fhir/type "Reference",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/request-replaces",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Reference},
+         :zen.fhir/reference {:refers #{}}}}

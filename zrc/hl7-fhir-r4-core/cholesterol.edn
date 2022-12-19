@@ -1,74 +1,58 @@
 {ns hl7-fhir-r4-core.cholesterol,
- import
- #{hl7-fhir-r4-core.Observation
-   hl7-fhir-r4-core.SimpleQuantity
-   zen.fhir},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/cholesterol",
-  :require #{:referenceRange :code},
-  :type zen/map,
-  :zen/desc
-  "Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes",
-  :keys
-  {:code
-   {:const
-    {:value
-     {:coding
-      [{:system "http://loinc.org",
-        :code "35200-5",
-        :display "Cholesterol [Moles/​volume] in Serum or Plasma"}]}},
-    :fhir/flags #{:MS},
-    :zen/desc "Cholesterol"},
-   :value
-   {:type zen/map,
-    :keys
-    {:Quantity
-     {:type zen/map,
-      :keys
-      {:system
-       {:const {:value "http://unitsofmeasure.org"},
-        :fhir/flags #{:MS}},
-       :unit {:const {:value "mmol/L"}, :fhir/flags #{:MS}},
-       :value {:fhir/flags #{:MS}, :zen/desc "Actual numerical value"},
-       :code {:const {:value "mmol/L"}, :fhir/flags #{:MS}}},
-      :require #{:system :unit :code},
-      :fhir/flags #{:MS},
-      :zen/desc "Cholesterol value"}}},
-   :interpretation
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:MS}, :zen/desc "+ | ++ | +++ | - | -- | ---"},
-    :maxItems 1},
-   :note
-   {:type zen/vector,
-    :every {:fhir/flags #{:MS}, :zen/desc "Comments about result"}},
-   :referenceRange
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:high
-      {:const {:value {:value 4.5}},
-       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
-      :appliesTo {:type zen/vector, :maxItems 0}},
-     :require #{:high},
-     :fhir/flags #{:MS}},
-    :minItems 1,
-    :maxItems 1},
-   :hasMember
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :maxItems 0},
-   :derivedFrom
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :maxItems 0}},
-  :zen.fhir/type "Observation"}}
+ import #{hl7-fhir-r4-core.Observation
+          hl7-fhir-r4-core.SimpleQuantity
+          zen.fhir},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Observation/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cholesterol",
+         :require #{:referenceRange :code},
+         :type zen/map,
+         :zen/desc "Describes how the lab report is used for a standard Lipid Profile - Cholesterol, Triglyceride and Cholesterol fractions. Uses LOINC codes",
+         :keys {:code {:const {:value {:coding [{:system "http://loinc.org",
+                                                 :code "35200-5",
+                                                 :display "Cholesterol [Moles/​volume] in Serum or Plasma"}]}},
+                       :fhir/flags #{:MS},
+                       :zen/desc "Cholesterol"},
+                :value {:type zen/map,
+                        :keys {:Quantity {:type zen/map,
+                                          :keys {:system {:const {:value "http://unitsofmeasure.org"},
+                                                          :fhir/flags #{:MS}},
+                                                 :unit {:const {:value "mmol/L"},
+                                                        :fhir/flags #{:MS}},
+                                                 :value {:fhir/flags #{:MS},
+                                                         :zen/desc "Actual numerical value"},
+                                                 :code {:const {:value "mmol/L"},
+                                                        :fhir/flags #{:MS}}},
+                                          :require #{:system
+                                                     :unit
+                                                     :code},
+                                          :fhir/flags #{:MS},
+                                          :zen/desc "Cholesterol value"}}},
+                :interpretation {:type zen/vector,
+                                 :every {:fhir/flags #{:MS},
+                                         :zen/desc "+ | ++ | +++ | - | -- | ---"},
+                                 :maxItems 1},
+                :note {:type zen/vector,
+                       :every {:fhir/flags #{:MS},
+                               :zen/desc "Comments about result"}},
+                :referenceRange {:type zen/vector,
+                                 :every {:type zen/map,
+                                         :keys {:high {:const {:value {:value 4.5}},
+                                                       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
+                                                :appliesTo {:type zen/vector,
+                                                            :maxItems 0}},
+                                         :require #{:high},
+                                         :fhir/flags #{:MS}},
+                                 :minItems 1,
+                                 :maxItems 1},
+                :hasMember {:type zen/vector,
+                            :every {:confirms #{zen.fhir/Reference},
+                                    :zen.fhir/reference {:refers #{}}},
+                            :maxItems 0},
+                :derivedFrom {:type zen/vector,
+                              :every {:confirms #{zen.fhir/Reference},
+                                      :zen.fhir/reference {:refers #{}}},
+                              :maxItems 0}},
+         :zen.fhir/type "Observation"}}

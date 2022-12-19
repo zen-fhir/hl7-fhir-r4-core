@@ -1,12 +1,10 @@
 {ns hl7-fhir-r4-core.id,
  import #{zen.fhir hl7-fhir-r4-core.string},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "Base StructureDefinition for id type: Any combination of letters, numerals, \"-\" and \".\", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive.",
-  :zen.fhir/type "id",
-  :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/id",
-  :zen.fhir/version "0.6.6-7",
-  :type zen/string,
-  :regex "[A-Za-z0-9\\-\\.]{1,64}",
-  :confirms #{hl7-fhir-r4-core.string/schema}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Base StructureDefinition for id type: Any combination of letters, numerals, \"-\" and \".\", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive.",
+         :zen.fhir/type "id",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/id",
+         :zen.fhir/version "0.6.6-8",
+         :type zen/string,
+         :regex "[A-Za-z0-9\\-\\.]{1,64}",
+         :confirms #{hl7-fhir-r4-core.string/schema}}}

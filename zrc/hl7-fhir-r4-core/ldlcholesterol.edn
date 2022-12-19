@@ -1,61 +1,46 @@
 {ns hl7-fhir-r4-core.ldlcholesterol,
- import
- #{hl7-fhir-r4-core.Observation
-   hl7-fhir-r4-core.SimpleQuantity
-   zen.fhir
-   hl7-fhir-r4-core.value-set.ldlcholesterol-codes},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/ldlcholesterol",
-  :require #{:referenceRange :code},
-  :type zen/map,
-  :zen/desc "LDL Cholesterol Result",
-  :keys
-  {:code
-   {:fhir/flags #{:MS},
-    :zen.fhir/value-set
-    {:symbol hl7-fhir-r4-core.value-set.ldlcholesterol-codes/value-set,
-     :strength :required},
-    :zen/desc "LDL Cholesterol -measured or calculated per code"},
-   :value
-   {:type zen/map,
-    :keys
-    {:Quantity
-     {:fhir/flags #{:MS}, :zen/desc "LDL Cholesterol value"}}},
-   :interpretation
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:MS}, :zen/desc "+ | ++ | +++ | - | -- | ---"},
-    :maxItems 1},
-   :note
-   {:type zen/vector,
-    :every {:fhir/flags #{:MS}, :zen/desc "Comments about result"}},
-   :referenceRange
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:high
-      {:const {:value {:value 3.0}},
-       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
-      :appliesTo {:type zen/vector, :maxItems 0}},
-     :require #{:high},
-     :fhir/flags #{:MS}},
-    :minItems 1,
-    :maxItems 1},
-   :hasMember
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :maxItems 0},
-   :derivedFrom
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :maxItems 0}},
-  :zen.fhir/type "Observation"}}
+ import #{hl7-fhir-r4-core.Observation
+          hl7-fhir-r4-core.SimpleQuantity
+          zen.fhir
+          hl7-fhir-r4-core.value-set.ldlcholesterol-codes},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Observation/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/ldlcholesterol",
+         :require #{:referenceRange :code},
+         :type zen/map,
+         :zen/desc "LDL Cholesterol Result",
+         :keys {:code {:fhir/flags #{:MS},
+                       :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.ldlcholesterol-codes/value-set,
+                                            :strength :required},
+                       :zen/desc "LDL Cholesterol -measured or calculated per code"},
+                :value {:type zen/map,
+                        :keys {:Quantity {:fhir/flags #{:MS},
+                                          :zen/desc "LDL Cholesterol value"}}},
+                :interpretation {:type zen/vector,
+                                 :every {:fhir/flags #{:MS},
+                                         :zen/desc "+ | ++ | +++ | - | -- | ---"},
+                                 :maxItems 1},
+                :note {:type zen/vector,
+                       :every {:fhir/flags #{:MS},
+                               :zen/desc "Comments about result"}},
+                :referenceRange {:type zen/vector,
+                                 :every {:type zen/map,
+                                         :keys {:high {:const {:value {:value 3.0}},
+                                                       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
+                                                :appliesTo {:type zen/vector,
+                                                            :maxItems 0}},
+                                         :require #{:high},
+                                         :fhir/flags #{:MS}},
+                                 :minItems 1,
+                                 :maxItems 1},
+                :hasMember {:type zen/vector,
+                            :every {:confirms #{zen.fhir/Reference},
+                                    :zen.fhir/reference {:refers #{}}},
+                            :maxItems 0},
+                :derivedFrom {:type zen/vector,
+                              :every {:confirms #{zen.fhir/Reference},
+                                      :zen.fhir/reference {:refers #{}}},
+                              :maxItems 0}},
+         :zen.fhir/type "Observation"}}

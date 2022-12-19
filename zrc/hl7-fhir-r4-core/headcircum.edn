@@ -1,56 +1,40 @@
 {ns hl7-fhir-r4-core.headcircum,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.value-set.ucum-bodylength
-   hl7-fhir-r4-core.vitalsigns},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "FHIR Head Circumference Profile",
-  :zen.fhir/type "Observation",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/headcircum",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{zen.fhir/Resource hl7-fhir-r4-core.vitalsigns/schema},
-  :type zen/map,
-  :keys
-  {:code
-   {:type zen/map,
-    :keys
-    {:coding
-     {:type zen/vector,
-      :slicing
-      {:slices
-       {"HeadCircumCode"
-        {:schema
-         {:type zen/vector,
-          :minItems 1,
-          :maxItems 1,
-          :every
-          {:type zen/map,
-           :keys
-           {:system {:const {:value "http://loinc.org"}},
-            :code {:const {:value "9843-4"}}},
-           :require #{:system :code}}},
-         :filter
-         {:engine :match,
-          :match {:code "9843-4", :system "http://loinc.org"}}}}}}},
-    :zen/desc "Head Circumference"},
-   :value
-   {:type zen/map,
-    :keys
-    {:Quantity
-     {:type zen/map,
-      :keys
-      {:value #:fhir{:flags #{:MS}},
-       :unit #:fhir{:flags #{:MS}},
-       :system
-       {:const {:value "http://unitsofmeasure.org"},
-        :fhir/flags #{:MS}},
-       :code
-       {:fhir/flags #{:MS},
-        :zen.fhir/value-set
-        {:symbol hl7-fhir-r4-core.value-set.ucum-bodylength/value-set,
-         :strength :required},
-        :zen/desc
-        "Coded responses from the common UCUM units for vital signs value set."}},
-      :require #{:system :unit :value :code}}}}}}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.value-set.ucum-bodylength
+          hl7-fhir-r4-core.vitalsigns},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "FHIR Head Circumference Profile",
+         :zen.fhir/type "Observation",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/headcircum",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Resource
+                     hl7-fhir-r4-core.vitalsigns/schema},
+         :type zen/map,
+         :keys {:code {:type zen/map,
+                       :keys {:coding {:type zen/vector,
+                                       :slicing {:slices {"HeadCircumCode" {:schema {:type zen/vector,
+                                                                                     :minItems 1,
+                                                                                     :maxItems 1,
+                                                                                     :every {:type zen/map,
+                                                                                             :keys {:system {:const {:value "http://loinc.org"}},
+                                                                                                    :code {:const {:value "9843-4"}}},
+                                                                                             :require #{:system
+                                                                                                        :code}}},
+                                                                            :filter {:engine :match,
+                                                                                     :match {:code "9843-4",
+                                                                                             :system "http://loinc.org"}}}}}}},
+                       :zen/desc "Head Circumference"},
+                :value {:type zen/map,
+                        :keys {:Quantity {:type zen/map,
+                                          :keys {:value {:fhir/flags #{:MS}},
+                                                 :unit {:fhir/flags #{:MS}},
+                                                 :system {:const {:value "http://unitsofmeasure.org"},
+                                                          :fhir/flags #{:MS}},
+                                                 :code {:fhir/flags #{:MS},
+                                                        :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.ucum-bodylength/value-set,
+                                                                             :strength :required},
+                                                        :zen/desc "Coded responses from the common UCUM units for vital signs value set."}},
+                                          :require #{:system
+                                                     :unit
+                                                     :value
+                                                     :code}}}}}}}

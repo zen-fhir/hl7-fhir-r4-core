@@ -1,18 +1,12 @@
 {ns hl7-fhir-r4-core.codesystem-usage,
  import #{zen.fhir hl7-fhir-r4-core.string},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/codesystem-usage",
-  :require #{:use :user},
-  :type zen/map,
-  :zen/desc
-  "Consumers of the value set and the implementations, projects or standards that the author has utilized the value set in.",
-  :keys
-  {:user
-   {:confirms #{hl7-fhir-r4-core.string/schema},
-    :zen/desc "A consumer of or client for the value set"},
-   :use
-   {:confirms #{hl7-fhir-r4-core.string/schema},
-    :zen/desc "Implementation/project/standard that uses value set"}}}}
+ schema {:zen.fhir/version "0.6.6-8",
+         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-usage",
+         :require #{:use :user},
+         :type zen/map,
+         :zen/desc "Consumers of the value set and the implementations, projects or standards that the author has utilized the value set in.",
+         :keys {:user {:confirms #{hl7-fhir-r4-core.string/schema},
+                       :zen/desc "A consumer of or client for the value set"},
+                :use {:confirms #{hl7-fhir-r4-core.string/schema},
+                      :zen/desc "Implementation/project/standard that uses value set"}}}}
