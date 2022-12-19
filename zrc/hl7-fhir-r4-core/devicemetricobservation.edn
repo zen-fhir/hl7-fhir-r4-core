@@ -1,78 +1,60 @@
 {ns hl7-fhir-r4-core.devicemetricobservation,
- import
- #{hl7-fhir-r4-core.Device
-   hl7-fhir-r4-core.Observation
-   zen.fhir
-   hl7-fhir-r4-core.Specimen
-   hl7-fhir-r4-core.DeviceMetric
-   hl7-fhir-r4-core.Patient},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/devicemetricobservation",
-  :require #{:status :effective :code :device :subject},
-  :type zen/map,
-  :zen/desc
-  "This profile describes the direct or derived, qualitative or quantitative physiological measurement, setting, or calculation data produced by a medical device or a device component.",
-  :keys
-  {:referenceRange
-   {:type zen/vector, :every #:fhir{:flags #{:MS}}, :maxItems 1},
-   :hasMember
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:MS},
-     :confirms #{zen.fhir/Reference},
-     :zen.fhir/reference
-     {:refers #{hl7-fhir-r4-core.Observation/schema}}}},
-   :derivedFrom
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:MS},
-     :confirms #{zen.fhir/Reference},
-     :zen.fhir/reference
-     {:refers #{hl7-fhir-r4-core.Observation/schema}}}},
-   :interpretation {:type zen/vector, :maxItems 1},
-   :encounter
-   {:confirms #{zen.fhir/Reference},
-    :zen.fhir/reference {:refers #{}}},
-   :method #:fhir{:flags #{:MS}},
-   :specimen
-   {:confirms #{zen.fhir/Reference},
-    :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Specimen/schema}}},
-   :value
-   {:fhir/polymorphic true,
-    :type zen/map,
-    :exclusive-keys
-    #{#{:time
-        :SampledData
-        :string
-        :dateTime
-        :Range
-        :Ratio
-        :Period
-        :CodeableConcept
-        :Quantity}},
-    :fhir/flags #{:MS}},
-   :status #:fhir{:flags #{:MS}},
-   :code #:fhir{:flags #{:MS}},
-   :identifier {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-   :bodySite #:fhir{:flags #{:MS}},
-   :device
-   {:fhir/flags #{:MS},
-    :confirms #{zen.fhir/Reference},
-    :zen.fhir/reference
-    {:refers #{hl7-fhir-r4-core.DeviceMetric/schema}}},
-   :_effective
-   {:type zen/map,
-    :keys {:dateTime #:fhir{:flags #{:MS}}},
-    :require #{:dateTime}},
-   :subject
-   {:fhir/flags #{:MS},
-    :confirms #{zen.fhir/Reference},
-    :zen.fhir/reference
-    {:refers
-     #{hl7-fhir-r4-core.Patient/schema
-       hl7-fhir-r4-core.Device/schema}}}},
-  :zen.fhir/type "Observation"}}
+ import #{hl7-fhir-r4-core.Device
+          hl7-fhir-r4-core.Observation
+          zen.fhir
+          hl7-fhir-r4-core.Specimen
+          hl7-fhir-r4-core.DeviceMetric
+          hl7-fhir-r4-core.Patient},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Observation/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/devicemetricobservation",
+         :require #{:status :effective :code :device :subject},
+         :type zen/map,
+         :zen/desc "This profile describes the direct or derived, qualitative or quantitative physiological measurement, setting, or calculation data produced by a medical device or a device component.",
+         :keys {:referenceRange {:type zen/vector,
+                                 :every {:fhir/flags #{:MS}},
+                                 :maxItems 1},
+                :hasMember {:type zen/vector,
+                            :every {:fhir/flags #{:MS},
+                                    :confirms #{zen.fhir/Reference},
+                                    :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Observation/schema}}}},
+                :derivedFrom {:type zen/vector,
+                              :every {:fhir/flags #{:MS},
+                                      :confirms #{zen.fhir/Reference},
+                                      :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Observation/schema}}}},
+                :interpretation {:type zen/vector, :maxItems 1},
+                :encounter {:confirms #{zen.fhir/Reference},
+                            :zen.fhir/reference {:refers #{}}},
+                :method {:fhir/flags #{:MS}},
+                :specimen {:confirms #{zen.fhir/Reference},
+                           :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Specimen/schema}}},
+                :value {:fhir/polymorphic true,
+                        :type zen/map,
+                        :exclusive-keys #{#{:time
+                                            :SampledData
+                                            :string
+                                            :dateTime
+                                            :Range
+                                            :Ratio
+                                            :Period
+                                            :CodeableConcept
+                                            :Quantity}},
+                        :fhir/flags #{:MS}},
+                :status {:fhir/flags #{:MS}},
+                :code {:fhir/flags #{:MS}},
+                :identifier {:type zen/vector,
+                             :every {:fhir/flags #{:MS}}},
+                :bodySite {:fhir/flags #{:MS}},
+                :device {:fhir/flags #{:MS},
+                         :confirms #{zen.fhir/Reference},
+                         :zen.fhir/reference {:refers #{hl7-fhir-r4-core.DeviceMetric/schema}}},
+                :_effective {:type zen/map,
+                             :keys {:dateTime {:fhir/flags #{:MS}}},
+                             :require #{:dateTime}},
+                :subject {:fhir/flags #{:MS},
+                          :confirms #{zen.fhir/Reference},
+                          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Patient/schema
+                                                         hl7-fhir-r4-core.Device/schema}}}},
+         :zen.fhir/type "Observation"}}

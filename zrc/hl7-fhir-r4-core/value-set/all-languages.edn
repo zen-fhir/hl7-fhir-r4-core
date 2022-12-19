@@ -1,17 +1,14 @@
 {ns hl7-fhir-r4-core.value-set.all-languages,
  import #{zen.fhir},
- value-set
- {:zen/tags #{zen.fhir/value-set},
-  :zen/desc
-  "This value set includes all possible codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
-  :zen.fhir/version "0.6.6-7",
-  :fhir/code-systems
-  #{{:fhir/url "urn:ietf:bcp:47", :zen.fhir/content :not-present}},
-  :uri "http://hl7.org/fhir/ValueSet/all-languages",
-  :version "4.0.1",
-  :ftr
-  {:module "ig",
-   :source-urls ["node_modules/hl7.fhir.r4.core"],
-   :source-type :igs,
-   :ftr-path "ftr",
-   :tag "init"}}}
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "This value set includes all possible codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+            :zen.fhir/version "0.6.6-8",
+            :fhir/code-systems #{{:fhir/url "urn:ietf:bcp:47",
+                                  :zen.fhir/content :not-present}},
+            :uri "http://hl7.org/fhir/ValueSet/all-languages",
+            :version "4.0.1",
+            :ftr {:module "ig",
+                  :source-urls ["node_modules/hl7.fhir.r4.core"],
+                  :source-type :igs,
+                  :ftr-path "ftr",
+                  :tag "init"}}}

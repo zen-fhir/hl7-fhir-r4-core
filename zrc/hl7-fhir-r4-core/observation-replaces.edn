@@ -1,12 +1,9 @@
 {ns hl7-fhir-r4-core.observation-replaces,
  import #{hl7-fhir-r4-core.Observation zen.fhir},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "This observation replaces a previous observation (i.e. a revised value).",
-  :zen.fhir/type "Reference",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/observation-replaces",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{zen.fhir/Reference},
-  :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Observation/schema}}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "This observation replaces a previous observation (i.e. a revised value).",
+         :zen.fhir/type "Reference",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-replaces",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Reference},
+         :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Observation/schema}}}}

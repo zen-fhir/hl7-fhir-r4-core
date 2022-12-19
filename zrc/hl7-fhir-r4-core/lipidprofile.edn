@@ -1,37 +1,26 @@
 {ns hl7-fhir-r4-core.lipidprofile,
  import #{zen.fhir hl7-fhir-r4-core.DiagnosticReport},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.DiagnosticReport/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/lipidprofile",
-  :require #{:result :code},
-  :type zen/map,
-  :zen/desc "Lipid Lab Report",
-  :keys
-  {:code
-   {:const
-    {:value
-     {:coding
-      [{:system "http://loinc.org",
-        :code "57698-3",
-        :display "Lipid panel with direct LDL - Serum or Plasma"}]}},
-    :zen/desc "LOINC Code for Lipid Panel with LDL"},
-   :result
-   {:type zen/vector,
-    :slicing {:slices {}},
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :minItems 3,
-    :maxItems 4},
-   :conclusion
-   {:fhir/flags #{:MS},
-    :zen/desc "Clinical Interpretation of Lipid Panel"},
-   :conclusionCode
-   {:type zen/vector,
-    :every #:zen{:desc "No codes for a lipid panel"},
-    :maxItems 0}},
-  :zen.fhir/type "DiagnosticReport"}}
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.DiagnosticReport/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/lipidprofile",
+         :require #{:result :code},
+         :type zen/map,
+         :zen/desc "Lipid Lab Report",
+         :keys {:code {:const {:value {:coding [{:system "http://loinc.org",
+                                                 :code "57698-3",
+                                                 :display "Lipid panel with direct LDL - Serum or Plasma"}]}},
+                       :zen/desc "LOINC Code for Lipid Panel with LDL"},
+                :result {:type zen/vector,
+                         :slicing {:slices {}},
+                         :every {:confirms #{zen.fhir/Reference},
+                                 :zen.fhir/reference {:refers #{}}},
+                         :minItems 3,
+                         :maxItems 4},
+                :conclusion {:fhir/flags #{:MS},
+                             :zen/desc "Clinical Interpretation of Lipid Panel"},
+                :conclusionCode {:type zen/vector,
+                                 :every {:zen/desc "No codes for a lipid panel"},
+                                 :maxItems 0}},
+         :zen.fhir/type "DiagnosticReport"}}

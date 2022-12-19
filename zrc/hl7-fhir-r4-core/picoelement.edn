@@ -1,74 +1,54 @@
 {ns hl7-fhir-r4-core.picoelement,
- import
- #{zen.fhir hl7-fhir-r4-core.EvidenceVariable hl7-fhir-r4-core.Group},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.EvidenceVariable/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/picoelement",
-  :require #{:characteristic},
-  :type zen/map,
-  :zen/desc "Explanation of what this profile contains/is for.",
-  :keys
-  {:description
-   #:zen{:desc
-         "Natural language description of the evidence variable"},
-   :date {:fhir/flags #{:SU}, :zen/desc "Date last changed"},
-   :type #:zen{:desc "dichotomous | continuous | descriptive"},
-   :title
-   {:fhir/flags #{:SU},
-    :zen/desc "Name for this evidence variable (human friendly)"},
-   :note
-   {:type zen/vector,
-    :every #:zen{:desc "Used for footnotes or explanatory notes"}},
-   :characteristic
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:description
-      #:zen{:desc
-            "Natural language description of the characteristic"},
-      :definition
-      {:fhir/polymorphic true,
-       :type zen/map,
-       :exclusive-keys
-       #{#{:DataRequirement
-           :TriggerDefinition
-           :Expression
-           :canonical
-           :CodeableConcept
-           :Reference}},
-       :keys
-       {:Reference
-        {:confirms #{zen.fhir/Reference},
-         :zen.fhir/reference
-         {:refers #{hl7-fhir-r4-core.Group/schema}}}},
-       :zen/desc "What code or expression defines members?"},
-      :exclude
-      #:zen{:desc
-            "Whether the characteristic includes or excludes members"},
-      :groupMeasure
-      #:zen{:desc
-            "mean | median | mean-of-mean | mean-of-median | median-of-mean | median-of-median"},
-      :timeFromStart #:zen{:desc "Observation time from study start"},
-      :participantEffective
-      {:fhir/polymorphic true,
-       :type zen/map,
-       :exclusive-keys #{#{:dateTime :Period :Timing :Duration}},
-       :zen/desc "What time period do participants cover"},
-      :usageContext
-      {:type zen/vector,
-       :every #:zen{:desc "What code/value pairs define members?"}}},
-     :require #{:definition},
-     :zen/desc "What defines the members of the evidence element"},
-    :minItems 1},
-   :identifier
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:SU},
-     :zen/desc "Additional identifier for the evidence variable"}},
-   :shortTitle #:zen{:desc "Title for use in informal contexts"}},
-  :zen.fhir/type "EvidenceVariable"}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.EvidenceVariable
+          hl7-fhir-r4-core.Group},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.EvidenceVariable/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/picoelement",
+         :require #{:characteristic},
+         :type zen/map,
+         :zen/desc "Explanation of what this profile contains/is for.",
+         :keys {:description {:zen/desc "Natural language description of the evidence variable"},
+                :date {:fhir/flags #{:SU},
+                       :zen/desc "Date last changed"},
+                :type {:zen/desc "dichotomous | continuous | descriptive"},
+                :title {:fhir/flags #{:SU},
+                        :zen/desc "Name for this evidence variable (human friendly)"},
+                :note {:type zen/vector,
+                       :every {:zen/desc "Used for footnotes or explanatory notes"}},
+                :characteristic {:type zen/vector,
+                                 :every {:type zen/map,
+                                         :keys {:description {:zen/desc "Natural language description of the characteristic"},
+                                                :definition {:fhir/polymorphic true,
+                                                             :type zen/map,
+                                                             :exclusive-keys #{#{:DataRequirement
+                                                                                 :TriggerDefinition
+                                                                                 :Expression
+                                                                                 :canonical
+                                                                                 :CodeableConcept
+                                                                                 :Reference}},
+                                                             :keys {:Reference {:confirms #{zen.fhir/Reference},
+                                                                                :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Group/schema}}}},
+                                                             :zen/desc "What code or expression defines members?"},
+                                                :exclude {:zen/desc "Whether the characteristic includes or excludes members"},
+                                                :groupMeasure {:zen/desc "mean | median | mean-of-mean | mean-of-median | median-of-mean | median-of-median"},
+                                                :timeFromStart {:zen/desc "Observation time from study start"},
+                                                :participantEffective {:fhir/polymorphic true,
+                                                                       :type zen/map,
+                                                                       :exclusive-keys #{#{:dateTime
+                                                                                           :Period
+                                                                                           :Timing
+                                                                                           :Duration}},
+                                                                       :zen/desc "What time period do participants cover"},
+                                                :usageContext {:type zen/vector,
+                                                               :every {:zen/desc "What code/value pairs define members?"}}},
+                                         :require #{:definition},
+                                         :zen/desc "What defines the members of the evidence element"},
+                                 :minItems 1},
+                :identifier {:type zen/vector,
+                             :every {:fhir/flags #{:SU},
+                                     :zen/desc "Additional identifier for the evidence variable"}},
+                :shortTitle {:zen/desc "Title for use in informal contexts"}},
+         :zen.fhir/type "EvidenceVariable"}}

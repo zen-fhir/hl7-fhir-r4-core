@@ -1,54 +1,42 @@
 {ns hl7-fhir-r4-core.triglyceride,
  import #{hl7-fhir-r4-core.Observation zen.fhir},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Observation/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/triglyceride",
-  :require #{:referenceRange :code},
-  :type zen/map,
-  :zen/desc "Triglyceride Result",
-  :keys
-  {:code
-   {:match
-    {:coding
-     #{{:system "http://loinc.org",
-        :code "35217-9",
-        :display "Triglyceride [Moles/​volume] in Serum or Plasma"}}},
-    :fhir/flags #{:MS},
-    :zen/desc "Triglyceride"},
-   :value
-   {:type zen/map,
-    :keys
-    {:Quantity {:fhir/flags #{:MS}, :zen/desc "Triglyceride value"}}},
-   :interpretation
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:MS}, :zen/desc "+ | ++ | +++ | - | -- | ---"},
-    :maxItems 1},
-   :note
-   {:type zen/vector,
-    :every {:fhir/flags #{:MS}, :zen/desc "Comments about result"}},
-   :referenceRange
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys {:appliesTo {:type zen/vector, :maxItems 0}},
-     :require #{:high},
-     :fhir/flags #{:MS}},
-    :minItems 1,
-    :maxItems 1},
-   :hasMember
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :maxItems 0},
-   :derivedFrom
-   {:type zen/vector,
-    :every
-    {:confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :maxItems 0}},
-  :zen.fhir/type "Observation"}}
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Observation/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/triglyceride",
+         :require #{:referenceRange :code},
+         :type zen/map,
+         :zen/desc "Triglyceride Result",
+         :keys {:code {:match {:coding #{{:system "http://loinc.org",
+                                          :code "35217-9",
+                                          :display "Triglyceride [Moles/​volume] in Serum or Plasma"}}},
+                       :fhir/flags #{:MS},
+                       :zen/desc "Triglyceride"},
+                :value {:type zen/map,
+                        :keys {:Quantity {:fhir/flags #{:MS},
+                                          :zen/desc "Triglyceride value"}}},
+                :interpretation {:type zen/vector,
+                                 :every {:fhir/flags #{:MS},
+                                         :zen/desc "+ | ++ | +++ | - | -- | ---"},
+                                 :maxItems 1},
+                :note {:type zen/vector,
+                       :every {:fhir/flags #{:MS},
+                               :zen/desc "Comments about result"}},
+                :referenceRange {:type zen/vector,
+                                 :every {:type zen/map,
+                                         :keys {:appliesTo {:type zen/vector,
+                                                            :maxItems 0}},
+                                         :require #{:high},
+                                         :fhir/flags #{:MS}},
+                                 :minItems 1,
+                                 :maxItems 1},
+                :hasMember {:type zen/vector,
+                            :every {:confirms #{zen.fhir/Reference},
+                                    :zen.fhir/reference {:refers #{}}},
+                            :maxItems 0},
+                :derivedFrom {:type zen/vector,
+                              :every {:confirms #{zen.fhir/Reference},
+                                      :zen.fhir/reference {:refers #{}}},
+                              :maxItems 0}},
+         :zen.fhir/type "Observation"}}

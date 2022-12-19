@@ -1,38 +1,33 @@
 {ns hl7-fhir-r4-core.cdshooksguidanceresponse,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.GuidanceResponse
-   hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.GuidanceResponse/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/cdshooksguidanceresponse",
-  :require #{:requestIdentifier :module :identifier :cdsHooksEndpoint},
-  :type zen/map,
-  :zen/desc
-  "Defines a GuidanceResponse that represents the response container for a CDS Hooks response",
-  :keys
-  {:module {:type zen/map, :require #{:uri}},
-   :result
-   {:fhir/flags #{:MS},
-    :confirms #{zen.fhir/Reference},
-    :zen.fhir/reference {:refers #{}}},
-   :identifier {:type zen/vector, :minItems 1, :maxItems 1},
-   :occurrenceDateTime #:fhir{:flags #{:MS}},
-   :cdsHooksEndpoint
-   {:confirms #{hl7-fhir-r4-core.cqf-cdsHooksEndpoint/schema},
-    :fhir/extensionUri
-    "http://hl7.org/fhir/StructureDefinition/cqf-cdsHooksEndpoint",
-    :zen/desc "Service endpoint"},
-   :subject
-   {:fhir/flags #{:MS},
-    :confirms #{zen.fhir/Reference},
-    :zen.fhir/reference {:refers #{}}},
-   :performer
-   {:fhir/flags #{:MS},
-    :confirms #{zen.fhir/Reference},
-    :zen.fhir/reference {:refers #{}}}},
-  :zen.fhir/type "GuidanceResponse"}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.GuidanceResponse
+          hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.GuidanceResponse/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cdshooksguidanceresponse",
+         :require #{:requestIdentifier
+                    :module
+                    :identifier
+                    :cdsHooksEndpoint},
+         :type zen/map,
+         :zen/desc "Defines a GuidanceResponse that represents the response container for a CDS Hooks response",
+         :keys {:module {:type zen/map, :require #{:uri}},
+                :result {:fhir/flags #{:MS},
+                         :confirms #{zen.fhir/Reference},
+                         :zen.fhir/reference {:refers #{}}},
+                :identifier {:type zen/vector,
+                             :minItems 1,
+                             :maxItems 1},
+                :occurrenceDateTime {:fhir/flags #{:MS}},
+                :cdsHooksEndpoint {:confirms #{hl7-fhir-r4-core.cqf-cdsHooksEndpoint/schema},
+                                   :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/cqf-cdsHooksEndpoint",
+                                   :zen/desc "Service endpoint"},
+                :subject {:fhir/flags #{:MS},
+                          :confirms #{zen.fhir/Reference},
+                          :zen.fhir/reference {:refers #{}}},
+                :performer {:fhir/flags #{:MS},
+                            :confirms #{zen.fhir/Reference},
+                            :zen.fhir/reference {:refers #{}}}},
+         :zen.fhir/type "GuidanceResponse"}}

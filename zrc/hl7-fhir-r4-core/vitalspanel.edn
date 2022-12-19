@@ -1,40 +1,27 @@
 {ns hl7-fhir-r4-core.vitalspanel,
  import #{zen.fhir hl7-fhir-r4-core.vitalsigns},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms #{zen.fhir/Resource hl7-fhir-r4-core.vitalsigns/schema},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/vitalspanel",
-  :require #{:hasMember},
-  :type zen/map,
-  :zen/desc "FHIR Vital Signs Panel Profile",
-  :keys
-  {:code
-   {:type zen/map,
-    :keys
-    {:coding
-     {:type zen/vector,
-      :slicing
-      {:slices
-       {"VitalsPanelCode"
-        {:schema
-         {:type zen/vector,
-          :every
-          {:type zen/map,
-           :keys
-           {:system {:const {:value "http://loinc.org"}},
-            :code {:const {:value "85353-1"}}}}},
-         :filter
-         {:engine :match,
-          :match {:code "85353-1", :system "http://loinc.org"}}}}}}},
-    :zen/desc "Vital Signs Panel"},
-   :value {:fhir/polymorphic true, :type zen/map},
-   :hasMember
-   {:type zen/vector,
-    :every
-    {:fhir/flags #{:MS},
-     :confirms #{zen.fhir/Reference},
-     :zen.fhir/reference {:refers #{}}},
-    :minItems 1}},
-  :zen.fhir/type "Observation"}}
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Resource
+                     hl7-fhir-r4-core.vitalsigns/schema},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/vitalspanel",
+         :require #{:hasMember},
+         :type zen/map,
+         :zen/desc "FHIR Vital Signs Panel Profile",
+         :keys {:code {:type zen/map,
+                       :keys {:coding {:type zen/vector,
+                                       :slicing {:slices {"VitalsPanelCode" {:schema {:type zen/vector,
+                                                                                      :every {:type zen/map,
+                                                                                              :keys {:system {:const {:value "http://loinc.org"}},
+                                                                                                     :code {:const {:value "85353-1"}}}}},
+                                                                             :filter {:engine :match,
+                                                                                      :match {:code "85353-1",
+                                                                                              :system "http://loinc.org"}}}}}}},
+                       :zen/desc "Vital Signs Panel"},
+                :value {:fhir/polymorphic true, :type zen/map},
+                :hasMember {:type zen/vector,
+                            :every {:fhir/flags #{:MS},
+                                    :confirms #{zen.fhir/Reference},
+                                    :zen.fhir/reference {:refers #{}}},
+                            :minItems 1}},
+         :zen.fhir/type "Observation"}}

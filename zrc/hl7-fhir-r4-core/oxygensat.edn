@@ -1,51 +1,37 @@
 {ns hl7-fhir-r4-core.oxygensat,
  import #{zen.fhir hl7-fhir-r4-core.vitalsigns},
- schema
- {:zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen/desc "FHIR Oxygen Saturation Profile",
-  :zen.fhir/type "Observation",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/oxygensat",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{zen.fhir/Resource hl7-fhir-r4-core.vitalsigns/schema},
-  :type zen/map,
-  :keys
-  {:code
-   {:type zen/map,
-    :keys
-    {:coding
-     {:type zen/vector,
-      :slicing
-      {:slices
-       {"OxygenSatCode"
-        {:schema
-         {:type zen/vector,
-          :minItems 1,
-          :maxItems 1,
-          :every
-          {:type zen/map,
-           :keys
-           {:system {:const {:value "http://loinc.org"}},
-            :code {:const {:value "2708-6"}}},
-           :require #{:system :code}}},
-         :filter
-         {:engine :match,
-          :match {:code "2708-6", :system "http://loinc.org"}}}}}}},
-    :zen/desc "Oxygen Saturation"},
-   :value
-   {:type zen/map,
-    :keys
-    {:Quantity
-     {:type zen/map,
-      :keys
-      {:value #:fhir{:flags #{:MS}},
-       :unit #:fhir{:flags #{:MS}},
-       :system
-       {:const {:value "http://unitsofmeasure.org"},
-        :fhir/flags #{:MS}},
-       :code
-       {:const {:value "%"},
-        :fhir/flags #{:MS},
-        :zen/desc
-        "Coded responses from the common UCUM units for vital signs value set."}},
-      :require #{:system :unit :value :code}}}}}}}
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "FHIR Oxygen Saturation Profile",
+         :zen.fhir/type "Observation",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/oxygensat",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Resource
+                     hl7-fhir-r4-core.vitalsigns/schema},
+         :type zen/map,
+         :keys {:code {:type zen/map,
+                       :keys {:coding {:type zen/vector,
+                                       :slicing {:slices {"OxygenSatCode" {:schema {:type zen/vector,
+                                                                                    :minItems 1,
+                                                                                    :maxItems 1,
+                                                                                    :every {:type zen/map,
+                                                                                            :keys {:system {:const {:value "http://loinc.org"}},
+                                                                                                   :code {:const {:value "2708-6"}}},
+                                                                                            :require #{:system
+                                                                                                       :code}}},
+                                                                           :filter {:engine :match,
+                                                                                    :match {:code "2708-6",
+                                                                                            :system "http://loinc.org"}}}}}}},
+                       :zen/desc "Oxygen Saturation"},
+                :value {:type zen/map,
+                        :keys {:Quantity {:type zen/map,
+                                          :keys {:value {:fhir/flags #{:MS}},
+                                                 :unit {:fhir/flags #{:MS}},
+                                                 :system {:const {:value "http://unitsofmeasure.org"},
+                                                          :fhir/flags #{:MS}},
+                                                 :code {:const {:value "%"},
+                                                        :fhir/flags #{:MS},
+                                                        :zen/desc "Coded responses from the common UCUM units for vital signs value set."}},
+                                          :require #{:system
+                                                     :unit
+                                                     :value
+                                                     :code}}}}}}}

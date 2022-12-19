@@ -1,40 +1,35 @@
 {ns hl7-fhir-r4-core.cdshooksserviceplandefinition,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.PlanDefinition
-   hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
- schema
- {:zen.fhir/version "0.6.6-7",
-  :confirms
-  #{hl7-fhir-r4-core.PlanDefinition/schema zen.fhir/Resource},
-  :zen/tags #{zen.fhir/profile-schema zen/schema},
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/cdshooksserviceplandefinition",
-  :require #{:cdsHooksEndpoint},
-  :type zen/map,
-  :zen/desc
-  "Defines a PlanDefinition that implements the behavior for a CDS Hooks service",
-  :keys
-  {:cdsHooksEndpoint
-   {:confirms #{hl7-fhir-r4-core.cqf-cdsHooksEndpoint/schema},
-    :fhir/extensionUri
-    "http://hl7.org/fhir/StructureDefinition/cqf-cdsHooksEndpoint",
-    :zen/desc "Service endpoint"},
-   :action
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:description #:fhir{:flags #{:MS}},
-      :definition
-      {:fhir/polymorphic true, :type zen/map, :fhir/flags #{:MS}},
-      :type #:fhir{:flags #{:MS}},
-      :participant {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-      :title #:fhir{:flags #{:MS}},
-      :selectionBehavior #:fhir{:flags #{:MS}},
-      :priority #:fhir{:flags #{:MS}},
-      :condition {:type zen/vector, :every #:fhir{:flags #{:MS}}},
-      :timing
-      {:fhir/polymorphic true, :type zen/map, :fhir/flags #{:MS}},
-      :trigger {:type zen/vector, :every #:fhir{:flags #{:MS}}}}}}},
-  :zen.fhir/type "PlanDefinition"}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.PlanDefinition
+          hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
+ schema {:zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.PlanDefinition/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cdshooksserviceplandefinition",
+         :require #{:cdsHooksEndpoint},
+         :type zen/map,
+         :zen/desc "Defines a PlanDefinition that implements the behavior for a CDS Hooks service",
+         :keys {:cdsHooksEndpoint {:confirms #{hl7-fhir-r4-core.cqf-cdsHooksEndpoint/schema},
+                                   :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/cqf-cdsHooksEndpoint",
+                                   :zen/desc "Service endpoint"},
+                :action {:type zen/vector,
+                         :every {:type zen/map,
+                                 :keys {:description {:fhir/flags #{:MS}},
+                                        :definition {:fhir/polymorphic true,
+                                                     :type zen/map,
+                                                     :fhir/flags #{:MS}},
+                                        :type {:fhir/flags #{:MS}},
+                                        :participant {:type zen/vector,
+                                                      :every {:fhir/flags #{:MS}}},
+                                        :title {:fhir/flags #{:MS}},
+                                        :selectionBehavior {:fhir/flags #{:MS}},
+                                        :priority {:fhir/flags #{:MS}},
+                                        :condition {:type zen/vector,
+                                                    :every {:fhir/flags #{:MS}}},
+                                        :timing {:fhir/polymorphic true,
+                                                 :type zen/map,
+                                                 :fhir/flags #{:MS}},
+                                        :trigger {:type zen/vector,
+                                                  :every {:fhir/flags #{:MS}}}}}}},
+         :zen.fhir/type "PlanDefinition"}}

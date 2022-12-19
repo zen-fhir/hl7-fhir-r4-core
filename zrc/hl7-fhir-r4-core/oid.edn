@@ -1,12 +1,10 @@
 {ns hl7-fhir-r4-core.oid,
  import #{zen.fhir hl7-fhir-r4-core.uri},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "Base StructureDefinition for oid type: An OID represented as a URI",
-  :zen.fhir/type "oid",
-  :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/oid",
-  :zen.fhir/version "0.6.6-7",
-  :type zen/string,
-  :regex "urn:oid:[0-2](\\.(0|[1-9][0-9]*))+",
-  :confirms #{hl7-fhir-r4-core.uri/schema}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Base StructureDefinition for oid type: An OID represented as a URI",
+         :zen.fhir/type "oid",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/oid",
+         :zen.fhir/version "0.6.6-8",
+         :type zen/string,
+         :regex "urn:oid:[0-2](\\.(0|[1-9][0-9]*))+",
+         :confirms #{hl7-fhir-r4-core.uri/schema}}}

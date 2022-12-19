@@ -1,17 +1,12 @@
 {ns hl7-fhir-r4-core.practitioner-animalSpecies,
- import
- #{zen.fhir
-   hl7-fhir-r4-core.value-set.animal-species
-   hl7-fhir-r4-core.CodeableConcept},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "This extension should be used to specifiy that a practioner or RelatedPerson resource is a service animal.",
-  :zen.fhir/type "CodeableConcept",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/practitioner-animalSpecies",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
-  :zen.fhir/value-set
-  {:symbol hl7-fhir-r4-core.value-set.animal-species/value-set,
-   :strength :example}}}
+ import #{zen.fhir
+          hl7-fhir-r4-core.value-set.animal-species
+          hl7-fhir-r4-core.CodeableConcept},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "This extension should be used to specifiy that a practioner or RelatedPerson resource is a service animal.",
+         :zen.fhir/type "CodeableConcept",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/practitioner-animalSpecies",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+         :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.animal-species/value-set,
+                              :strength :example}}}

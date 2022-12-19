@@ -1,36 +1,34 @@
 {ns hl7-fhir-r4-core.search.InsurancePlan-name,
  import #{zen.fhir},
- search
- {:zen/tags #{zen.fhir/search},
-  :fhir/id "InsurancePlan-name",
-  :fhir/url "http://hl7.org/fhir/SearchParameter/InsurancePlan-name",
-  :fhir/type "string",
-  :name "name",
-  :expr
-  {:InsurancePlan
-   {:knife [["name"] ["alias"]],
-    :jsonpath ["$.\"name\"[*]" "$.\"alias\"[*]"],
-    :data-types #{},
-    :template :string,
-    :sql
-    {:where
-     [:or
-      [:ilike
-       [:pg/cast
-        [:pg/jsonb-path-query-array
-         [:pg/sql "{{table}}.resource"]
-         [:pg/cast
-          "($.\"name\"[*]).** ? (@.type() == \"string\")"
-          :jsonpath]]
-        :text]
-       [:pg/sql "{{param}}"]]
-      [:ilike
-       [:pg/cast
-        [:pg/jsonb-path-query-array
-         [:pg/sql "{{table}}.resource"]
-         [:pg/cast
-          "($.\"alias\"[*]).** ? (@.type() == \"string\")"
-          :jsonpath]]
-        :text]
-       [:pg/sql "{{param}}"]]],
-     :parameter-format "%\"?%"}}}}}
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "InsurancePlan-name",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/InsurancePlan-name",
+         :fhir/type "string",
+         :name "name",
+         :expr {:InsurancePlan {:knife [["name"] ["alias"]],
+                                :jsonpath ["$.\"name\"[*]"
+                                           "$.\"alias\"[*]"],
+                                :data-types #{},
+                                :template :string,
+                                :sql {:where [:or
+                                              [:ilike
+                                               [:pg/cast
+                                                [:pg/jsonb-path-query-array
+                                                 [:pg/sql
+                                                  "{{table}}.resource"]
+                                                 [:pg/cast
+                                                  "($.\"name\"[*]).** ? (@.type() == \"string\")"
+                                                  :jsonpath]]
+                                                :text]
+                                               [:pg/sql "{{param}}"]]
+                                              [:ilike
+                                               [:pg/cast
+                                                [:pg/jsonb-path-query-array
+                                                 [:pg/sql
+                                                  "{{table}}.resource"]
+                                                 [:pg/cast
+                                                  "($.\"alias\"[*]).** ? (@.type() == \"string\")"
+                                                  :jsonpath]]
+                                                :text]
+                                               [:pg/sql "{{param}}"]]],
+                                      :parameter-format "%\"?%"}}}}}

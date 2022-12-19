@@ -1,18 +1,14 @@
 {ns hl7-fhir-r4-core.value-set.identity-assuranceLevel,
  import #{zen.fhir},
- value-set
- {:zen/tags #{zen.fhir/value-set},
-  :zen/desc
-  "The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.",
-  :zen.fhir/version "0.6.6-7",
-  :fhir/code-systems
-  #{{:fhir/url "http://hl7.org/fhir/identity-assuranceLevel",
-     :zen.fhir/content :bundled}},
-  :uri "http://hl7.org/fhir/ValueSet/identity-assuranceLevel",
-  :version "4.0.1",
-  :ftr
-  {:module "ig",
-   :source-urls ["node_modules/hl7.fhir.r4.core"],
-   :source-type :igs,
-   :ftr-path "ftr",
-   :tag "init"}}}
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.",
+            :zen.fhir/version "0.6.6-8",
+            :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/identity-assuranceLevel",
+                                  :zen.fhir/content :bundled}},
+            :uri "http://hl7.org/fhir/ValueSet/identity-assuranceLevel",
+            :version "4.0.1",
+            :ftr {:module "ig",
+                  :source-urls ["node_modules/hl7.fhir.r4.core"],
+                  :source-type :igs,
+                  :ftr-path "ftr",
+                  :tag "init"}}}

@@ -1,39 +1,27 @@
 {ns hl7-fhir-r4-core.elementdefinition-de,
- import
- #{hl7-fhir-r4-core.elementdefinition-question
-   zen.fhir
-   hl7-fhir-r4-core.ElementDefinition
-   hl7-fhir-r4-core.elementdefinition-allowedUnits},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc
-  "Identifies how the ElementDefinition data type is used when it appears within a data element",
-  :zen.fhir/type "ElementDefinition",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/elementdefinition-de",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.ElementDefinition/schema},
-  :type zen/map,
-  :keys
-  {:type
-   {:type zen/vector,
-    :every
-    {:type zen/map,
-     :keys
-     {:profile {:type zen/vector, :maxItems 0},
-      :aggregation {:type zen/vector, :maxItems 0}}}},
-   :AllowedUnits
-   {:confirms
-    #{hl7-fhir-r4-core.elementdefinition-allowedUnits/schema},
-    :fhir/extensionUri
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-allowedUnits"},
-   :representation {:type zen/vector, :maxItems 0},
-   :Question
-   {:type zen/vector,
-    :every
-    {:confirms #{hl7-fhir-r4-core.elementdefinition-question/schema},
-     :fhir/extensionUri
-     "http://hl7.org/fhir/StructureDefinition/elementdefinition-question"}},
-   :defaultValue {:fhir/polymorphic true, :type zen/map},
-   :fixed {:fhir/polymorphic true, :type zen/map},
-   :pattern {:fhir/polymorphic true, :type zen/map}}}}
+ import #{hl7-fhir-r4-core.elementdefinition-question
+          zen.fhir
+          hl7-fhir-r4-core.ElementDefinition
+          hl7-fhir-r4-core.elementdefinition-allowedUnits},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Identifies how the ElementDefinition data type is used when it appears within a data element",
+         :zen.fhir/type "ElementDefinition",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-de",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.ElementDefinition/schema},
+         :type zen/map,
+         :keys {:type {:type zen/vector,
+                       :every {:type zen/map,
+                               :keys {:profile {:type zen/vector,
+                                                :maxItems 0},
+                                      :aggregation {:type zen/vector,
+                                                    :maxItems 0}}}},
+                :AllowedUnits {:confirms #{hl7-fhir-r4-core.elementdefinition-allowedUnits/schema},
+                               :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-allowedUnits"},
+                :representation {:type zen/vector, :maxItems 0},
+                :Question {:type zen/vector,
+                           :every {:confirms #{hl7-fhir-r4-core.elementdefinition-question/schema},
+                                   :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-question"}},
+                :defaultValue {:fhir/polymorphic true, :type zen/map},
+                :fixed {:fhir/polymorphic true, :type zen/map},
+                :pattern {:fhir/polymorphic true, :type zen/map}}}}

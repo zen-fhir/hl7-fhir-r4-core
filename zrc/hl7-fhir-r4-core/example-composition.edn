@@ -1,11 +1,9 @@
 {ns hl7-fhir-r4-core.example-composition,
  import #{zen.fhir hl7-fhir-r4-core.Composition},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen.fhir/type "Composition",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/example-composition",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{hl7-fhir-r4-core.Composition/schema},
-  :type zen/map,
-  :keys {:section {:type zen/vector, :slicing {:slices {}}}}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/type "Composition",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/example-composition",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{hl7-fhir-r4-core.Composition/schema},
+         :type zen/map,
+         :keys {:section {:type zen/vector, :slicing {:slices {}}}}}}

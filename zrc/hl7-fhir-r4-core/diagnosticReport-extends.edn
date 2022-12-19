@@ -1,12 +1,9 @@
 {ns hl7-fhir-r4-core.diagnosticReport-extends,
  import #{zen.fhir hl7-fhir-r4-core.DiagnosticReport},
- schema
- {:zen/tags #{zen/schema zen.fhir/structure-schema},
-  :zen/desc "The report references related (\"sibling\") reports.",
-  :zen.fhir/type "Reference",
-  :zen.fhir/profileUri
-  "http://hl7.org/fhir/StructureDefinition/diagnosticReport-extends",
-  :zen.fhir/version "0.6.6-7",
-  :confirms #{zen.fhir/Reference},
-  :zen.fhir/reference
-  {:refers #{hl7-fhir-r4-core.DiagnosticReport/schema}}}}
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "The report references related (\"sibling\") reports.",
+         :zen.fhir/type "Reference",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/diagnosticReport-extends",
+         :zen.fhir/version "0.6.6-8",
+         :confirms #{zen.fhir/Reference},
+         :zen.fhir/reference {:refers #{hl7-fhir-r4-core.DiagnosticReport/schema}}}}
