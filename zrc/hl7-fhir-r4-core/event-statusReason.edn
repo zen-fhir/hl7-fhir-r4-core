@@ -4,5 +4,5 @@
          :zen/desc "Captures the reason for the current state of the resource.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/event-statusReason",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

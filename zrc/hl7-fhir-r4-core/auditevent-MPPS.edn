@@ -4,5 +4,5 @@
          :zen/desc "An MPPS Instance UID associated with this entity.",
          :zen.fhir/type "Identifier",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/auditevent-MPPS",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.Identifier/schema}}}

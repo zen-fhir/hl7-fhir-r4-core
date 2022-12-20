@@ -3,7 +3,7 @@
           hl7-fhir-r4-core.value-set.allerg-intol-substance-exp-risk
           hl7-fhir-r4-core.value-set.substance-code
           hl7-fhir-r4-core.CodeableConcept},
- schema {:zen.fhir/version "0.6.6-8",
+ schema {:zen.fhir/version "0.6.7",
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/allergyintolerance-substanceExposureRisk",
          :require #{:substance :exposureRisk},

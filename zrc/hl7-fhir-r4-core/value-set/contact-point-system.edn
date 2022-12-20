@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Telecommunications form for contact point.",
-            :zen.fhir/version "0.6.6-8",
+            :zen.fhir/version "0.6.7",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/contact-point-system",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/contact-point-system",

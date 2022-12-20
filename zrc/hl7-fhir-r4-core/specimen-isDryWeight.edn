@@ -4,5 +4,5 @@
          :zen/desc "If the recorded quantity of the specimen is reported as a weight, if it is a dry weight.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/specimen-isDryWeight",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

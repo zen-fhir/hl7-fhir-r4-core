@@ -4,5 +4,5 @@
          :zen/desc "If true, indicates that if this answerOption is selected, no other possible answers may be selected, even if the item is a repeating question.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

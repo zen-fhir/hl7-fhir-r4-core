@@ -4,6 +4,6 @@
          :zen/desc "Completed or terminated task(s) whose function is taken by this new task.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/task-replaces",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Task/schema}}}}

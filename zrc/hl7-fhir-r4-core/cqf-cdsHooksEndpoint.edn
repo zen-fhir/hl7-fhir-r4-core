@@ -4,5 +4,5 @@
          :zen/desc "Specifies the URI of a CDS Hooks service that uses this PlanDefinition as its implementation.",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-cdsHooksEndpoint",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.uri/schema}}}
