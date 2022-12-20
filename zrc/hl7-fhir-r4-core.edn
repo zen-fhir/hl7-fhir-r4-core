@@ -262,7 +262,6 @@
                               "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-role" #zen/quote hl7-fhir-r4-core.search.OrganizationAffiliation-role/search},
                       "target-date" {"http://hl7.org/fhir/SearchParameter/Goal-target-date" #zen/quote hl7-fhir-r4-core.search.Goal-target-date/search},
                       "entry" {"http://hl7.org/fhir/SearchParameter/Composition-entry" #zen/quote hl7-fhir-r4-core.search.Composition-entry/search},
-                      "ID-SEARCH-PARAMETER" {"http://hl7.org/fhir/SearchParameter/example" #zen/quote hl7-fhir-r4-core.search.example/search},
                       "class-type" {"http://hl7.org/fhir/SearchParameter/Coverage-class-type" #zen/quote hl7-fhir-r4-core.search.Coverage-class-type/search},
                       "resource" {"http://hl7.org/fhir/SearchParameter/ImplementationGuide-resource" #zen/quote hl7-fhir-r4-core.search.ImplementationGuide-resource/search,
                                   "http://hl7.org/fhir/SearchParameter/CompartmentDefinition-resource" #zen/quote hl7-fhir-r4-core.search.CompartmentDefinition-resource/search,

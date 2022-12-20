@@ -6,7 +6,7 @@
          :zen/desc "Indicates that a signature (of the specified type) is needed when completing the QuestionnaireResponse.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired",
-         :zen.fhir/version "0.6.7",
+         :zen.fhir/version "0.6.7-2",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.signature-type/value-set,
                               :strength :preferred}}}
