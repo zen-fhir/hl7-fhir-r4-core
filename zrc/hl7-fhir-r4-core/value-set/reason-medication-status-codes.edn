@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar",
-            :zen.fhir/version "0.6.7",
+            :zen.fhir/version "0.6.7-2",
             :fhir/code-systems #{{:fhir/url "http://snomed.info/sct",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/reason-medication-status-codes",

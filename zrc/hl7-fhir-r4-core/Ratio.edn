@@ -4,7 +4,7 @@
          :zen/desc "Base StructureDefinition for Ratio Type: A relationship of two Quantity values - expressed as a numerator and a denominator.",
          :zen.fhir/type "Ratio",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Ratio",
-         :zen.fhir/version "0.6.7",
+         :zen.fhir/version "0.6.7-2",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:numerator {:confirms #{hl7-fhir-r4-core.Quantity/schema},

@@ -4,5 +4,5 @@
          :zen/desc "A name that can be used for code generation when generating named enumerations for the binding.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-         :zen.fhir/version "0.6.7",
+         :zen.fhir/version "0.6.7-2",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

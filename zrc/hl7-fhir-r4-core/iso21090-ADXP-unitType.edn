@@ -4,5 +4,5 @@
          :zen/desc "Indicates the type of specific unit contained within a building or complex. E.g. Appartment, Floor.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitType",
-         :zen.fhir/version "0.6.7",
+         :zen.fhir/version "0.6.7-2",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
