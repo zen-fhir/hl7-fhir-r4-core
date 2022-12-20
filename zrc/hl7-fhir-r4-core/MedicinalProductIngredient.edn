@@ -11,7 +11,7 @@
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.Organization},
- schema {:zen.fhir/version "0.6.6-8",
+ schema {:zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -67,7 +67,7 @@
          :zen.fhir/type "MedicinalProductIngredient"},
  specifiedSubstance-strength-schema {:zen/tags #{zen/schema
                                                  zen.fhir/structure-schema},
-                                     :zen.fhir/version "0.6.6-8",
+                                     :zen.fhir/version "0.6.7",
                                      :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                      :type zen/map,
                                      :keys {:presentation {:confirms #{hl7-fhir-r4-core.Ratio/schema},

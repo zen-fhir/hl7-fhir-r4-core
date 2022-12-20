@@ -26,7 +26,7 @@
          :zen/desc "Details of a Health Insurance product/plan provided by an organization.",
          :zen.fhir/type "InsurancePlan",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/InsurancePlan",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

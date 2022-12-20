@@ -4,5 +4,5 @@
          :zen/desc "The JSON type of a property - used for the value property of a primitive type (for which there is no type in the FHIR typing system).",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

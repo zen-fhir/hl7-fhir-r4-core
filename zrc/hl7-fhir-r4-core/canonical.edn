@@ -4,6 +4,6 @@
          :zen/desc "Base StructureDefinition for canonical type: A URI that is a reference to a canonical URL on a FHIR resource",
          :zen.fhir/type "canonical",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/canonical",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :type zen/string,
          :confirms #{hl7-fhir-r4-core.uri/schema}}}

@@ -4,5 +4,5 @@
          :zen/desc "Information captured by the author/maintainer of the questionnaire for development purposes, not intended to be seen by users.",
          :zen.fhir/type "markdown",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/designNote",
-         :zen.fhir/version "0.6.6-8",
+         :zen.fhir/version "0.6.7",
          :confirms #{hl7-fhir-r4-core.markdown/schema}}}
