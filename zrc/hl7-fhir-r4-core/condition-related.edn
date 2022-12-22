@@ -4,6 +4,6 @@
          :zen/desc "This condition has an unspecified relationship with another condition.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/condition-related",
-         :zen.fhir/version "0.6.7-2",
+         :zen.fhir/version "0.6.7-3",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Condition/schema}}}}

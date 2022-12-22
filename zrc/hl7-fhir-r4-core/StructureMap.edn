@@ -64,7 +64,7 @@
           hl7-fhir-r4-core.Address
           hl7-fhir-r4-core.StructureMap},
  group-rule-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                    :zen.fhir/version "0.6.7-2",
+                    :zen.fhir/version "0.6.7-3",
                     :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                     :type zen/map,
                     :keys {:name {:confirms #{hl7-fhir-r4-core.id/schema},
@@ -339,7 +339,7 @@
                     :require #{:name :source},
                     :fhir/flags #{:SU},
                     :zen/desc "Transform Rule from source to target"},
- schema {:zen.fhir/version "0.6.7-2",
+ schema {:zen.fhir/version "0.6.7-3",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
