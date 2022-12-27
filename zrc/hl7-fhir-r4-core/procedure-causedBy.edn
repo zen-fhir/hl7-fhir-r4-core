@@ -15,7 +15,7 @@
          :zen/desc "This procedure is because of the related item.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/procedure-causedBy",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.MedicationAdministration/schema
                                         hl7-fhir-r4-core.ImagingStudy/schema

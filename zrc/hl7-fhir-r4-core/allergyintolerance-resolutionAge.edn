@@ -4,5 +4,5 @@
          :zen/desc "The estimated patient age at which the allergy or intolerance resolved. Should be specified only if the status is resolved.",
          :zen.fhir/type "Age",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/allergyintolerance-resolutionAge",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{hl7-fhir-r4-core.Age/schema}}}

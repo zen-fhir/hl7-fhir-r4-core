@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes for units of time",
-            :zen.fhir/version "0.6.7-4",
+            :zen.fhir/version "0.6.7-5",
             :fhir/code-systems #{{:fhir/url "http://unitsofmeasure.org",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/all-time-units",

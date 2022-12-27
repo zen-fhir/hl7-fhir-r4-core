@@ -6,7 +6,7 @@
          :zen/desc "Where the type for a question is \"Reference\", indicates a type of resource that is permitted.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.resource-types/value-set,
                               :strength :required}}}
