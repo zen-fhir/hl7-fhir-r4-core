@@ -18,7 +18,7 @@
          :zen/desc "Defines an affiliation/assotiation/relationship between 2 distinct oganizations, that is not a part-of relationship/sub-division relationship.",
          :zen.fhir/type "OrganizationAffiliation",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

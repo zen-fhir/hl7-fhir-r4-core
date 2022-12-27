@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Lifecycle status of the questionnaire response.",
-            :zen.fhir/version "0.6.7-4",
+            :zen.fhir/version "0.6.7-5",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/questionnaire-answers-status",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/questionnaire-answers-status",

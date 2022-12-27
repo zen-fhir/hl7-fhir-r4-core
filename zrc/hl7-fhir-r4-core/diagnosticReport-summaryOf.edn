@@ -4,6 +4,6 @@
          :zen/desc "A summary report that points to subordinate target reports.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/diagnosticReport-summaryOf",
-         :zen.fhir/version "0.6.7-4",
+         :zen.fhir/version "0.6.7-5",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.DiagnosticReport/schema}}}}

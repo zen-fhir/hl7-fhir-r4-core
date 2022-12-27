@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The code(s) that detail the conditions under which the healthcare service is available/offered.",
-            :zen.fhir/version "0.6.7-4",
+            :zen.fhir/version "0.6.7-5",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/service-provision-conditions",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/service-provision-conditions",
