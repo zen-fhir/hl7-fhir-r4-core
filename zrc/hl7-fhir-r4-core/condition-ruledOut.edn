@@ -4,6 +4,6 @@
          :zen/desc "Identifies what potential diagnoses have been ruled out for this condition.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/condition-ruledOut",
-         :zen.fhir/version "0.6.7-3",
+         :zen.fhir/version "0.6.7-4",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Condition/schema}}}}

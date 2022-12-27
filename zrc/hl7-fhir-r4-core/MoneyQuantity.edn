@@ -4,5 +4,5 @@
          :zen/desc "An amount of money. With regard to precision, see [Decimal Precision](datatypes.html#precision)",
          :zen.fhir/type "Quantity",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MoneyQuantity",
-         :zen.fhir/version "0.6.7-3",
+         :zen.fhir/version "0.6.7-4",
          :confirms #{hl7-fhir-r4-core.Quantity/schema}}}

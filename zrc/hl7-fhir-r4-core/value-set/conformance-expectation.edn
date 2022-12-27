@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Indicates the degree of adherence to a specified behavior or capability expected for a system to be deemed conformant with a specification.",
-            :zen.fhir/version "0.6.7-3",
+            :zen.fhir/version "0.6.7-4",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/conformance-expectation",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/conformance-expectation",

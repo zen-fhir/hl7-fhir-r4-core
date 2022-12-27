@@ -6,7 +6,7 @@
          :zen/desc "If this StructureDefinition is normative, which was the first normative version.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-         :zen.fhir/version "0.6.7-3",
+         :zen.fhir/version "0.6.7-4",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.FHIR-version/value-set,
                               :strength :required}}}
