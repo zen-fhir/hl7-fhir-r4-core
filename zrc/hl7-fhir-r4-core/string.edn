@@ -4,6 +4,6 @@
          :zen/desc "Base StructureDefinition for string Type: A sequence of Unicode characters",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/string",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :type zen/string,
          :maxLength 1048576}}

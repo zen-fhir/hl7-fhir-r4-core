@@ -6,7 +6,7 @@
          :zen/desc "Base StructureDefinition for BackboneElement Type: Base definition for all elements that are defined inside a resource - but not those in a data type.",
          :zen.fhir/type "BackboneElement",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/BackboneElement",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:modifierExtension {:type zen/vector,

@@ -4,5 +4,5 @@
          :zen/desc "The title or other name to display when referencing a resource by canonical URL.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/display",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
