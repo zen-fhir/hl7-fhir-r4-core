@@ -4,5 +4,5 @@
          :zen/desc "Identifies the maximum number of decimal places that may be specified for the data element.",
          :zen.fhir/type "integer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.integer/schema}}}

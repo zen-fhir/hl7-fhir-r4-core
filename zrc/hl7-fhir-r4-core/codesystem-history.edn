@@ -6,7 +6,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "Information on changes made to the Value Set Definition over time, and also has a contained audit trail of all such changes.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-history",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :type zen/map,
          :keys {:name {:confirms #{hl7-fhir-r4-core.string/schema},
                        :zen/desc "The name of this set of history entries"},

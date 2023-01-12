@@ -4,5 +4,5 @@
          :zen/desc "if ture, indicates that the concept is deprecated from the value set - that is, it should not be used, and is planned to be withdrawn.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-deprecated",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

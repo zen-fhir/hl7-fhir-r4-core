@@ -4,5 +4,5 @@
          :zen/desc "The qualitative change in the value relative to the previous measurement. Usually only recorded if the change is clinically significant.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-delta",
-         :zen.fhir/version "0.6.7-5",
+         :zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

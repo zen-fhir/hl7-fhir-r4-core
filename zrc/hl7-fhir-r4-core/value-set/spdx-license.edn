@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The license that applies to an Implementation Guide (using an SPDX license Identifiers, or 'not-open-source'). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).",
-            :zen.fhir/version "0.6.7-5",
+            :zen.fhir/version "0.6.8",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/spdx-license",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/spdx-license",

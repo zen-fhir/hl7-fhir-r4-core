@@ -34,7 +34,7 @@
           hl7-fhir-r4-core.Organization
           hl7-fhir-r4-core.value-set.medication-statement-category
           hl7-fhir-r4-core.value-set.reason-medication-status-codes},
- schema {:zen.fhir/version "0.6.7-5",
+ schema {:zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

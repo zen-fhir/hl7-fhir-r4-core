@@ -44,7 +44,7 @@
           hl7-fhir-r4-core.Medication
           hl7-fhir-r4-core.value-set.action-participant-role
           hl7-fhir-r4-core.Expression},
- schema {:zen.fhir/version "0.6.7-5",
+ schema {:zen.fhir/version "0.6.8",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
