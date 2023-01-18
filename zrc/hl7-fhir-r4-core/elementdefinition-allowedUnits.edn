@@ -4,7 +4,7 @@
           hl7-fhir-r4-core.value-set.ucum-units
           hl7-fhir-r4-core.CodeableConcept},
  schema {:fhir/polymorphic true,
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-allowedUnits",
          :type zen/map,

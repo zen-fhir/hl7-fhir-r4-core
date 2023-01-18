@@ -2,7 +2,7 @@
  import #{zen.fhir
           hl7-fhir-r4-core.PlanDefinition
           hl7-fhir-r4-core.cqf-cdsHooksEndpoint},
- schema {:zen.fhir/version "0.6.8",
+ schema {:zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.PlanDefinition/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

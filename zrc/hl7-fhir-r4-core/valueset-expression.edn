@@ -4,5 +4,5 @@
          :zen/desc "An expression that provides an alternative definition of the content of the value set. There are two different ways to use this expression extension: If both an expression and a compose element is present, the compose is understood the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, it that is computable.",
          :zen.fhir/type "Expression",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-expression",
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.Expression/schema}}}

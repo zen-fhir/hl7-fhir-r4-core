@@ -62,7 +62,7 @@
           hl7-fhir-r4-core.Distance
           hl7-fhir-r4-core.Expression
           hl7-fhir-r4-core.Address},
- schema {:zen.fhir/version "0.6.8",
+ schema {:zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/ElementDefinition",

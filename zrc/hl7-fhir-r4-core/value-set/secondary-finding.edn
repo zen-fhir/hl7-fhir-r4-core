@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Codes to denote a guideline or policy statement.when a genetic test result is being shared as a secondary finding.",
-            :zen.fhir/version "0.6.8",
+            :zen.fhir/version "0.6.9",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/secondary-finding",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/secondary-finding",

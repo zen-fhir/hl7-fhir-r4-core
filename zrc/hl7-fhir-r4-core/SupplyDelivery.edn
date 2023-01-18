@@ -30,7 +30,7 @@
          :zen/desc "Record of delivery of what is supplied.",
          :zen.fhir/type "SupplyDelivery",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/SupplyDelivery",
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
