@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "How an extension context is interpreted.",
-            :zen.fhir/version "0.6.8",
+            :zen.fhir/version "0.6.9",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/extension-context-type",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/extension-context-type",

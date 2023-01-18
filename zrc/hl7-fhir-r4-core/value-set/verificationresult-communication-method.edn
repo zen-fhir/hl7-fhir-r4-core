@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Attested information may be validated by process that are manual or automated. For automated processes it may accomplished by the system of record reaching out through another system's API or information may be sent to the system of record. This value set defines a set of codes to describing the process, the how, a resource or data element is validated.",
-            :zen.fhir/version "0.6.8",
+            :zen.fhir/version "0.6.9",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/verificationresult-communication-method",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/verificationresult-communication-method",

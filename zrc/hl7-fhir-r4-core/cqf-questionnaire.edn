@@ -6,7 +6,7 @@
          :zen/desc "A questionnaire with the ability to specify behavior associated with questions or groups of questions",
          :zen.fhir/type "Questionnaire",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-questionnaire",
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.Questionnaire/schema
                      zen.fhir/Resource},
          :type zen/map,

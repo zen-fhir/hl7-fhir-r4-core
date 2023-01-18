@@ -4,5 +4,5 @@
          :zen/desc "Base StructureDefinition for boolean Type: Value of \"true\" or \"false\"",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/boolean",
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :type zen/boolean}}

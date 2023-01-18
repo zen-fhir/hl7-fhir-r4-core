@@ -4,5 +4,5 @@
          :zen/desc "This extension declares that a value set depends on a particular supplement and should not be used in its absence.",
          :zen.fhir/type "canonical",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-supplement",
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.canonical/schema}}}

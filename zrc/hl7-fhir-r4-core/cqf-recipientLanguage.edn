@@ -6,7 +6,7 @@
          :zen/desc "Preferred language of the person that will consume the content.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-recipientLanguage",
-         :zen.fhir/version "0.6.8",
+         :zen.fhir/version "0.6.9",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.languages/value-set,
                               :strength :preferred}}}
