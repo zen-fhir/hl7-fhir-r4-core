@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Describes the state of a metric calibration.",
-            :zen.fhir/version "0.6.9",
+            :zen.fhir/version "0.6.10",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/metric-calibration-state",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/metric-calibration-state",

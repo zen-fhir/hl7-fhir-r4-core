@@ -4,6 +4,6 @@
          :zen/desc "Indicates that this event is relevant to the specified research study(ies).",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/workflow-researchStudy",
-         :zen.fhir/version "0.6.9",
+         :zen.fhir/version "0.6.10",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.ResearchStudy/schema}}}}
