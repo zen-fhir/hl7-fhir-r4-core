@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Defines behavior for an action or a group for how many times that item may be repeated.",
-            :zen.fhir/version "0.6.9",
+            :zen.fhir/version "0.6.10",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/action-cardinality-behavior",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/action-cardinality-behavior",

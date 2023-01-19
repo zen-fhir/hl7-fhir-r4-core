@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Used to specify why the normally expected content of the data element is missing.",
-            :zen.fhir/version "0.6.9",
+            :zen.fhir/version "0.6.10",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/data-absent-reason",

@@ -4,7 +4,7 @@
          :zen/desc "Base StructureDefinition for Element Type: Base definition for all elements in a resource.",
          :zen.fhir/type "Element",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Element",
-         :zen.fhir/version "0.6.9",
+         :zen.fhir/version "0.6.10",
          :type zen/map,
          :keys {:id {:confirms #{hl7-fhir-r4-core.string/schema},
                      :zen/desc "Unique id for inter-element referencing"},
