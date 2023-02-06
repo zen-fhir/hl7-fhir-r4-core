@@ -6,7 +6,7 @@
          :zen/desc "The level of equivalence between the element containing the mapping and the element mapped to.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-equivalence",
-         :zen.fhir/version "0.6.10",
+         :zen.fhir/version "0.6.12-1",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.concept-map-equivalence/value-set,
                               :strength :required}}}

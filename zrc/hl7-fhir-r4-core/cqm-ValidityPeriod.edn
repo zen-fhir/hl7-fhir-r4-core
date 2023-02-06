@@ -4,5 +4,5 @@
          :zen/desc "The period in which the catalog is valid.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqm-ValidityPeriod",
-         :zen.fhir/version "0.6.10",
+         :zen.fhir/version "0.6.12-1",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

@@ -4,5 +4,5 @@
          :zen/desc "A name to use for the type, in implementations. This is a suggestion; it's not a normative part of the FHIR specification, but it does appear in the UML diagrams, and is used in generated code, schemas, etc.to identify the type.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-         :zen.fhir/version "0.6.10",
+         :zen.fhir/version "0.6.12-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

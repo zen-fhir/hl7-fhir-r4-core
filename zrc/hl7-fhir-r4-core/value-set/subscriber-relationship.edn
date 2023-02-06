@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).",
-            :zen.fhir/version "0.6.10",
+            :zen.fhir/version "0.6.12-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/subscriber-relationship",

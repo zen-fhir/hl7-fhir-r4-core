@@ -5,7 +5,7 @@
          :fhir/url "http://hl7.org/fhir/SearchParameter/observation-genetic-Observation-gene-identifier",
          :fhir/type "token",
          :name "gene-identifier",
-         :expr {:Observation {:knife [],
-                              :jsonpath [],
+         :expr {:Observation {:knife [["extension('http://hl7.org/fhir/StructureDefinition/observation-geneticsGene'"]],
+                              :jsonpath ["$.\"extension('http://hl7.org/fhir/StructureDefinition/observation-geneticsGene'\"[*]"],
                               :data-types #{},
                               :template :token}}}}

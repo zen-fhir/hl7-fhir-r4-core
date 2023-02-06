@@ -5,7 +5,7 @@
          :fhir/url "http://hl7.org/fhir/SearchParameter/device-extensions-Device-din",
          :fhir/type "token",
          :name "din",
-         :expr {:Device {:knife [],
-                         :jsonpath [],
+         :expr {:Device {:knife [["extension('http://hl7.org/fhir/SearchParameter/device-extensions-Device-din'"]],
+                         :jsonpath ["$.\"extension('http://hl7.org/fhir/SearchParameter/device-extensions-Device-din'\"[*]"],
                          :data-types #{},
                          :template :token}}}}
