@@ -4,4 +4,4 @@
          :zen/desc "Logical Model: Who What When Where Why - Common pattern for all resources that deals with attribution.",
          :zen.fhir/type "FiveWs",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/FiveWs",
-         :zen.fhir/version "0.6.10"}}
+         :zen.fhir/version "0.6.12-1"}}

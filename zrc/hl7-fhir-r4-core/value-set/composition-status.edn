@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The workflow/clinical status of the composition.",
-            :zen.fhir/version "0.6.10",
+            :zen.fhir/version "0.6.12-1",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/composition-status",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/composition-status",

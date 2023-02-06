@@ -4,5 +4,5 @@
          :zen/desc "Carries additional confidentiality codes beyond the base fixed code specified in the CDA document.",
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-otherConfidentiality",
-         :zen.fhir/version "0.6.10",
+         :zen.fhir/version "0.6.12-1",
          :confirms #{hl7-fhir-r4-core.Coding/schema}}}

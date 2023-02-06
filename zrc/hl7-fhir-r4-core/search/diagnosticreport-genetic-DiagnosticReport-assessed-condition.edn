@@ -5,7 +5,7 @@
          :fhir/url "http://hl7.org/fhir/SearchParameter/diagnosticreport-genetic-DiagnosticReport-assessed-condition",
          :fhir/type "reference",
          :name "assessed-condition",
-         :expr {:DiagnosticReport {:knife [],
-                                   :jsonpath [],
+         :expr {:DiagnosticReport {:knife [["extension('http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsAssessedCondition'"]],
+                                   :jsonpath ["$.\"extension('http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsAssessedCondition'\"[*]"],
                                    :data-types #{},
                                    :template :reference}}}}
