@@ -4,5 +4,5 @@
          :zen/desc "Identifies how the specified element should be rendered when displayed.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/rendering-style",
-         :zen.fhir/version "0.6.12-1",
+         :zen.fhir/version "0.16.13-2",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

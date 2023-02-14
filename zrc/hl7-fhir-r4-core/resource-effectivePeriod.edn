@@ -4,5 +4,5 @@
          :zen/desc "The period during which the resource content was or is planned to be effective.",
          :zen.fhir/type "Period",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
-         :zen.fhir/version "0.6.12-1",
+         :zen.fhir/version "0.16.13-2",
          :confirms #{hl7-fhir-r4-core.Period/schema}}}
