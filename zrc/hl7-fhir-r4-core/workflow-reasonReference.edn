@@ -9,7 +9,7 @@
          :zen/desc "Indicates another resource whose existence justifies this event.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/workflow-reasonReference",
-         :zen.fhir/version "0.6.12-1",
+         :zen.fhir/version "0.16.13-2",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Media/schema
                                         hl7-fhir-r4-core.Observation/schema

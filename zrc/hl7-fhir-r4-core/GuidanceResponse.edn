@@ -24,7 +24,7 @@
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.Parameters},
- schema {:zen.fhir/version "0.6.12-1",
+ schema {:zen.fhir/version "0.16.13-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

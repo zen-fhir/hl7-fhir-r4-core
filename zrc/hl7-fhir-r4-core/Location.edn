@@ -27,7 +27,7 @@
          :zen/desc "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.",
          :zen.fhir/type "Location",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Location",
-         :zen.fhir/version "0.6.12-1",
+         :zen.fhir/version "0.16.13-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Example codes indicating the reason for a current status.  Note that these are in no way complete and might not even be appropriate for some uses.",
-            :zen.fhir/version "0.6.12-1",
+            :zen.fhir/version "0.16.13-2",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/goal-status-reason",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/goal-status-reason",
