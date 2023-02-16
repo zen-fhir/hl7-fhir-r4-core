@@ -4,5 +4,5 @@
          :zen/desc "The date on which the existence of the Condition was first asserted or acknowledged.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-         :zen.fhir/version "0.16.13-2",
+         :zen.fhir/version "0.6.14",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

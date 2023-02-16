@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example.",
-            :zen.fhir/version "0.16.13-2",
+            :zen.fhir/version "0.6.14",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/enteral-route",

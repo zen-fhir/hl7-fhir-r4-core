@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This identifies the vaccine substance administered - CVX codes.",
-            :zen.fhir/version "0.16.13-2",
+            :zen.fhir/version "0.6.14",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/sid/cvx",
                                   :zen.fhir/content :not-present}
                                  {:fhir/url "urn:oid:1.2.36.1.2001.1005.17",
