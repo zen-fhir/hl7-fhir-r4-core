@@ -6,7 +6,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "Allele information.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-geneticsAllele",
-         :zen.fhir/version "0.6.14",
+         :zen.fhir/version "0.6.15",
          :type zen/map,
          :keys {:Name {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
                        :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.allelename/value-set,

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Event Types for Audit Events - defined by DICOM with some FHIR specific additions.",
-            :zen.fhir/version "0.6.14",
+            :zen.fhir/version "0.6.15",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://dicom.nema.org/resources/ontology/DCM",

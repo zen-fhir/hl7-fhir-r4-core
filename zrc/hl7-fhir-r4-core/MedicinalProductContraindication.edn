@@ -14,7 +14,7 @@
          :zen/desc "The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.",
          :zen.fhir/type "MedicinalProductContraindication",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MedicinalProductContraindication",
-         :zen.fhir/version "0.6.14",
+         :zen.fhir/version "0.6.15",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

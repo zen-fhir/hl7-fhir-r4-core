@@ -10,7 +10,7 @@
          :zen/desc "This is the base resource type for everything.",
          :zen.fhir/type "Resource",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Resource",
-         :zen.fhir/version "0.6.14",
+         :zen.fhir/version "0.6.15",
          :confirms #{zen.fhir/Resource},
          :type zen/map,
          :keys {:id {:confirms #{hl7-fhir-r4-core.string/schema},
