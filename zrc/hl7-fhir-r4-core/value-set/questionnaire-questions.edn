@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Example list of codes for questions and groups of questions. (Not necessarily complete or appropriate.)",
-            :zen.fhir/version "0.6.14",
+            :zen.fhir/version "0.6.15",
             :fhir/code-systems #{{:fhir/url "http://loinc.org",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/questionnaire-questions",

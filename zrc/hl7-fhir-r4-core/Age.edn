@@ -6,7 +6,7 @@
          :zen/desc "Base StructureDefinition for Age Type: A duration of time during which an organism (or a process) has existed.",
          :zen.fhir/type "Age",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Age",
-         :zen.fhir/version "0.6.14",
+         :zen.fhir/version "0.6.15",
          :confirms #{hl7-fhir-r4-core.Quantity/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.age-units/value-set,
                               :strength :extensible}}}
