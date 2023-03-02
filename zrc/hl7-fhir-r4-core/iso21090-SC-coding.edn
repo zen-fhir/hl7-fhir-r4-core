@@ -4,5 +4,5 @@
          :zen/desc "Provides a coded expression for the content represented in a string.",
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding",
-         :zen.fhir/version "0.6.15",
+         :zen.fhir/version "0.6.16-3",
          :confirms #{hl7-fhir-r4-core.Coding/schema}}}
