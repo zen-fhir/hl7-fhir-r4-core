@@ -4,5 +4,5 @@
          :zen/desc "For slider-based controls, indicates the step size to use when toggling the control up or down.",
          :zen.fhir/type "integer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue",
-         :zen.fhir/version "0.6.15",
+         :zen.fhir/version "0.6.16-3",
          :confirms #{hl7-fhir-r4-core.integer/schema}}}

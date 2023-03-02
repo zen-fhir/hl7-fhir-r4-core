@@ -4,5 +4,5 @@
          :zen/desc "This text is intended to act as a citation to work done elsewhere that is not part of the current stewarding process where the referenced source is in some way a basis of the current value set definition.",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-sourceReference",
-         :zen.fhir/version "0.6.15",
+         :zen.fhir/version "0.6.16-3",
          :confirms #{hl7-fhir-r4-core.uri/schema}}}

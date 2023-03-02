@@ -4,5 +4,5 @@
          :zen/desc "Marks that the expansion is  incomplete, because the full value set is too large to represent, and the client asked for an incomplete fragment.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
-         :zen.fhir/version "0.6.15",
+         :zen.fhir/version "0.6.16-3",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

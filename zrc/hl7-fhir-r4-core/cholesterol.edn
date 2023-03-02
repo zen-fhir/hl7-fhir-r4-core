@@ -2,7 +2,7 @@
  import #{hl7-fhir-r4-core.Observation
           hl7-fhir-r4-core.SimpleQuantity
           zen.fhir},
- schema {:zen.fhir/version "0.6.15",
+ schema {:zen.fhir/version "0.6.16-3",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
