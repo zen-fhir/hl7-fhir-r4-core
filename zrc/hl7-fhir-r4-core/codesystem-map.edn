@@ -4,5 +4,5 @@
          :zen/desc "A reference to a concept map that is relevant for the interpretation of this value set.",
          :zen.fhir/type "canonical",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-map",
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17-1",
          :confirms #{hl7-fhir-r4-core.canonical/schema}}}

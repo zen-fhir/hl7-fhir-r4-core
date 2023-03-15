@@ -16,7 +16,7 @@
          :zen/desc "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.",
          :zen.fhir/type "EnrollmentRequest",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest",
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17-1",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
