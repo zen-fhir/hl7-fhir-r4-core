@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A Master Patient Index (MPI) assessment of whether a candidate patient record is a match or not.",
-            :zen.fhir/version "0.6.17-1",
+            :zen.fhir/version "0.6.17-2",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/match-grade",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/match-grade",

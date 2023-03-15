@@ -1,6 +1,6 @@
 {ns hl7-fhir-r4-core.triglyceride,
  import #{hl7-fhir-r4-core.Observation zen.fhir},
- schema {:zen.fhir/version "0.6.17-1",
+ schema {:zen.fhir/version "0.6.17-2",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

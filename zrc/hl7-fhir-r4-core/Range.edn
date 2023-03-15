@@ -7,7 +7,7 @@
          :zen/desc "Base StructureDefinition for Range Type: A set of ordered Quantities defined by a low and high limit.",
          :zen.fhir/type "Range",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Range",
-         :zen.fhir/version "0.6.17-1",
+         :zen.fhir/version "0.6.17-2",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:low {:confirms #{hl7-fhir-r4-core.Quantity/schema

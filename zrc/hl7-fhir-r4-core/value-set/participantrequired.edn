@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Is the Participant required to attend the appointment.",
-            :zen.fhir/version "0.6.17-1",
+            :zen.fhir/version "0.6.17-2",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/participantrequired",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/participantrequired",

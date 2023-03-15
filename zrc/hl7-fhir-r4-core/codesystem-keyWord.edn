@@ -4,5 +4,5 @@
          :zen/desc "Word or words used in an information retrieval system to indicate the content of the value set.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-keyWord",
-         :zen.fhir/version "0.6.17-1",
+         :zen.fhir/version "0.6.17-2",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
