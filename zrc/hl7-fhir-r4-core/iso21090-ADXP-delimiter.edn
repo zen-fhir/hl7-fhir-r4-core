@@ -4,5 +4,5 @@
          :zen/desc "Delimiters are printed without framing white space. If no value component is provided, the delimiter appears as a line break.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-delimiter",
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

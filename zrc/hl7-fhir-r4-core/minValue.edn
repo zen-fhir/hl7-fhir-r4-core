@@ -6,7 +6,7 @@
           hl7-fhir-r4-core.dateTime
           hl7-fhir-r4-core.date},
  schema {:fhir/polymorphic true,
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17-1",
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/minValue",
          :type zen/map,

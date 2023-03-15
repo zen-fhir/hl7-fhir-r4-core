@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Codes for the stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.",
-            :zen.fhir/version "0.6.16-3",
+            :zen.fhir/version "0.6.17-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/research-study-phase",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/research-study-phase",

@@ -4,5 +4,5 @@
          :zen/desc "A special note for implementers about the status of the resource.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-special-status",
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

@@ -6,7 +6,7 @@
          :zen/desc "Describes how the ServiceRequest resource is used to for genetics",
          :zen.fhir/type "ServiceRequest",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/servicerequest-genetics",
-         :zen.fhir/version "0.6.16-3",
+         :zen.fhir/version "0.6.17-1",
          :confirms #{hl7-fhir-r4-core.ServiceRequest/schema
                      zen.fhir/Resource},
          :type zen/map,

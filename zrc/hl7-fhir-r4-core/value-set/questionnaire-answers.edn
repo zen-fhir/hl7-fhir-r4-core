@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Example list of codes for answers to questions. (Not complete or necessarily appropriate.)",
-            :zen.fhir/version "0.6.16-3",
+            :zen.fhir/version "0.6.17-1",
             :fhir/code-systems #{{:fhir/url "http://snomed.info/sct",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/questionnaire-answers",
