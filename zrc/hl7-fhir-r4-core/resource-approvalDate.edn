@@ -4,5 +4,5 @@
          :zen/desc "The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.",
          :zen.fhir/type "date",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/resource-approvalDate",
-         :zen.fhir/version "0.6.17-1",
+         :zen.fhir/version "0.6.17-2",
          :confirms #{hl7-fhir-r4-core.date/schema}}}

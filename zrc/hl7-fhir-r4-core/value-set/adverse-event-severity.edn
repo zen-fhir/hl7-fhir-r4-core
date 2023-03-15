@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The severity of the adverse event itself, in direct relation to the subject.",
-            :zen.fhir/version "0.6.17-1",
+            :zen.fhir/version "0.6.17-2",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/adverse-event-severity",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/adverse-event-severity",

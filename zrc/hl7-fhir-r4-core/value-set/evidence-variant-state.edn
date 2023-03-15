@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.",
-            :zen.fhir/version "0.6.17-1",
+            :zen.fhir/version "0.6.17-2",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/evidence-variant-state",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/evidence-variant-state",

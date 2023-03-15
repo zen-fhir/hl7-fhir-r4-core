@@ -7,7 +7,7 @@
          :zen/desc "Base StructureDefinition for Population Type: A populatioof people with some set of grouping criteria.",
          :zen.fhir/type "Population",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Population",
-         :zen.fhir/version "0.6.17-1",
+         :zen.fhir/version "0.6.17-2",
          :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
          :type zen/map,
          :keys {:age {:fhir/polymorphic true,

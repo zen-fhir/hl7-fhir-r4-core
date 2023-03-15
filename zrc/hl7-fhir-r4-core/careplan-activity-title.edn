@@ -4,5 +4,5 @@
          :zen/desc "Human-friendly name for the activity.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/careplan-activity-title",
-         :zen.fhir/version "0.6.17-1",
+         :zen.fhir/version "0.6.17-2",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
