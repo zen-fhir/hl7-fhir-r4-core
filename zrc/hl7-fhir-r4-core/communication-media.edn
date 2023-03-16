@@ -4,5 +4,5 @@
          :zen/desc "It contains enriched media representation of the alert message, such as a voice recording.  This may be used, for example for compliance with jurisdictional accessibility requirements, literacy issues, or translations of the unstructured text content in other languages.",
          :zen.fhir/type "Attachment",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/communication-media",
-         :zen.fhir/version "0.6.17-2",
+         :zen.fhir/version "0.6.17-4",
          :confirms #{hl7-fhir-r4-core.Attachment/schema}}}

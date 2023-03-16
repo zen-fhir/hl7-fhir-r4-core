@@ -6,7 +6,7 @@
           hl7-fhir-r4-core.Quantity
           hl7-fhir-r4-core.positiveInt
           hl7-fhir-r4-core.Element},
- schema {:zen.fhir/version "0.6.17-2",
+ schema {:zen.fhir/version "0.6.17-4",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/SampledData",

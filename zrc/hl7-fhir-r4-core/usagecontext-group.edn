@@ -4,5 +4,5 @@
          :zen/desc "Defines the group in which this usage context is a member. Multiple groups are \"OR'ed\", contexts within a group are \"AND'ed\".",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/usagecontext-group",
-         :zen.fhir/version "0.6.17-2",
+         :zen.fhir/version "0.6.17-4",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

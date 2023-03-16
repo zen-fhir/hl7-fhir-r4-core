@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Type for access of external URI.",
-            :zen.fhir/version "0.6.17-2",
+            :zen.fhir/version "0.6.17-4",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/repository-type",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/repository-type",

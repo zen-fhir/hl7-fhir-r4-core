@@ -5,7 +5,7 @@
           hl7-fhir-r4-core.dateTime
           hl7-fhir-r4-core.Element
           hl7-fhir-r4-core.CodeableConcept},
- schema {:zen.fhir/version "0.6.17-2",
+ schema {:zen.fhir/version "0.6.17-4",
          :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MarketingStatus",

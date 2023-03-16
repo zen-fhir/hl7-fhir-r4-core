@@ -4,6 +4,6 @@
          :zen/desc "Base StructureDefinition for uuid type: A UUID, represented as a URI",
          :zen.fhir/type "uuid",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/uuid",
-         :zen.fhir/version "0.6.17-2",
+         :zen.fhir/version "0.6.17-4",
          :type zen/string,
          :confirms #{hl7-fhir-r4-core.uri/schema}}}
