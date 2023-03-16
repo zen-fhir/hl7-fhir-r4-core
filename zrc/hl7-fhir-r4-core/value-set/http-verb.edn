@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
-            :zen.fhir/version "0.6.17-2",
+            :zen.fhir/version "0.6.17-4",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/http-verb",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/http-verb",

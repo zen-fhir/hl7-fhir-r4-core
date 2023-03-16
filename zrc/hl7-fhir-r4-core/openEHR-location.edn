@@ -6,7 +6,7 @@
          :zen/desc "The anatomical location / body site(s) where the symptoms manifested.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/openEHR-location",
-         :zen.fhir/version "0.6.17-2",
+         :zen.fhir/version "0.6.17-4",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.body-site/value-set,
                               :strength :extensible}}}

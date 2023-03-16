@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This example value set defines a set of codes that can be used to indicate a type of insurance plan.",
-            :zen.fhir/version "0.6.17-2",
+            :zen.fhir/version "0.6.17-4",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/insurance-plan-type",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/insuranceplan-type",

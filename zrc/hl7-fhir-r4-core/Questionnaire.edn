@@ -33,7 +33,7 @@
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.Identifier},
  item-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-              :zen.fhir/version "0.6.17-2",
+              :zen.fhir/version "0.6.17-4",
               :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
               :type zen/map,
               :keys {:enableBehavior {:confirms #{hl7-fhir-r4-core.code/schema},
@@ -208,7 +208,7 @@
                             :zen/desc "Primary text for the item"}},
               :require #{:linkId :type},
               :zen/desc "Questions and sections within the Questionnaire"},
- schema {:zen.fhir/version "0.6.17-2",
+ schema {:zen.fhir/version "0.6.17-4",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
