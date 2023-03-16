@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The Digital Signature Purposes, an indication of the reason an entity signs a document. This is included in the signed information and can be used when determining accountability for various actions concerning the document. Examples include: author, transcriptionist/recorder, and witness.",
-            :zen.fhir/version "0.6.17-4",
+            :zen.fhir/version "0.6.18-1",
             :fhir/code-systems #{{:fhir/url "urn:iso-astm:E1762-95:2013",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/signature-type",

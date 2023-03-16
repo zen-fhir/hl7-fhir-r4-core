@@ -4,5 +4,5 @@
          :zen/desc "A code that replaces this - use this code instead.",
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-replacedby",
-         :zen.fhir/version "0.6.17-4",
+         :zen.fhir/version "0.6.18-1",
          :confirms #{hl7-fhir-r4-core.Coding/schema}}}

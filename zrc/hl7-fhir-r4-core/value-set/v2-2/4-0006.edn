@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "FHIR Value set/code system definition for HL7 v2 table 0006 ver 2.9 ( Religion)",
-            :zen.fhir/version "0.6.17-4",
+            :zen.fhir/version "0.6.18-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0006|2.4",
                                   :zen.fhir/content :bundled}},
             :uri "http://terminology.hl7.org/ValueSet/v2-2.4-0006",

@@ -4,6 +4,6 @@
          :zen/desc "If true indicates that the request is asking for the specified action to not occur.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/request-doNotPerform",
-         :zen.fhir/version "0.6.17-4",
+         :zen.fhir/version "0.6.18-1",
          :confirms #{hl7-fhir-r4-core.boolean/schema},
          :fhir/flags #{:?!}}}

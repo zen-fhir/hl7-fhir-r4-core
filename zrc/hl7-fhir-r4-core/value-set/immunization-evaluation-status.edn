@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the current status of the evaluation for vaccine administration event.",
-            :zen.fhir/version "0.6.17-4",
+            :zen.fhir/version "0.6.18-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/medication-admin-status",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/immunization-evaluation-status",

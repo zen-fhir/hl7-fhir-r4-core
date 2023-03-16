@@ -6,7 +6,7 @@
          :zen/desc "The gender the patient identifies with. The Patient's gender identity is used as guidance (e.g. for staff) about how to interact with the patient.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity",
-         :zen.fhir/version "0.6.17-4",
+         :zen.fhir/version "0.6.18-1",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.gender-identity/value-set,
                               :strength :example}}}
