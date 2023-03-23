@@ -1,17 +1,31 @@
 {ns hl7-fhir-r4-core.shareablevalueset,
- import #{zen.fhir hl7-fhir-r4-core.ValueSet},
- schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
-         :zen/desc "Enforces the minimum information set for the value set metadata required by HL7 and other organizations that share and publish value sets",
-         :zen.fhir/type "ValueSet",
-         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
-         :zen.fhir/version "0.6.18-1",
+ import #{zen.fhir
+          hl7-fhir-r4-core.shareablevalueset
+          hl7-fhir-r4-core.ValueSet},
+ compose-include-concept-designation-schema {:zen/tags #{zen/schema
+                                                         zen.fhir/structure-schema},
+                                             :zen.fhir/version "0.6.19"},
+ compose-include-schema {:zen/tags #{zen/schema
+                                     zen.fhir/structure-schema},
+                         :zen.fhir/version "0.6.19",
+                         :every {:keys {:concept {:every {:keys {:designation {:confirms #{hl7-fhir-r4-core.shareablevalueset/compose-include-concept-designation-schema}}}}}}}},
+ expansion-contains-schema {:zen/tags #{zen/schema
+                                        zen.fhir/structure-schema},
+                            :zen.fhir/version "0.6.19"},
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.ValueSet/schema
                      zen.fhir/Resource},
-         :type zen/map,
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/shareablevalueset",
          :require #{:description
                     :publisher
                     :name
                     :experimental
                     :status
                     :url
-                    :version}}}
+                    :version},
+         :type zen/map,
+         :zen/desc "Enforces the minimum information set for the value set metadata required by HL7 and other organizations that share and publish value sets",
+         :zen.fhir/type "ValueSet",
+         :every {:keys {:compose {:every {:keys {:include {:confirms #{hl7-fhir-r4-core.shareablevalueset/compose-include-schema}}}}},
+                        :expansion {:every {:keys {:contains {:confirms #{hl7-fhir-r4-core.shareablevalueset/expansion-contains-schema}}}}}}}}}

@@ -1,6 +1,16 @@
 {ns hl7-fhir-r4-core.triglyceride,
- import #{hl7-fhir-r4-core.Observation zen.fhir},
- schema {:zen.fhir/version "0.6.18-1",
+ import #{hl7-fhir-r4-core.Observation
+          zen.fhir
+          hl7-fhir-r4-core.triglyceride},
+ referenceRange-schema {:zen/tags #{zen/schema
+                                    zen.fhir/structure-schema},
+                        :zen.fhir/version "0.6.19",
+                        :type zen/map,
+                        :keys {:appliesTo {:type zen/vector,
+                                           :maxItems 0}},
+                        :require #{:high},
+                        :fhir/flags #{:MS}},
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -24,11 +34,7 @@
                        :every {:fhir/flags #{:MS},
                                :zen/desc "Comments about result"}},
                 :referenceRange {:type zen/vector,
-                                 :every {:type zen/map,
-                                         :keys {:appliesTo {:type zen/vector,
-                                                            :maxItems 0}},
-                                         :require #{:high},
-                                         :fhir/flags #{:MS}},
+                                 :every {:confirms #{hl7-fhir-r4-core.triglyceride/referenceRange-schema}},
                                  :minItems 1,
                                  :maxItems 1},
                 :hasMember {:type zen/vector,

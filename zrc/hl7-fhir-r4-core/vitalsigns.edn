@@ -11,7 +11,10 @@
           hl7-fhir-r4-core.Media
           hl7-fhir-r4-core.DocumentReference
           hl7-fhir-r4-core.vitalsigns},
- schema {:zen.fhir/version "0.6.18-1",
+ referenceRange-schema {:zen/tags #{zen/schema
+                                    zen.fhir/structure-schema},
+                        :zen.fhir/version "0.6.19"},
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -40,6 +43,7 @@
                                                                                    :system "http://terminology.hl7.org/CodeSystem/observation-category"}}}}}}},
                            :every {:fhir/flags #{:MS}},
                            :minItems 1},
+                :referenceRange {:confirms #{hl7-fhir-r4-core.vitalsigns/referenceRange-schema}},
                 :hasMember {:type zen/vector,
                             :every {:confirms #{zen.fhir/Reference},
                                     :zen.fhir/reference {:refers #{hl7-fhir-r4-core.QuestionnaireResponse/schema

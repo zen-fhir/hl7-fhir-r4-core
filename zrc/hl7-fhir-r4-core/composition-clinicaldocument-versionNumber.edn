@@ -4,5 +4,5 @@
          :zen/desc "Version specific identifier for the composition, assigned when each version is created/updated.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

@@ -4,8 +4,13 @@
           zen.fhir
           hl7-fhir-r4-core.Specimen
           hl7-fhir-r4-core.DeviceMetric
-          hl7-fhir-r4-core.Patient},
- schema {:zen.fhir/version "0.6.18-1",
+          hl7-fhir-r4-core.Patient
+          hl7-fhir-r4-core.devicemetricobservation},
+ referenceRange-schema {:zen/tags #{zen/schema
+                                    zen.fhir/structure-schema},
+                        :zen.fhir/version "0.6.19",
+                        :fhir/flags #{:MS}},
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -14,7 +19,7 @@
          :type zen/map,
          :zen/desc "This profile describes the direct or derived, qualitative or quantitative physiological measurement, setting, or calculation data produced by a medical device or a device component.",
          :keys {:referenceRange {:type zen/vector,
-                                 :every {:fhir/flags #{:MS}},
+                                 :every {:confirms #{hl7-fhir-r4-core.devicemetricobservation/referenceRange-schema}},
                                  :maxItems 1},
                 :hasMember {:type zen/vector,
                             :every {:fhir/flags #{:MS},

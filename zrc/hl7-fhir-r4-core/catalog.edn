@@ -1,10 +1,11 @@
 {ns hl7-fhir-r4-core.catalog,
- import #{zen.fhir
+ import #{hl7-fhir-r4-core.catalog
+          zen.fhir
           hl7-fhir-r4-core.cqm-ValidityPeriod
           hl7-fhir-r4-core.value-set.catalogType
           hl7-fhir-r4-core.Composition
           hl7-fhir-r4-core.CatalogEntry},
- schema {:zen.fhir/version "0.6.18-1",
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.Composition/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -27,11 +28,16 @@
                           :zen.fhir/reference {:refers #{}},
                           :zen/desc "Who and/or what the composition is about"},
                 :section {:type zen/vector,
-                          :every {:type zen/map,
-                                  :keys {:entry {:type zen/vector,
-                                                 :every {:confirms #{zen.fhir/Reference},
-                                                         :zen.fhir/reference {:refers #{hl7-fhir-r4-core.CatalogEntry/schema}},
-                                                         :zen/desc "The Content of the section"},
-                                                 :minItems 1}},
-                                  :require #{:entry}}}},
-         :zen.fhir/type "Composition"}}
+                          :every {:confirms #{hl7-fhir-r4-core.catalog/section-schema}}}},
+         :zen.fhir/type "Composition"},
+ section-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+                 :zen.fhir/version "0.6.19",
+                 :type zen/map,
+                 :keys {:entry {:type zen/vector,
+                                :every {:confirms #{zen.fhir/Reference},
+                                        :zen.fhir/reference {:refers #{hl7-fhir-r4-core.CatalogEntry/schema}},
+                                        :zen/desc "The Content of the section"},
+                                :minItems 1},
+                        :section {:type zen/vector,
+                                  :every {:confirms #{hl7-fhir-r4-core.catalog/section-schema}}}},
+                 :require #{:entry}}}

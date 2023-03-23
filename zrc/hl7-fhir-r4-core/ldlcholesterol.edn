@@ -2,8 +2,19 @@
  import #{hl7-fhir-r4-core.Observation
           hl7-fhir-r4-core.SimpleQuantity
           zen.fhir
-          hl7-fhir-r4-core.value-set.ldlcholesterol-codes},
- schema {:zen.fhir/version "0.6.18-1",
+          hl7-fhir-r4-core.value-set.ldlcholesterol-codes
+          hl7-fhir-r4-core.ldlcholesterol},
+ referenceRange-schema {:zen/tags #{zen/schema
+                                    zen.fhir/structure-schema},
+                        :zen.fhir/version "0.6.19",
+                        :type zen/map,
+                        :keys {:high {:const {:value {:value 3.0}},
+                                      :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
+                               :appliesTo {:type zen/vector,
+                                           :maxItems 0}},
+                        :require #{:high},
+                        :fhir/flags #{:MS}},
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -26,13 +37,7 @@
                        :every {:fhir/flags #{:MS},
                                :zen/desc "Comments about result"}},
                 :referenceRange {:type zen/vector,
-                                 :every {:type zen/map,
-                                         :keys {:high {:const {:value {:value 3.0}},
-                                                       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
-                                                :appliesTo {:type zen/vector,
-                                                            :maxItems 0}},
-                                         :require #{:high},
-                                         :fhir/flags #{:MS}},
+                                 :every {:confirms #{hl7-fhir-r4-core.ldlcholesterol/referenceRange-schema}},
                                  :minItems 1,
                                  :maxItems 1},
                 :hasMember {:type zen/vector,

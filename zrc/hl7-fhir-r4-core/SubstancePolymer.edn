@@ -13,7 +13,7 @@
          :zen/desc "Todo.",
          :zen.fhir/type "SubstancePolymer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/SubstancePolymer",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

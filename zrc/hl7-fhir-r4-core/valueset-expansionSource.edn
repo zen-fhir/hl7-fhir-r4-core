@@ -4,5 +4,5 @@
          :zen/desc "The logical URL of the ValueSet definition that was used to generate this expansion.",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-expansionSource",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.uri/schema}}}

@@ -4,5 +4,5 @@
          :zen/desc "A geographic sub-unit delineated for demographic purposes.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
