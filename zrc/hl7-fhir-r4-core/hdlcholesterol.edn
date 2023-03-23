@@ -1,8 +1,19 @@
 {ns hl7-fhir-r4-core.hdlcholesterol,
  import #{hl7-fhir-r4-core.Observation
           hl7-fhir-r4-core.SimpleQuantity
-          zen.fhir},
- schema {:zen.fhir/version "0.6.18-1",
+          zen.fhir
+          hl7-fhir-r4-core.hdlcholesterol},
+ referenceRange-schema {:zen/tags #{zen/schema
+                                    zen.fhir/structure-schema},
+                        :zen.fhir/version "0.6.19",
+                        :type zen/map,
+                        :keys {:low {:const {:value {:value 1.5}},
+                                     :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
+                               :appliesTo {:type zen/vector,
+                                           :maxItems 0}},
+                        :require #{:low},
+                        :fhir/flags #{:MS}},
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -26,13 +37,7 @@
                        :every {:fhir/flags #{:MS},
                                :zen/desc "Comments about result"}},
                 :referenceRange {:type zen/vector,
-                                 :every {:type zen/map,
-                                         :keys {:low {:const {:value {:value 1.5}},
-                                                      :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
-                                                :appliesTo {:type zen/vector,
-                                                            :maxItems 0}},
-                                         :require #{:low},
-                                         :fhir/flags #{:MS}},
+                                 :every {:confirms #{hl7-fhir-r4-core.hdlcholesterol/referenceRange-schema}},
                                  :minItems 1,
                                  :maxItems 1},
                 :hasMember {:type zen/vector,

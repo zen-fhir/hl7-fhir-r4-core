@@ -1,6 +1,6 @@
 {ns hl7-fhir-r4-core.actualgroup,
  import #{zen.fhir hl7-fhir-r4-core.Group},
- schema {:zen.fhir/version "0.6.18-1",
+ schema {:zen.fhir/version "0.6.19",
          :confirms #{zen.fhir/Resource hl7-fhir-r4-core.Group/schema},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/actualgroup",

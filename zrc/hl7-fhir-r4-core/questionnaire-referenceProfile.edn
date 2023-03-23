@@ -4,5 +4,5 @@
          :zen/desc "Where the type for a question is \"Reference\", indicates a profile that the resource instances pointed to in answers to this question must be valid against.",
          :zen.fhir/type "canonical",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.canonical/schema}}}

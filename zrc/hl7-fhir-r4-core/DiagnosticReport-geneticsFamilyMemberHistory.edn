@@ -4,6 +4,6 @@
          :zen/desc "Significant health events and conditions for a person related to the patient relevant in the context of care for the patient.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsFamilyMemberHistory",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.FamilyMemberHistory/schema}}}}

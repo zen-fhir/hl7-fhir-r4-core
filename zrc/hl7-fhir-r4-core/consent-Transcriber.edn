@@ -8,7 +8,7 @@
          :zen/desc "Any person/thing who transcribed the consent into the system.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/consent-Transcriber",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Patient/schema
                                         hl7-fhir-r4-core.Organization/schema

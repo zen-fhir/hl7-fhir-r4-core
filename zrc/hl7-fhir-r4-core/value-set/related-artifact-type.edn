@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The type of relationship to the related artifact.",
-            :zen.fhir/version "0.6.18-1",
+            :zen.fhir/version "0.6.19",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/related-artifact-type",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/related-artifact-type",

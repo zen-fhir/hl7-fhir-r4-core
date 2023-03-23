@@ -4,5 +4,5 @@
          :zen/desc "The date on which the existence of the AllergyIntolerance was first asserted or acknowledged.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/allergyintolerance-assertedDate",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

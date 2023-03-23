@@ -28,7 +28,7 @@
          :zen/desc "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.",
          :zen.fhir/type "CareTeam",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/CareTeam",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

@@ -4,5 +4,5 @@
          :zen/desc "The time of the first incision.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/procedure-incisionDateTime",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

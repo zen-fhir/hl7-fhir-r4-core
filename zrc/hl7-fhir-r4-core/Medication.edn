@@ -21,7 +21,7 @@
          :zen/desc "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.",
          :zen.fhir/type "Medication",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Medication",
-         :zen.fhir/version "0.6.18-1",
+         :zen.fhir/version "0.6.19",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
