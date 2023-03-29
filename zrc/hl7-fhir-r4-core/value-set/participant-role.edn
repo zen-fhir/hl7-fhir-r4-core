@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).",
-            :zen.fhir/version "0.6.19",
+            :zen.fhir/version "0.6.20-2",
             :fhir/code-systems #{{:fhir/url "http://snomed.info/sct",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/participant-role",

@@ -15,7 +15,7 @@
          :zen/desc "Indication for the Medicinal Product.",
          :zen.fhir/type "MedicinalProductIndication",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MedicinalProductIndication",
-         :zen.fhir/version "0.6.19",
+         :zen.fhir/version "0.6.20-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

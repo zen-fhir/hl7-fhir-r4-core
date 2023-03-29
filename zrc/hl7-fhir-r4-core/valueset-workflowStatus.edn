@@ -4,5 +4,5 @@
          :zen/desc "Workflow Status is used to represent details of the value set development process while in a single Activity Status.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-workflowStatus",
-         :zen.fhir/version "0.6.19",
+         :zen.fhir/version "0.6.20-2",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
