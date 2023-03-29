@@ -30,7 +30,7 @@
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.value-set.assert-operator-codes
           hl7-fhir-r4-core.value-set.testscript-operation-codes},
- schema {:zen.fhir/version "0.6.19",
+ schema {:zen.fhir/version "0.6.20-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
@@ -265,7 +265,7 @@
          :zen.fhir/type "TestScript"},
  setup-action-assert-schema {:zen/tags #{zen/schema
                                          zen.fhir/structure-schema},
-                             :zen.fhir/version "0.6.19",
+                             :zen.fhir/version "0.6.20-2",
                              :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                              :type zen/map,
                              :keys {:response {:confirms #{hl7-fhir-r4-core.code/schema},
@@ -350,7 +350,7 @@
                              :zen/desc "The assertion to perform"},
  setup-action-operation-schema {:zen/tags #{zen/schema
                                             zen.fhir/structure-schema},
-                                :zen.fhir/version "0.6.19",
+                                :zen.fhir/version "0.6.20-2",
                                 :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                 :type zen/map,
                                 :keys {:description {:confirms #{hl7-fhir-r4-core.string/schema},

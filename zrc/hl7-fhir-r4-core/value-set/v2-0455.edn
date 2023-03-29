@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "FHIR Value set/code system definition for HL7 v2 table 0455 ( Type of bill code)",
-            :zen.fhir/version "0.6.19",
+            :zen.fhir/version "0.6.20-2",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0455",
                                   :zen.fhir/content :bundled}},
             :uri "http://terminology.hl7.org/ValueSet/v2-0455",

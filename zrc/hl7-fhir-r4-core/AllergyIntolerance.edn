@@ -28,7 +28,7 @@
           hl7-fhir-r4-core.value-set.allergyintolerance-code
           hl7-fhir-r4-core.Age
           hl7-fhir-r4-core.value-set.clinical-findings},
- schema {:zen.fhir/version "0.6.19",
+ schema {:zen.fhir/version "0.6.20-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
