@@ -6,7 +6,7 @@
          :zen/desc "Indicates how the individual completing the QuestionnaireResponse provided their responses.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-completionMode",
-         :zen.fhir/version "0.6.20-2",
+         :zen.fhir/version "0.6.21-2",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.questionnaireresponse-mode/value-set,
                               :strength :required}}}

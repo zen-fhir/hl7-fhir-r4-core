@@ -28,7 +28,7 @@
          :zen/desc "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.",
          :zen.fhir/type "Device",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Device",
-         :zen.fhir/version "0.6.20-2",
+         :zen.fhir/version "0.6.21-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
