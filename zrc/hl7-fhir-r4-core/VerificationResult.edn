@@ -24,7 +24,7 @@
           hl7-fhir-r4-core.value-set.verificationresult-push-type-available
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.Organization},
- schema {:zen.fhir/version "0.6.20-2",
+ schema {:zen.fhir/version "0.6.21-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

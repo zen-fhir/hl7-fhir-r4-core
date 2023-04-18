@@ -27,7 +27,7 @@
          :zen/desc "A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity.",
          :zen.fhir/type "BiologicallyDerivedProduct",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
-         :zen.fhir/version "0.6.20-2",
+         :zen.fhir/version "0.6.21-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
