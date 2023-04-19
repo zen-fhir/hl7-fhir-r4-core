@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Document section codes (LOINC codes used in CCDA sections).",
-            :zen.fhir/version "0.6.21-2",
+            :zen.fhir/version "0.6.22",
             :fhir/code-systems #{{:fhir/url "http://loinc.org",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/doc-section-codes",

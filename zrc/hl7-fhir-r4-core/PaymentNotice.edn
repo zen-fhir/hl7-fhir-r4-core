@@ -15,7 +15,7 @@
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.PaymentReconciliation
           hl7-fhir-r4-core.Organization},
- schema {:zen.fhir/version "0.6.21-2",
+ schema {:zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

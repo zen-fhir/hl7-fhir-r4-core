@@ -3,7 +3,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "glstring.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-glstring",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :type zen/map,
          :keys {:url {:confirms #{hl7-fhir-r4-core.uri/schema},
                       :zen/desc "glstring.url"},

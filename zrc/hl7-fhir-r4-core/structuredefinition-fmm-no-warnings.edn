@@ -4,5 +4,5 @@
          :zen/desc "The FMM level that would be assigned to the artifact if it had no warnings.",
          :zen.fhir/type "integer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm-no-warnings",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.integer/schema}}}

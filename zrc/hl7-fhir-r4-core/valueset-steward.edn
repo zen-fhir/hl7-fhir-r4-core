@@ -4,5 +4,5 @@
          :zen/desc "The entity that is responsible for the content of the Value Set Definition. This is a textual description of the organizational entity responsible for the content and maintenance.",
          :zen.fhir/type "ContactDetail",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-steward",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.ContactDetail/schema}}}

@@ -4,5 +4,5 @@
          :zen/desc "If this a case sensitive code.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-caseSensitive",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

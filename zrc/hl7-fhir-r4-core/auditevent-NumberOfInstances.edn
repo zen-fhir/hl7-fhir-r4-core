@@ -4,5 +4,5 @@
          :zen/desc "The Number of SOP Instances referred to by this entity.",
          :zen.fhir/type "integer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/auditevent-NumberOfInstances",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.integer/schema}}}

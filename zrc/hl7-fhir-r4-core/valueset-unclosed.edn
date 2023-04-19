@@ -4,5 +4,5 @@
          :zen/desc "Marks that the expansion is  incomplete, and values other than those listed may be valid. This may be used because post-coordinated codes are allowed, and no practical expansion can be produced.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

@@ -4,12 +4,12 @@
           hl7-fhir-r4-core.cqf-questionnaire
           hl7-fhir-r4-core.cqf-library},
  item-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-              :zen.fhir/version "0.6.21-2"},
+              :zen.fhir/version "0.6.22"},
  schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
          :zen/desc "A questionnaire with the ability to specify behavior associated with questions or groups of questions",
          :zen.fhir/type "Questionnaire",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-questionnaire",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.Questionnaire/schema
                      zen.fhir/Resource},
          :type zen/map,

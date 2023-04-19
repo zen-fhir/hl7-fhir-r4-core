@@ -4,5 +4,5 @@
          :zen/desc "The date range that this organization should be considered available.",
          :zen.fhir/type "Period",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/organization-period",
-         :zen.fhir/version "0.6.21-2",
+         :zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.Period/schema}}}
