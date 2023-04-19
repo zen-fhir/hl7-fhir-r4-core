@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Codes that convey the current status of the research study.",
-            :zen.fhir/version "0.6.21-2",
+            :zen.fhir/version "0.6.22",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/research-study-status",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/research-study-status",

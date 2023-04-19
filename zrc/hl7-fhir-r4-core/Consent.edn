@@ -38,7 +38,7 @@
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.Organization},
  provision-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                   :zen.fhir/version "0.6.21-2",
+                   :zen.fhir/version "0.6.22",
                    :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                    :type zen/map,
                    :keys {:provision {:type zen/vector,
@@ -126,7 +126,7 @@
                                          :zen/desc "Data controlled by this rule"}}},
                    :fhir/flags #{:SU},
                    :zen/desc "Constraints to the base Consent.policyRule"},
- schema {:zen.fhir/version "0.6.21-2",
+ schema {:zen.fhir/version "0.6.22",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
