@@ -4,5 +4,5 @@
          :zen/desc "A boundary shape that represents the outside edge of the location (in GeoJSON format) This shape may have holes, and disconnected shapes.",
          :zen.fhir/type "Attachment",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/location-boundary-geojson",
-         :zen.fhir/version "0.6.22",
+         :zen.fhir/version "0.6.22-1",
          :confirms #{hl7-fhir-r4-core.Attachment/schema}}}

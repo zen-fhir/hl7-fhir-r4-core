@@ -4,6 +4,6 @@
          :zen/desc "A larger event of which this particular event is a component or step.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/event-partOf",
-         :zen.fhir/version "0.6.22",
+         :zen.fhir/version "0.6.22-1",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{}}}}
