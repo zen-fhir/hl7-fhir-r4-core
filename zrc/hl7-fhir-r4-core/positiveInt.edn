@@ -4,7 +4,7 @@
          :zen/desc "Base StructureDefinition for positiveInt type: An integer with a value that is positive (e.g. >0)",
          :zen.fhir/type "positiveInt",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/positiveInt",
-         :zen.fhir/version "0.6.22-1",
+         :zen.fhir/version "0.6.22-2",
          :type zen/integer,
          :min 1,
          :confirms #{hl7-fhir-r4-core.integer/schema}}}
