@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "If field is a list, how to manage the source.",
-            :zen.fhir/version "0.6.22",
+            :zen.fhir/version "0.6.22-1",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/map-source-list-mode",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/map-source-list-mode",

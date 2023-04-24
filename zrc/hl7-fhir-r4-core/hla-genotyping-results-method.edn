@@ -4,5 +4,5 @@
          :zen/desc "The platform, methodology and software applied at the time of the\rgenotyping.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-method",
-         :zen.fhir/version "0.6.22",
+         :zen.fhir/version "0.6.22-1",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

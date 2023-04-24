@@ -4,15 +4,15 @@
           hl7-fhir-r4-core.ValueSet},
  compose-include-concept-designation-schema {:zen/tags #{zen/schema
                                                          zen.fhir/structure-schema},
-                                             :zen.fhir/version "0.6.22"},
+                                             :zen.fhir/version "0.6.22-1"},
  compose-include-schema {:zen/tags #{zen/schema
                                      zen.fhir/structure-schema},
-                         :zen.fhir/version "0.6.22",
+                         :zen.fhir/version "0.6.22-1",
                          :every {:keys {:concept {:every {:keys {:designation {:confirms #{hl7-fhir-r4-core.shareablevalueset/compose-include-concept-designation-schema}}}}}}}},
  expansion-contains-schema {:zen/tags #{zen/schema
                                         zen.fhir/structure-schema},
-                            :zen.fhir/version "0.6.22"},
- schema {:zen.fhir/version "0.6.22",
+                            :zen.fhir/version "0.6.22-1"},
+ schema {:zen.fhir/version "0.6.22-1",
          :confirms #{hl7-fhir-r4-core.ValueSet/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

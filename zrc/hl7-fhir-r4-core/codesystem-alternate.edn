@@ -3,7 +3,7 @@
           zen.fhir
           hl7-fhir-r4-core.value-set.codesystem-altcode-kind
           hl7-fhir-r4-core.Coding},
- schema {:zen.fhir/version "0.6.22",
+ schema {:zen.fhir/version "0.6.22-1",
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-alternate",
          :require #{:use :code},
