@@ -4,5 +4,5 @@
          :zen/desc "The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by the event or request resource.",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/workflow-instantiatesUri",
-         :zen.fhir/version "0.6.22-1",
+         :zen.fhir/version "0.6.22-2",
          :confirms #{hl7-fhir-r4-core.uri/schema}}}

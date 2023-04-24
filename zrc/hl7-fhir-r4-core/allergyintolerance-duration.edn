@@ -4,5 +4,5 @@
          :zen/desc "The amount of time that the Adverse Reaction persisted.",
          :zen.fhir/type "Duration",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/allergyintolerance-duration",
-         :zen.fhir/version "0.6.22-1",
+         :zen.fhir/version "0.6.22-2",
          :confirms #{hl7-fhir-r4-core.Duration/schema}}}

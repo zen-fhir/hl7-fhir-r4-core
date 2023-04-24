@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc " This example value set defines a set of codes that can be used to indicate the priority of collection of a specimen.",
-            :zen.fhir/version "0.6.22-1",
+            :zen.fhir/version "0.6.22-2",
             :fhir/code-systems #{{:fhir/url "http://example.com",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/specimen-collection-priority",

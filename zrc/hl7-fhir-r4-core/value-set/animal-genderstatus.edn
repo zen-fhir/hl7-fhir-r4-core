@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This example value set defines a set of codes that can be used to indicate the current state of the animal's reproductive organs.",
-            :zen.fhir/version "0.6.22-1",
+            :zen.fhir/version "0.6.22-2",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/animal-genderstatus",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/animal-genderstatus",

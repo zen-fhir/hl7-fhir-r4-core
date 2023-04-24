@@ -21,7 +21,7 @@
           hl7-fhir-r4-core.Identifier},
  instance-containedInstance-schema {:zen/tags #{zen/schema
                                                 zen.fhir/structure-schema},
-                                    :zen.fhir/version "0.6.22-1",
+                                    :zen.fhir/version "0.6.22-2",
                                     :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                     :type zen/map,
                                     :keys {:resourceId {:confirms #{hl7-fhir-r4-core.string/schema},
@@ -33,7 +33,7 @@
                                     :require #{:resourceId},
                                     :zen/desc "Resources contained in the instance"},
  process-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                 :zen.fhir/version "0.6.22-1",
+                 :zen.fhir/version "0.6.22-2",
                  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                  :type zen/map,
                  :keys {:description {:confirms #{hl7-fhir-r4-core.markdown/schema},
@@ -55,7 +55,7 @@
                  :zen/desc "Each major process - a group of operations"},
  process-step-schema {:zen/tags #{zen/schema
                                   zen.fhir/structure-schema},
-                      :zen.fhir/version "0.6.22-1",
+                      :zen.fhir/version "0.6.22-2",
                       :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                       :type zen/map,
                       :keys {:process {:type zen/vector,
@@ -111,7 +111,7 @@
                                                    :require #{:title},
                                                    :zen/desc "Alternate non-typical step action"}}},
                       :zen/desc "Each step of the process"},
- schema {:zen.fhir/version "0.6.22-1",
+ schema {:zen.fhir/version "0.6.22-2",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
