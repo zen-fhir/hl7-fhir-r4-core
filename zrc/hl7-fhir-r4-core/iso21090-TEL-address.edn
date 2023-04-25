@@ -4,5 +4,5 @@
          :zen/desc "A V3 compliant, RFC 3966 conformant URI version of the telephone or fax number.",
          :zen.fhir/type "url",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-TEL-address",
-         :zen.fhir/version "0.6.23",
+         :zen.fhir/version "0.6.23-1",
          :confirms #{hl7-fhir-r4-core.url/schema}}}

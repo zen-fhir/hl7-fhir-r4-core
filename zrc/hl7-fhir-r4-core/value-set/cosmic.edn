@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "COSMIC : Catalogue Of Somatic Mutations In Cancer",
-            :zen.fhir/version "0.6.23",
+            :zen.fhir/version "0.6.23-1",
             :fhir/code-systems #{{:fhir/url "http://cancer.sanger.ac.uk/cancergenome/projects/cosmic",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/cosmic",

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A set of codes for each different representation of a name.",
-            :zen.fhir/version "0.6.23",
+            :zen.fhir/version "0.6.23-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-EntityNameUse",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/name-v3-representation",

@@ -4,5 +4,5 @@
          :zen/desc "Base StructureDefinition for integer Type: A whole number",
          :zen.fhir/type "integer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/integer",
-         :zen.fhir/version "0.6.23",
+         :zen.fhir/version "0.6.23-1",
          :type zen/integer}}
