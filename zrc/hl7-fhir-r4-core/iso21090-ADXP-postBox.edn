@@ -4,5 +4,5 @@
          :zen/desc "A numbered box located in a post station.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
-         :zen.fhir/version "0.6.23",
+         :zen.fhir/version "0.6.23-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

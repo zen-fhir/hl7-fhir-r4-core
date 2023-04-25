@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.",
-            :zen.fhir/version "0.6.23",
+            :zen.fhir/version "0.6.23-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier",

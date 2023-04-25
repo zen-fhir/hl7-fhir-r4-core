@@ -30,7 +30,7 @@
           hl7-fhir-r4-core.value-set.subject-type
           hl7-fhir-r4-core.value-set.measure-improvement-notation
           hl7-fhir-r4-core.Expression},
- schema {:zen.fhir/version "0.6.23",
+ schema {:zen.fhir/version "0.6.23-1",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

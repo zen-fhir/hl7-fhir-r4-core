@@ -4,5 +4,5 @@
          :zen/desc "A number, letter or name identifying a delivery installation. For example, for Station A, the delivery installation qualifier would be 'A'.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-deliveryInstallationQualifier",
-         :zen.fhir/version "0.6.23",
+         :zen.fhir/version "0.6.23-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

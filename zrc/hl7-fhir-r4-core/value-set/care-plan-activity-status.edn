@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Codes that reflect the current state of a care plan activity within its overall life cycle.",
-            :zen.fhir/version "0.6.23",
+            :zen.fhir/version "0.6.23-1",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/care-plan-activity-status",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/care-plan-activity-status",
