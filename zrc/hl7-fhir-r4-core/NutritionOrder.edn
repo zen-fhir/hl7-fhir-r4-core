@@ -34,7 +34,7 @@
           hl7-fhir-r4-core.value-set.modified-foodtype
           hl7-fhir-r4-core.value-set.entformula-type
           hl7-fhir-r4-core.value-set.supplement-type},
- schema {:zen.fhir/version "0.6.22-2",
+ schema {:zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

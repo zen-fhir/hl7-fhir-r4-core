@@ -4,5 +4,5 @@
          :zen/desc "Whether translations might be expected for this element in resource instances.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}
