@@ -6,7 +6,7 @@
          :zen/desc "Codes to represent the functional status of a device implanted in a patient.  Both overall device status and an implant status need to be considered. The implant status should only be used when the [device status](device-definitions.html#Device.status) is `active `.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/device-implantStatus",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.implantStatus/value-set,
                               :strength :required}}}

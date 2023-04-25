@@ -4,5 +4,5 @@
          :zen/desc "When present, this extension indicate that the event actually only occurs on the specified days of the month, on the times as otherwise specified by the timing schedule.",
          :zen.fhir/type "positiveInt",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.positiveInt/schema}}}

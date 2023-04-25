@@ -4,5 +4,5 @@
          :zen/desc "The class of encounter (inpatient, outpatient, etc.).",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-encounterClass",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

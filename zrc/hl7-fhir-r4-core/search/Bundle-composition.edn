@@ -5,7 +5,7 @@
          :fhir/url "http://hl7.org/fhir/SearchParameter/Bundle-composition",
          :fhir/type "reference",
          :name "composition",
-         :expr {:Bundle {:knife [],
-                         :jsonpath [],
+         :expr {:Bundle {:knife [["entry" 0 "resource"]],
+                         :jsonpath ["$.\"entry\"[0].\"resource\"[*]"],
                          :data-types #{},
                          :template :reference}}}}

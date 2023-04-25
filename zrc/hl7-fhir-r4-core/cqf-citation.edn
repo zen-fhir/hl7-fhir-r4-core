@@ -4,5 +4,5 @@
          :zen/desc "A bibliographic citation for the related resource. This text SHOULD be formatted according to an accepted citation format.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-citation",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

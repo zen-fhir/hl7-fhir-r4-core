@@ -4,5 +4,5 @@
          :zen/desc "Mother's maiden (unmarried) name, commonly collected to help verify patient identity.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

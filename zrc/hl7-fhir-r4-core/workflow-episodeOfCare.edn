@@ -4,6 +4,6 @@
          :zen/desc "The episode(s) of care that establishes the context for this {{title}}.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
-         :zen.fhir/version "0.6.22-2",
+         :zen.fhir/version "0.6.23",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.EpisodeOfCare/schema}}}}

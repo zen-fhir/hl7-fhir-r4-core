@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Code for the entity type involved in the audit event.",
-            :zen.fhir/version "0.6.22-2",
+            :zen.fhir/version "0.6.23",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/resource-types",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://terminology.hl7.org/CodeSystem/audit-entity-type",

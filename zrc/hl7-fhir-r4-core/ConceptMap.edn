@@ -21,7 +21,7 @@
           hl7-fhir-r4-core.ConceptMap},
  group-element-target-dependsOn-schema {:zen/tags #{zen/schema
                                                     zen.fhir/structure-schema},
-                                        :zen.fhir/version "0.6.22-2",
+                                        :zen.fhir/version "0.6.23",
                                         :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                         :type zen/map,
                                         :keys {:property {:confirms #{hl7-fhir-r4-core.uri/schema},
@@ -38,7 +38,7 @@
                                                :_display {:confirms #{hl7-fhir-r4-core.Element/schema}}},
                                         :require #{:property :value},
                                         :zen/desc "Other elements required for this mapping (from context)"},
- schema {:zen.fhir/version "0.6.22-2",
+ schema {:zen.fhir/version "0.6.23",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

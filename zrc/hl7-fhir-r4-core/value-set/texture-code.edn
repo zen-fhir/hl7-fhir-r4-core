@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "TextureModifier: Codes for food consistency types or texture modifications to apply to foods. This value set is composed of SNOMED CT (US Extension and Core) Concepts from SCTID 229961002 Food consistency types (substance) hierarchy and is provided as a suggestive example.",
-            :zen.fhir/version "0.6.22-2",
+            :zen.fhir/version "0.6.23",
             :fhir/code-systems #{{:fhir/url "http://snomed.info/sct",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/texture-code",
