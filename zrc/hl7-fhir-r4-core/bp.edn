@@ -1,9 +1,6 @@
 {ns hl7-fhir-r4-core.bp,
- import #{zen.fhir hl7-fhir-r4-core.bp hl7-fhir-r4-core.vitalsigns},
- referenceRange-schema {:zen/tags #{zen/schema
-                                    zen.fhir/structure-schema},
-                        :zen.fhir/version "0.6.23-1"},
- schema {:zen.fhir/version "0.6.23-1",
+ import #{zen.fhir hl7-fhir-r4-core.vitalsigns},
+ schema {:zen.fhir/version "0.6.24",
          :confirms #{zen.fhir/Resource
                      hl7-fhir-r4-core.vitalsigns/schema},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -27,6 +24,5 @@
                        :zen/desc "Blood Pressure"},
                 :component {:type zen/vector,
                             :slicing {:slices {}},
-                            :minItems 2},
-                :referenceRange {:confirms #{hl7-fhir-r4-core.bp/referenceRange-schema}}},
+                            :minItems 2}},
          :zen.fhir/type "Observation"}}

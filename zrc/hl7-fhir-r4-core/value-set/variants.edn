@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "HGVS : Human Genome Variation Society",
-            :zen.fhir/version "0.6.23-1",
+            :zen.fhir/version "0.6.24",
             :fhir/code-systems #{{:fhir/url "http://varnomen.hgvs.org/",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/variants",

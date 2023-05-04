@@ -6,7 +6,7 @@
          :zen/desc "Base StructureDefinition for Duration Type: A length of time.",
          :zen.fhir/type "Duration",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Duration",
-         :zen.fhir/version "0.6.23-1",
+         :zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.Quantity/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.duration-units/value-set,
                               :strength :extensible}}}

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A code that represents the preferred display order of the components of a human name.",
-            :zen.fhir/version "0.6.23-1",
+            :zen.fhir/version "0.6.24",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/name-assembly-order",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0444",

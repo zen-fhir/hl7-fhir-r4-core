@@ -3,7 +3,6 @@
           hl7-fhir-r4-core.observation-geneticsAllele
           hl7-fhir-r4-core.observation-geneticsDNARegionName
           zen.fhir
-          hl7-fhir-r4-core.observation-genetics
           hl7-fhir-r4-core.observation-geneticsGenomicSourceClass
           hl7-fhir-r4-core.observation-geneticsGene
           hl7-fhir-r4-core.observation-geneticsVariant
@@ -12,21 +11,17 @@
           hl7-fhir-r4-core.observation-geneticsInterpretation
           hl7-fhir-r4-core.observation-geneticsPhaseSet
           hl7-fhir-r4-core.observation-geneticsAminoAcidChange},
- referenceRange-schema {:zen/tags #{zen/schema
-                                    zen.fhir/structure-schema},
-                        :zen.fhir/version "0.6.23-1"},
  schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
          :zen/desc "Describes how the observation resource is used to report structured genetic test results",
          :zen.fhir/type "Observation",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-genetics",
-         :zen.fhir/version "0.6.23-1",
+         :zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :type zen/map,
          :keys {:CopyNumberEvent {:confirms #{hl7-fhir-r4-core.observation-geneticsCopyNumberEvent/schema},
                                   :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/observation-geneticsCopyNumberEvent",
                                   :zen/desc "Copy number variation"},
-                :referenceRange {:confirms #{hl7-fhir-r4-core.observation-genetics/referenceRange-schema}},
                 :DNARegionName {:confirms #{hl7-fhir-r4-core.observation-geneticsDNARegionName/schema},
                                 :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/observation-geneticsDNARegionName",
                                 :zen/desc "DNA region name"},

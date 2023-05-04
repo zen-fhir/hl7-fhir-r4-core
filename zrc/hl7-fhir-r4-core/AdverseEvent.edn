@@ -38,7 +38,7 @@
           hl7-fhir-r4-core.Location
           hl7-fhir-r4-core.Medication
           hl7-fhir-r4-core.value-set.adverse-event-causality-method},
- schema {:zen.fhir/version "0.6.23-1",
+ schema {:zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

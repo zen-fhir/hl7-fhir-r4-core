@@ -4,5 +4,5 @@
          :zen/desc "The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
-         :zen.fhir/version "0.6.23-1",
+         :zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

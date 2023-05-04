@@ -1,11 +1,6 @@
 {ns hl7-fhir-r4-core.vitalspanel,
- import #{hl7-fhir-r4-core.vitalspanel
-          zen.fhir
-          hl7-fhir-r4-core.vitalsigns},
- referenceRange-schema {:zen/tags #{zen/schema
-                                    zen.fhir/structure-schema},
-                        :zen.fhir/version "0.6.23-1"},
- schema {:zen.fhir/version "0.6.23-1",
+ import #{zen.fhir hl7-fhir-r4-core.vitalsigns},
+ schema {:zen.fhir/version "0.6.24",
          :confirms #{zen.fhir/Resource
                      hl7-fhir-r4-core.vitalsigns/schema},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -28,6 +23,5 @@
                             :every {:fhir/flags #{:MS},
                                     :confirms #{zen.fhir/Reference},
                                     :zen.fhir/reference {:refers #{}}},
-                            :minItems 1},
-                :referenceRange {:confirms #{hl7-fhir-r4-core.vitalspanel/referenceRange-schema}}},
+                            :minItems 1}},
          :zen.fhir/type "Observation"}}
