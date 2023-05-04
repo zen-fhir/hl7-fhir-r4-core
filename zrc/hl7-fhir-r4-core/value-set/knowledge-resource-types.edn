@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A list of all the knowledge resource types defined in this version of the FHIR specification.",
-            :zen.fhir/version "0.6.23-1",
+            :zen.fhir/version "0.6.24",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/knowledge-resource-types",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/knowledge-resource-types",

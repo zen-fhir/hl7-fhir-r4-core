@@ -4,5 +4,5 @@
          :zen/desc "This is an equivalent of the string on which the extension is sent, but includes additional markdown (see documentation about [markdown](datatypes.html#markdown). Note that using HTML  [xhtml](extension-rendering-xhtml.html) can allow for greater precision of display.",
          :zen.fhir/type "markdown",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
-         :zen.fhir/version "0.6.23-1",
+         :zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.markdown/schema}}}

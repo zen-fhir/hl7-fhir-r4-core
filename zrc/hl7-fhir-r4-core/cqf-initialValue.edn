@@ -4,5 +4,5 @@
          :zen/desc "The name of an expression in a referenced library that determines an initial value.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-initialValue",
-         :zen.fhir/version "0.6.23-1",
+         :zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

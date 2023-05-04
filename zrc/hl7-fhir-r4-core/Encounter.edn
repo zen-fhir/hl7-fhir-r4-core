@@ -43,7 +43,7 @@
           hl7-fhir-r4-core.Organization
           hl7-fhir-r4-core.value-set.encounter-admit-source
           hl7-terminology-r4.value-set.v2-0092},
- schema {:zen.fhir/version "0.6.23-1",
+ schema {:zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

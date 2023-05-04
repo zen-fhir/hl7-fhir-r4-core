@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The kind of operation to perform as a part of a property based filter.",
-            :zen.fhir/version "0.6.23-1",
+            :zen.fhir/version "0.6.24",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/filter-operator",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/filter-operator",

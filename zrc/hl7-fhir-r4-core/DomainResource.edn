@@ -7,7 +7,7 @@
          :zen/desc "A resource that includes narrative, extensions, and contained resources.",
          :zen.fhir/type "DomainResource",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/DomainResource",
-         :zen.fhir/version "0.6.23-1",
+         :zen.fhir/version "0.6.24",
          :confirms #{hl7-fhir-r4-core.Resource/schema
                      zen.fhir/Resource},
          :type zen/map,
