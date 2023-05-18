@@ -4,5 +4,5 @@
          :zen/desc "Text description about the clinical management provided.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/openEHR-management",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

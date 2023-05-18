@@ -6,7 +6,7 @@
          :zen/desc "The type of data entry control or structure that should be used to render the item.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.questionnaire-item-control/value-set,
                               :strength :extensible}}}

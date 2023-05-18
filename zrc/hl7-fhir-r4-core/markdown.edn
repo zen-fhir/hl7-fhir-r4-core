@@ -4,7 +4,7 @@
          :zen/desc "Base StructureDefinition for markdown type: A string that may contain Github Flavored Markdown syntax for optional processing by a mark down presentation engine",
          :zen.fhir/type "markdown",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/markdown",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :type zen/string,
          :maxLength 1048576,
          :confirms #{hl7-fhir-r4-core.string/schema}}}

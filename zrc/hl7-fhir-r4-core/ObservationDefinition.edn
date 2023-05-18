@@ -22,7 +22,7 @@
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.value-set.observation-category
           hl7-fhir-r4-core.value-set.referencerange-appliesto},
- schema {:zen.fhir/version "0.6.24",
+ schema {:zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

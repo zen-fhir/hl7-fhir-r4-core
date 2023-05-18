@@ -5,7 +5,7 @@
           hl7-fhir-r4-core.value-set.catalogType
           hl7-fhir-r4-core.Composition
           hl7-fhir-r4-core.CatalogEntry},
- schema {:zen.fhir/version "0.6.24",
+ schema {:zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.Composition/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},
@@ -31,7 +31,7 @@
                           :every {:confirms #{hl7-fhir-r4-core.catalog/section-schema}}}},
          :zen.fhir/type "Composition"},
  section-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                 :zen.fhir/version "0.6.24",
+                 :zen.fhir/version "0.6.25-1",
                  :type zen/map,
                  :keys {:entry {:type zen/vector,
                                 :every {:confirms #{zen.fhir/Reference},

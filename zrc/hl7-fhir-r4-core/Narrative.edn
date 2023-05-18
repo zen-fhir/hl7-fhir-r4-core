@@ -4,7 +4,7 @@
           zen.fhir
           hl7-fhir-r4-core.Element
           hl7-fhir-r4-core.value-set.narrative-status},
- schema {:zen.fhir/version "0.6.24",
+ schema {:zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Narrative",

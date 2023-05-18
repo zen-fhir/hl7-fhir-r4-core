@@ -39,7 +39,7 @@
           hl7-fhir-r4-core.value-set.conditional-delete-status},
  rest-resource-operation-schema {:zen/tags #{zen/schema
                                              zen.fhir/structure-schema},
-                                 :zen.fhir/version "0.6.24",
+                                 :zen.fhir/version "0.6.25-1",
                                  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                  :type zen/map,
                                  :keys {:name {:confirms #{hl7-fhir-r4-core.string/schema},
@@ -58,7 +58,7 @@
                                  :zen/desc "Definition of a resource operation"},
  rest-resource-searchParam-schema {:zen/tags #{zen/schema
                                                zen.fhir/structure-schema},
-                                   :zen.fhir/version "0.6.24",
+                                   :zen.fhir/version "0.6.25-1",
                                    :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                    :type zen/map,
                                    :keys {:name {:confirms #{hl7-fhir-r4-core.string/schema},
@@ -77,7 +77,7 @@
                                           :_documentation {:confirms #{hl7-fhir-r4-core.Element/schema}}},
                                    :require #{:name :type},
                                    :zen/desc "Search parameters supported by implementation"},
- schema {:zen.fhir/version "0.6.24",
+ schema {:zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
