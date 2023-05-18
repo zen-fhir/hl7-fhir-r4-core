@@ -6,7 +6,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen/desc "Proficiency level of the communication.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/patient-proficiency",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :type zen/map,
          :keys {:level {:confirms #{hl7-fhir-r4-core.Coding/schema},
                         :zen.fhir/value-set {:symbol hl7-terminology-r4.value-set.v3-LanguageAbilityProficiency/value-set,

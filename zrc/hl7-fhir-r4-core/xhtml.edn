@@ -4,6 +4,6 @@
          :zen/desc "Base StructureDefinition for xhtml Type",
          :zen.fhir/type "xhtml",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/xhtml",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :type zen/string,
          :maxLength 1048576}}

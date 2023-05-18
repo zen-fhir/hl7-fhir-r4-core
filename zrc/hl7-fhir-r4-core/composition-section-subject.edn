@@ -4,5 +4,5 @@
          :zen/desc "Specifies that the section has a different subject that the Composition, or it's container section.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/composition-section-subject",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

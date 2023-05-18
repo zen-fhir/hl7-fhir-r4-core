@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Codes for the kind of study objective.",
-            :zen.fhir/version "0.6.24",
+            :zen.fhir/version "0.6.25-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/research-study-objective-type",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/research-study-objective-type",

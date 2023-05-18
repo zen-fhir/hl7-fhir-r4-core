@@ -6,7 +6,7 @@
          :zen/desc "Identifies that the specified element should only appear in certain \"modes\" of operation.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-usageMode",
-         :zen.fhir/version "0.6.24",
+         :zen.fhir/version "0.6.25-1",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.questionnaire-usage-mode/value-set,
                               :strength :required}}}
