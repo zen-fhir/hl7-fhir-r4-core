@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Biologically Derived Product Status.",
-            :zen.fhir/version "0.6.25-1",
+            :zen.fhir/version "0.6.27",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/product-status",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/product-status",
