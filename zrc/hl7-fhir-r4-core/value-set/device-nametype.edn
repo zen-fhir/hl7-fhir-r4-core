@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The type of name the device is referred by.",
-            :zen.fhir/version "0.6.25-1",
+            :zen.fhir/version "0.6.27",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/device-nametype",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/device-nametype",
