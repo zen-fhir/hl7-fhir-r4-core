@@ -1,8 +1,10 @@
 {ns hl7-fhir-r4-core.cqf-expression,
  import #{zen.fhir hl7-fhir-r4-core.Expression},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "An expression that, when evaluated, provides the value for the element on which it appears.",
          :zen.fhir/type "Expression",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.Expression/schema}}}

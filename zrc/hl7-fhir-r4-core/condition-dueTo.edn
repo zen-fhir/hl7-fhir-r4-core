@@ -9,8 +9,10 @@
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.MedicationStatement},
  schema {:fhir/polymorphic true,
-         :zen.fhir/version "0.6.27",
-         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/version "0.6.28",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/condition-dueTo",
          :type zen/map,
          :zen/desc "Further conditions, problems, diagnoses, procedures or events or the substance that caused/triggered this Condition.",

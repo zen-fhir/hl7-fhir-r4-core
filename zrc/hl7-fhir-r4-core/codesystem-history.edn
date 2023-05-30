@@ -3,10 +3,12 @@
           hl7-fhir-r4-core.dateTime
           hl7-fhir-r4-core.string
           hl7-fhir-r4-core.Extension},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "Information on changes made to the Value Set Definition over time, and also has a contained audit trail of all such changes.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-history",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :type zen/map,
          :keys {:name {:confirms #{hl7-fhir-r4-core.string/schema},
                        :zen/desc "The name of this set of history entries"},

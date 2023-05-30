@@ -1,8 +1,10 @@
 {ns hl7-fhir-r4-core.hla-genotyping-results-method,
  import #{zen.fhir hl7-fhir-r4-core.CodeableConcept},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "The platform, methodology and software applied at the time of the\rgenotyping.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-method",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

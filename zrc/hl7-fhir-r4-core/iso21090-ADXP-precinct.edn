@@ -1,8 +1,10 @@
 {ns hl7-fhir-r4-core.iso21090-ADXP-precinct,
  import #{zen.fhir hl7-fhir-r4-core.string},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "A subsection of a municipality.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
