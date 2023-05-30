@@ -8,9 +8,9 @@
           hl7-fhir-r4-core.devicemetricobservation},
  referenceRange-schema {:zen/tags #{zen/schema
                                     zen.fhir/structure-schema},
-                        :zen.fhir/version "0.6.27",
+                        :zen.fhir/version "0.6.28",
                         :fhir/flags #{:MS}},
- schema {:zen.fhir/version "0.6.27",
+ schema {:zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

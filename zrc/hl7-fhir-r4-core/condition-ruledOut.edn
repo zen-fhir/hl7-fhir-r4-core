@@ -1,9 +1,11 @@
 {ns hl7-fhir-r4-core.condition-ruledOut,
  import #{hl7-fhir-r4-core.Condition zen.fhir},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "Identifies what potential diagnoses have been ruled out for this condition.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/condition-ruledOut",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Condition/schema}}}}

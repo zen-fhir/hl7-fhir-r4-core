@@ -2,11 +2,13 @@
  import #{hl7-fhir-r4-core.code
           zen.fhir
           hl7-fhir-r4-core.value-set.hl7-work-group},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "The work group that owns and maintains this resource.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.hl7-work-group/value-set,
                               :strength :required}}}

@@ -1,9 +1,11 @@
 {ns hl7-fhir-r4-core.hla-genotyping-results-haploid,
  import #{zen.fhir hl7-fhir-r4-core.CodeableConcept},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "haploid.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-haploid",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :type zen/map,
          :keys {:locus {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
                         :zen/desc "haploid-locus"},

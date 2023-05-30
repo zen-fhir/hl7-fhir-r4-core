@@ -4,8 +4,10 @@
           hl7-fhir-r4-core.boolean
           hl7-fhir-r4-core.CodeableConcept},
  schema {:fhir/polymorphic true,
-         :zen.fhir/version "0.6.27",
-         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/version "0.6.28",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
          :type zen/map,
          :zen/desc "Mark that an invariant represents 'best practice' rule - a rule that implementers may choose to enforce at error level in some or all circumstances.",

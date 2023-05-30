@@ -11,7 +11,7 @@
           hl7-fhir-r4-core.Media
           hl7-fhir-r4-core.DocumentReference
           hl7-fhir-r4-core.vitalsigns},
- schema {:zen.fhir/version "0.6.27",
+ schema {:zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

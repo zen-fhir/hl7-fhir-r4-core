@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This example value set defines a set of codes that can be used to indicate breeds of species.",
-            :zen.fhir/version "0.6.27",
+            :zen.fhir/version "0.6.28",
             :fhir/code-systems #{{:fhir/url "http://snomed.info/sct",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/animal-breeds",

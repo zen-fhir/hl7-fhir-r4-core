@@ -2,11 +2,13 @@
  import #{hl7-fhir-r4-core.code
           zen.fhir
           hl7-fhir-r4-core.value-set.data-types},
- schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
          :zen/desc "This identifies the underlying type in a profile, when a questionnaire is generated from a profile.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-baseType",
-         :zen.fhir/version "0.6.27",
+         :zen.fhir/version "0.6.28",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.data-types/value-set,
                               :strength :required}}}
