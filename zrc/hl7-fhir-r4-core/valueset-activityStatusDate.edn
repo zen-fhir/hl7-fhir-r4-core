@@ -6,5 +6,5 @@
          :zen/desc "The date when the associated Value Set Definition Version activity status is in effect.",
          :zen.fhir/type "date",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-activityStatusDate",
-         :zen.fhir/version "0.6.28",
+         :zen.fhir/version "0.6.29",
          :confirms #{hl7-fhir-r4-core.date/schema}}}
