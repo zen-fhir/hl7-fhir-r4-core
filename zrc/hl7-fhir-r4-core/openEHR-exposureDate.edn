@@ -6,5 +6,5 @@
          :zen/desc "Record of the date and/or time of the first exposure to the Substance for this Reaction Event.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDate",
-         :zen.fhir/version "0.6.28",
+         :zen.fhir/version "0.6.29",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

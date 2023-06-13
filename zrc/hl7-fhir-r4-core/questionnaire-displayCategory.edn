@@ -8,7 +8,7 @@
          :zen/desc "Describes the intended purpose of the rendered text.  For example - instructions, guidance on access control, maintenance information, etc.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory",
-         :zen.fhir/version "0.6.28",
+         :zen.fhir/version "0.6.29",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.questionnaire-display-category/value-set,
                               :strength :extensible}}}

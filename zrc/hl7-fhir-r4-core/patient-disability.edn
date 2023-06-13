@@ -6,5 +6,5 @@
          :zen/desc "Value(s) identifying physical or mental condition(s) that limits a person's movements, senses, or activities.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/patient-disability",
-         :zen.fhir/version "0.6.28",
+         :zen.fhir/version "0.6.29",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Distinguishes whether the task is a proposal, plan or full order.",
-            :zen.fhir/version "0.6.28",
+            :zen.fhir/version "0.6.29",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/request-intent",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://hl7.org/fhir/task-intent",

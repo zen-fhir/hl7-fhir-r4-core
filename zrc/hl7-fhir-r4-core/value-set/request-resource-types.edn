@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A list of all the request resource types defined in this version of the FHIR specification.",
-            :zen.fhir/version "0.6.28",
+            :zen.fhir/version "0.6.29",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/request-resource-types",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/request-resource-types",

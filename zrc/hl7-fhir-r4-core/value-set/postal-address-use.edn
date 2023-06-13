@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Uses of an address not included in Address.use.",
-            :zen.fhir/version "0.6.28",
+            :zen.fhir/version "0.6.29",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-AddressUse",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/postal-address-use",
