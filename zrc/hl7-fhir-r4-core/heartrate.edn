@@ -4,7 +4,7 @@
          :zen/desc "FHIR Heart Rate Profile",
          :zen.fhir/type "Observation",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/heartrate",
-         :zen.fhir/version "0.6.29",
+         :zen.fhir/version "0.6.29-22",
          :confirms #{zen.fhir/Resource
                      hl7-fhir-r4-core.vitalsigns/schema},
          :type zen/map,

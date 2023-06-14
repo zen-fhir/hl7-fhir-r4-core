@@ -6,5 +6,5 @@
          :zen/desc "The reason the goal was not accepted. Applies only if the status of the goal is rejected.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/goal-reasonRejected",
-         :zen.fhir/version "0.6.29",
+         :zen.fhir/version "0.6.29-22",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

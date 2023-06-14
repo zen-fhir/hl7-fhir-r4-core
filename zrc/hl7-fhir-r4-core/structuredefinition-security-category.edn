@@ -8,7 +8,7 @@
          :zen/desc "Provides general guidance around the kind of access Control to Read, Search, Create, Update, or Delete the resource.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-         :zen.fhir/version "0.6.29",
+         :zen.fhir/version "0.6.29-22",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.resource-security-category/value-set,
                               :strength :required}}}

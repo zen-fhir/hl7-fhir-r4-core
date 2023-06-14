@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This value set includes a sample set of Payment Status codes.",
-            :zen.fhir/version "0.6.29",
+            :zen.fhir/version "0.6.29-22",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/paymentstatus",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/payment-status",

@@ -6,6 +6,6 @@
          :zen/desc "The Provenance/AuditEvent resources can represent the same information.  Note that the Provenance/AuditEvent resources can represent the same information.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-gatewayDevice",
-         :zen.fhir/version "0.6.29",
+         :zen.fhir/version "0.6.29-22",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Device/schema}}}}
