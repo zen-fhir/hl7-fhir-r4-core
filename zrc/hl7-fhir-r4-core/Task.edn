@@ -73,7 +73,7 @@
           hl7-fhir-r4-core.Distance
           hl7-fhir-r4-core.Expression
           hl7-fhir-r4-core.Address},
- schema {:zen.fhir/version "0.6.29",
+ schema {:zen.fhir/version "0.6.29-22",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

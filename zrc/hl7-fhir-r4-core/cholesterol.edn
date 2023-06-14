@@ -5,7 +5,7 @@
           hl7-fhir-r4-core.cholesterol},
  referenceRange-schema {:zen/tags #{zen/schema
                                     zen.fhir/structure-schema},
-                        :zen.fhir/version "0.6.29",
+                        :zen.fhir/version "0.6.29-22",
                         :type zen/map,
                         :keys {:high {:const {:value {:value 4.5}},
                                       :confirms #{hl7-fhir-r4-core.SimpleQuantity/schema}},
@@ -13,7 +13,7 @@
                                            :maxItems 0}},
                         :require #{:high},
                         :fhir/flags #{:MS}},
- schema {:zen.fhir/version "0.6.29",
+ schema {:zen.fhir/version "0.6.29-22",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

@@ -1,6 +1,6 @@
 {ns hl7-fhir-r4-core.geolocation,
  import #{hl7-fhir-r4-core.decimal zen.fhir},
- schema {:zen.fhir/version "0.6.29",
+ schema {:zen.fhir/version "0.6.29-22",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},
