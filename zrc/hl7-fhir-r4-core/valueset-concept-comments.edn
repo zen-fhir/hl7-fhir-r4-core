@@ -6,5 +6,5 @@
          :zen/desc "A comment that explains how this code is used in this context (where the value set is expected to be used).",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-concept-comments",
-         :zen.fhir/version "0.6.29-22",
+         :zen.fhir/version "0.6.29-4",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
