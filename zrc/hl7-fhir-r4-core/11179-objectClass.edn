@@ -8,7 +8,7 @@
          :zen/desc "A concept that represents a set of ideas, abstractions, or things in the real world that can be identified with explicit boundaries and meaning and whose properties and behavior follow the same rules. It may be either a single concept or a group of associated concepts, abstractions, or things.",
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/11179-objectClass",
-         :zen.fhir/version "0.6.29-22",
+         :zen.fhir/version "0.6.29-4",
          :confirms #{hl7-fhir-r4-core.Coding/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.dataelement-sdcobjectclass/value-set,
                               :strength :example}}}

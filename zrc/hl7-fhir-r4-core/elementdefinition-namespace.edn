@@ -6,5 +6,5 @@
          :zen/desc "Use this extension to indicate tha the element has an XML namespace different to http://hl7.org/fhir.",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
-         :zen.fhir/version "0.6.29-22",
+         :zen.fhir/version "0.6.29-4",
          :confirms #{hl7-fhir-r4-core.uri/schema}}}

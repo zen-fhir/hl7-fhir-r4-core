@@ -40,7 +40,7 @@
           hl7-fhir-r4-core.Location
           hl7-fhir-r4-core.Organization
           hl7-fhir-r4-core.value-set.device-kind},
- schema {:zen.fhir/version "0.6.29-22",
+ schema {:zen.fhir/version "0.6.29-4",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

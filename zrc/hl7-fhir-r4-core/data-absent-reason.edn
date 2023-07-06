@@ -8,7 +8,7 @@
          :zen/desc "Provides a reason why the expected value or elements in the element that is extended are missing.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-         :zen.fhir/version "0.6.29-22",
+         :zen.fhir/version "0.6.29-4",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.data-absent-reason/value-set,
                               :strength :required}}}

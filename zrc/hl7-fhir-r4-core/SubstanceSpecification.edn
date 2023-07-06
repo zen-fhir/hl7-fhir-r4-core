@@ -22,7 +22,7 @@
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.Identifier},
  name-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-              :zen.fhir/version "0.6.29-22",
+              :zen.fhir/version "0.6.29-4",
               :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
               :type zen/map,
               :keys {:official {:type zen/vector,
@@ -87,7 +87,7 @@
          :zen/desc "The detailed description of a substance, typically at a level beyond what is used for prescribing.",
          :zen.fhir/type "SubstanceSpecification",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification",
-         :zen.fhir/version "0.6.29-22",
+         :zen.fhir/version "0.6.29-4",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
@@ -351,7 +351,7 @@
                 :_comment {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
  structure-isotope-molecularWeight-schema {:zen/tags #{zen/schema
                                                        zen.fhir/structure-schema},
-                                           :zen.fhir/version "0.6.29-22",
+                                           :zen.fhir/version "0.6.29-4",
                                            :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                            :type zen/map,
                                            :keys {:method {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},

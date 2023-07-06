@@ -6,6 +6,6 @@
          :zen/desc "This encounter occurs within the scope of the referenced encounter.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/encounter-associatedEncounter",
-         :zen.fhir/version "0.6.29-22",
+         :zen.fhir/version "0.6.29-4",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Encounter/schema}}}}
