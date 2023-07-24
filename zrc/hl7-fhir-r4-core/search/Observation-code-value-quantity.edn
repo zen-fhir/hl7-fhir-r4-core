@@ -1,0 +1,19 @@
+{ns hl7-fhir-r4-core.search.Observation-code-value-quantity,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Observation-code-value-quantity",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity",
+         :fhir/type "composite",
+         :name "code-value-quantity",
+         :expr {:Observation {:base-knife [[]],
+                              :base-jsonpath ["$[*]"],
+                              :component-knife [[["code"]]
+                                                [["value" "Quantity"]]],
+                              :component-jsonpath [["$.\"code\"[*]"]
+                                                   ["$.\"value\".\"Quantity\"[*]"]],
+                              :data-types #{{:type "Quantity",
+                                             :polymorphic? false}
+                                            {:type "CodeableConcept",
+                                             :polymorphic? false}},
+                              :search-types [:token :quantity],
+                              :template :composite}}}}

@@ -1,0 +1,20 @@
+{ns hl7-fhir-r4-core.search.MolecularSequence-chromosome-window-coordinate,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "MolecularSequence-chromosome-window-coordinate",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome-window-coordinate",
+         :fhir/type "composite",
+         :name "chromosome-window-coordinate",
+         :expr {:MolecularSequence {:base-knife [["referenceSeq"]],
+                                    :base-jsonpath ["$.\"referenceSeq\"[*]"],
+                                    :component-knife [[["chromosome"]]
+                                                      [["windowStart"]]
+                                                      [["windowEnd"]]],
+                                    :component-jsonpath [["$.\"chromosome\"[*]"]
+                                                         ["$.\"windowStart\"[*]"]
+                                                         ["$.\"windowEnd\"[*]"]],
+                                    :data-types #{},
+                                    :search-types [:token
+                                                   :number
+                                                   :number],
+                                    :template :composite}}}}

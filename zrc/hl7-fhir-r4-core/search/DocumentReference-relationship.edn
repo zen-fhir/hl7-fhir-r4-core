@@ -1,0 +1,16 @@
+{ns hl7-fhir-r4-core.search.DocumentReference-relationship,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "DocumentReference-relationship",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/DocumentReference-relationship",
+         :fhir/type "composite",
+         :name "relationship",
+         :expr {:DocumentReference {:base-knife [["relatesTo"]],
+                                    :base-jsonpath ["$.\"relatesTo\"[*]"],
+                                    :component-knife [[["code"]]
+                                                      [["target"]]],
+                                    :component-jsonpath [["$.\"code\"[*]"]
+                                                         ["$.\"target\"[*]"]],
+                                    :data-types #{},
+                                    :search-types [:reference :token],
+                                    :template :composite}}}}

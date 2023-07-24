@@ -6,5 +6,5 @@
          :zen/desc "Allele Database.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/hla-genotyping-results-allele-database",
-         :zen.fhir/version "0.6.29-4",
+         :zen.fhir/version "0.6.30",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema}}}

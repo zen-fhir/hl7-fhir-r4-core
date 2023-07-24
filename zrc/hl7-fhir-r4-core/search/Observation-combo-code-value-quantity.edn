@@ -1,0 +1,20 @@
+{ns hl7-fhir-r4-core.search.Observation-combo-code-value-quantity,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Observation-combo-code-value-quantity",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/Observation-combo-code-value-quantity",
+         :fhir/type "composite",
+         :name "combo-code-value-quantity",
+         :expr {:Observation {:base-knife [[] ["component"]],
+                              :base-jsonpath ["$[*]"
+                                              "$.\"component\"[*]"],
+                              :component-knife [[["code"]]
+                                                [["value" "Quantity"]]],
+                              :component-jsonpath [["$.\"code\"[*]"]
+                                                   ["$.\"value\".\"Quantity\"[*]"]],
+                              :data-types #{{:type "Quantity",
+                                             :polymorphic? false}
+                                            {:type "CodeableConcept",
+                                             :polymorphic? false}},
+                              :search-types [:token :quantity],
+                              :template :composite}}}}

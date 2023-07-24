@@ -6,5 +6,5 @@
          :zen/desc "An extra warning about the correct use of the value set.",
          :zen.fhir/type "markdown",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-warning",
-         :zen.fhir/version "0.6.29-4",
+         :zen.fhir/version "0.6.30",
          :confirms #{hl7-fhir-r4-core.markdown/schema}}}

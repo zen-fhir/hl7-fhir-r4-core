@@ -4,7 +4,7 @@
           hl7-fhir-r4-core.boolean
           hl7-fhir-r4-core.CodeableConcept},
  schema {:fhir/polymorphic true,
-         :zen.fhir/version "0.6.29-4",
+         :zen.fhir/version "0.6.30",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},

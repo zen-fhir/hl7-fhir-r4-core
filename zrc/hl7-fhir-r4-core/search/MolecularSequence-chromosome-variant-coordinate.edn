@@ -1,0 +1,20 @@
+{ns hl7-fhir-r4-core.search.MolecularSequence-chromosome-variant-coordinate,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "MolecularSequence-chromosome-variant-coordinate",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome-variant-coordinate",
+         :fhir/type "composite",
+         :name "chromosome-variant-coordinate",
+         :expr {:MolecularSequence {:base-knife [["variant"]],
+                                    :base-jsonpath ["$.\"variant\"[*]"],
+                                    :component-knife [nil
+                                                      [["start"]]
+                                                      [["end"]]],
+                                    :component-jsonpath [[]
+                                                         ["$.\"start\"[*]"]
+                                                         ["$.\"end\"[*]"]],
+                                    :data-types #{},
+                                    :search-types [:token
+                                                   :number
+                                                   :number],
+                                    :template :composite}}}}
