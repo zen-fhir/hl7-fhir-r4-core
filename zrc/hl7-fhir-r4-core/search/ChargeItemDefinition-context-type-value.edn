@@ -1,0 +1,18 @@
+{ns hl7-fhir-r4-core.search.ChargeItemDefinition-context-type-value,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "ChargeItemDefinition-context-type-value",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type-value",
+         :fhir/type "composite",
+         :name "context-type-value",
+         :expr {:ChargeItemDefinition {:base-knife [["useContext"]],
+                                       :base-jsonpath ["$.\"useContext\"[*]"],
+                                       :component-knife [[["code"]]
+                                                         [["value"
+                                                           "CodeableConcept"]]],
+                                       :component-jsonpath [["$.\"code\"[*]"]
+                                                            ["$.\"value\".\"CodeableConcept\"[*]"]],
+                                       :data-types #{{:type "CodeableConcept",
+                                                      :polymorphic? false}},
+                                       :search-types [:token :token],
+                                       :template :composite}}}}

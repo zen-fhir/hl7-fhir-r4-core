@@ -1,0 +1,17 @@
+{ns hl7-fhir-r4-core.search.Evidence-context-type-value,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Evidence-context-type-value",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/Evidence-context-type-value",
+         :fhir/type "composite",
+         :name "context-type-value",
+         :expr {:Evidence {:base-knife [["useContext"]],
+                           :base-jsonpath ["$.\"useContext\"[*]"],
+                           :component-knife [[["code"]]
+                                             [["value"
+                                               "CodeableConcept"]]],
+                           :component-jsonpath [["$.\"code\"[*]"]
+                                                ["$.\"value\".\"CodeableConcept\"[*]"]],
+                           :data-types #{},
+                           :search-types [:token :token],
+                           :template :composite}}}}

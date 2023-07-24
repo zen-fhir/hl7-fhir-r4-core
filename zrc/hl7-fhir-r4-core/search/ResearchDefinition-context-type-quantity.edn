@@ -1,0 +1,20 @@
+{ns hl7-fhir-r4-core.search.ResearchDefinition-context-type-quantity,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "ResearchDefinition-context-type-quantity",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type-quantity",
+         :fhir/type "composite",
+         :name "context-type-quantity",
+         :expr {:ResearchDefinition {:base-knife [["useContext"]],
+                                     :base-jsonpath ["$.\"useContext\"[*]"],
+                                     :component-knife [[["code"]]
+                                                       [["value"
+                                                         "Quantity"]
+                                                        ["value"
+                                                         "Range"]]],
+                                     :component-jsonpath [["$.\"code\"[*]"]
+                                                          ["$.\"value\".\"Quantity\"[*]"
+                                                           "$.\"value\".\"Range\"[*]"]],
+                                     :data-types #{},
+                                     :search-types [:token :quantity],
+                                     :template :composite}}}}

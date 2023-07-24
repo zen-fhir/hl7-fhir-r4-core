@@ -1,0 +1,17 @@
+{ns hl7-fhir-r4-core.search.Measure-context-type-value,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Measure-context-type-value",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/Measure-context-type-value",
+         :fhir/type "composite",
+         :name "context-type-value",
+         :expr {:Measure {:base-knife [["useContext"]],
+                          :base-jsonpath ["$.\"useContext\"[*]"],
+                          :component-knife [[["code"]]
+                                            [["value"
+                                              "CodeableConcept"]]],
+                          :component-jsonpath [["$.\"code\"[*]"]
+                                               ["$.\"value\".\"CodeableConcept\"[*]"]],
+                          :data-types #{},
+                          :search-types [:token :token],
+                          :template :composite}}}}

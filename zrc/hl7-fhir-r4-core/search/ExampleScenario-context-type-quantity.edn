@@ -1,0 +1,19 @@
+{ns hl7-fhir-r4-core.search.ExampleScenario-context-type-quantity,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "ExampleScenario-context-type-quantity",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type-quantity",
+         :fhir/type "composite",
+         :name "context-type-quantity",
+         :expr {:ExampleScenario {:base-knife [["useContext"]],
+                                  :base-jsonpath ["$.\"useContext\"[*]"],
+                                  :component-knife [[["code"]]
+                                                    [["value"
+                                                      "Quantity"]
+                                                     ["value" "Range"]]],
+                                  :component-jsonpath [["$.\"code\"[*]"]
+                                                       ["$.\"value\".\"Quantity\"[*]"
+                                                        "$.\"value\".\"Range\"[*]"]],
+                                  :data-types #{},
+                                  :search-types [:token :quantity],
+                                  :template :composite}}}}

@@ -1,0 +1,19 @@
+{ns hl7-fhir-r4-core.search.Observation-code-value-string,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Observation-code-value-string",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/Observation-code-value-string",
+         :fhir/type "composite",
+         :name "code-value-string",
+         :expr {:Observation {:base-knife [[]],
+                              :base-jsonpath ["$[*]"],
+                              :component-knife [[["code"]]
+                                                [["value" "string"]]],
+                              :component-jsonpath [["$.\"code\"[*]"]
+                                                   ["$.\"value\".\"string\"[*]"]],
+                              :data-types #{{:type "CodeableConcept",
+                                             :polymorphic? false}
+                                            {:type "string",
+                                             :polymorphic? false}},
+                              :search-types [:token :string],
+                              :template :composite}}}}

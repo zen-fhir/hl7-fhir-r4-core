@@ -1,0 +1,23 @@
+{ns hl7-fhir-r4-core.search.Observation-code-value-date,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Observation-code-value-date",
+         :fhir/url "http://hl7.org/fhir/SearchParameter/Observation-code-value-date",
+         :fhir/type "composite",
+         :name "code-value-date",
+         :expr {:Observation {:base-knife [[]],
+                              :base-jsonpath ["$[*]"],
+                              :component-knife [[["code"]]
+                                                [["value" "dateTime"]
+                                                 ["value" "Period"]]],
+                              :component-jsonpath [["$.\"code\"[*]"]
+                                                   ["$.\"value\".\"dateTime\"[*]"
+                                                    "$.\"value\".\"Period\"[*]"]],
+                              :data-types #{{:type "Period",
+                                             :polymorphic? false}
+                                            {:type "dateTime",
+                                             :polymorphic? false}
+                                            {:type "CodeableConcept",
+                                             :polymorphic? false}},
+                              :search-types [:token :date],
+                              :template :composite}}}}
