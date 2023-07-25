@@ -11,7 +11,7 @@
           hl7-fhir-r4-core.instant
           hl7-fhir-r4-core.Element
           hl7-fhir-r4-core.DomainResource},
- schema {:zen.fhir/version "0.6.30",
+ schema {:zen.fhir/version "0.6.30-1",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

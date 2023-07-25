@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "A code specifying the types of information being requested.",
-            :zen.fhir/version "0.6.30",
+            :zen.fhir/version "0.6.30-1",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/eligibilityresponse-purpose",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/eligibilityresponse-purpose",

@@ -6,5 +6,5 @@
          :zen/desc "Represents a wet or electronic signature for either the form overall or for the question or item it's associated with.",
          :zen.fhir/type "Signature",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature",
-         :zen.fhir/version "0.6.30",
+         :zen.fhir/version "0.6.30-1",
          :confirms #{hl7-fhir-r4-core.Signature/schema}}}
