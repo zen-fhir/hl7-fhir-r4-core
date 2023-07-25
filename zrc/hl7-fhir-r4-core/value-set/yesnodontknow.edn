@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "For Capturing simple yes-no-don't know answers",
-            :zen.fhir/version "0.6.30",
+            :zen.fhir/version "0.6.30-1",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://terminology.hl7.org/CodeSystem/v2-0532",

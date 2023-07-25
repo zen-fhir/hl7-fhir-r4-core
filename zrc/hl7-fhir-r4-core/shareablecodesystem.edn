@@ -3,12 +3,12 @@
           zen.fhir
           hl7-fhir-r4-core.CodeSystem},
  concept-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                 :zen.fhir/version "0.6.30",
+                 :zen.fhir/version "0.6.30-1",
                  :type zen/map,
                  :keys {:concept {:type zen/vector,
                                   :every {:confirms #{hl7-fhir-r4-core.shareablecodesystem/concept-schema}}}},
                  :require #{:code}},
- schema {:zen.fhir/version "0.6.30",
+ schema {:zen.fhir/version "0.6.30-1",
          :confirms #{hl7-fhir-r4-core.CodeSystem/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

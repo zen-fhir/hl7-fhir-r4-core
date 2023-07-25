@@ -7,13 +7,15 @@
          :name "referenceseqid-variant-coordinate",
          :expr {:MolecularSequence {:base-knife [["variant"]],
                                     :base-jsonpath ["$.\"variant\"[*]"],
-                                    :component-knife [nil
+                                    :component-knife [[["referenceSeq"
+                                                        "referenceSeqId"]]
                                                       [["start"]]
                                                       [["end"]]],
-                                    :component-jsonpath [[]
+                                    :component-jsonpath [["$.\"referenceSeq\".\"referenceSeqId\"[*]"]
                                                          ["$.\"start\"[*]"]
                                                          ["$.\"end\"[*]"]],
-                                    :data-types #{},
+                                    :data-types #{{:type "CodeableConcept",
+                                                   :polymorphic? false}},
                                     :search-types [:token
                                                    :number
                                                    :number],

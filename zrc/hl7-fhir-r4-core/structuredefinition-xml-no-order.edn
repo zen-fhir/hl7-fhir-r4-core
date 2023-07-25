@@ -6,5 +6,5 @@
          :zen/desc "Whether elements can come in any order in XML.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-no-order",
-         :zen.fhir/version "0.6.30",
+         :zen.fhir/version "0.6.30-1",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}

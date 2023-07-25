@@ -61,7 +61,7 @@
           hl7-fhir-r4-core.value-set.referencerange-appliesto},
  referenceRange-schema {:zen/tags #{zen/schema
                                     zen.fhir/structure-schema},
-                        :zen.fhir/version "0.6.30",
+                        :zen.fhir/version "0.6.30-1",
                         :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                         :type zen/map,
                         :keys {:low {:confirms #{hl7-fhir-r4-core.Quantity/schema
@@ -85,7 +85,7 @@
                                       :zen/desc "Text based reference range in an observation"},
                                :_text {:confirms #{hl7-fhir-r4-core.Element/schema}}},
                         :zen/desc "Provides guide for interpretation"},
- schema {:zen.fhir/version "0.6.30",
+ schema {:zen.fhir/version "0.6.30-1",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
