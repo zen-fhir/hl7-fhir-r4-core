@@ -6,6 +6,6 @@
          :zen/desc "Clinical Interpretations for variant. It's a reference to an Observation resource.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-geneticsInterpretation",
-         :zen.fhir/version "0.6.30-1",
+         :zen.fhir/version "0.6.30-7",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Observation/schema}}}}

@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "The role that a provenance participant played",
-            :zen.fhir/version "0.6.30-1",
+            :zen.fhir/version "0.6.30-7",
             :fhir/code-systems #{{:fhir/url "http://hl7.org/fhir/provenance-participant-role",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/provenance-agent-role",

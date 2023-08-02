@@ -9,7 +9,7 @@
           hl7-fhir-r4-core.Element
           hl7-fhir-r4-core.Practitioner
           hl7-fhir-r4-core.Organization},
- schema {:zen.fhir/version "0.6.30-1",
+ schema {:zen.fhir/version "0.6.30-7",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Annotation",
