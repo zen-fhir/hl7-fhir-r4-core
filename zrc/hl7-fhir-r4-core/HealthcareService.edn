@@ -29,7 +29,7 @@
          :zen/desc "The details of a healthcare service available at a location.",
          :zen.fhir/type "HealthcareService",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-         :zen.fhir/version "0.6.30-1",
+         :zen.fhir/version "0.6.30-7",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

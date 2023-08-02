@@ -6,6 +6,6 @@
          :zen/desc "Points to the Observation, AllergyIntolerance or other record that provides additional supporting information about this flag.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/flag-detail",
-         :zen.fhir/version "0.6.30-1",
+         :zen.fhir/version "0.6.30-7",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{}}}}

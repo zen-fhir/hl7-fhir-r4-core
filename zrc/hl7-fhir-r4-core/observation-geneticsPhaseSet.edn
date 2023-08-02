@@ -3,7 +3,7 @@
           zen.fhir
           hl7-fhir-r4-core.uri
           hl7-fhir-r4-core.Reference},
- schema {:zen.fhir/version "0.6.30-1",
+ schema {:zen.fhir/version "0.6.30-7",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},

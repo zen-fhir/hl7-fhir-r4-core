@@ -6,6 +6,6 @@
          :zen/desc "Reference to the List that a \"change\" list is asserting changes with respect to.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/list-changeBase",
-         :zen.fhir/version "0.6.30-1",
+         :zen.fhir/version "0.6.30-7",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.List/schema}}}}

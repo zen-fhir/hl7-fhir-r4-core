@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Types of roles indicating how a particular agent was involved with the creation or modification of a resource for use when exposing event history",
-            :zen.fhir/version "0.6.30-1",
+            :zen.fhir/version "0.6.30-7",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/provenance-history-agent-type",

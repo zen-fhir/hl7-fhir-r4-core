@@ -6,5 +6,5 @@
          :zen/desc "Identifies the relative order in which concepts within the value set should be presented to a user.",
          :zen.fhir/type "integer",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
-         :zen.fhir/version "0.6.30-1",
+         :zen.fhir/version "0.6.30-7",
          :confirms #{hl7-fhir-r4-core.integer/schema}}}

@@ -4,7 +4,7 @@
           hl7-fhir-r4-core.string
           hl7-fhir-r4-core.value-set.constraint-severity
           hl7-fhir-r4-core.id},
- schema {:zen.fhir/version "0.6.30-1",
+ schema {:zen.fhir/version "0.6.30-7",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},
