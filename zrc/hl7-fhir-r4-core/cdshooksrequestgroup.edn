@@ -3,7 +3,7 @@
           hl7-fhir-r4-core.cdshooksrequestgroup
           hl7-fhir-r4-core.RequestGroup},
  action-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                :zen.fhir/version "0.6.30-11",
+                :zen.fhir/version "0.6.30-12",
                 :type zen/map,
                 :keys {:description {:fhir/flags #{:MS}},
                        :type {:fhir/flags #{:MS}},
@@ -26,7 +26,7 @@
                                 :fhir/flags #{:MS}},
                        :action {:type zen/vector,
                                 :every {:confirms #{hl7-fhir-r4-core.cdshooksrequestgroup/action-schema}}}}},
- schema {:zen.fhir/version "0.6.30-11",
+ schema {:zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.RequestGroup/schema
                      zen.fhir/Resource},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

@@ -1,6 +1,6 @@
 {ns hl7-fhir-r4-core.valueset-otherName,
  import #{zen.fhir hl7-fhir-r4-core.boolean hl7-fhir-r4-core.string},
- schema {:zen.fhir/version "0.6.30-11",
+ schema {:zen.fhir/version "0.6.30-12",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},

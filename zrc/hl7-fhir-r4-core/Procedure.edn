@@ -47,7 +47,7 @@
           hl7-fhir-r4-core.Organization
           hl7-fhir-r4-core.value-set.device-kind
           hl7-fhir-r4-core.value-set.procedure-reason},
- schema {:zen.fhir/version "0.6.30-11",
+ schema {:zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
