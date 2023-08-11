@@ -6,5 +6,5 @@
          :zen/desc "This is the first date-time when the value set version becomes active, so this value is present on Inactive value set versions as well. The start Date_time is expected to be as of 0001 UTC of the Effective Date.",
          :zen.fhir/type "dateTime",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-effectiveDate",
-         :zen.fhir/version "0.6.30-7",
+         :zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.dateTime/schema}}}

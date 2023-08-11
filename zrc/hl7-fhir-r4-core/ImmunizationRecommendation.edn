@@ -18,7 +18,7 @@
           hl7-fhir-r4-core.value-set.immunization-recommendation-target-disease
           hl7-fhir-r4-core.ImmunizationEvaluation
           hl7-fhir-r4-core.Organization},
- schema {:zen.fhir/version "0.6.30-7",
+ schema {:zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
