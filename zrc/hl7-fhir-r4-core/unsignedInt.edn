@@ -4,7 +4,7 @@
          :zen/desc "Base StructureDefinition for unsignedInt type: An integer with a value that is not negative (e.g. >= 0)",
          :zen.fhir/type "unsignedInt",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/unsignedInt",
-         :zen.fhir/version "0.6.30-13",
+         :zen.fhir/version "0.6.30-14",
          :type zen/integer,
          :min 0,
          :confirms #{hl7-fhir-r4-core.integer/schema}}}

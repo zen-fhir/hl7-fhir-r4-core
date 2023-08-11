@@ -29,7 +29,7 @@
           hl7-fhir-r4-core.Medication},
  applicability-schema {:zen/tags #{zen/schema
                                    zen.fhir/structure-schema},
-                       :zen.fhir/version "0.6.30-13",
+                       :zen.fhir/version "0.6.30-14",
                        :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                        :type zen/map,
                        :keys {:description {:confirms #{hl7-fhir-r4-core.string/schema},
@@ -42,7 +42,7 @@
                                            :zen/desc "Boolean-valued expression"},
                               :_expression {:confirms #{hl7-fhir-r4-core.Element/schema}}},
                        :zen/desc "Whether or not the billing code is applicable"},
- schema {:zen.fhir/version "0.6.30-13",
+ schema {:zen.fhir/version "0.6.30-14",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

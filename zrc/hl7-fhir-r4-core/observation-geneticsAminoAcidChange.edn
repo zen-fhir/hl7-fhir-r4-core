@@ -7,7 +7,7 @@
                      zen.fhir/structure-schema},
          :zen/desc "AminoAcidChange information.",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-geneticsAminoAcidChange",
-         :zen.fhir/version "0.6.30-13",
+         :zen.fhir/version "0.6.30-14",
          :type zen/map,
          :keys {:Name {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
                        :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.clinvar/value-set,
