@@ -8,7 +8,7 @@
          :zen/desc "Distinguishes the type of involvement of the performer in the event. For example, 'author',  'verifier' or 'responsible party'.",
          :zen.fhir/type "CodeableConcept",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/event-performerFunction",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.performer-function/value-set,
                               :strength :extensible}}}

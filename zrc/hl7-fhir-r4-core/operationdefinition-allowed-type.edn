@@ -6,5 +6,5 @@
          :zen/desc "When the base type is an abstract type (e.g. Resource or Element) then this extension defines which concrete types are allowed to be used for a parameter. In the absence of this extension, any type is allowed.",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.uri/schema}}}

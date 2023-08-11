@@ -6,5 +6,5 @@
          :zen/desc "The number or name of a specific unit contained within a building or complex, as assigned by that building or complex.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.string/schema}}}
