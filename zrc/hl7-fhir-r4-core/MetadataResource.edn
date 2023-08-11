@@ -13,7 +13,7 @@
           hl7-fhir-r4-core.Element
           hl7-fhir-r4-core.DomainResource
           hl7-fhir-r4-core.CodeableConcept},
- schema {:zen.fhir/version "0.6.30-7",
+ schema {:zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MetadataResource",

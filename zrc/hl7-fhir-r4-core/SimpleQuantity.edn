@@ -4,5 +4,5 @@
          :zen/desc "A fixed quantity (no comparator)",
          :zen.fhir/type "Quantity",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/SimpleQuantity",
-         :zen.fhir/version "0.6.30-7",
+         :zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.Quantity/schema}}}

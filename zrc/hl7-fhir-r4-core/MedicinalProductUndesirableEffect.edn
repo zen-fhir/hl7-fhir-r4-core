@@ -10,7 +10,7 @@
          :zen/desc "Describe the undesirable effects of the medicinal product.",
          :zen.fhir/type "MedicinalProductUndesirableEffect",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MedicinalProductUndesirableEffect",
-         :zen.fhir/version "0.6.30-7",
+         :zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
