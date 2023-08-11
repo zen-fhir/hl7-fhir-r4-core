@@ -6,5 +6,5 @@
          :zen/desc "Indicates a resource that this resource is replacing.",
          :zen.fhir/type "canonical",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/replaces",
-         :zen.fhir/version "0.6.30-13",
+         :zen.fhir/version "0.6.30-14",
          :confirms #{hl7-fhir-r4-core.canonical/schema}}}

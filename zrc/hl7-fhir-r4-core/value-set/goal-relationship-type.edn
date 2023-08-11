@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Types of relationships between two goals.",
-            :zen.fhir/version "0.6.30-13",
+            :zen.fhir/version "0.6.30-14",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/goal-relationship-type",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/goal-relationship-type",

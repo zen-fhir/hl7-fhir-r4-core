@@ -6,5 +6,5 @@
          :zen/desc "If true, indicates that the extended item should not be displayed to the user.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-         :zen.fhir/version "0.6.30-13",
+         :zen.fhir/version "0.6.30-14",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}
