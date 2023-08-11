@@ -8,7 +8,7 @@
          :zen/desc "The Current HL7 ballot/Standards status of this artifact.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-         :zen.fhir/version "0.6.30-10",
+         :zen.fhir/version "0.6.30-11",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.standards-status/value-set,
                               :strength :required}}}
