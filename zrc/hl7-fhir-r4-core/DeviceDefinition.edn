@@ -24,7 +24,7 @@
          :zen/desc "The characteristics, operational status and capabilities of a medical-related component of a medical device.",
          :zen.fhir/type "DeviceDefinition",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
-         :zen.fhir/version "0.6.30-10",
+         :zen.fhir/version "0.6.30-11",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

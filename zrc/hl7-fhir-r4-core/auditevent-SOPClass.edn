@@ -6,6 +6,6 @@
          :zen/desc "Required if ParticipantObjectIDTypeCode is (110180, DCM, \"Study Instance UID\") and any of the optional fields (AccessionNumber, ContainsMPPS, NumberOfInstances, ContainsSOPInstances,Encrypted,Anonymized) are present in this Participant Object. May be present if ParticipantObjectIDTypeCode is (110180, DCM, \"Study Instance UID\") even though none of the optional fields are present.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/auditevent-SOPClass",
-         :zen.fhir/version "0.6.30-10",
+         :zen.fhir/version "0.6.30-11",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.ImagingStudy/schema}}}}

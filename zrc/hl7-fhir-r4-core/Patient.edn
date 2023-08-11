@@ -30,7 +30,7 @@
          :zen/desc "Demographics and other administrative information about an individual or animal receiving care or other health-related services.",
          :zen.fhir/type "Patient",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Patient",
-         :zen.fhir/version "0.6.30-10",
+         :zen.fhir/version "0.6.30-11",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

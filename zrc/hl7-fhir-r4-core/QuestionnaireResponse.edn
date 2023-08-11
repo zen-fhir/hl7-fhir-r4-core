@@ -33,7 +33,7 @@
           hl7-fhir-r4-core.Identifier
           hl7-fhir-r4-core.Organization},
  item-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-              :zen.fhir/version "0.6.30-10",
+              :zen.fhir/version "0.6.30-11",
               :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
               :type zen/map,
               :keys {:linkId {:confirms #{hl7-fhir-r4-core.string/schema},
@@ -96,7 +96,7 @@
                                     :zen/desc "Nested questionnaire response items"}}},
               :require #{:linkId},
               :zen/desc "Groups and questions"},
- schema {:zen.fhir/version "0.6.30-10",
+ schema {:zen.fhir/version "0.6.30-11",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},
