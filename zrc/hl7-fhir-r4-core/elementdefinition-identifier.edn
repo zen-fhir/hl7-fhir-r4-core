@@ -6,5 +6,5 @@
          :zen/desc "External Identifiers associated with this element - these are identifiers that are associated with the concept this element represents.",
          :zen.fhir/type "Identifier",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-identifier",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.Identifier/schema}}}

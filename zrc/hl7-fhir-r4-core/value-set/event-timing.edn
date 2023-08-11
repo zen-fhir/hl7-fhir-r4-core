@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Real world event relating to the schedule.",
-            :zen.fhir/version "0.6.30-11",
+            :zen.fhir/version "0.6.30-12",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-TimingEvent",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://hl7.org/fhir/event-timing",

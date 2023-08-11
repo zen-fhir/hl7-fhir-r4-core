@@ -14,7 +14,7 @@
          :zen/desc "Todo.",
          :zen.fhir/type "SubstanceReferenceInformation",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

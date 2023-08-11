@@ -8,7 +8,7 @@
          :zen/desc "The Human Language of the item.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/language",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.languages/value-set,
                               :strength :preferred}}}

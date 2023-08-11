@@ -6,7 +6,7 @@
          :zen/desc "FHIR Body Weight Profile",
          :zen.fhir/type "Observation",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/bodyweight",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{zen.fhir/Resource
                      hl7-fhir-r4-core.vitalsigns/schema},
          :type zen/map,

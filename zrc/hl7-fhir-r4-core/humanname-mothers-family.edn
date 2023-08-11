@@ -6,5 +6,5 @@
          :zen/desc "The portion of the family name that is derived from the person's mother.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

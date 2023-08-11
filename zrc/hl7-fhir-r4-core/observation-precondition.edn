@@ -6,6 +6,6 @@
          :zen/desc "Other preceding or concurrent observations that must be known to correctly interpret the the observation.  For example an fiO2 measure taken alongside of a SpO2 measurement.  See the [Observation notes](observation.html#notes) section for additional guidance.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/observation-precondition",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Observation/schema}}}}

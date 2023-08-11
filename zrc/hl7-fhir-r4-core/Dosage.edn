@@ -21,7 +21,7 @@
          :zen/desc "Base StructureDefinition for Dosage Type: Indicates how the medication is/was taken or should be taken by the patient.",
          :zen.fhir/type "Dosage",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Dosage",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
          :type zen/map,
          :keys {:_sequence {:confirms #{hl7-fhir-r4-core.Element/schema}},
