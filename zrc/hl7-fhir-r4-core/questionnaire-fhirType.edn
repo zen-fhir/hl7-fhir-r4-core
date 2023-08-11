@@ -6,5 +6,5 @@
          :zen/desc "For questionnaires generated from FHIR profiles, indicates the FHIR data type or resource type that corresponds to this node.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

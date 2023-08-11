@@ -6,5 +6,5 @@
          :zen/desc "This is an equivalent of the string on which the extension is sent, but includes additional XHTML markup, such as bold, italics, styles, tables, etc. Existing [restrictions on XHTML content](narrative.html#security) apply. Note that using [markdown](extension-rendering-markdown.html) allows for greater flexibility of display.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

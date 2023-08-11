@@ -33,7 +33,7 @@
           hl7-fhir-r4-core.Organization
           hl7-terminology-r4.value-set.v3-ActReason
           hl7-terminology-r4.value-set.v3-ParticipationMode},
- schema {:zen.fhir/version "0.6.30-12",
+ schema {:zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

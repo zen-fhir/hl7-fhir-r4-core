@@ -6,5 +6,5 @@
          :zen/desc "The XML (schema) type of a property - used for the value attribute of a primitive type (for which there is no type in the FHIR typing system).",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

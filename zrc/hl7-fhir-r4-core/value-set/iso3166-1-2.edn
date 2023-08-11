@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "This value set defines the ISO 3166 Part 1 2-letter codes",
-            :zen.fhir/version "0.6.30-12",
+            :zen.fhir/version "0.6.30-13",
             :fhir/code-systems #{{:fhir/url "urn:iso:std:iso:3166",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/iso3166-1-2",
