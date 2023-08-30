@@ -8,7 +8,7 @@
          :zen/desc "Identifies the desired orientation when rendering a list of choices (typically radio-box or check-box lists).",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.choice-list-orientation/value-set,
                               :strength :required}}}

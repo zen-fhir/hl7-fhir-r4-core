@@ -9,7 +9,7 @@
          :zen/desc "Base StructureDefinition for HumanName Type: A human's name with the ability to identify parts and usage.",
          :zen.fhir/type "HumanName",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/HumanName",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:_family {:confirms #{hl7-fhir-r4-core.Element/schema}},

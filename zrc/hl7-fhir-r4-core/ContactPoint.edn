@@ -11,7 +11,7 @@
          :zen/desc "Base StructureDefinition for ContactPoint Type: Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.",
          :zen.fhir/type "ContactPoint",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/ContactPoint",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:system {:confirms #{hl7-fhir-r4-core.code/schema},
