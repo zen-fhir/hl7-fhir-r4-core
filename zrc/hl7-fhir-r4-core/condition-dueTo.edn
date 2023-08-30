@@ -9,7 +9,7 @@
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.MedicationStatement},
  schema {:fhir/polymorphic true,
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},

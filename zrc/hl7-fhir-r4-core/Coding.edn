@@ -9,7 +9,7 @@
          :zen/desc "Base StructureDefinition for Coding Type: A reference to a code defined by a terminology system.",
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Coding",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:userSelected {:confirms #{hl7-fhir-r4-core.boolean/schema},

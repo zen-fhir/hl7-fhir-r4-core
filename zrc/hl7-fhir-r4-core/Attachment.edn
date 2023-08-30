@@ -13,7 +13,7 @@
          :zen/desc "Base StructureDefinition for Attachment Type: For referring to data content defined in other formats.",
          :zen.fhir/type "Attachment",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Attachment",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:creation {:confirms #{hl7-fhir-r4-core.dateTime/schema},
