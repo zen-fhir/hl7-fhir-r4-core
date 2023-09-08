@@ -1,13 +1,4 @@
 {:deps
  {zen.fhir "https://github.com/zen-fhir/zen.fhir.git",
   hl7-terminology-r4
-  "https://github.com/zen-fhir/hl7-terminology-r4.git"},
- :ftr-build-deps
- {"http://snomed.info/sct"
-  {:source-url "https://storage.googleapis.com/ftr",
-   :module "snomed",
-   :tag "prod"},
-  "http://hl7.org/fhir/sid/icd-10"
-  {:source-url "https://storage.googleapis.com/ftr",
-   :module "icd10cm",
-   :tag "prod"}}}
+  "https://github.com/zen-fhir/hl7-terminology-r4.git"}}

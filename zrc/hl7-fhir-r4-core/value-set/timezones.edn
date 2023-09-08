@@ -2,15 +2,8 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "IANA Timezone Codes",
-            :zen.fhir/version "0.6.31",
+            :zen.fhir/version "0.6.32",
             :fhir/code-systems #{{:fhir/url "https://www.iana.org/time-zones",
                                   :zen.fhir/content :not-present}},
             :uri "http://hl7.org/fhir/ValueSet/timezones",
-            :version "4.0.1",
-            :ftr {:module "hl7-fhir-r4-core",
-                  :source-url "https://storage.googleapis.com",
-                  :source-type :cloud-storage,
-                  :ftr-path "ftr",
-                  :tag "init",
-                  :validation-index {:type :nippy,
-                                     :file "index.nippy"}}}}
+            :version "4.0.1"}}

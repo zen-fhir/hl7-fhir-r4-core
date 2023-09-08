@@ -22,7 +22,7 @@
          :zen/desc "A person who is directly or indirectly involved in the provisioning of healthcare.",
          :zen.fhir/type "Practitioner",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Practitioner",
-         :zen.fhir/version "0.6.31",
+         :zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

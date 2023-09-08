@@ -4,7 +4,7 @@
           hl7-fhir-r4-core.Quantity
           hl7-fhir-r4-core.CodeableConcept
           hl7-fhir-r4-core.Identifier},
- schema {:zen.fhir/version "0.6.31",
+ schema {:zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/ProductShelfLife",

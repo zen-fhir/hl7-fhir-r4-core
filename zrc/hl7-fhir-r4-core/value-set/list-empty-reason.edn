@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
-            :zen.fhir/version "0.6.31",
+            :zen.fhir/version "0.6.32",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/list-empty-reason",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/list-empty-reason",

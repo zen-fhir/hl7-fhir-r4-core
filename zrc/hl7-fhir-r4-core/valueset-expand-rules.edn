@@ -8,7 +8,7 @@
          :zen/desc "Defines how concepts are processed into the expansion when it's for UI presentation.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-expand-rules",
-         :zen.fhir/version "0.6.31",
+         :zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.expansion-processing-rule/value-set,
                               :strength :required}}}
