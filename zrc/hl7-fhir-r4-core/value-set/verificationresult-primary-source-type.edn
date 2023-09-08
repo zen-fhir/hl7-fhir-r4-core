@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Type of the validation primary source",
-            :zen.fhir/version "0.6.31",
+            :zen.fhir/version "0.6.32",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/primary-source-type",
                                   :zen.fhir/content :bundled}},
             :uri "http://hl7.org/fhir/ValueSet/verificationresult-primary-source-type",

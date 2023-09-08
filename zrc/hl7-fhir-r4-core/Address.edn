@@ -10,7 +10,7 @@
          :zen/desc "Base StructureDefinition for Address Type: An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.",
          :zen.fhir/type "Address",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Address",
-         :zen.fhir/version "0.6.31",
+         :zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:_line {:type zen/vector,

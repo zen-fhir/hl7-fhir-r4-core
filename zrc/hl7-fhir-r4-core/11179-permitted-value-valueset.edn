@@ -6,5 +6,5 @@
          :zen/desc "Allows expressing the value set that must be stored internally by the system (as distinct from the base value set which defines values for exchange).",
          :zen.fhir/type "canonical",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/11179-permitted-value-valueset",
-         :zen.fhir/version "0.6.31",
+         :zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.canonical/schema}}}

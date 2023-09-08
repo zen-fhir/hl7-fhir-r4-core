@@ -8,7 +8,7 @@
          :zen/desc "Identifies the kind(s) of attachment allowed to be sent for an element.",
          :zen.fhir/type "code",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/mimeType",
-         :zen.fhir/version "0.6.31",
+         :zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.code/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.mimetypes/value-set,
                               :strength :required}}}

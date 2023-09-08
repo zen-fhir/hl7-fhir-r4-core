@@ -16,7 +16,7 @@
           hl7-fhir-r4-core.value-set.immunization-evaluation-dose-status-reason
           hl7-fhir-r4-core.Organization
           hl7-fhir-r4-core.value-set.immunization-evaluation-target-disease},
- schema {:zen.fhir/version "0.6.31",
+ schema {:zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

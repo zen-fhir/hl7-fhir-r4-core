@@ -82,7 +82,7 @@
          :zen/desc "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.",
          :zen.fhir/type "Contract",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Contract",
-         :zen.fhir/version "0.6.31",
+         :zen.fhir/version "0.6.32",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,
@@ -320,7 +320,7 @@
                 :_instantiatesUri {:confirms #{hl7-fhir-r4-core.Element/schema}}}},
  term-offer-answer-schema {:zen/tags #{zen/schema
                                        zen.fhir/structure-schema},
-                           :zen.fhir/version "0.6.31",
+                           :zen.fhir/version "0.6.32",
                            :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                            :type zen/map,
                            :keys {:value {:fhir/polymorphic true,
@@ -363,7 +363,7 @@
                            :require #{:value},
                            :zen/desc "Response to offer text"},
  term-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-              :zen.fhir/version "0.6.31",
+              :zen.fhir/version "0.6.32",
               :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
               :type zen/map,
               :keys {:_issued {:confirms #{hl7-fhir-r4-core.Element/schema}},
