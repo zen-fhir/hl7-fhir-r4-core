@@ -28,7 +28,7 @@
           hl7-fhir-r4-core.value-set.invoice-status},
  lineItem-priceComponent-schema {:zen/tags #{zen/schema
                                              zen.fhir/structure-schema},
-                                 :zen.fhir/version "0.6.32",
+                                 :zen.fhir/version "0.6.42",
                                  :confirms #{hl7-fhir-r4-core.BackboneElement/schema},
                                  :type zen/map,
                                  :keys {:type {:confirms #{hl7-fhir-r4-core.code/schema},
@@ -45,7 +45,7 @@
                                                  :zen/desc "Monetary amount associated with this component"}},
                                  :require #{:type},
                                  :zen/desc "Components of total line item price"},
- schema {:zen.fhir/version "0.6.32",
+ schema {:zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :zen/tags #{zen/schema zen.fhir/base-schema},

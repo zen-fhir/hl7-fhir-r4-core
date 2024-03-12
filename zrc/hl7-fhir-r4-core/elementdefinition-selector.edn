@@ -6,5 +6,5 @@
          :zen/desc "A FHIRPath statement that defines whether an element is in the slice.",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-selector",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

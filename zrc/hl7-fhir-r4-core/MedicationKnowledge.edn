@@ -34,7 +34,7 @@
          :zen/desc "Information about a medication that is used to support knowledge.",
          :zen.fhir/type "MedicationKnowledge",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/MedicationKnowledge",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.DomainResource/schema
                      zen.fhir/Resource},
          :type zen/map,

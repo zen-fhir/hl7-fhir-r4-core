@@ -6,6 +6,6 @@
          :zen/desc "Link to an actual medication administration record with the full details of the administration, if a link is known.",
          :zen.fhir/type "Reference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/openEHR-administration",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{zen.fhir/Reference},
          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.MedicationAdministration/schema}}}}

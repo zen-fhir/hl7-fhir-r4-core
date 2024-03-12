@@ -6,7 +6,7 @@
          :zen/desc "Base StructureDefinition for Distance Type: A length - a value with a unit that is a physical distance.",
          :zen.fhir/type "Distance",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Distance",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.Quantity/schema},
          :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.distance-units/value-set,
                               :strength :extensible}}}

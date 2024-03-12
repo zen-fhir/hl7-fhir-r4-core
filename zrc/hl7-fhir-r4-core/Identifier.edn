@@ -14,7 +14,7 @@
          :zen/desc "Base StructureDefinition for Identifier Type: An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.",
          :zen.fhir/type "Identifier",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/Identifier",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.Element/schema},
          :type zen/map,
          :keys {:assigner {:confirms #{hl7-fhir-r4-core.Reference/schema

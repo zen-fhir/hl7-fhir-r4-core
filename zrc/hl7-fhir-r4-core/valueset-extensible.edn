@@ -6,5 +6,5 @@
          :zen/desc "Whether this is intended to be used with an extensible binding or not.",
          :zen.fhir/type "boolean",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/valueset-extensible",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.boolean/schema}}}
