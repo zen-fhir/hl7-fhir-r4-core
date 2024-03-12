@@ -5,7 +5,7 @@
  schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/type "Composition",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/example-section-library",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :confirms #{hl7-fhir-r4-core.Composition/schema},
          :type zen/map,
          :keys {:section {:type zen/vector,
@@ -47,7 +47,7 @@
                                                                                         :display "Plan of treatment (narrative)"}}}}}}}},
                           :every {:confirms #{hl7-fhir-r4-core.example-section-library/section-schema}}}}},
  section-schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
-                 :zen.fhir/version "0.6.32",
+                 :zen.fhir/version "0.6.42",
                  :type zen/map,
                  :keys {:section {:type zen/vector,
                                   :every {:confirms #{hl7-fhir-r4-core.example-section-library/section-schema}}}}}}

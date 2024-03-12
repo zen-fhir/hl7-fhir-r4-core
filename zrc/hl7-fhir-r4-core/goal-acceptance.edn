@@ -8,7 +8,7 @@
           hl7-fhir-r4-core.Reference
           hl7-fhir-r4-core.Practitioner
           hl7-fhir-r4-core.CodeableConcept},
- schema {:zen.fhir/version "0.6.32",
+ schema {:zen.fhir/version "0.6.42",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},

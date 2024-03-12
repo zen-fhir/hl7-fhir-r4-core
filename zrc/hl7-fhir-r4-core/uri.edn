@@ -4,5 +4,5 @@
          :zen/desc "Base StructureDefinition for uri Type: String of characters used to identify a name or a resource",
          :zen.fhir/type "uri",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/uri",
-         :zen.fhir/version "0.6.32",
+         :zen.fhir/version "0.6.42",
          :type zen/string}}
